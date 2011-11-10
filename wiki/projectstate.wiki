@@ -1,0 +1,13 @@
+#Current project state
+
+= Übersichtsseite Projektfortschritt =
+
+Hier wird der Fortschritt der Projektteilnehmer dokumentiert
+
+==Alex==
+To Do:
+- Ganz viel
+
+Done:
+- Google Code Projekt erstellt
+- Templates hinzugefügt
