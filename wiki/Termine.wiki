@@ -1,0 +1,9 @@
+#summary Terminübersicht
+
+= Termine Gruppe 11 =
+<br>
+=== Vortreffen mit Prof. Gauger ===
+||Wann? ||  23.11.2011 ||
+||Wo?   ||CATS - Rogowskigebäude||
+||Wer?  || Alle Gruppenmitglieder||
+||Was?    ||Erläuterung der Aufgabenstellung, Fragestunde, bestenfalls vorlegen einer ersten Roadmap|| 
