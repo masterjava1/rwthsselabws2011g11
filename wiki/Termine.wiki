@@ -1,9 +1,20 @@
 #summary Terminübersicht
 
 = Termine Gruppe 11 =
+
 <br>
+
+=== Gruppentreffen ===
+||<b>Wann?</b> ||  21.11.2011 09:30 Uhr ||
+||<b>Wo?</b>   ||C-Cafe RWTH||
+||<b>Wer?</b>  || Alle Gruppenmitglieder||
+||<b>Was?</b>  ||Besprechen der Aufgabenstellung, Fragenkatalog, Roadmap                                                ||
+
+<br>
+
 === Vortreffen mit Prof. Gauger ===
-||Wann? ||  23.11.2011 10:00 Uhr ||
-||Wo?   ||CATS - Rogowskigebäude||
-||Wer?  || Alle Gruppenmitglieder||
-||Was?    ||Erläuterung der Aufgabenstellung, Fragestunde, bestenfalls vorlegen einer ersten Roadmap|| 
+
+||<b>Wann?</b> ||  23.11.2011 10:00 Uhr ||
+||<b>Wo?</b>   ||CATS - Rogowskigebäude||
+||<b>Wer?</b>  || Alle Gruppenmitglieder||
+||<b>Was?</b>    ||Erläuterung der Aufgabenstellung, Fragestunde, bestenfalls <br> vorlegen einer ersten Roadmap||
