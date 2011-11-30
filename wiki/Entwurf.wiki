@@ -1,0 +1,7 @@
+#summary Entwurf
+
+= Packages =
+
+||mathtools||Solver und Datentypen||
+||gui||Grafische Nutzeroberfläche||
+||errorhandling||exceptions etc.||
