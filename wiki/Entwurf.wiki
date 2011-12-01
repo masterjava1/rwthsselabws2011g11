@@ -3,5 +3,7 @@
 = Packages =
 
 ||mathtools||Solver und Datentypen||
+||mathtools::dtype||Datentypen||
+||mathtools::solver||Solver||
 ||gui||Grafische Nutzeroberfläche||
 ||errorhandling||exceptions etc.||
