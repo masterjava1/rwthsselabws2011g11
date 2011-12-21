@@ -122,7 +122,7 @@ end;
 
 for i=1:10;
     figure(i);
-    plot(ti, wi(i));
+    plot(ti, wi(i,:));
 end;
 
 figure(11);
