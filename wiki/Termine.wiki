@@ -18,3 +18,12 @@
 ||<b>Wo?</b>   ||CATS - Rogowskigebäude||
 ||<b>Wer?</b>  || Alle Gruppenmitglieder||
 ||<b>Was?</b>    ||Erläuterung der Aufgabenstellung, Fragestunde, bestenfalls <br> vorlegen einer ersten Roadmap||
+
+<br>
+
+=== Besprechung MATLAB Prototype mit Prof. Gauger ===
+
+||<b>Wann?</b> ||  22.12.2011 09:45 Uhr ||
+||<b>Wo?</b>   ||Vor 2356|051 (AH VI)||
+||<b>Wer?</b>  || Alle Gruppenmitglieder||
+||<b>Was?</b>    || Besprechen des MATLAB Prototypen ||
