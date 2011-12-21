@@ -49,7 +49,7 @@ count = 0;
 h = hmax;
 i = 2;
 
-gtol = 1E-8;
+gtol = 0.5E-6;
 
 R = 25E-3;
 m = 15E-3;
@@ -58,7 +58,7 @@ I3 = 0.4.*m.*R^2;
 a = 5E-3;
 
 lambda = x0(2);
-theta = x0(7);
+theta = x0(6);
 ny = x0(3);
 G = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
         cos(theta)+ny);
@@ -79,14 +79,15 @@ while ( t0 < tf )
 	
     % Conserved quantity
     lambda = wi(2);
-    theta = wi(7);
+    theta = wi(6);
     ny = wi(3);
     Gc = G;
     G = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
         cos(theta)+ny);
-    Gp(it) = abs(Gc-G);
-    
+  
 	if ((R < TOL) && (abs(Gc-G)<gtol))
+       Gp(it) = abs(Gc-G);
+       
        x0 = x0 + 16*k1/135 + 6656*k3/12825 + 28561*k4/56430 - 9*k5/50 + 2*k6/55;
 %      x0 = x0 + 25*k1/216 + 1408*k3/2565 + 2197*k4/4104 - k5/5;
 	   t0 = t0 + h;
@@ -98,7 +99,7 @@ while ( t0 < tf )
        subplot(1,2,1);
 %       plot(ti, wi(1:3,:));
 %       hold on;
-       plot(ti, wi(3,:));
+       plot(ti, wi(7,:));
 %       legend('dtheta/dt','dphi/dt','dpsi/dt','phi','theta','psi');
        drawnow;
        
