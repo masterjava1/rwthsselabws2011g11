@@ -20,8 +20,8 @@ function dx_dt = RHS(t,x)
 
 g = 9.81;
 R = 25E-3;
-% k = 0.3;
-k = 0;
+k = 0.3;
+% k = 0;
 m = 15E-3;
 I = 0.4.*m.*R^2;
 I3 = 0.4.*m.*R^2;
@@ -55,9 +55,9 @@ dx_dt(2) = (-(2.*I-I3).*lambda.*my.*cos(theta)+I3.*my.*ny-k.*m.*...
 
 % dny_dt
 dx_dt(3) = (-I3.*(dx_dt(2).*cos(theta)-lambda.*my.*sin(theta))-k.*m.*...
-    (g+a.*cos(theta).*my.^2+a.*sin(theta).*dx_dt(1).^2).* ...
+    (g+a.*cos(theta).*my.^2+a.*sin(theta).*dx_dt(1)).* ...
     (R.*sin(theta)).*(xi.*cos(phi)+omikron.*sin(phi)+(a.*lambda+ny.*R).*...
-    sin(phi)))./I3;
+    sin(theta)))./I3;
 
 % dxi_dt
 dx_dt(4) = (-k.*(g+a.*cos(theta).*my.^2+a.*sin(theta).*dx_dt(1)).* ...
@@ -67,7 +67,7 @@ dx_dt(4) = (-k.*(g+a.*cos(theta).*my.^2+a.*sin(theta).*dx_dt(1)).* ...
 % domikron_dt
 dx_dt(5) = (-k.*(g+a.*cos(theta).*my.^2+a.*sin(theta).*dx_dt(1)).* ...
     (omikron+(a.*lambda+ny.*R).*sin(theta).*cos(phi)+(R-a.*cos(theta)).*...
-     phi.*my));
+    cos(phi).*my));
 
 % dtheta_dt
 dx_dt(6) = my;
