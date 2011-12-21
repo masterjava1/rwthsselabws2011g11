@@ -15,7 +15,7 @@
 %=========================================================================
 
 %%
-% x = [my; lambda; ny; xi; omikron; phi; theta; psi; xc; yc]
+% x = [my; lambda; ny; xi; omikron; theta; phi; psi; xc; yc]
 function dx_dt = RHS(t,x)
 
 g = 9.81;
@@ -33,8 +33,8 @@ lambda = x(2);
 ny = x(3);
 xi = x(4);
 omikron = x(5);
-phi = x(6);
-theta = x(7);
+theta = x(6);
+phi = x(7);
 psi = x(8);
 xc = x(9);
 yc = x(10);
@@ -69,11 +69,11 @@ dx_dt(5) = (-k.*(g+a.*cos(theta).*my.^2+a.*sin(theta).*dx_dt(1)).* ...
     (omikron+(a.*lambda+ny.*R).*sin(theta).*cos(phi)+(R-a.*cos(theta)).*...
      phi.*my));
 
-% dphi_dt
-dx_dt(6) = lambda;
-
 % dtheta_dt
-dx_dt(7) = my;
+dx_dt(6) = my;
+ 
+ % dphi_dt
+dx_dt(7) = lambda;
 
 % dpsi_dt
 dx_dt(8) = ny;
