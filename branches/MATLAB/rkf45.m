@@ -38,6 +38,20 @@ function [wi, ti, count] = rkf45 ( RHS, t0, x0, tf, parms )
 %                     solution from t = t0 to t = tf
 %
 
+%%
+% Parameter
+gtol = 1E-10;
+
+R = 25E-3;
+m = 15E-3;
+I = 0.4.*m.*R.^2;
+I3 = 0.4.*m.*R.^2;
+a = 5E-3;
+
+
+
+%%
+
 neqn = length ( x0 );
 hmin = parms(1);
 hmax = parms(2);
@@ -49,22 +63,14 @@ count = 0;
 h = hmax;
 i = 2;
 
-gtol = 1E-10;
-
-R = 25E-3;
-m = 15E-3;
-I = 0.4.*m.*R.^2;
-I3 = 0.4.*m.*R.^2;
-a = 5E-3;
-
+% Conserved quantity
+cq = 0;
 lambda = x0(2);
 theta = x0(6);
 ny = x0(3);
-G = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
-        cos(theta)+ny);
-
-it = 1;
-    
+Gc = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
+           cos(theta)+ny);
+       
 while ( t0 < tf )
     k1 = h * feval ( RHS, t0, x0 );
 	k2 = h * feval ( RHS, t0 + h/4, x0 + k1/4 );
@@ -75,37 +81,41 @@ while ( t0 < tf )
 	
 	Rk = max ( abs ( k1/360 - 128*k3/4275 - 2197*k4/75240 + k5/50 + 2*k6/55 ) / h );
 	q = 0.84 * ( TOL / Rk ) ^ (1/4);
-	count = count + 6; 
-	
+	count = count + 6;       
+    
     % Conserved quantity
-    lambda = wi(2);
-    theta = wi(6);
-    ny = wi(3);
-    Gc = G;
+    xt = x0 + 16*k1/135 + 6656*k3/12825 + 28561*k4/56430 - 9*k5/50 + 2*k6/55;
+    lambda = xt(2);
+    theta = xt(6);
+    ny = xt(3);
     G = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
-        cos(theta)+ny);
-  
-	if ((Rk < TOL) && ((abs(Gc-G)/h)<gtol))
-       Gp(it) = abs(Gc-G);
+           cos(theta)+ny);
+    
+    if ((Rk < TOL)&&((abs(abs(G)-abs(Gc))/h)>gtol))
+        cq = cq + 1;
+    end;
+    
+	if ((Rk < TOL)&&((abs(abs(G)-abs(Gc))/h)<gtol))
+       Gc = G;
+       Gp(i-1) = abs(abs(G)-abs(Gc))/h;
        
-       x0 = x0 + 16*k1/135 + 6656*k3/12825 + 28561*k4/56430 - 9*k5/50 + 2*k6/55;
+       x0 = xt;
 %      x0 = x0 + 25*k1/216 + 1408*k3/2565 + 2197*k4/4104 - k5/5;
 	   t0 = t0 + h;
 
        ti(i) = t0;
-       wi(1:neqn, i) = x0';
-	   i = i + 1;
+       wi(1:neqn, i) = x0';     
        
+       figure(1);
        subplot(1,2,1);
-%       plot(ti, wi(1:3,:));
-%       hold on;
-       plot(ti, wi(7,:));
-%        legend('dtheta/dt','dphi/dt','dpsi/dt','phi','theta','psi');
+       hold on;
+       plot(ti(i-1),wi(2,i-1));
+       subplot(1,2,2);
+       hold on;
+       plot(i-1,Gp(i-1));
        drawnow;
        
-       subplot(1,2,2);
-       plot(Gp);
-       drawnow;
+       i = i + 1;
 	end;
 	
 	h = min ( max ( q, 0.1 ), 4.0 ) * h;
@@ -117,13 +127,7 @@ while ( t0 < tf )
 	   return;
 	end;
     
-    it = it + 1;
 end;
 
-% for i=1:10;
-%    figure(i);
-%    plot(ti, wi(i,:));
-% end;
-
-% figure(11);
-% plot(Gp);
+disp( 'Conserved quantity exceeded: ');
+disp(cq);
