@@ -49,7 +49,7 @@ count = 0;
 h = hmax;
 i = 2;
 
-gtol = 1E-6;
+gtol = 1E-10;
 
 R = 25E-3;
 m = 15E-3;
@@ -96,15 +96,15 @@ while ( t0 < tf )
        wi(1:neqn, i) = x0';
 	   i = i + 1;
        
-%       subplot(1,2,1);
+       subplot(1,2,1);
 %       plot(ti, wi(1:3,:));
 %       hold on;
-%       plot(ti, wi(3,:));
-%       legend('dtheta/dt','dphi/dt','dpsi/dt','phi','theta','psi');
-%       drawnow;
+       plot(ti, wi(6,:));
+%        legend('dtheta/dt','dphi/dt','dpsi/dt','phi','theta','psi');
+       drawnow;
        
-%       subplot(1,2,2);
-%       plot(Gp);
+       subplot(1,2,2);
+       plot(Gp);
        drawnow;
 	end;
 	
@@ -120,10 +120,10 @@ while ( t0 < tf )
     it = it + 1;
 end;
 
-for i=1:10;
-    figure(i);
-    plot(ti, wi(i,:));
-end;
+% for i=1:10;
+%    figure(i);
+%    plot(ti, wi(i,:));
+% end;
 
-figure(11);
-plot(Gp);
+% figure(11);
+% plot(Gp);
