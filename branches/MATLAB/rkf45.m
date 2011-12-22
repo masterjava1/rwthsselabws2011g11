@@ -53,8 +53,8 @@ gtol = 1E-10;
 
 R = 25E-3;
 m = 15E-3;
-I = 0.4.*m.*R^2;
-I3 = 0.4.*m.*R^2;
+I = 0.4.*m.*R.^2;
+I3 = 0.4.*m.*R.^2;
 a = 5E-3;
 
 lambda = x0(2);
@@ -73,8 +73,8 @@ while ( t0 < tf )
     k5 = h * feval ( RHS, t0 + h, x0 + 439*k1/216 - 8*k2 + 3680*k3/513 - 845*k4/4104 );
 	k6 = h * feval ( RHS, t0 + h/2, x0 - 8*k1/27 + 2*k2 - 3544*k3/2565 + 1859*k4/4104 - 11*k5/40 );
 	
-	R = max ( abs ( k1/360 - 128*k3/4275 - 2197*k4/75240 + k5/50 + 2*k6/55 ) / h );
-	q = 0.84 * ( TOL / R ) ^ (1/4);
+	Rk = max ( abs ( k1/360 - 128*k3/4275 - 2197*k4/75240 + k5/50 + 2*k6/55 ) / h );
+	q = 0.84 * ( TOL / Rk ) ^ (1/4);
 	count = count + 6; 
 	
     % Conserved quantity
@@ -85,7 +85,7 @@ while ( t0 < tf )
     G = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
         cos(theta)+ny);
   
-	if ((R < TOL) && ((abs(Gc-G)/h)<gtol))
+	if ((Rk < TOL) && ((abs(Gc-G)/h)<gtol))
        Gp(it) = abs(Gc-G);
        
        x0 = x0 + 16*k1/135 + 6656*k3/12825 + 28561*k4/56430 - 9*k5/50 + 2*k6/55;
@@ -99,7 +99,7 @@ while ( t0 < tf )
        subplot(1,2,1);
 %       plot(ti, wi(1:3,:));
 %       hold on;
-       plot(ti, wi(6,:));
+       plot(ti, wi(7,:));
 %        legend('dtheta/dt','dphi/dt','dpsi/dt','phi','theta','psi');
        drawnow;
        

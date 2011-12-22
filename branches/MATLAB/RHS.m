@@ -20,11 +20,11 @@ function dx_dt = RHS(t,x)
 
 g = 9.81;
 R = 25E-3;
-% k = 0.3;
-k = 0;
+k = 0.3;
+% k = 0;
 m = 15E-3;
-I = 0.4.*m.*R^2;
-I3 = 0.4.*m.*R^2;
+I = 0.4.*m.*R.^2;
+I3 = 0.4.*m.*R.^2;
 a = 5E-3;
 
 dx_dt = zeros(10,1);
@@ -61,7 +61,7 @@ dx_dt(3) = (-I3.*(dx_dt(2).*cos(theta)-lambda.*my.*sin(theta))-k.*m.*...
 
 % dxi_dt
 dx_dt(4) = (-k.*(g+a.*cos(theta).*my.^2+a.*sin(theta).*dx_dt(1)).* ...
-    (xi+(a.*lambda+ny.*R).*sin(theta).*cos(theta)+(a.*cos(theta)-R).* ...
+    (xi+(a.*lambda+ny.*R).*sin(theta).*cos(phi)+(a.*cos(theta)-R).* ...
     sin(phi).*my));
 
 % domikron_dt
