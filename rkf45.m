@@ -40,7 +40,7 @@ function [wi, ti, count] = rkf45 ( RHS, t0, x0, tf, parms )
 
 %%
 % Parameter
-gtol = 1E-10;
+gtol = 3E-7;
 
 R = 25E-3;
 m = 15E-3;
@@ -64,7 +64,6 @@ h = hmax;
 i = 2;
 
 % Conserved quantity
-cq = 0;
 lambda = x0(2);
 theta = x0(6);
 ny = x0(3);
@@ -90,14 +89,12 @@ while ( t0 < tf )
     ny = xt(3);
     G = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
            cos(theta)+ny);
-    
-    if ((Rk < TOL)&&((abs(abs(G)-abs(Gc))/h)>gtol))
-        cq = cq + 1;
-    end;
+
     
 	if ((Rk < TOL)&&((abs(abs(G)-abs(Gc))/h)<gtol))
-       Gc = G;
+
        Gp(i-1) = abs(abs(G)-abs(Gc))/h;
+       Gc = G;
        
        x0 = xt;
 %      x0 = x0 + 25*k1/216 + 1408*k3/2565 + 2197*k4/4104 - k5/5;
@@ -109,7 +106,7 @@ while ( t0 < tf )
        figure(1);
        subplot(1,2,1);
        hold on;
-       plot(ti(i-1),wi(2,i-1));
+       plot(ti(i-1),wi(7,i-1));
        subplot(1,2,2);
        hold on;
        plot(i-1,Gp(i-1));
@@ -128,6 +125,3 @@ while ( t0 < tf )
 	end;
     
 end;
-
-disp( 'Conserved quantity exceeded: ');
-disp(cq);
