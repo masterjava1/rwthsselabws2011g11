@@ -14,19 +14,21 @@
 % dx_dt
 %=========================================================================
 
-%%
+
 % x = [my; lambda; ny; xi; omikron; theta; phi; psi; xc; yc]
 function dx_dt = RHS(t,x)
 
 g = 9.81;
 R = 25E-3;
-k = 0.3;
-% k = 0;
+k = 0.3E2;
+%k = 0;
 m = 15E-3;
 I = 0.4.*m.*R.^2;
 I3 = 0.4.*m.*R.^2;
 a = 5E-3;
 
+
+%%
 dx_dt = zeros(10,1);
 my = x(1);
 lambda = x(2);
