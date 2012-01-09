@@ -112,6 +112,7 @@ while ( t0 < tf )
        drawnow;
        
 	   i = i + 1;	
+       h = hmax;
 	end;
 	
 	h = min ( max ( q, 0.1 ), 4.0 ) * h;
