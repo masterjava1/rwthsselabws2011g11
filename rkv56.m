@@ -40,7 +40,7 @@ function [wi, ti, count] = rkv56 ( RHS, t0, x0, tf, parms )
 
 %%
 % Parameter
-gtol = 1E-7;
+gtol = 1E-6;
 
 R = 25E-3;
 m = 15E-3;
@@ -54,12 +54,19 @@ neqn = length ( x0 );
 hmin = parms(1);
 hmax = parms(2);
 TOL  = parms(3);
+xt = zeros(1,10);
+xa = zeros(1,10);
+
+% Preallocate wi, ti
+wi = zeros(1:neqn,tf/hmin);
+ti = zeros(1,tf/hmin);
 
 ti(1) = t0;
 wi(1:neqn, 1) = x0';
 count = 0;
 h = hmax;
 i = 2;
+mreached = 0;
 
 % Conserved quantity
 lambda = x0(2);
@@ -78,11 +85,12 @@ while ( t0 < tf )
 	k7 = h * feval ( RHS, t0 + h/15, x0 - 8263*k1/15000 + 124*k2/75 - 643*k3/680 - 81*k4/250 + 2484*k5/10625 );
 	k8 = h * feval ( RHS, t0 + h, x0 + 3501*k1/1720 - 300*k2/43 + 297275*k3/52632 - 319*k4/2322 + 24068*k5/84065 + 3850*k7/26703 );
 	
-	Rk = max ( abs ( k1/160 + 125*k3/17952 - k4/144 + 12*k5/1955 + 3*k6/44 - 125*k7/11592 - 43*k8/616 ) / h );
+	Rk =  max( abs ( k1/160 + 125*k3/17952 - k4/144 + 12*k5/1955 + 3*k6/44 - 125*k7/11592 - 43*k8/616 ) / h );
 	q = 0.87 * ( TOL / Rk ) ^ (1/5);
 	count = count + 8; 
 	
     % Conserved quantity
+    xa = xt;
     xt = x0 + 3*k1/40 + 875*k3/2244 + 23*k4/72 + 264*k5/1955 + 125*k7/11592 + 43*k8/616;
     lambda = xt(2);
     theta = xt(6);
@@ -90,7 +98,7 @@ while ( t0 < tf )
     G = I.*R.*lambda.*sin(theta).^2+I3.*(R.*cos(theta)-a).*(lambda.* ...
            cos(theta)+ny);
        
-	if ((Rk < TOL)&&((abs(abs(G)-abs(Gc))/h)<gtol))
+	if (((Rk < TOL)&&((abs(abs(G)-abs(Gc))/h)<gtol))||(mreached==1))
         
        Gp(i-1) = abs(abs(G)-abs(Gc))/h;
        Gc = G;
@@ -105,22 +113,27 @@ while ( t0 < tf )
        figure(1);
        subplot(1,2,1);
        hold on;
-       plot(ti(i-1),wi(7,i-1));
+       plot(ti(i-1),wi(3,i-1));
        subplot(1,2,2);
        hold on;
        plot(i-1,Gp(i-1));
        drawnow;
        
 	   i = i + 1;	
+       mreached = 0;
+       h
        h = hmax;
 	end;
-	
-	h = min ( max ( q, 0.1 ), 4.0 ) * h;
+    
+    h = min ( max ( q, 0.1 ), 4.0 ) * h;
+    
 	if ( h > hmax ) h = hmax; end;
 	if ( t0 + h > tf )
 	   h = tf - t0;
 	elseif ( h < hmin )
-	   disp ( 'Solution requires step size smaller than minimum' );
-	   return;
+%	   disp ( 'Solution requires step size smaller than minimum' );
+%	   return;
+       h = hmin;
+       mreached = 1;
 	end;
 end;
