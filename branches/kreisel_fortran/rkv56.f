@@ -18,7 +18,7 @@ com   customized to solve the "TippeTop" ODE-system
 com   =================================================================
       subroutine rkv56(wi, ti, it, t0, x0, tf, parms)
 com   Precision
-      integer, parameter :: prec = selected_real_kind(8,245)
+      integer, parameter :: prec = selected_real_kind(8,248)
 com   Dummy arguments
       integer, intent(inout) :: it
       real(kind=prec) :: t0, tf
@@ -29,7 +29,7 @@ com   Dummy arguments
       real(kind=prec), dimension(:,:), allocatable, intent(inout)
      & :: wi
 com   Parameter
-      real(kind=prec), parameter :: gtol = 1E-4
+      real(kind=prec), parameter :: gtol = 1E-6
       real(kind=prec), parameter :: R = 25E-3
       real(kind=prec), parameter :: m = 15E-3
       real(kind=prec), parameter :: I = 0.4*m*R**2
