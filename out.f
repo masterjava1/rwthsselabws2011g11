@@ -18,7 +18,7 @@ com
          write(7,*) ti(i)
       end do
       do i=1,nc
-         write(7,*) wi(7,i)
+         write(7,*) wi(3,i)
       end do
       close(7)
       end subroutine kreiselplot

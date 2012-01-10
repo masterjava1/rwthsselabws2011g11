@@ -17,7 +17,7 @@ com
       contains
       subroutine RHS(dx_dt, t, x)
 com   Precision
-      integer, parameter :: prec = selected_real_kind(8,245)
+      integer, parameter :: prec = selected_real_kind(8,248)
 com   Dummy arguments
       real(kind=prec) :: t 
       real(kind=prec), dimension(10) :: x 
@@ -63,6 +63,7 @@ com   dmy_dt
      &(R-a*cos(theta))*my)))/(I+m*a**2*sin(theta)**2+k*m*a*
      &sin(theta)*(R-a*cos(theta))*(-xi*sin(phi)+omikron*cos(phi)-
      &(R-a*cos(theta))*my))
+      if (IsNaN(dx_dt(1))) write(*,*) x 
       if (IsNaN(dx_dt(1))) stop '"dx_dt(1)" is NaN'
 com
 com   dlambda_dt
