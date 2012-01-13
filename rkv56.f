@@ -54,7 +54,7 @@ com
       it = 2
       minreached = .FALSE.
 com   Compute memory and allocate arrays
-      msteps = INT((tf-t0)/hmin)
+      msteps = INT((tf-t0)/(hmin*3))
       allocate(ti(msteps+1))
       allocate(Gp(msteps+1))
       allocate(wi(10,msteps+1))
