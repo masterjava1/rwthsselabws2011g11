@@ -25,8 +25,8 @@ com   Dummy arguments
 com   Parameter
       real(kind=prec), parameter :: g = 9.81 
       real(kind=prec), parameter :: R = 25E-3
-      real(kind=prec), parameter :: k = 0.3E2
-com      real(kind=prec), parameter :: k = 0
+com      real(kind=prec), parameter :: k = 0.3E2
+      real(kind=prec), parameter :: k = 0
       real(kind=prec), parameter :: m = 15E-3
       real(kind=prec), parameter :: I = 0.4*m*R*R
       real(kind=prec), parameter :: I3 = 0.4*m*R*R

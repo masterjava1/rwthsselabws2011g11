@@ -14,10 +14,11 @@ com
 com
       x0 = (/ 0.0, 0.0, 250.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0 /)
       t0 = 0
-      tf = 0.05
+      tf = 0.23
       parms = (/1E-8, 1E-4, 1E-6 /)
       write(*,*) "Calculating ..." 
       call rkv56(wi, ti, it, t0, x0, tf, parms)
       write(*,*) "Writing output ..." 
+      it = it-1
       call kreiselplot(ti, wi, it)
       end program
