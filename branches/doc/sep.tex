@@ -1,0 +1,61 @@
+\documentclass[fleqn]{scrartcl}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts} 
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{ulem}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, filecolor=black, urlcolor=black, bookmarks=true, bookmarksopen=true, bookmarksopenlevel=3, plainpages=false, pdfpagelabels=true]{hyperref}
+\usepackage[labelsep=none]{caption}
+\newenvironment{rcases}{
+  \left.\renewcommand*\lbrace.
+  \begin{cases}}
+{\end{cases}\right\rbrace}
+
+
+\renewcommand{\thefigure}{}
+
+ 
+\begin{document}
+\begin{align*}
+	&
+	\ddot \theta (I+ma^2\sin^2\theta+kma\sin \theta(R-a\cos\theta)(-\dot x_c
+	\sin\phi+\dot y_c \cos \phi-(R-a\cos\theta)\dot \theta))
+	\\&
+	=\underbrace{I_3-I\dot \phi^2\sin\theta\cos\theta}_{=0}-I_3\dot \phi \sin \theta \dot \phi 
+	+ (g+a\dot \theta^2\cos \theta)(-ma\sin\theta - km(R-a\cos \theta)
+	\\&
+	(-\dot x_c \sin \phi +\dot y_c \cos \phi-(R-a\cos\theta)\dot \theta))
+\end{align*}
+\begin{align*}
+	&
+	\ddot \phi I \sin\theta= -\underbrace{(2I-I_3)}_{=I}
+	\dot \phi \dot \theta \cos \theta + I_3\dot \theta \dot \psi
+	\\&
+	-km(g+a\cos\theta\dot\theta^2+a\sin\theta\ddot\theta)
+	(a-R\cos\theta)(\dot x_c\cos \phi +\dot y_c \sin\phi+
+	(a\dot \phi+\dot \phi R)\sin \theta)
+\end{align*}
+\begin{align*}
+	&\ddot \psi I_3=-I_3(\ddot \phi \cos \theta - \dot \phi \dot \theta \sin \theta)
+	\\&
+	-km(g+a\cos\theta\dot\theta^2+a \sin\theta\ddot \theta)(R\sin\theta)
+	(\dot x_c\cos \phi +\dot y_c \sin \phi+(a\dot \phi +\dot \psi R)\sin\theta)
+\end{align*}
+\begin{align*}
+	&m\ddot x_c=-km(g+a\cos\theta\dot \theta^2+a\sin \theta\ddot\theta)
+	(\dot x_c+(a\dot \phi + \dot \psi R)\sin \theta\cos \theta+
+	(a\cos \theta -R)\sin \phi \dot \theta)
+\end{align*}
+\begin{align*}
+	&m\ddot y_c=-km(g+a\cos \theta\dot \theta^2+a \sin \theta \ddot \theta)
+	(\dot y_c+(a\dot \phi + \dot \psi R)\sin \theta \cos \phi
+	+(r-a\cos \theta)\cos\phi \dot \theta)
+\end{align*}
+\end{document}
