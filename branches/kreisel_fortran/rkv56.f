@@ -29,14 +29,21 @@ com   Dummy arguments
       real(kind=prec), dimension(:,:), allocatable, intent(inout)
      & :: wi
 com   Parameter
-      real(kind=prec), parameter :: gtol = 1E-6
+com   =================================================================
+com   IMPORTANT:
+com   You have to set the amount of memory that will be allocated
+com   manually! Therefor set msteps to the expected length of your
+com   solution array.
+com   =================================================================
+      real(kind=prec), parameter :: gtol = 1E-4
       real(kind=prec), parameter :: R = 25E-3
       real(kind=prec), parameter :: m = 15E-3
       real(kind=prec), parameter :: I = 0.4*m*R**2
       real(kind=prec), parameter :: I3 = 0.4*m*R**2
       real(kind=prec), parameter :: a = 5E-3
+      integer(kind=8), parameter :: msteps = 1E6
 com   Variables
-      integer :: neqn, counter, msteps, k, j
+      integer(kind=8) :: neqn, counter, k, j
       logical :: minreached
       real(kind=prec) ::  
      &lambda, theta, Rk, ny, G, Gc, hmin, hmax, TOL, h, q
@@ -44,7 +51,7 @@ com   Variables
      &k7, k8, xt, dx_dt
 com   Dynamic variables
       real(kind=prec), dimension(:), allocatable :: Gp
-com   
+com  
       neqn = 10
       hmin = parms(1)
       hmax = parms(2)
@@ -53,8 +60,9 @@ com
       h = hmax
       it = 2
       minreached = .FALSE.
-com   Compute memory and allocate arrays
-      msteps = INT((tf-t0)/(hmin*3))
+com   Allocate arrays
+      write(*,*) "Allocating memory"
+com      msteps = NINT((tf-t0)/(hmin*1))
       allocate(ti(msteps+1))
       allocate(Gp(msteps+1))
       allocate(wi(10,msteps+1))
@@ -65,6 +73,9 @@ com   Compute memory and allocate arrays
             wi(j,k) = 0
          end do
       end do
+      write(*,*) "Memory allocation done"
+com
+      write(*,*) "Performing rkv56"
 com
       ti(1) = t0
       wi(:, 1) = x0
@@ -111,8 +122,9 @@ com
          G = I*R*lambda*sin(theta)**2+I3*(R*cos(theta)-a)*(lambda*
      &   cos(theta)+ny)
 com
-         if (((Rk.LT.TOL).AND.((abs(abs(G)-abs(Gc))/h).LT.gtol))
-     &   .OR.minreached) then
+         if ((Rk.LT.TOL).AND.((abs(abs(G)-abs(Gc))/h).LT.gtol))
+     &    then
+            if (it.GT.msteps) stop "Need more memory"
             Gp(it-1) = abs(abs(G)-abs(Gc))/h
             Gc = G
             x0 = xt
@@ -120,14 +132,26 @@ com
             wi(1:neqn, it) = x0
             ti(it) = t0
             it =  it + 1
-            minreached = .FALSE.
             h = hmax
+            minreached = .FALSE.
          end if
          h = min(max(q,0.1),4.0)*h
          if (h.GT.hmax) then 
             h=hmax 
          endif
 com
+         if(minreached) then
+            if (Rk.GT.TOL) then
+               write(*,*) t0
+               stop "Desired precision needs smaller minimum"//
+     &         " stepsize! ABORT"
+            endif
+            if ((abs(abs(G)-abs(Gc))/h).GT.gtol) then
+               write(*,*) t0
+               stop "Conserved quantity needs smaller minimum"//
+     &         " stepsize! ABORT"
+            endif
+         endif
          if (t0+h.GT.tf) then
             h = tf-t0
          elseif (h.LT.hmin) then
@@ -136,5 +160,6 @@ com
          endif
       end do      
 com
+      write(*,*) "Solution computed"
       end subroutine rkv56
       end module RUNGEKUTTA

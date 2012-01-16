@@ -12,6 +12,8 @@ com   Dummy variables
 com   Variables
       integer :: i,nc
 com
+      write(*,*) "Writing solution to kreisel.dat in tecplot format"
+com
       nc = it 
       open(unit=7, file='kreisel.dat', status='unknown')
       write(7,*) 'TITLE     = "Simulation Stehaufkreisel"'
@@ -36,7 +38,9 @@ com
          write(unit=7,fmt="(11(E28.20))") ti(i), wi(:,i)
       end do
       close(7)
-      
+com
+      write(*,*) "kreisel.dat written"
+com
       end subroutine kreiselplot
 com
       end module OUTPUT
