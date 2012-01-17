@@ -16,7 +16,8 @@ com   Variables
       integer(kind=iprec) :: i,nc
 com
       write(*,*) "Writing solution to kreisel.dat in tecplot format"
-com
+com   Format
+ 30   format('I=',I9,1X,', J=1, K=1, ZONETYPE=Ordered')   
       nc = it 
       open(unit=7, file='kreisel.dat', status='unknown')
       write(7,*) 'TITLE     = "Simulation Stehaufkreisel"'
@@ -33,15 +34,12 @@ com
       write(7,*) '"yc"'
       write(7,*) 'ZONE T="ZONE 001"'
       write(7,*) 'STRANDID=0, SOLUTIONTIME=0'
-      write(7,*) 'I=2645, J=1, K=1, ZONETYPE=Ordered'
+      write(7,30) nc
       write(7,*) 'DATAPACKING=POINT'
       write(7,*) 'DT=(SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE '// 
      & 'SINGLE SINGLE SINGLE SINGLE SINGLE )'
       do i=1,nc
          write(unit=7,fmt="(11(E28.20))") ti(i), wi(:,i)
-      end do
-      do i=1,nc
-         write(7,*) wi(7,i)
       end do
       close(7)
 com
