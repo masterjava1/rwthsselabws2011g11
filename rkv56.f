@@ -21,7 +21,7 @@ com   Precision
       integer, parameter :: prec = selected_real_kind(8,248)
       integer, parameter :: iprec = selected_real_kind(8)
 com   Dummy arguments
-      integer, intent(inout) :: it
+      integer(kind=iprec), intent(inout) :: it
       real(kind=prec) :: t0, tf
       real(kind=prec), dimension(10) :: x0
       real(kind=prec), dimension(3) :: parms

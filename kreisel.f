@@ -4,8 +4,9 @@
       implicit none
 com   Precision
       integer, parameter :: prec = selected_real_kind(8,248)
+      integer, parameter :: iprec = selected_real_kind(8)
 com
-      integer :: it
+      integer(kind=iprec) :: it
       real(kind=prec), dimension(10) :: x0
       real(kind=prec), dimension(:,:), allocatable :: wi
       real(kind=prec), dimension(:), allocatable :: ti
