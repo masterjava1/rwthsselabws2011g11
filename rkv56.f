@@ -39,7 +39,8 @@ com   Parameter
 com   Variables
       integer(kind=iprec) :: msteps 
       integer(kind=iprec) :: neqn, counter, k, j
-      logical :: minreached
+com   TMP DEBUG
+      logical :: minreached, mrflag 
       real(kind=prec) ::  
      &lambda, theta, Rk, ny, G, Gc, hmin, hmax, TOL, h, q
       real(kind=prec), dimension(10) :: k1, k2, k3, k4, k5, k6,
@@ -62,9 +63,10 @@ com
       h = hmax
       it = 2
       minreached = .FALSE.
+com   TMP DEBUG
+      mrflag = .FALSE.
 com   Allocate arrays
       write(*,*) "Allocating memory"
-      write (*,*) msteps
 com      msteps = NINT((tf-t0)/(hmin*1))
       allocate(ti(msteps+1))
       allocate(Gp(msteps+1))
@@ -125,8 +127,9 @@ com
          G = I*R*lambda*sin(theta)**2+I3*(R*cos(theta)-a)*(lambda*
      &   cos(theta)+ny)
 com
-         if ((Rk.LT.TOL).AND.((abs(abs(G)-abs(Gc))/h).LT.gtol))
-     &    then
+com   TMP DEBUG
+         if (((Rk.LT.TOL).AND.((abs(abs(G)-abs(Gc))/h).LT.gtol))
+     &    .OR.mrflag) then
             if (it.GT.msteps) stop "Need more memory"
             Gp(it-1) = abs(abs(G)-abs(Gc))/h
             Gc = G
@@ -136,6 +139,8 @@ com
             ti(it) = t0
             it =  it + 1
             h = hmax
+com   TMP DEBUG
+            mrflag = .FALSE.
             minreached = .FALSE.
          end if
          h = min(max(q,0.1),4.0)*h
@@ -145,14 +150,18 @@ com
 com
          if(minreached) then
             if (Rk.GT.TOL) then
-               write(*,*) t0
-               stop "Desired precision needs smaller minimum"//
-     &         " stepsize! ABORT"
+com   TMP DEBUG
+com               write(*,*) t0
+com               stop "Desired precision needs smaller minimum"//
+com     &         " stepsize! ABORT"
+               mrflag = .TRUE.
             endif
             if ((abs(abs(G)-abs(Gc))/h).GT.gtol) then
-               write(*,*) t0
-               stop "Conserved quantity needs smaller minimum"//
-     &         " stepsize! ABORT"
+com   TMP DEBUG
+com               write(*,*) t0
+com               stop "Conserved quantity needs smaller minimum"//
+com     &         " stepsize! ABORT"
+               mrflag = .TRUE.
             endif
          endif
          if (t0+h.GT.tf) then
