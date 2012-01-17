@@ -19,6 +19,7 @@ com   =================================================================
       subroutine rkv56(wi, ti, it, t0, x0, tf, parms)
 com   Precision
       integer, parameter :: prec = selected_real_kind(8,248)
+      integer, parameter :: iprec = selected_real_kind(4)
 com   Dummy arguments
       integer, intent(inout) :: it
       real(kind=prec) :: t0, tf
@@ -41,9 +42,9 @@ com   =================================================================
       real(kind=prec), parameter :: I = 0.4*m*R**2
       real(kind=prec), parameter :: I3 = 0.4*m*R**2
       real(kind=prec), parameter :: a = 5E-3
-      integer(kind=8), parameter :: msteps = 1E6
+      integer(kind=iprec), parameter :: msteps = huge(msteps)-1 
 com   Variables
-      integer(kind=8) :: neqn, counter, k, j
+      integer(kind=iprec) :: neqn, counter, k, j
       logical :: minreached
       real(kind=prec) ::  
      &lambda, theta, Rk, ny, G, Gc, hmin, hmax, TOL, h, q
@@ -62,6 +63,7 @@ com
       minreached = .FALSE.
 com   Allocate arrays
       write(*,*) "Allocating memory"
+      write(*,"(E17.10)") msteps
 com      msteps = NINT((tf-t0)/(hmin*1))
       allocate(ti(msteps+1))
       allocate(Gp(msteps+1))
