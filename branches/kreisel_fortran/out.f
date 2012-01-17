@@ -5,7 +5,7 @@ com
       subroutine kreiselplot(ti, wi, it)
 com   Precision
       integer, parameter :: prec = selected_real_kind(8,248)
-      integer, parameter :: iprec = selected_real_kind(4)
+      integer, parameter :: iprec = selected_real_kind(8)
 com   Dummy variables
       integer(kind=iprec), intent(inout) :: it
       real(kind=prec), dimension(:,:), allocatable, intent(in) ::
@@ -39,6 +39,9 @@ com
      & 'SINGLE SINGLE SINGLE SINGLE SINGLE )'
       do i=1,nc
          write(unit=7,fmt="(11(E28.20))") ti(i), wi(:,i)
+      end do
+      do i=1,nc
+         write(7,*) wi(7,i)
       end do
       close(7)
 com

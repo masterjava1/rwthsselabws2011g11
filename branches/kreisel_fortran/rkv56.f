@@ -19,7 +19,7 @@ com   =================================================================
       subroutine rkv56(wi, ti, it, t0, x0, tf, parms)
 com   Precision
       integer, parameter :: prec = selected_real_kind(8,248)
-      integer, parameter :: iprec = selected_real_kind(4)
+      integer, parameter :: iprec = selected_real_kind(8)
 com   Dummy arguments
       integer, intent(inout) :: it
       real(kind=prec) :: t0, tf
@@ -30,20 +30,14 @@ com   Dummy arguments
       real(kind=prec), dimension(:,:), allocatable, intent(inout)
      & :: wi
 com   Parameter
-com   =================================================================
-com   IMPORTANT:
-com   You have to set the amount of memory that will be allocated
-com   manually! Therefor set msteps to the expected length of your
-com   solution array.
-com   =================================================================
       real(kind=prec), parameter :: gtol = 1E-4
       real(kind=prec), parameter :: R = 25E-3
       real(kind=prec), parameter :: m = 15E-3
       real(kind=prec), parameter :: I = 0.4*m*R**2
       real(kind=prec), parameter :: I3 = 0.4*m*R**2
       real(kind=prec), parameter :: a = 5E-3
-      integer(kind=iprec), parameter :: msteps = huge(msteps)-1 
 com   Variables
+      integer(kind=iprec) :: msteps 
       integer(kind=iprec) :: neqn, counter, k, j
       logical :: minreached
       real(kind=prec) ::  
@@ -52,7 +46,14 @@ com   Variables
      &k7, k8, xt, dx_dt
 com   Dynamic variables
       real(kind=prec), dimension(:), allocatable :: Gp
-com  
+com   =================================================================
+com   IMPORTANT:
+com   You have to set the amount of memory that will be allocated
+com   manually! Therefor set msteps to the expected length of your
+com   solution array.
+com   =================================================================
+      msteps = 1E6 
+com 
       neqn = 10
       hmin = parms(1)
       hmax = parms(2)
@@ -63,7 +64,7 @@ com
       minreached = .FALSE.
 com   Allocate arrays
       write(*,*) "Allocating memory"
-      write(*,"(E17.10)") msteps
+      write (*,*) msteps
 com      msteps = NINT((tf-t0)/(hmin*1))
       allocate(ti(msteps+1))
       allocate(Gp(msteps+1))
