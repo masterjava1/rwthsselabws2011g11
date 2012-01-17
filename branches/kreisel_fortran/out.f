@@ -3,14 +3,17 @@
       contains
 com
       subroutine kreiselplot(ti, wi, it)
+com   Precision
+      integer, parameter :: prec = selected_real_kind(8,248)
+      integer, parameter :: iprec = selected_real_kind(4)
 com   Dummy variables
-      integer, intent(inout) :: it
-      real(kind=kind(1.0d0)), dimension(:,:), allocatable, intent(in) ::
+      integer(kind=iprec), intent(inout) :: it
+      real(kind=prec), dimension(:,:), allocatable, intent(in) ::
      & wi
-      real(kind=kind(1.0d0)), dimension(:), allocatable, intent(in) :: 
+      real(kind=prec), dimension(:), allocatable, intent(in) :: 
      & ti
 com   Variables
-      integer :: i,nc
+      integer(kind=iprec) :: i,nc
 com
       write(*,*) "Writing solution to kreisel.dat in tecplot format"
 com

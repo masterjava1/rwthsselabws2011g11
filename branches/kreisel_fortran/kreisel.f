@@ -14,8 +14,8 @@ com
 com
       x0 = (/ 0.0, 0.0, 250.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0 /)
       t0 = 0
-      tf = 0.005
-      parms = (/1E-30, 1E-6, 1E-4 /)
+      tf = 0.23
+      parms = (/1E-8, 1E-6, 1E-4 /)
       write(*,*) "Simulation of the TippeTop gyro" 
       call rkv56(wi, ti, it, t0, x0, tf, parms)
       it = it-1
