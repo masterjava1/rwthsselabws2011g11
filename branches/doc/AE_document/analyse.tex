@@ -6,22 +6,61 @@
 
 \subsection{Benutzeranforderungen}
 
-{Das von Herrn Professor Gauger gestellte Simulationsproblem umfasst die Erstellung einer Software ... .
-Im Speziellen wird ein Runge-Kutta56-Verfahren mit adaptiver Schrittweitensteuerung unter Betrachtung einer Erhaltungsgröße (conserved quantity) zur Simulation des Problems verwendet. Die Realisierung der Simulation findet in C++ statt.
+{Das von Herrn Professor Gauger gestellte Simulationsproblem umfasst die Erstellung einer Software zur Simulation eines Stehaufkreisels.
 
-Die Bedienung sowie die Auswertung der Ergebnisse der Simulationssoftware muss durch eine grafische Benutzeroberfläche (GUI) möglich sein.
+Die Simulation soll dabei einmal f\"ur den Fall verschwindender Reibung sowie einmal für den Fall einer reibungsbehafteten Bewegung durchgef\"uhrt werden. 
 
-Die Simulationsergebnisse können in einer ASCII formatierten Datei zur weiteren Verarbeitung und Auswertung exportiert werden.
+Im Speziellen wird ein Runge-Kutta56-Verfahren mit adaptiver Schrittweitensteuerung unter Betrachtung einer Erhaltungsgröße (\textit{conserved quantity}) zur Simulation des Problems verwendet. Die Realisierung der Simulation findet in C++ statt.
 
-(Bilder exportiere?) 
+Die Bedienung sowie die Auswertung der Ergebnisse der Simulationssoftware muss durch eine grafische Benutzeroberfl\"ache (\textit{GUI}) m\"oglich sein.
 
-Durch den modularen Aufbau ist die Wartbarkeit und spätere Modifikationen oder Erweiterungen durch externe Mitarbeiter gewährleistet. 
+Die Simulationsergebnisse k\"onnen in einer \textit{ASCII}-formatierten Datei zur weiteren Verarbeitung und Auswertung exportiert werden.
+
+%(Bilder exportieren?) 
+
+Durch den modularen Aufbau ist die Wartbarkeit und sp\"atere Modifikationen oder Erweiterungen durch externe Mitarbeiter gew\"ahrleistet. 
 
 
-Im weiteren umfasst der Arbeitsauftrag die Erstellung einer Benutzerdokumentation für den Endanwender. 
-\em Rechte-Seite
+Im weiteren umfasst der Arbeitsauftrag die Erstellung einer Benutzerdokumentation f\"ur den Endanwender. 
+\em 
 
-Hauptproblem besteht im Lösen der Rechten Seite (mit rkv56) }
+Das Hauptproblem besteht im L\"osen der Rechten Seite mithilfe des Runge-Kutta56-Verfahrens:
+
+\begin{align*}
+	&
+	\ddot \theta (I+ma^2\sin^2\theta+kma\sin \theta(R-a\cos\theta)(-\dot x_c
+	\sin\phi+\dot y_c \cos \phi-(R-a\cos\theta)\dot \theta))
+	\\&
+	=\underbrace{-(I_3-I)\dot \phi^2\sin\theta\cos\theta}_{=0}-I_3\dot \phi \sin \theta \dot \psi 
+	+ (g+a\dot \theta^2\cos \theta)(-ma\sin\theta - km(R-a\cos \theta)
+	\\&
+	(-\dot x_c \sin \phi +\dot y_c \cos \phi-(R-a\cos\theta)\dot \theta))
+\end{align*}
+\begin{align*}
+	&
+	\ddot \phi I \sin\theta= -\underbrace{(2I-I_3)}_{=I}
+	\dot \phi \dot \theta \cos \theta + I_3\dot \theta \dot \psi
+	\\&
+	-km(g+a\cos\theta\dot\theta^2+a\sin\theta\ddot\theta)
+	(a-R\cos\theta)(\dot x_c\cos \phi +\dot y_c \sin\phi+
+	(a\dot \phi+\dot \psi R)\sin \theta)
+\end{align*}
+\begin{align*}
+	&\ddot \psi I_3=-I_3(\ddot \phi \cos \theta - \dot \phi \dot \theta \sin \theta)
+	\\&
+	-km(g+a\cos\theta\dot\theta^2+a \sin\theta\ddot \theta)(R\sin\theta)
+	(\dot x_c\cos \phi +\dot y_c \sin \phi+(a\dot \phi +\dot \psi R)\sin\theta)
+\end{align*}
+\begin{align*}
+	&m\ddot x_c=-km(g+a\cos\theta\dot \theta^2+a\sin \theta\ddot\theta)
+	(\dot x_c+(a\dot \phi + \dot \psi R)\sin \theta\cos \phi+
+	(a\cos \theta -R)\sin \phi \dot \theta)
+\end{align*}
+\begin{align*}
+	&m\ddot y_c=-km(g+a\cos \theta\dot \theta^2+a \sin \theta \ddot \theta)
+	(\dot y_c+(a\dot \phi + \dot \psi R)\sin \theta \cos \phi
+	+(R-a\cos \theta)\cos\phi \dot \theta)
+\end{align*} }
 
 \subsection{Anwendungsfallanalyse}
 
