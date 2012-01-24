@@ -8,9 +8,9 @@ com   Precision
       integer, parameter :: iprec = selected_real_kind(8)
 com   Dummy variables
       integer(kind=iprec), intent(inout) :: it
-      real(kind=prec), dimension(:,:), allocatable, intent(in) ::
+      real(kind=prec), dimension(:,:), pointer, intent(in) ::
      & wi
-      real(kind=prec), dimension(:), allocatable, intent(in) :: 
+      real(kind=prec), dimension(:), pointer, intent(in) :: 
      & ti
 com   Variables
       integer(kind=iprec) :: i,nc
