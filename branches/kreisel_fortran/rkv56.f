@@ -1,15 +1,18 @@
 com   =================================================================
 com   23.12.2011
 com  
+com   RWTH SSELAB WS11/12
+com
 com   Alexander Fischer
 com   alexander.fischer@rwth-aachen.de
-com
 com
 com
 com   =================================================================
 com
       module RUNGEKUTTA
+      use PRECMOD
       use RIGHTSIDE
+      use ATV01
       implicit none 
       contains
 com   =================================================================
@@ -17,17 +20,14 @@ com   Runge-Kutta 56 solver with adaptable stepping
 com   customized to solve the "TippeTop" ODE-system
 com   =================================================================
       subroutine rkv56(wi, ti, it, t0, x0, tf, parms)
-com   Precision
-      integer, parameter :: prec = selected_real_kind(8,248)
-      integer, parameter :: iprec = selected_real_kind(8)
 com   Dummy arguments
       integer(kind=iprec), intent(inout) :: it
       real(kind=prec) :: t0, tf
       real(kind=prec), dimension(10) :: x0
       real(kind=prec), dimension(3) :: parms
-      real(kind=prec), dimension(:), allocatable, intent(inout) 
+      real(kind=prec), dimension(:), pointer, intent(inout) 
      & :: ti
-      real(kind=prec), dimension(:,:), allocatable, intent(inout)
+      real(kind=prec), dimension(:,:), pointer, intent(inout)
      & :: wi
 com   Parameter
       real(kind=prec), parameter :: gtol = 1E-4
@@ -37,24 +37,15 @@ com   Parameter
       real(kind=prec), parameter :: I3 = 0.4*m*R**2
       real(kind=prec), parameter :: a = 5E-3
 com   Variables
-      integer(kind=iprec) :: msteps 
-      integer(kind=iprec) :: neqn, counter, k, j
-com   TMP DEBUG
+      integer(kind=iprec) :: neqn, counter
+com   TMP WEAK PREC BORDER
       logical :: minreached, mrflag 
       real(kind=prec) ::  
      &lambda, theta, Rk, ny, G, Gc, hmin, hmax, TOL, h, q
       real(kind=prec), dimension(10) :: k1, k2, k3, k4, k5, k6,
      &k7, k8, xt, dx_dt
 com   Dynamic variables
-      real(kind=prec), dimension(:), allocatable :: Gp
-com   =================================================================
-com   IMPORTANT:
-com   You have to set the amount of memory that will be allocated
-com   manually! Therefor set msteps to the expected length of your
-com   solution array.
-com   =================================================================
-      msteps = 1E6 
-com 
+      real(kind=prec), dimension(:), pointer :: Gp
       neqn = 10
       hmin = parms(1)
       hmax = parms(2)
@@ -63,22 +54,16 @@ com
       h = hmax
       it = 2
       minreached = .FALSE.
-com   TMP DEBUG
+com   TMP WEAK PREC BORDER
       mrflag = .FALSE.
-com   Allocate arrays
-      write(*,*) "Allocating memory"
 com      msteps = NINT((tf-t0)/(hmin*1))
-      allocate(ti(msteps+1))
-      allocate(Gp(msteps+1))
-      allocate(wi(10,msteps+1))
-      ti = (/ (0,k=1,msteps+1) /)
-      Gp = (/ (0,k=1,msteps+1) /)
-      do j=1,10
-         do k=1,msteps+1
-            wi(j,k) = 0
-         end do
-      end do
-      write(*,*) "Memory allocation done"
+      allocate(ti(2))
+      allocate(Gp(1))
+      allocate(wi(10,2))
+      ti = (/ 0, 0 /)
+com   Specify number of initial elements 
+      Gp = 0 
+      wi = 0 
 com
       write(*,*) "Performing rkv56"
 com
@@ -92,6 +77,7 @@ com   Conserved quantity
      &cos(theta)+ny) 
 com
       do while (t0 .LT. tf)
+com   DEBUG
          call RHS(dx_dt, t0, x0) 
          k1 = h*dx_dt
          call RHS(dx_dt, t0+h/6, x0+k1/6) 
@@ -127,19 +113,23 @@ com
          G = I*R*lambda*sin(theta)**2+I3*(R*cos(theta)-a)*(lambda*
      &   cos(theta)+ny)
 com
-com   TMP DEBUG
+com   TMP WEAK PREC BORDER
          if (((Rk.LT.TOL).AND.((abs(abs(G)-abs(Gc))/h).LT.gtol))
      &    .OR.mrflag) then
-            if (it.GT.msteps) stop "Need more memory"
+com   DEBUG
+            write(*,*) t0 
             Gp(it-1) = abs(abs(G)-abs(Gc))/h
+            call ias(Gp, it-1)
             Gc = G
             x0 = xt
             t0 = t0+h
             wi(1:neqn, it) = x0
+            call iasc(wi, it)
             ti(it) = t0
+            call ias(ti, it)
             it =  it + 1
             h = hmax
-com   TMP DEBUG
+com   TMP WEAK PREC BORDER
             mrflag = .FALSE.
             minreached = .FALSE.
          end if
@@ -150,14 +140,14 @@ com   TMP DEBUG
 com
          if(minreached) then
             if (Rk.GT.TOL) then
-com   TMP DEBUG
+com   TMP WEAK PREC BORDER
 com               write(*,*) t0
 com               stop "Desired precision needs smaller minimum"//
 com     &         " stepsize! ABORT"
                mrflag = .TRUE.
             endif
             if ((abs(abs(G)-abs(Gc))/h).GT.gtol) then
-com   TMP DEBUG
+com   TMP WEAK PREC BORDER
 com               write(*,*) t0
 com               stop "Conserved quantity needs smaller minimum"//
 com     &         " stepsize! ABORT"

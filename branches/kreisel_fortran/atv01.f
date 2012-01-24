@@ -13,38 +13,51 @@ com
 com   =================================================================
 com
       module ATV01
+      use PRECMOD
       implicit none
+com   Allocation steps
+      integer, parameter :: asteps = 2048000 
       contains
-      subroutine ias(dp_array)
+      subroutine ias(dp_array, used)
+com   Precision
 com   Dummy variable
-      real(kind=kind(1.0d0)), dimension(:), pointer :: dp_array
+      real(kind=prec), dimension(:), pointer :: dp_array
+      integer(kind=iprec), intent(in) :: used 
 com   Variables
       integer :: cs
-      real(kind=kind(1.0d0)), dimension(:), pointer :: datmp 
+      real(kind=prec), dimension(:), pointer :: datmp 
 com
       cs = size(dp_array)
-      allocate(datmp(cs+1))
+      if(used.GT.size(dp_array)) stop "ATV01:ias used > size" 
+      if(used.EQ.size(dp_array)) then
+      allocate(datmp(cs+asteps))
       datmp(1:cs) = dp_array(1:cs)
       deallocate(dp_array)
-      datmp(cs+1) = 0
+      datmp(cs+1:cs+asteps) = 0
       dp_array=>datmp
-com
+      end if
       end subroutine ias
 com
+com
 com   Extend 10,i to 10,i+1
-      subroutine iasc(dp_array)
+      subroutine iasc(dp_array, used)
 com   Dummy variable
-      real(kind=kind(1.0d0)), dimension(:,:), pointer :: dp_array
+      real(kind=prec), dimension(:,:), pointer :: dp_array
+      integer(kind=iprec), intent(in) :: used 
 com   Variables
-      integer :: cs, i
-      real(kind=kind(1.0d0)), dimension(:,:), pointer :: datmp 
+      integer :: cs
+      real(kind=prec), dimension(:,:), pointer :: datmp 
 com
       cs = size(dp_array,2)
-      allocate(datmp(10,cs+1))
+      if(used.GT.size(dp_array,2)) stop "ATV01:iasc used > size" 
+      if(used.EQ.size(dp_array,2)) then
+      allocate(datmp(10,cs+asteps))
       datmp(:,1:cs) = dp_array(:,1:cs)
       deallocate(dp_array)
-      datmp(1:10,cs+1) = (/ (0,i=1,10) /)
+      datmp(1:10,cs+1:cs+asteps) = 0
       dp_array => datmp
-com
+      end if
       end subroutine iasc
+com
+com
       end module ATV01
