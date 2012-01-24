@@ -19,13 +19,13 @@ FILES = precmod.f out.f atv01.f RHS.f rkv56.f kreisel.f
 default: $(FILES) 
 	gfortran $(FILES) $(CF) -o kreisel.exe
 
-intel: RHS.f rkv56.f kreisel.f
+intel: $(FILES) 
 	ifort $(FILES) $(CF) -o kreisel_intel.exe
 
-debug: RHS.f rkv56.f kreisel.f
+debug: $(FILES)
 	gfortran  $(DEBUGFLAGS) $(FILES) -o kreisel_debug.exe
 
-debug_intel: RHS.f rkv56.f kreisel.f
+debug_intel: $(FILES)
 	ifort $(DEBUGFLAGS_INTEL) $(FILES) -o kreisel_debug_intel.exe
 
 clean: 
