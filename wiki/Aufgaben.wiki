@@ -1,4 +1,4 @@
-# Aufgabenverteilung
+#summary Aufgabenverteilung
 
 = Aufgaben =
 
