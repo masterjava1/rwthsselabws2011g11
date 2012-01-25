@@ -1,6 +1,6 @@
 #Aufgabenverteilung
 
-= ToDo Liste =
+= Aufgaben =
 
 Alexander
 || *Dokumentation/Code* || *Was* || *Bis wann* ||
