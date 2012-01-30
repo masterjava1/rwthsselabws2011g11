@@ -1,7 +1,6 @@
 \documentclass{report}
 
 \usepackage{amsmath}
-\usepackage[german]{babel}
 \usepackage{amssymb}
 \usepackage{amsxtra}
 \usepackage[dvips]{epsfig,psfrag}
@@ -11,6 +10,7 @@
 \newcommand{\refsec}[1]{Sektion~\ref{#1}}
 \newcommand{\refeqn}[1]{Gleichung~(\ref{#1})}
 \newcommand{\reffig}[1]{Abbildung~\ref{#1}}
+\renewcommand{\arraystretch}{1.5}
 
 \title{\bf CES Softwareentwicklungspraktikum \\
 {\small Analyse- und Entwurfsdokument} \vspace{1cm}\\
@@ -40,15 +40,15 @@ email: {\tt [lena.blum|alexander.fischer|??]@rwth-aachen.de}
 \include{vorwort}
 \include{analyse}
 \include{entwurf}
-\include{nutzerdoc}
-\include{entwicklerdoc}
+%% \include{nutzerdoc}
+%% \include{entwicklerdoc}
 
 \bibliographystyle{plain}
 \bibliography{analyse_entwurf}
 
-\appendix
+%% \appendix
 
-\include{quellcode}
+%% \include{quellcode}
 
 
 \end{document}

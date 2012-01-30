@@ -7,25 +7,32 @@
 \subsection*{Aufgabenstellung}
 
 {Im Rahmen des Softwareentwicklungspraktikums (CES$\_$SS2012) soll eine Software zur Simulation eines Stehaufkreisels erstellt werden.
-Die Simulation soll dabei einmal f\"ur den Fall verschwindender
-Reibung sowie einmal für den Fall einer reibungsbehafteten Bewegung durchgef\"uhrt werden. 
+Die Simulationssoftware muss sowohl den reibungsfreien, als auch den reibungsbehafteten Fall korrekt simulieren können.
 
 Als Programmiersprache soll C++ verwendet werden. Der Quellcode soll derart strukturiert
-und kommentiert sein, dass sp\"atere Modifikationen und Erweiterungen durch weitere
-Mitarbeiter m\"oglich sind.}
+und kommentiert sein, dass sp\"atere Modifikationen und Erweiterungen durch Dritte m\"oglich sind.}
 
 \section{Projektmanagement}
 \label{sec:1.2}
 
-{\em 
-\begin{tabular}{l l}
+{
+\begin{tabular}{l || l}
+  \hline
+  \hline
 	Protoyping (MATLAB/ FORTRAN)& Alexander \\
+	\hline
 	Dokumentation &Lena \\
-	C++ Code:& \\
-	1. Solver+RHS& Alexander\\
-	2. Schnittstellenspezifikation & William\\
-	3. GUI & Lena \\
-	4. Exception-Handling & William\\
+	\hline
+	\hline
+	Coding:& \\
+	\hline
+	Parameterset, Solver, Solution, Rkv56Parset, Rkv56,\\ DESolution,\textless  \textless interface\textgreater \textgreater RightSide, RHS, Rkv56Modified & Alexander\\
+	\hline
+	\textless \textless interface \textgreater \textgreater OutputInterface, OutputToolbox, Main, ExceptionHandlingModule,\\ MathException, NonCriticalME, CriticalME, ParameterException & William\\
+	\hline
+	GUI & Lena \\
+	\hline
+	\hline
 \end{tabular}
 }
 
