@@ -5,14 +5,12 @@
 \contentsline {chapter}{\numberline {2}Analyse}{3}
 \contentsline {section}{\numberline {2.1}Anforderungsanalyse}{3}
 \contentsline {subsection}{\numberline {2.1.1}Benutzeranforderungen}{3}
-\contentsline {subsection}{\numberline {2.1.2}Anwendungsfallanalyse}{4}
-\contentsline {subsubsection}{Systemanforderungen}{4}
+\contentsline {subsection}{\numberline {2.1.2}Systemanforderungen}{4}
+\contentsline {subsubsection}{Funktionale Anforderungen}{4}
+\contentsline {subsubsection}{Nicht-Funktionale Anforderungen}{4}
+\contentsline {section}{\numberline {2.2}Begriffsanalyse}{4}
 \contentsline {chapter}{\numberline {3}Entwurf}{5}
 \contentsline {section}{\numberline {3.1}Grobentwurf: Subsysteme}{5}
-\contentsline {subsection}{\numberline {3.1.1}Statik}{6}
-\contentsline {subsection}{\numberline {3.1.2}Dynamik}{6}
 \contentsline {section}{\numberline {3.2}Detailentwurf: Klassen}{6}
-\contentsline {subsection}{\numberline {3.2.1}Statik}{7}
-\contentsline {subsection}{\numberline {3.2.2}Dynamik}{7}
 \contentsline {section}{\numberline {3.3}Graphical User Interface}{7}
 \contentsline {section}{\numberline {3.4}Use-Case-Diagramm}{9}
