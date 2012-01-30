@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Statik}{7}
 \contentsline {subsection}{\numberline {3.2.2}Dynamik}{7}
 \contentsline {section}{\numberline {3.3}Graphical User Interface}{7}
-\contentsline {section}{\numberline {3.4}Use-Case-Diagramm}{8}
+\contentsline {section}{\numberline {3.4}Use-Case-Diagramm}{9}
 \contentsline {chapter}{\numberline {4}Benutzerdokumentation}{10}
 \contentsline {chapter}{\numberline {5}Entwicklerdokumentation}{11}
 \contentsline {chapter}{\numberline {A}Quellcode}{12}
