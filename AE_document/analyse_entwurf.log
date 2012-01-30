@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (Web2C 2011) (format=latex 2011.10.13)  30 JAN 2012 20:29
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (Web2C 2011) (format=latex 2011.10.13)  30 JAN 2012 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -92,20 +92,6 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(c:/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2008/07/08 v3.8m The Babel package
-
-(c:/texlive/2011/texmf-dist/tex/generic/babel/germanb.ldf
-Language: germanb 2008/06/01 v2.6m German support from the babel system
-
-(c:/texlive/2011/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count100
-\U@D=\dimen112
-)
-\l@austrian = a dialect from \language\l@german 
-Package babel Info: Making " an active character on input line 102.
-))
 (c:/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
@@ -144,36 +130,36 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 (c:/texlive/2011/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 )
-\epsfxsize=\dimen115
-\epsfysize=\dimen116
+\epsfxsize=\dimen114
+\epsfysize=\dimen115
 )
 (c:/texlive/2011/texmf-dist/tex/latex/psfrag/psfrag.sty
 Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
-\pfg@pcount=\count101
-\pfg@scount=\count102
+\pfg@pcount=\count100
+\pfg@scount=\count101
 \pfg@temp=\write3
 )
 (c:/texlive/2011/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count103
+\lst@mode=\count102
 \lst@gtempboxa=\box28
 \lst@token=\toks20
-\lst@length=\count104
-\lst@currlwidth=\dimen117
-\lst@column=\count105
-\lst@pos=\count106
-\lst@lostspace=\dimen118
-\lst@width=\dimen119
-\lst@newlines=\count107
-\lst@lineno=\count108
-\lst@maxwidth=\dimen120
+\lst@length=\count103
+\lst@currlwidth=\dimen116
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen117
+\lst@width=\dimen118
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen119
 
 (c:/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count109
-\lst@skipnumbers=\count110
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
 \lst@framebox=\box29
 )
 (c:/texlive/2011/texmf-dist/tex/latex/listings/listings.cfg
@@ -181,75 +167,20 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(c:/texlive/2011/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2011/07/31 v0.4p Insert pages of external PDF documents (AM)
+(./analyse_entwurf.aux
 
-(c:/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(c:/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count111
-\calc@Bcount=\count112
-\calc@Adimen=\dimen121
-\calc@Bdimen=\dimen122
-\calc@Askip=\skip46
-\calc@Bskip=\skip47
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count113
-\calc@Cskip=\skip48
-)
-(c:/texlive/2011/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+! Package babel Error: You haven't loaded the option german yet.
 
-(c:/texlive/2011/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \select@language{german}
+                            
+You may proceed, but expect unexpected results
 
-(c:/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
-)
-(c:/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
-)
-(c:/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
-))
-(c:/texlive/2011/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-(c:/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: dvips.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-))
-(c:/texlive/2011/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2011/07/31 v0.4p Pdfpages driver for pdfTeX (AM)
-
-(c:/texlive/2011/texmf-dist/tex/latex/pdfpages/ppnull.def
-File: ppnull.def 2011/07/31 v0.4p Pdfpages dummy driver (AM)
-
-
-Package pdfpages Warning: I will use a dummy \includepdf command
-(pdfpages)                which will NOT insert any pages, because
-(pdfpages)                you are producing DVI output.
-
-))
-\AM@pagebox=\box30
-\AM@toc@title=\toks21
-\c@AM@survey=\count114
-\AM@templatesizebox=\box31
-) (./analyse_entwurf.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux)
-(./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux))
+(./vorwort.aux) (./analyse.aux) (./entwurf.aux) (./nutzerdoc.aux)
+(./entwicklerdoc.aux) (./quellcode.aux))
 \openout1 = `analyse_entwurf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -264,8 +195,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
-\c@lstlisting=\count115
-\AtBeginShipoutBox=\box32
+\c@lstlisting=\count110
 
 (c:/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -287,7 +217,19 @@ Overfull \hbox (13.15018pt too wide) in paragraph at lines 36--36
 
 [1
 
-] (./analyse_entwurf.toc)
+] (./analyse_entwurf.toc
+
+! Package babel Error: You haven't loaded the option german yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \select@language {german}
+                             
+You may proceed, but expect unexpected results
+
+)
 \tf@toc=\write4
 \openout4 = `analyse_entwurf.toc'.
 
@@ -297,7 +239,7 @@ Overfull \hbox (13.15018pt too wide) in paragraph at lines 36--36
 \openout2 = `vorwort.aux'.
 
  (./vorwort.tex
-Kapitel 1.
+Chapter 1.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¶ in font cmr10!
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 29.
@@ -319,11 +261,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--38
 ) [2
 
 
-]
+] [3]
 \openout2 = `analyse.aux'.
 
  (./analyse.tex
-Kapitel 2.
+Chapter 2.
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¶ in font cmr10!
 Missing character: There is no Ã in font cmr10!
@@ -343,7 +285,7 @@ Overfull \hbox (2.4119pt too wide) in paragraph at lines 45--45
 [] 
  []
 
-[3
+[4
 
 
 
@@ -358,31 +300,37 @@ Overfull \hbox (25.35179pt too wide) in paragraph at lines 61--61
  []
 
 
-Overfull \hbox (23.72246pt too wide) in paragraph at lines 65--67
-\OT1/cmr/m/it/10 Anwendungsf[]alle (Sta-tik: An-wen-dungs-fall-dia-gram-me; Dy-
-na-mik: Ak-ti-vit[]atsdiagramme;
+Overfull \hbox (27.12164pt too wide) in paragraph at lines 65--67
+\OT1/cmr/m/it/10 Anwendungsf^^?alle (Statik: An-wen-dungs-fall-dia-gramme; Dy-n
+amik: Ak-tivit^^?atsdiagramme;
  []
 
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¶ in font cmr10!
-) [4]
+
+Overfull \hbox (11.80614pt too wide) in paragraph at lines 70--78
+\OT1/cmr/m/n/10 la-tion ein Fehler auftritt wird der An-wen-der ^^?uber ein Pop
+up-Fenster be-nachrichtigt.
+ []
+
+) [5]
 \openout2 = `entwurf.aux'.
 
  (./entwurf.tex
-Kapitel 3.
-File: figures/RWTH_SSELAB_WS1112_CLASSES.eps Graphic file (type eps)
-<figures/RWTH_SSELAB_WS1112_CLASSES.eps>
+Chapter 3.
+File: figures/StructureDiagGyroSim.eps Graphic file (type eps)
+<figures/StructureDiagGyroSim.eps>
 Overfull \hbox (88.62pt too wide) in paragraph at lines 6--7
 [] 
  []
 
-File: figures/StructureDiagGyroSim.eps Graphic file (type eps)
-<figures/StructureDiagGyroSim.eps>
+File: figures/RWTH_SSELAB_WS1112_CLASSES.eps Graphic file (type eps)
+<figures/RWTH_SSELAB_WS1112_CLASSES.eps>
 Overfull \hbox (88.62pt too wide) in paragraph at lines 14--15
 [] 
  []
 
-[5
+[6
 
 
 
@@ -391,28 +339,28 @@ File: figures/GUIParameterInputForm.eps Graphic file (type eps)
  <figures/GUIParameterInputForm.eps>
 File: figures/GUIDisplayForm.eps Graphic file (type eps)
  <figures/GUIDisplayForm.eps>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 40--42
+Overfull \hbox (88.62pt too wide) in paragraph at lines 41--43
 []
  []
 
 
-Overfull \hbox (88.62pt too wide) in paragraph at lines 40--42
+Overfull \hbox (88.62pt too wide) in paragraph at lines 41--43
 [] 
  []
 
-[6] [7]
+[7] [8]
 File: figures/UseCaseTippeTop.eps Graphic file (type eps)
  <figures/UseCaseTippeTop.eps>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 44--45
+Overfull \hbox (88.62pt too wide) in paragraph at lines 45--46
 [] 
  []
 
-) [8] [9]
+) [9] [10]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
-Kapitel 4.
-) [10
+Chapter 4.
+) [11
 
 
 
@@ -420,13 +368,8 @@ Kapitel 4.
 \openout2 = `entwicklerdoc.aux'.
 
  (./entwicklerdoc.tex
-Kapitel 5.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 4--45
-
- []
-
-[11
+Chapter 5.
+) [12
 
 
 
@@ -435,31 +378,20 @@ No file analyse_entwurf.bbl.
 \openout2 = `quellcode.aux'.
 
 (./quellcode.tex
-Anhang A.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
-(c:/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
-) [12
+Appendix A.
+) [13
 
 
 
-]
-(./analyse_entwurf.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux)
-(./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./analyse_entwurf.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux)
+(./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux)) ) 
 Here is how much of TeX's memory you used:
- 4663 strings out of 493630
- 62039 string characters out of 3146713
- 155189 words of memory out of 3000000
- 7842 multiletter control sequences out of 15000+200000
- 14920 words of font info for 57 fonts, out of 3000000 for 9000
+ 2889 strings out of 493630
+ 37486 string characters out of 3146713
+ 117176 words of memory out of 3000000
+ 6126 multiletter control sequences out of 15000+200000
+ 14198 words of font info for 54 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,16n,39p,293b,1165s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,16n,32p,293b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on analyse_entwurf.dvi (13 pages, 20620 bytes).
+Output written on analyse_entwurf.dvi (14 pages, 15660 bytes).
