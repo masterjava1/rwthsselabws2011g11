@@ -19,8 +19,6 @@ Die Bedienung sowie das ausgeben der Simulationsergebnisse muss durch eine grafi
 
 Die Simulationsergebnisse k\"onnen in einer \textit{ASCII}-formatierten Datei zur weiteren Verarbeitung und Auswertung exportiert werden.
 
-%(Bilder exportieren?) 
-
 Durch den modularen Aufbau ist die Wartbarkeit und sp\"atere Modifikationen oder Erweiterungen durch externe Mitarbeiter gew\"ahrleistet. 
  
 
@@ -69,8 +67,22 @@ Aktivit\"atsdiagramme; Textuelle Beschreibungen laut Vorlage}
 
 \subsubsection{Systemanforderungen}
 
-{Dem Anwender ist es möglich die Simulationsparameter k (Reibung) sowie $ \dot \psi $ (rad/s) \"uber eine grafische Eingabemaske festzulegen. Wenn w\"ahrend der Simulation ein Fehler auftritt wird der Anwender \"uber ein Popup-Fenster benachrichtigt. Nach Durchlauf der Simulation bekommt der Anwender die Simulationsergebnisse \textit{ - $\theta, \psi, \phi, x_c, y_c, \dot \theta, \dot \psi, \dot \phi$ -} in Form von \textit{LineCharts} in eine GUI eingebettet angezeigt. Die Ausgabemaske bietet die M\"oglichkeit die Simulationsergebnisse als ASCII-kodierte Datei zu exportieren.
-Kommt es w\"ahrend der Laufzeit zu einem kritischen \textit{ - erklaerung kritischer Fehler -}Fehler wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das Programm beendet. }
+{Dem Anwender ist es möglich die Simulationsparameter k (Reibung) sowie 
+$ \dot \psi $ (rad/s) \"uber eine grafische Eingabemaske festzulegen. 
+Wenn w\"ahrend der Simulation ein Fehler auftritt wird der Anwender 
+\"uber ein Popup-Fenster benachrichtigt. Nach Durchlauf der Simulation
+bekommt der Anwender die Simulationsergebnisse 
+\textit{ - $\theta, \psi, \phi, x_c, y_c, \dot \theta, \dot \psi, 
+\phi$ -} in Form von \textit{LineCharts} in eine \textit{GUI} 
+eingebettet angezeigt. 
+
+Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei exportiert werden, ebenso besteht f\"ur den Anwender die M\"oglichkeit, die errechneten Werte in Form von Tabellen zu speichern. \medskip
+
+Kommt es w\"ahrend der Laufzeit zu einem kritischen Fehler (ein Fehler, der das korrekte Fortf\"uhren des Programmes undm\"oglich macht) wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das Programm beendet.
+\medskip
+
+
+ }
 
 %% \subsubsection{Benutzerdokumentation}
 
