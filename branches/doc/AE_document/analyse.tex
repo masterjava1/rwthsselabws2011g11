@@ -60,35 +60,41 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 	+(R-a\cos \theta)\cos\phi \dot \theta)
 \end{align*} }
 
-\subsection{Anwendungsfallanalyse}
+\subsection{Systemanforderungen}
+%% \subsection{Anwendungsfallanalyse}
 
-{\em Anwendungsf\"alle (Statik: Anwendungsfalldiagramme; Dynamik: 
-Aktivit\"atsdiagramme; Textuelle Beschreibungen laut Vorlage}
 
-\subsubsection{Systemanforderungen}
+\subsubsection{Funktionale Anforderungen}
 
-{Dem Anwender ist es möglich die Simulationsparameter k (Reibung) sowie 
+{Dem Anwender ist es m\"oglich die Simulationsparameter k (Reibung) sowie 
 $ \dot \psi $ (rad/s) \"uber eine grafische Eingabemaske festzulegen. 
 Wenn w\"ahrend der Simulation ein Fehler auftritt wird der Anwender 
 \"uber ein Popup-Fenster benachrichtigt. Nach Durchlauf der Simulation
 bekommt der Anwender die Simulationsergebnisse 
 \textit{ - $\theta, \psi, \phi, x_c, y_c, \dot \theta, \dot \psi, 
 \phi$ -} in Form von \textit{LineCharts} in eine \textit{GUI} 
-eingebettet angezeigt. 
+eingebettet angezeigt.} 
 
-Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei exportiert werden, ebenso besteht f\"ur den Anwender die M\"oglichkeit, die errechneten Werte in Form von Tabellen zu speichern. \medskip
+Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei exportiert werden. \medskip
 
 Kommt es w\"ahrend der Laufzeit zu einem kritischen Fehler (ein Fehler, der das korrekte Fortf\"uhren des Programmes undm\"oglich macht) wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das Programm beendet.
 \medskip
 
-
- }
+\subsubsection{Nicht-Funktionale Anforderungen}
+{
+Die Exportfunktion der Simulationssoftware schreibt Tecplot konforme ASCII-kodierte Ausgabedateien.
+Vormals exportierte Dateien k\"onnen wieder importiert und geplottet werden.
+Ausgabe einer Statistik \"uber das Verhalten der Erhaltungsgr\"o\ss e und der Kontrollgr\"o\ss en zur Schrittweitensteuerung.  
+}
 
 %% \subsubsection{Benutzerdokumentation}
 
 %% {\em - folgt -}
 
-%% \section{Begriffsanalyse}
+\section{Begriffsanalyse}
+\begin{itemize}
+\item LineChart - \textit{Zwei Achsen Diagramm mit Kartesischem Koordinatensystem. Die einzelnen Datenpunkte sind durch gerade Linien verbunden.} 
+\end{itemize}
 
 %% {\em -folgt -}
 

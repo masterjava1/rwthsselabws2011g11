@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.11.23)  30 JAN 2012 23:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.11.23)  31 JAN 2012 00:26
 entering extended mode
  %&-line parsing enabled.
 **analyse_entwurf.tex
@@ -337,20 +337,12 @@ Overfull \hbox (25.35179pt too wide) in paragraph at lines 61--61
 [] 
  []
 
-
-Overfull \hbox (23.72246pt too wide) in paragraph at lines 65--67
-\OT1/cmr/m/it/10 Anwendungsf[]alle (Statik: An-wen-dungs-fall-dia-gramme; Dy-na
-mik: Ak-tiv-it[]atsdiagramme;
- []
-
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ¶ in font cmr10!
-
-Overfull \hbox (11.80614pt too wide) in paragraph at lines 70--78
-\OT1/cmr/m/n/10 la-tion ein Fehler auftritt wird der An-wen-der []uber ein Popu
-p-Fenster be-nachrichtigt.
- []
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
 ) [4]
 \openout2 = `entwurf.aux'.
 
@@ -394,18 +386,14 @@ Overfull \hbox (88.62pt too wide) in paragraph at lines 45--46
  []
 
 ) [8] [9] (./analyse_entwurf.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux
-))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+)) ) 
 Here is how much of TeX's memory you used:
- 4090 strings out of 495062
- 55073 string characters out of 1182643
- 134492 words of memory out of 3000000
- 7177 multiletter control sequences out of 15000+50000
+ 4106 strings out of 495062
+ 55346 string characters out of 1182643
+ 134481 words of memory out of 3000000
+ 7190 multiletter control sequences out of 15000+50000
  14198 words of font info for 54 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  32i,16n,32p,293b,271s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on analyse_entwurf.dvi (10 pages, 16388 bytes).
+Output written on analyse_entwurf.dvi (10 pages, 15232 bytes).
