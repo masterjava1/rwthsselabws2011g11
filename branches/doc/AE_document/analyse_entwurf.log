@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (Web2C 2011) (format=latex 2011.10.13)  30 JAN 2012 20:10
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (Web2C 2011) (format=latex 2011.10.13)  30 JAN 2012 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -401,12 +401,13 @@ Overfull \hbox (88.62pt too wide) in paragraph at lines 40--42
  []
 
 [6] [7]
+File: figures/UseCaseTippeTop.eps Graphic file (type eps)
+ <figures/UseCaseTippeTop.eps>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 44--45
+[] 
+ []
 
-Package pdfpages Warning: I cannot determine the number of pages of the
-(pdfpages)                included document, while being in DVI mode. You
-(pdfpages)                can use the option `lastpage' to give me a hint.
-
-[8] [9])
+) [8] [9]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
@@ -447,14 +448,18 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 
 ]
 (./analyse_entwurf.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux)
-(./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux)) ) 
+(./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4662 strings out of 493630
- 62009 string characters out of 3146713
+ 4663 strings out of 493630
+ 62039 string characters out of 3146713
  155189 words of memory out of 3000000
  7842 multiletter control sequences out of 15000+200000
  14920 words of font info for 57 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  37i,16n,39p,293b,1165s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on analyse_entwurf.dvi (13 pages, 20496 bytes).
+Output written on analyse_entwurf.dvi (13 pages, 20620 bytes).
