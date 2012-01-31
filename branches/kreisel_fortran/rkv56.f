@@ -45,7 +45,8 @@ com   TMP WEAK PREC BORDER
       real(kind=prec), dimension(10) :: k1, k2, k3, k4, k5, k6,
      &k7, k8, xt, dx_dt
 com   Dynamic variables
-      real(kind=prec), dimension(:), pointer :: Gp
+com   DEBUG
+com      real(kind=prec), dimension(:), pointer :: Gp
       neqn = 10
       hmin = parms(1)
       hmax = parms(2)
@@ -58,11 +59,11 @@ com   TMP WEAK PREC BORDER
       mrflag = .FALSE.
 com      msteps = NINT((tf-t0)/(hmin*1))
       allocate(ti(2))
-      allocate(Gp(1))
+com      allocate(Gp(1))
       allocate(wi(10,2))
       ti = (/ 0, 0 /)
 com   Specify number of initial elements 
-      Gp = 0 
+com      Gp = 0 
       wi = 0 
 com
       write(*,*) "Performing rkv56"
@@ -77,7 +78,6 @@ com   Conserved quantity
      &cos(theta)+ny) 
 com
       do while (t0 .LT. tf)
-com   DEBUG
          call RHS(dx_dt, t0, x0) 
          k1 = h*dx_dt
          call RHS(dx_dt, t0+h/6, x0+k1/6) 
@@ -117,9 +117,9 @@ com   TMP WEAK PREC BORDER
          if (((Rk.LT.TOL).AND.((abs(abs(G)-abs(Gc))/h).LT.gtol))
      &    .OR.mrflag) then
 com   DEBUG
-            write(*,*) t0 
-            Gp(it-1) = abs(abs(G)-abs(Gc))/h
-            call ias(Gp, it-1)
+com            write(*,*) t0 
+com            Gp(it-1) = abs(abs(G)-abs(Gc))/h
+com            call ias(Gp, it-1)
             Gc = G
             x0 = xt
             t0 = t0+h

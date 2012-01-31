@@ -5,18 +5,19 @@ com   Alexander Fischer
 com   alexander.fischer@rwth-aachen.de
 com
 com   Toolbox for array operation, manipulation and allocation
-com   All subroutines work with double precision real objects
 com
-com   + subroutine ias(dp_array)
-com       reallocates the input array (+1; persistent data)
+com   + subroutine ias(dp_array, used)
+com       reallocates the input array (+asteps; persistent data)
 com
+com   + subroutine iasc(dp_array, used)
+com       reallocates the input array (+asteps; persistent data)
 com   =================================================================
 com
       module ATV01
       use PRECMOD
       implicit none
 com   Allocation steps
-      integer, parameter :: asteps = 2048000 
+      integer, parameter :: asteps = 204800
       contains
       subroutine ias(dp_array, used)
 com   Precision
