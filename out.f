@@ -2,7 +2,7 @@
       implicit none
       contains
 com
-      subroutine gyroplot(ti, wi, it)
+      subroutine kreiselplot(ti, wi, it)
 com   Precision
       integer, parameter :: prec = selected_real_kind(8,248)
       integer, parameter :: iprec = selected_real_kind(8)
@@ -45,6 +45,6 @@ com   Format
 com
       write(*,*) "gyro.dat written"
 com
-      end subroutine gyroplot
+      end subroutine kreiselplot
 com
       end module OUTPUT
