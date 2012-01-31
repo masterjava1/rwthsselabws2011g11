@@ -4,9 +4,16 @@
 # RWTH SSELAB WS11/12
 # alexander.fischer@rwth-aachen.de
 #
+#
+#
+# USING THE INTEL-COMPILER CAN LEAD TO PROBLEMS AT THE MOMENT! 
+#
+#
+#
 #=================================================================================
 
 CF = -O2
+CF_INTEL = 
 DEBUGFLAGS = -g -Wall
 DEBUGFLAGS_INTEL =  -g  -check all -warn all,nodec,nointerfaces \
                -traceback -fpe0 -ftrapuv \
@@ -20,7 +27,7 @@ default: $(FILES)
 	gfortran $(FILES) $(CF) -o kreisel.exe
 
 intel: $(FILES) 
-	ifort $(FILES) $(CF) -o kreisel_intel.exe
+	ifort $(FILES) $(CF_INTEL) -o kreisel_intel.exe
 
 debug: $(FILES)
 	gfortran  $(DEBUGFLAGS) $(FILES) -o kreisel_debug.exe
