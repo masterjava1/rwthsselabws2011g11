@@ -2,7 +2,7 @@
       implicit none
       contains
 com
-      subroutine kreiselplot(ti, wi, it)
+      subroutine gyroplot(ti, wi, it)
 com   Precision
       integer, parameter :: prec = selected_real_kind(8,248)
       integer, parameter :: iprec = selected_real_kind(8)
@@ -15,12 +15,12 @@ com   Dummy variables
 com   Variables
       integer(kind=iprec) :: i,nc
 com
-      write(*,*) "Writing solution to kreisel.dat in tecplot format"
+      write(*,*) "Writing solution to gyro.dat in tecplot format"
 com   Format
  30   format('I=',I9,1X,', J=1, K=1, ZONETYPE=Ordered')   
       nc = it 
-      open(unit=7, file='kreisel.dat', status='unknown')
-      write(7,*) 'TITLE     = "Simulation Stehaufkreisel"'
+      open(unit=7, file='gyro.dat', status='unknown')
+      write(7,*) 'TITLE     = "Simulation tippe-top gyro"'
       write(7,*) 'VARIABLES = "t"'
       write(7,*) '"my"'
       write(7,*) '"lambda"'
@@ -43,8 +43,8 @@ com   Format
       end do
       close(7)
 com
-      write(*,*) "kreisel.dat written"
+      write(*,*) "gyro.dat written"
 com
-      end subroutine kreiselplot
+      end subroutine gyroplot
 com
       end module OUTPUT
