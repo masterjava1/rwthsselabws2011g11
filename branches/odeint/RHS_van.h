@@ -2,7 +2,7 @@
   30.03.2012
   desc: Right-side of  Van der Pol's equation 
   rev: 1.0
-  autor: Alexander Fischer
+  author: Alexander Fischer
   ===========================================================================
   dependencies:
     - blitz/array.h 

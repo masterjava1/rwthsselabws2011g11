@@ -2,7 +2,7 @@
   30.03.2012
   desc: high-level interface for ODE solvers with adaptive steppsize controll
   rev: 0.1
-  autor: Alexander Fischer
+  author: Alexander Fischer
   ===========================================================================
   dependencies:
     - blitz/array.h 

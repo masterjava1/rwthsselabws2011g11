@@ -2,7 +2,7 @@
   30.03.2012
   desc: structure for output from ODE solver such as odeint 
   rev: 0.1
-  autor: Alexander Fischer
+  author: Alexander Fischer
   ===========================================================================
   dependencies:
     - Stepper.h  

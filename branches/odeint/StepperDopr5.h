@@ -2,7 +2,7 @@
   30.03.2012
   desc: Dormant-Prince 5 method 
   rev: 0.1
-  autor: Alexander Fischer
+  author: Alexander Fischer
   ===========================================================================
   dependencies:
     - blitz/array.h 
