@@ -21,7 +21,13 @@ int main(int argc, char* argv[]){
    Output<StepperDopr5<RHS_van> > out(20);
    RHS_van d(1.0e-3);
    Odeint<StepperDopr5<RHS_van> > ode(ystart,x1,x2,atol,rtol,h1,hmin,out,d);
-   ode.integrate();
+   try{
+      ode.integrate();
+   }catch(char const* e){
+      cout << e << endl;
+      return 1;
+   }
+   
 
    // Output
    cout << out.xsave(Range(0,out.count-1)) << endl;
