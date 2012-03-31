@@ -2,7 +2,7 @@
   30.03.2012
   desc: base class for all ODE algorithms 
   rev: 0.1
-  autor: Alexander Fischer
+  author: Alexander Fischer
   ===========================================================================
   dependencies:
     - blitz/array.h 
