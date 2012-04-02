@@ -25,8 +25,8 @@ com   Dummy arguments
 com   Parameter
       real(kind=prec), parameter :: g = 9.81 
       real(kind=prec), parameter :: R = 25E-3
-com      real(kind=prec), parameter :: k = 0.3E2
-      real(kind=prec), parameter :: k = 0
+      real(kind=prec), parameter :: k = 0.3E2
+com      real(kind=prec), parameter :: k = 0
       real(kind=prec), parameter :: m = 15E-3
       real(kind=prec), parameter :: I = 0.4*m*R*R
       real(kind=prec), parameter :: I3 = 0.4*m*R*R
@@ -59,9 +59,9 @@ com
 com   dmy_dt
       dx_dt(1) = (-(I3-I)*lambda**2*sin(theta)*cos(theta)-I3*lambda*
      &sin(theta)*ny+(g+a*my**2*cos(theta))*(-m*a*sin(theta)-k*
-     &m*(R-a*cos(theta))*(-xi*sin(phi)+omikron*cos(phi)-
+     &m*(R-a*cos(theta))*(-xi*sin(phi)+omikron*cos(phi)+
      &(R-a*cos(theta))*my)))/(I+m*a**2*sin(theta)**2+k*m*a*
-     &sin(theta)*(R-a*cos(theta))*(-xi*sin(phi)+omikron*cos(phi)-
+     &sin(theta)*(R-a*cos(theta))*(-xi*sin(phi)+omikron*cos(phi)+
      &(R-a*cos(theta))*my))
       if (IsNaN(dx_dt(1))) write(*,*) x 
       if (IsNaN(dx_dt(1))) stop '"dx_dt(1)" is NaN'
@@ -88,7 +88,7 @@ com   dxi_dt
 com
 com   domikron_dt 
       dx_dt(5) = (-k*(g+a*cos(theta)*my**2+a*sin(theta)*dx_dt(1))*
-     &(omikron+(a*lambda+ny*R)*sin(theta)*cos(phi)+(R-a*cos(theta))*
+     &(omikron+(a*lambda+ny*R)*sin(theta)*sin(phi)+(R-a*cos(theta))*
      &cos(phi)*my))
       if (IsNaN(dx_dt(5))) stop '"dx_dt(5)" is NaN'
 com  
