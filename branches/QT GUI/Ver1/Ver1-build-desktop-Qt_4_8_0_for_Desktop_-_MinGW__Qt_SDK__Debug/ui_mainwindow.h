@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon 2. Apr 12:17:10 2012
+** Created: Mon 2. Apr 14:29:31 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -52,6 +52,13 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(250, 200);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(250, 200));
+        MainWindow->setMaximumSize(QSize(250, 200));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         psidot0 = new QLineEdit(centralWidget);
@@ -116,7 +123,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Parameters", 0, QApplication::UnicodeUTF8));
         psidot0->setText(QApplication::translate("MainWindow", "250", 0, QApplication::UnicodeUTF8));
         theta0->setText(QApplication::translate("MainWindow", "0.1", 0, QApplication::UnicodeUTF8));
         a->setText(QApplication::translate("MainWindow", "0.5", 0, QApplication::UnicodeUTF8));

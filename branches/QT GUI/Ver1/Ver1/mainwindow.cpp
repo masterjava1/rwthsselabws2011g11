@@ -13,6 +13,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+
 void MainWindow::FrictionChange()
 {
     if (ui->k->isEnabled())
