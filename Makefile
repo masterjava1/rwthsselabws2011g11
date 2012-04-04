@@ -9,8 +9,8 @@
 CF = -O2
 DCF = -Wall -g
 
-FILES = RHS_van.h RHS_van.cpp StepperBase.h StepperBase.cpp StepperDopr5.h \
-        Output.h Odeint.h main.cpp
+FILES = RHS_van.cpp StepperBase.cpp  \
+        main.cpp
 
 #==============================================================================
 
