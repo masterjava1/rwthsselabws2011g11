@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mydialog.ui'
 **
-** Created: Wed Apr 4 15:42:55 2012
+** Created: Wed Apr 4 18:13:33 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -40,7 +40,7 @@ public:
     QPushButton *cancel_button;
     QLineEdit *TolConQual;
     QLineEdit *a;
-    QLineEdit *lineEdit_3;
+    QLineEdit *m;
     QLineEdit *k;
     QLineEdit *R;
     QLineEdit *psidot0;
@@ -95,9 +95,9 @@ public:
         a = new QLineEdit(MyDialog);
         a->setObjectName(QString::fromUtf8("a"));
         a->setGeometry(QRect(220, 120, 113, 27));
-        lineEdit_3 = new QLineEdit(MyDialog);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setGeometry(QRect(220, 150, 113, 27));
+        m = new QLineEdit(MyDialog);
+        m->setObjectName(QString::fromUtf8("m"));
+        m->setGeometry(QRect(220, 150, 113, 27));
         k = new QLineEdit(MyDialog);
         k->setObjectName(QString::fromUtf8("k"));
         k->setGeometry(QRect(220, 180, 113, 27));
@@ -112,6 +112,7 @@ public:
         theta0->setGeometry(QRect(220, 60, 113, 27));
 
         retranslateUi(MyDialog);
+        QObject::connect(Friction, SIGNAL(clicked()), MyDialog, SLOT(FrictionCheck()));
 
         QMetaObject::connectSlotsByName(MyDialog);
     } // setupUi
@@ -133,7 +134,7 @@ public:
         cancel_button->setText(QApplication::translate("MyDialog", "Cancel", 0, QApplication::UnicodeUTF8));
         TolConQual->setText(QApplication::translate("MyDialog", "10^-6", 0, QApplication::UnicodeUTF8));
         a->setText(QApplication::translate("MyDialog", "0.5", 0, QApplication::UnicodeUTF8));
-        lineEdit_3->setText(QApplication::translate("MyDialog", "15", 0, QApplication::UnicodeUTF8));
+        m->setText(QApplication::translate("MyDialog", "15", 0, QApplication::UnicodeUTF8));
         k->setText(QApplication::translate("MyDialog", "0.3", 0, QApplication::UnicodeUTF8));
         R->setText(QApplication::translate("MyDialog", "2.5", 0, QApplication::UnicodeUTF8));
         psidot0->setText(QApplication::translate("MyDialog", "250", 0, QApplication::UnicodeUTF8));

@@ -13,6 +13,10 @@ public:
     MyDialog(QWidget *parent = 0);
     ~MyDialog();
 
+public slots:
+    void FrictionCheck();
+    void ParameterConfirm();
+
 protected:
     void changeEvent(QEvent *e);
 
