@@ -207,7 +207,7 @@
     <string>0.5</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="m">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -274,5 +274,26 @@
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Friction</sender>
+   <signal>clicked()</signal>
+   <receiver>MyDialog</receiver>
+   <slot>FrictionCheck()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>FrictionCheck()</slot>
+  <slot>ParameterConfirm()</slot>
+ </slots>
 </ui>

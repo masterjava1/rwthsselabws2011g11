@@ -5,8 +5,17 @@ TARGET = Test1
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
-    mydialog.cpp
+    exportdialog.cpp \
+    parameter.cpp \
+    warningdialog.cpp \
+    errordialog.cpp
 HEADERS += mainwindow.h \
-    mydialog.h
+    exportdialog.h \
+    parameter.h \
+    warningdialog.h \
+    errordialog.h
 FORMS += mainwindow.ui \
-    mydialog.ui
+    exportdialog.ui \
+    parameter.ui \
+    warningdialog.ui \
+    errordialog.ui

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Apr 4 15:25:17 2012
+** Created: Wed Apr 4 16:50:32 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -20,7 +20,6 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QPushButton>
 #include <QtGui/QSlider>
-#include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
 #include <QtGui/QWidget>
 
@@ -36,141 +35,172 @@ public:
     QGraphicsView *graphicsView;
     QGraphicsView *graphicsView_2;
     QGraphicsView *graphicsView_4;
-    QLabel *G_text;
-    QLabel *G;
-    QLabel *t_text;
-    QLabel *t;
     QWidget *Derivatives;
     QGraphicsView *graphicsView_5;
     QGraphicsView *graphicsView_6;
     QGraphicsView *graphicsView_7;
     QGraphicsView *graphicsView_8;
-    QLabel *G_text_2;
-    QLabel *t_2;
-    QLabel *t_text_2;
-    QLabel *G_2;
     QWidget *Positions;
-    QLabel *t_3;
     QGraphicsView *graphicsView_9;
-    QLabel *G_3;
     QGraphicsView *graphicsView_10;
     QGraphicsView *graphicsView_11;
     QGraphicsView *graphicsView_12;
-    QLabel *G_text_3;
-    QLabel *t_text_3;
     QSlider *t_slider;
-    QPushButton *viewparameter_button;
+    QPushButton *changeparameter_button;
     QPushButton *Simulate_button;
-    QStatusBar *statusBar;
+    QPushButton *Import_button;
+    QPushButton *Export_button;
+    QLabel *t_text;
+    QLabel *G;
+    QLabel *t;
+    QLabel *G_text;
+    QLabel *m_text;
+    QLabel *k_text;
+    QLabel *Tolerance_text;
+    QLabel *R_text;
+    QLabel *a_text;
+    QLabel *theta0_text;
+    QLabel *psidot0_text;
+    QLabel *psidot0;
+    QLabel *theta0;
+    QLabel *R;
+    QLabel *a;
+    QLabel *m;
+    QLabel *k;
+    QLabel *Tolerance;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(540, 558);
+        MainWindow->resize(540, 543);
+        MainWindow->setMinimumSize(QSize(540, 543));
+        MainWindow->setMaximumSize(QSize(540, 543));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 20, 511, 441));
+        tabWidget->setGeometry(QRect(10, 50, 511, 411));
         Angles = new QWidget();
         Angles->setObjectName(QString::fromUtf8("Angles"));
         graphicsView_3 = new QGraphicsView(Angles);
         graphicsView_3->setObjectName(QString::fromUtf8("graphicsView_3"));
-        graphicsView_3->setGeometry(QRect(10, 230, 231, 171));
+        graphicsView_3->setGeometry(QRect(10, 190, 231, 171));
         graphicsView = new QGraphicsView(Angles);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(10, 50, 231, 171));
+        graphicsView->setGeometry(QRect(10, 10, 231, 171));
         graphicsView_2 = new QGraphicsView(Angles);
         graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(250, 50, 231, 171));
+        graphicsView_2->setGeometry(QRect(250, 10, 231, 171));
         graphicsView_4 = new QGraphicsView(Angles);
         graphicsView_4->setObjectName(QString::fromUtf8("graphicsView_4"));
-        graphicsView_4->setGeometry(QRect(250, 230, 231, 171));
-        G_text = new QLabel(Angles);
-        G_text->setObjectName(QString::fromUtf8("G_text"));
-        G_text->setGeometry(QRect(10, 20, 81, 16));
-        G = new QLabel(Angles);
-        G->setObjectName(QString::fromUtf8("G"));
-        G->setGeometry(QRect(90, 20, 31, 16));
-        t_text = new QLabel(Angles);
-        t_text->setObjectName(QString::fromUtf8("t_text"));
-        t_text->setGeometry(QRect(130, 20, 91, 16));
-        t = new QLabel(Angles);
-        t->setObjectName(QString::fromUtf8("t"));
-        t->setGeometry(QRect(230, 20, 46, 16));
+        graphicsView_4->setGeometry(QRect(250, 190, 231, 171));
         tabWidget->addTab(Angles, QString());
         Derivatives = new QWidget();
         Derivatives->setObjectName(QString::fromUtf8("Derivatives"));
         graphicsView_5 = new QGraphicsView(Derivatives);
         graphicsView_5->setObjectName(QString::fromUtf8("graphicsView_5"));
-        graphicsView_5->setGeometry(QRect(10, 230, 231, 171));
+        graphicsView_5->setGeometry(QRect(10, 190, 231, 171));
         graphicsView_6 = new QGraphicsView(Derivatives);
         graphicsView_6->setObjectName(QString::fromUtf8("graphicsView_6"));
-        graphicsView_6->setGeometry(QRect(10, 50, 231, 171));
+        graphicsView_6->setGeometry(QRect(10, 10, 231, 171));
         graphicsView_7 = new QGraphicsView(Derivatives);
         graphicsView_7->setObjectName(QString::fromUtf8("graphicsView_7"));
-        graphicsView_7->setGeometry(QRect(250, 50, 231, 171));
+        graphicsView_7->setGeometry(QRect(250, 10, 231, 171));
         graphicsView_8 = new QGraphicsView(Derivatives);
         graphicsView_8->setObjectName(QString::fromUtf8("graphicsView_8"));
-        graphicsView_8->setGeometry(QRect(250, 230, 231, 171));
-        G_text_2 = new QLabel(Derivatives);
-        G_text_2->setObjectName(QString::fromUtf8("G_text_2"));
-        G_text_2->setGeometry(QRect(10, 20, 81, 16));
-        t_2 = new QLabel(Derivatives);
-        t_2->setObjectName(QString::fromUtf8("t_2"));
-        t_2->setGeometry(QRect(230, 20, 46, 16));
-        t_text_2 = new QLabel(Derivatives);
-        t_text_2->setObjectName(QString::fromUtf8("t_text_2"));
-        t_text_2->setGeometry(QRect(130, 20, 91, 16));
-        G_2 = new QLabel(Derivatives);
-        G_2->setObjectName(QString::fromUtf8("G_2"));
-        G_2->setGeometry(QRect(90, 20, 31, 16));
+        graphicsView_8->setGeometry(QRect(250, 190, 231, 171));
         tabWidget->addTab(Derivatives, QString());
         Positions = new QWidget();
         Positions->setObjectName(QString::fromUtf8("Positions"));
-        t_3 = new QLabel(Positions);
-        t_3->setObjectName(QString::fromUtf8("t_3"));
-        t_3->setGeometry(QRect(230, 20, 46, 16));
         graphicsView_9 = new QGraphicsView(Positions);
         graphicsView_9->setObjectName(QString::fromUtf8("graphicsView_9"));
-        graphicsView_9->setGeometry(QRect(250, 50, 231, 171));
-        G_3 = new QLabel(Positions);
-        G_3->setObjectName(QString::fromUtf8("G_3"));
-        G_3->setGeometry(QRect(90, 20, 31, 16));
+        graphicsView_9->setGeometry(QRect(250, 10, 231, 171));
         graphicsView_10 = new QGraphicsView(Positions);
         graphicsView_10->setObjectName(QString::fromUtf8("graphicsView_10"));
-        graphicsView_10->setGeometry(QRect(10, 50, 231, 171));
+        graphicsView_10->setGeometry(QRect(10, 10, 231, 171));
         graphicsView_11 = new QGraphicsView(Positions);
         graphicsView_11->setObjectName(QString::fromUtf8("graphicsView_11"));
-        graphicsView_11->setGeometry(QRect(250, 230, 231, 171));
+        graphicsView_11->setGeometry(QRect(250, 190, 231, 171));
         graphicsView_12 = new QGraphicsView(Positions);
         graphicsView_12->setObjectName(QString::fromUtf8("graphicsView_12"));
-        graphicsView_12->setGeometry(QRect(10, 230, 231, 171));
-        G_text_3 = new QLabel(Positions);
-        G_text_3->setObjectName(QString::fromUtf8("G_text_3"));
-        G_text_3->setGeometry(QRect(10, 20, 81, 16));
-        t_text_3 = new QLabel(Positions);
-        t_text_3->setObjectName(QString::fromUtf8("t_text_3"));
-        t_text_3->setGeometry(QRect(130, 20, 91, 16));
+        graphicsView_12->setGeometry(QRect(10, 190, 231, 171));
         tabWidget->addTab(Positions, QString());
         t_slider = new QSlider(centralWidget);
         t_slider->setObjectName(QString::fromUtf8("t_slider"));
         t_slider->setGeometry(QRect(20, 470, 231, 19));
         t_slider->setOrientation(Qt::Horizontal);
-        viewparameter_button = new QPushButton(centralWidget);
-        viewparameter_button->setObjectName(QString::fromUtf8("viewparameter_button"));
-        viewparameter_button->setGeometry(QRect(410, 10, 111, 23));
+        changeparameter_button = new QPushButton(centralWidget);
+        changeparameter_button->setObjectName(QString::fromUtf8("changeparameter_button"));
+        changeparameter_button->setGeometry(QRect(380, 50, 141, 23));
         Simulate_button = new QPushButton(centralWidget);
         Simulate_button->setObjectName(QString::fromUtf8("Simulate_button"));
-        Simulate_button->setGeometry(QRect(420, 470, 75, 23));
+        Simulate_button->setGeometry(QRect(420, 470, 92, 27));
+        Import_button = new QPushButton(centralWidget);
+        Import_button->setObjectName(QString::fromUtf8("Import_button"));
+        Import_button->setGeometry(QRect(320, 500, 92, 27));
+        Export_button = new QPushButton(centralWidget);
+        Export_button->setObjectName(QString::fromUtf8("Export_button"));
+        Export_button->setGeometry(QRect(420, 500, 92, 27));
+        t_text = new QLabel(centralWidget);
+        t_text->setObjectName(QString::fromUtf8("t_text"));
+        t_text->setGeometry(QRect(140, 500, 91, 16));
+        G = new QLabel(centralWidget);
+        G->setObjectName(QString::fromUtf8("G"));
+        G->setGeometry(QRect(100, 500, 31, 16));
+        t = new QLabel(centralWidget);
+        t->setObjectName(QString::fromUtf8("t"));
+        t->setGeometry(QRect(240, 500, 46, 16));
+        G_text = new QLabel(centralWidget);
+        G_text->setObjectName(QString::fromUtf8("G_text"));
+        G_text->setGeometry(QRect(20, 500, 81, 16));
+        m_text = new QLabel(centralWidget);
+        m_text->setObjectName(QString::fromUtf8("m_text"));
+        m_text->setGeometry(QRect(270, 0, 31, 17));
+        k_text = new QLabel(centralWidget);
+        k_text->setObjectName(QString::fromUtf8("k_text"));
+        k_text->setGeometry(QRect(270, 20, 21, 17));
+        Tolerance_text = new QLabel(centralWidget);
+        Tolerance_text->setObjectName(QString::fromUtf8("Tolerance_text"));
+        Tolerance_text->setGeometry(QRect(400, 0, 81, 17));
+        R_text = new QLabel(centralWidget);
+        R_text->setObjectName(QString::fromUtf8("R_text"));
+        R_text->setGeometry(QRect(160, 0, 31, 17));
+        a_text = new QLabel(centralWidget);
+        a_text->setObjectName(QString::fromUtf8("a_text"));
+        a_text->setGeometry(QRect(160, 20, 31, 17));
+        theta0_text = new QLabel(centralWidget);
+        theta0_text->setObjectName(QString::fromUtf8("theta0_text"));
+        theta0_text->setGeometry(QRect(10, 20, 61, 17));
+        psidot0_text = new QLabel(centralWidget);
+        psidot0_text->setObjectName(QString::fromUtf8("psidot0_text"));
+        psidot0_text->setGeometry(QRect(10, 0, 61, 20));
+        psidot0 = new QLabel(centralWidget);
+        psidot0->setObjectName(QString::fromUtf8("psidot0"));
+        psidot0->setGeometry(QRect(80, 0, 59, 17));
+        theta0 = new QLabel(centralWidget);
+        theta0->setObjectName(QString::fromUtf8("theta0"));
+        theta0->setGeometry(QRect(80, 20, 59, 17));
+        R = new QLabel(centralWidget);
+        R->setObjectName(QString::fromUtf8("R"));
+        R->setGeometry(QRect(190, 0, 59, 17));
+        a = new QLabel(centralWidget);
+        a->setObjectName(QString::fromUtf8("a"));
+        a->setGeometry(QRect(190, 20, 59, 17));
+        m = new QLabel(centralWidget);
+        m->setObjectName(QString::fromUtf8("m"));
+        m->setGeometry(QRect(300, 0, 59, 17));
+        k = new QLabel(centralWidget);
+        k->setObjectName(QString::fromUtf8("k"));
+        k->setGeometry(QRect(300, 20, 59, 17));
+        Tolerance = new QLabel(centralWidget);
+        Tolerance->setObjectName(QString::fromUtf8("Tolerance"));
+        Tolerance->setGeometry(QRect(480, 0, 59, 17));
         MainWindow->setCentralWidget(centralWidget);
-        statusBar = new QStatusBar(MainWindow);
-        statusBar->setObjectName(QString::fromUtf8("statusBar"));
-        MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
-        QObject::connect(viewparameter_button, SIGNAL(clicked()), MainWindow, SLOT(buttonClicked()));
+        QObject::connect(Export_button, SIGNAL(clicked()), MainWindow, SLOT(ExportbuttonClicked()));
+        QObject::connect(changeparameter_button, SIGNAL(clicked()), MainWindow, SLOT(ParameterbuttonClicked()));
 
         tabWidget->setCurrentIndex(2);
 
@@ -181,23 +211,31 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
-        G_text->setText(QApplication::translate("MainWindow", "Current G = ", 0, QApplication::UnicodeUTF8));
-        G->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
-        t_text->setText(QApplication::translate("MainWindow", "Current t [s] = ", 0, QApplication::UnicodeUTF8));
-        t->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Angles), QApplication::translate("MainWindow", "Angles", 0, QApplication::UnicodeUTF8));
-        G_text_2->setText(QApplication::translate("MainWindow", "Current G = ", 0, QApplication::UnicodeUTF8));
-        t_2->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
-        t_text_2->setText(QApplication::translate("MainWindow", "Current t [s] = ", 0, QApplication::UnicodeUTF8));
-        G_2->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Derivatives), QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
-        t_3->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
-        G_3->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
-        G_text_3->setText(QApplication::translate("MainWindow", "Current G = ", 0, QApplication::UnicodeUTF8));
-        t_text_3->setText(QApplication::translate("MainWindow", "Current t [s] = ", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Positions), QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));
-        viewparameter_button->setText(QApplication::translate("MainWindow", "View Parameter", 0, QApplication::UnicodeUTF8));
+        changeparameter_button->setText(QApplication::translate("MainWindow", "Change Parameter", 0, QApplication::UnicodeUTF8));
         Simulate_button->setText(QApplication::translate("MainWindow", "Simulate", 0, QApplication::UnicodeUTF8));
+        Import_button->setText(QApplication::translate("MainWindow", "Import Data", 0, QApplication::UnicodeUTF8));
+        Export_button->setText(QApplication::translate("MainWindow", "Export Data", 0, QApplication::UnicodeUTF8));
+        t_text->setText(QApplication::translate("MainWindow", "Current t [s] = ", 0, QApplication::UnicodeUTF8));
+        G->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
+        t->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
+        G_text->setText(QApplication::translate("MainWindow", "Current G = ", 0, QApplication::UnicodeUTF8));
+        m_text->setText(QApplication::translate("MainWindow", "m = ", 0, QApplication::UnicodeUTF8));
+        k_text->setText(QApplication::translate("MainWindow", "k = ", 0, QApplication::UnicodeUTF8));
+        Tolerance_text->setText(QApplication::translate("MainWindow", "Tolerance = ", 0, QApplication::UnicodeUTF8));
+        R_text->setText(QApplication::translate("MainWindow", "R = ", 0, QApplication::UnicodeUTF8));
+        a_text->setText(QApplication::translate("MainWindow", "a = ", 0, QApplication::UnicodeUTF8));
+        theta0_text->setText(QApplication::translate("MainWindow", "theta0 = ", 0, QApplication::UnicodeUTF8));
+        psidot0_text->setText(QApplication::translate("MainWindow", "psidot0 = ", 0, QApplication::UnicodeUTF8));
+        psidot0->setText(QString());
+        theta0->setText(QString());
+        R->setText(QString());
+        a->setText(QString());
+        m->setText(QString());
+        k->setText(QString());
+        Tolerance->setText(QString());
     } // retranslateUi
 
 };
