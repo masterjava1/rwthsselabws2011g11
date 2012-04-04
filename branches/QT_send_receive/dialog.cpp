@@ -29,5 +29,10 @@ void Dialog::changeEvent(QEvent *e)
 void Dialog::on_actionSendText_triggered()
 {
     emit(textInserted(ui->plainTextEdit->toPlainText()));
+}
+
+void Dialog::on_actionCloseTriggered_triggered()
+{
+    emit(closeW());
     this->close();
 }

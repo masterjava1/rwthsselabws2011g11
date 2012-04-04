@@ -32,6 +32,7 @@ void MainWindow::on_actionOpenWidget_triggered()
         myDialog = new Dialog(this);
         myDialog->setFixedSize(myDialog->size());
         QObject::connect(myDialog,SIGNAL(textInserted(QString)),this,SLOT(recieveText(QString)));
+        QObject::connect(myDialog,SIGNAL(closeW()),this,SLOT(widgetClosed()));
         myDialog->show();
         widgetOpen = true;
     }
@@ -39,5 +40,8 @@ void MainWindow::on_actionOpenWidget_triggered()
 
 void MainWindow::recieveText(QString ss){
     ui->textEdit->setText(ss);
+}
+
+void MainWindow::widgetClosed(){
     widgetOpen = false;
 }

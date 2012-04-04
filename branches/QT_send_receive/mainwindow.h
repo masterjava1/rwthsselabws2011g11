@@ -28,6 +28,7 @@ private slots:
 
 public slots:
     void recieveText(QString ss);
+    void widgetClosed();
 };
 
 #endif // MAINWINDOW_H

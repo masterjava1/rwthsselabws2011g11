@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Wed Apr 4 23:01:46 2012
+** Created: Wed Apr 4 23:28:41 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,13 +33,14 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x08,
       47,   44,   11,   11, 0x0a,
+      68,   11,   11,   11, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0on_actionOpenWidget_triggered()\0"
-    "ss\0recieveText(QString)\0"
+    "ss\0recieveText(QString)\0widgetClosed()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -73,9 +74,10 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: on_actionOpenWidget_triggered(); break;
         case 1: recieveText((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 2: widgetClosed(); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

@@ -21,8 +21,10 @@ private:
 
 signals:
     void textInserted(QString ss);
+    void closeW();
 
 private slots:
+    void on_actionCloseTriggered_triggered();
     void on_actionSendText_triggered();
 };
 
