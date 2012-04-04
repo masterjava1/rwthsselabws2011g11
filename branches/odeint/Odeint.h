@@ -30,7 +30,8 @@ class Odeint {
    int nvar;
    double x1, x2, hmin;
    bool dense;  // true if dense output is requested by out
-   Array<double,1> y, dydx;
+   Array<double,1> y;
+   Array<double,1> dydx;
    Array<double,1> &ystart;
    Output<Stepper> &out;
    typename Stepper::Dtype &derivs;  // get the type of derivs from the stepper
@@ -53,9 +54,9 @@ template<typename Stepper>
 Odeint<Stepper>::Odeint(Array<double,1> &ystartt, const double xx1, const double xx2,
  const double atol, const double rtol, const double h1, const double hminn, 
  Output<Stepper> &outt, typename Stepper::Dtype &derivss) 
-: nvar(ystartt.size()), y(nvar), dydx(nvar), ystart(ystartt), x(xx1), nok(0), 
+ : nvar(ystartt.size()), y(nvar), dydx(nvar), ystart(ystartt), x(xx1), nok(0), 
  nbad(0), x1(xx1), x2(xx2), hmin(hminn), dense(outt.dense), out(outt), 
- derivs(derivss), s(y, dydx, x, atol, rtol, dense) {
+ s(y, dydx, x, atol, rtol, dense), derivs(derivss) {
    EPS=numeric_limits<double>::epsilon();
    h=SIGN(h1, x2-x1);
    for (int i=0;i<nvar;i++) y(i)=ystart(i);

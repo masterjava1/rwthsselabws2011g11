@@ -19,6 +19,9 @@ class RHS_van {
    double eps;
    RHS_van(double epss);
    void operator() (const double x, Array<double,1> &y, Array<double,1> &dydx) {
+// DEBUG
+      if(y.size()<2) throw "RHS: y-Size < 2";
+      if(dydx.size()<2) throw "RHS: dydx-Size < 2";
       dydx(0) = y(1);
       dydx(1) = ((1.0-y(0)*y(0))*y(1)-y(0))/eps;
    }

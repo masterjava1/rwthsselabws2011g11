@@ -3,7 +3,7 @@
 #include "Odeint.h"
 #include "Output.h"
 #include "RHS_van.h"
-#include "StepperDopr5.h"
+#include "StepperDopr853.h"
 
 using namespace blitz;
 
@@ -18,9 +18,9 @@ int main(int argc, char* argv[]){
    Array<double,1> ystart(nvar);
    ystart(0)=2.0;
    ystart(1)=0.0;
-   Output<StepperDopr5<RHS_van> > out(20);
+   Output<StepperDopr853<RHS_van> > out(20);
    RHS_van d(1.0e-3);
-   Odeint<StepperDopr5<RHS_van> > ode(ystart,x1,x2,atol,rtol,h1,hmin,out,d);
+   Odeint<StepperDopr853<RHS_van> > ode(ystart,x1,x2,atol,rtol,h1,hmin,out,d);
    try{
       ode.integrate();
    }catch(char const* e){

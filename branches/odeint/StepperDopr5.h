@@ -40,12 +40,20 @@ class StepperDopr5 : public StepperBase {
 };
 
 template <typename D>
-StepperDopr5<D>::StepperDopr5(Array<double,1> &yy,Array<double,1> &dydxx,double &xx,
-	const double atoll,const double rtoll,bool dens) :
-	StepperBase(yy,dydxx,xx,atoll,rtoll,dens), k2(n),k3(n),k4(n),k5(n),k6(n),
-	rcont1(n),rcont2(n),rcont3(n),rcont4(n),rcont5(n),dydxnew(n) {
-        // numeric_limits???
+StepperDopr5<D>::StepperDopr5(Array<double,1> &yy,Array<double,1> &dydxx,double &xx, const double atoll,const double rtoll,bool dens) :
+	StepperBase(yy,dydxx,xx,atoll,rtoll,dens) {
 	EPS=numeric_limits<double>::epsilon();
+        k2.resize(n);
+        k3.resize(n);
+        k4.resize(n);
+        k5.resize(n);
+        k6.resize(n);
+        rcont1.resize(n);
+        rcont2.resize(n);
+        rcont3.resize(n);
+        rcont4.resize(n);
+        rcont5.resize(n);
+        dydxnew.resize(n);
 }
 
 template <typename D>
