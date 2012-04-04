@@ -1,16 +1,12 @@
 # -------------------------------------------------
-# Project created by QtCreator 2012-04-02T13:36:24
+# Project created by QtCreator 2012-04-04T15:24:10
 # -------------------------------------------------
-QT += core \
-    gui
-TARGET = untitled
+TARGET = Test1
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
-    ParametersWindow.cpp
+    mydialog.cpp
 HEADERS += mainwindow.h \
-    ParametersWindow.h \
-    MyDialog.h
+    mydialog.h
 FORMS += mainwindow.ui \
-    ParametersWindow.ui
-RESOURCES += 
+    mydialog.ui
