@@ -30,6 +30,7 @@ void MainWindow::on_actionOpenWidget_triggered()
 {
     if(!widgetOpen){
         myDialog = new Dialog(this);
+        myDialog->setFixedSize(myDialog->size());
         QObject::connect(myDialog,SIGNAL(textInserted(QString)),this,SLOT(recieveText(QString)));
         myDialog->show();
         widgetOpen = true;
