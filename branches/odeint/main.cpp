@@ -1,9 +1,11 @@
 #include <iostream>
+#include <fstream>
 #include <blitz/array.h>
 #include "Odeint.h"
 #include "Output.h"
 #include "RHS_van.h"
 #include "StepperDopr853.h"
+#include "tecplotter.cpp"
 
 using namespace blitz;
 
@@ -30,7 +32,7 @@ int main(int argc, char* argv[]){
    
 
    // Output
-   cout << out.xsave(Range(0,out.count-1)) << endl;
-   cout << out.ysave(Range(0,1),Range(0,out.count-1)) << endl;
+
+   tecplotter(out);
    return 0;
 }
