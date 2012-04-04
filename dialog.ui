@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Sender</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -27,9 +27,16 @@
      <widget class="QPlainTextEdit" name="plainTextEdit"/>
     </item>
     <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>OK</string>
+       <string>Close</string>
       </property>
      </widget>
     </item>
@@ -40,13 +47,34 @@
     <string>sendText</string>
    </property>
   </action>
+  <action name="actionCloseTriggered">
+   <property name="text">
+    <string>closeTriggered</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>pushButton_2</sender>
    <signal>clicked()</signal>
    <receiver>actionSendText</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>actionCloseTriggered</receiver>
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">

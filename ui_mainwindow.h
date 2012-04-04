@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Apr 4 22:45:37 2012
+** Created: Wed Apr 4 23:28:39 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -54,6 +54,8 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         textEdit = new QTextEdit(centralWidget);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setAcceptDrops(false);
+        textEdit->setReadOnly(true);
 
         verticalLayout->addWidget(textEdit);
 
@@ -85,7 +87,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Receiver", 0, QApplication::UnicodeUTF8));
         actionOpenWidget->setText(QApplication::translate("MainWindow", "openWidget", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("MainWindow", "Display Widget", 0, QApplication::UnicodeUTF8));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0, QApplication::UnicodeUTF8));
