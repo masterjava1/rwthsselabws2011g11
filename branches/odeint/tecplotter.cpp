@@ -15,7 +15,7 @@ int tecplotter(Output<StepperDopr853<RHS_van> > &out)
 	   << "\"theta\"" << endl << "\"phi\"" << endl << "\"psi\"" << endl << "\"xc\"" << endl << "\"yc\"" << endl;
    outfile << "ZONE T = \"ZONE 001\"" << endl;
    outfile << "STRANDID=0, SOLUTIONTIME=0" << endl;
-   outfile << "I=86208 , J=1, K=1, ZONETYPE=Ordered" << endl;
+   outfile << "I=" << out.count <<" , J=1, K=1, ZONETYPE=Ordered" << endl;
    outfile << "DATAPACKING = POINT" << endl;
    outfile << "DT = (SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE )" << endl;
    for(int i=0;i<out.count;i++)
