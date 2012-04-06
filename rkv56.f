@@ -75,7 +75,7 @@ com   Conserved quantity
       theta = x0(6)
       ny = x0(3)
       Gc = I*R*lambda*sin(theta)**2+I3*(R*cos(theta)-a)*(lambda*
-     &cos(theta)+ny) 
+     &cos(theta)+ny)
 com
       do while (t0 .LT. tf)
          call RHS(dx_dt, t0, x0) 
