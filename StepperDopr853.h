@@ -224,8 +224,6 @@ StepperDopr853<D>::StepperDopr853(Array<double,1> &yy, Array<double,1> &dydxx,
       k2(n),k3(n),k4(n),k5(n),k6(n),k7(n),k8(n),k9(n),k10(n),rcont1(n),
       rcont2(n),rcont3(n),rcont4(n),rcont5(n),rcont6(n),rcont7(n),rcont8(n),
       yerr2(n),StepperBase(yy,dydxx,xx,atoll,rtoll,dens) {
-   cout << "StepperDopr853<D>::StepperDopr853(...)"<< dydx.size()<< endl;
-   cout << "StepperDopr853 Constr dydx.size() " << dydx.size()<< endl;
    EPS=numeric_limits<double>::epsilon();
 }
 
@@ -238,7 +236,7 @@ void StepperDopr853<D>::step(const double htry, D &derivs) {
       double err=error(h);
       if (con.success(err,h)) break;
       if (abs(h) <= abs(x)*EPS) {
-         throw("stepsize underflow in StepperDopr5");
+         throw("stepsize underflow in StepperDopr853");
       }      
    }
    derivs(x+h, yout, dydxnew);
@@ -378,7 +376,7 @@ bool StepperDopr853<D>::Controller::success(const double err, double &h) {
    static const double beta=0.0,alpha=1.0/8.0-beta*0.2,safe=0.9,minscale=0.333,
    maxscale=6.0;
    double scale;
-   if (err <= 1.0) {
+   if (err <= 1.0 ) {
       if (err == 0.0)
          scale=maxscale;
       else {

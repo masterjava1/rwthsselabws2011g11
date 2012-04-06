@@ -76,12 +76,16 @@ void Output<Stepper>::init(const int neqn, const double xlo, const double xhi) {
 template <typename Stepper>
 void Output<Stepper>::resize() {
    int kold=kmax;
+   int i;
    kmax *= 2;
    Array<double,1> tempvec(xsave);
    xsave.resize(shape(kmax));
-   xsave=tempvec;
+   xsave(Range(0,kold-1)) =tempvec;
    Array<double,2> tempmat(ysave);
    ysave.resize(shape(nvar,kmax));
+   for (i=0;i<nvar;i++) {
+      ysave(i,Range(0,kold-1)) = tempmat(i,Range(0,kold-1));
+   }
 }
 
 template <typename Stepper>

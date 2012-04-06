@@ -23,7 +23,7 @@ using namespace blitz;
 template<typename Stepper>
 class Odeint {
    public:
-   static const int MAXSTP=50000;  // Maxsteps
+   static const int MAXSTP=5000000;  // Maxsteps
    double EPS;
    int nok; // good steps
    int nbad; // bad steps (retried and fixed)
