@@ -6,8 +6,8 @@
 #
 #==============================================================================
 
-CF = -O2
-DCF = -Wall -g
+CF = -O2 -lntl
+DCF = -lntl -Wall -g
 
 FILES = StepperBase.cpp main.cpp
 

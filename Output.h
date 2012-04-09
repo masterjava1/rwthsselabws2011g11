@@ -14,8 +14,11 @@
 #define _OUTPUT_INCLUDED__
 
 #include <blitz/array.h> 
+#include <NTL/RR.h>
 
 using namespace blitz;
+using namespace NTL;
+
 template <typename Stepper>
 class Output {
    public:
@@ -24,30 +27,30 @@ class Output {
    int nsave; // number of intervals to save for dense output
    bool dense; // true for dense output
    int count;  // number of values actually saved
-   double x1, x2, xout, dxout;
-   Array<double,1> xsave; // Results stored in the vector xsave[0..count-1] 
-   Array<double,2> ysave; // and the matrix ysave[0..nvar-1][0..count-1]
+   RR x1, x2, xout, dxout;
+   Array<RR,1> xsave; // Results stored in the vector xsave[0..count-1] 
+   Array<RR,2> ysave; // and the matrix ysave[0..nvar-1][0..count-1]
    Output(); // default constructor, no output 
    // Constructor for dense output at nsave equally spaced intervalls
    // If nsave <= 0 output is saved only at the actual integration steps
    Output(const int nsavee);
    // Called by Odeint constructor, which passes neqn (#of eqn),
    // xlo (startingpoint of integration) and xhi (ending point)
-   void init(const int neqn, const double xlo, const double xhi);
+   void init(const int neqn, const RR xlo, const RR xhi);
    // Resizes storage arrays by a factor of two, keeping data
    void resize(); 
    // Invokes dense_out function of stepper routine to produce output at
    // xout. Normally called by out. Assumes that xout is between xold and
    // xold+h, where the stepper must keep track of xold, the location of
    // the previus step and x=xold+h, the current step
-   void save_dense(Stepper &s, const double xout, const double h);
-   void save(const double x, Array<double,1> &y); // saves current x and y
+   void save_dense(Stepper &s, const RR xout, const RR h);
+   void save(const RR x, Array<RR,1> &y); // saves current x and y
    // Typically called by Odeint to produce dense output. Input variables are
    // nstep (current step number), x, y, stepper s and stepsize h.
    // A call with nstp=-1 saves the initial values. The routine checks wether
    // x is greater than the desired output point xout. If so, it calls save_dense.
-   void out(const int nstp, const double x, Array<double,1> &y, Stepper &s, 
-    const double h); 
+   void out(const int nstp, const RR x, Array<RR,1> &y, Stepper &s, 
+    const RR h); 
 };
    
 template <typename Stepper>
@@ -61,7 +64,7 @@ Output<Stepper>::Output(const int nsavee) : kmax(500), nsave(nsavee), count(0){
 
 
 template <typename Stepper>
-void Output<Stepper>::init(const int neqn, const double xlo, const double xhi) {
+void Output<Stepper>::init(const int neqn, const RR xlo, const RR xhi) {
    nvar = neqn;
    if (kmax == -1) return;
    ysave.resize(shape(nvar,kmax));
@@ -78,10 +81,10 @@ void Output<Stepper>::resize() {
    int kold=kmax;
    int i;
    kmax *= 2;
-   Array<double,1> tempvec(xsave);
+   Array<RR,1> tempvec(xsave);
    xsave.resize(shape(kmax));
    xsave(Range(0,kold-1)) =tempvec;
-   Array<double,2> tempmat(ysave);
+   Array<RR,2> tempmat(ysave);
    ysave.resize(shape(nvar,kmax));
    for (i=0;i<nvar;i++) {
       ysave(i,Range(0,kold-1)) = tempmat(i,Range(0,kold-1));
@@ -89,7 +92,7 @@ void Output<Stepper>::resize() {
 }
 
 template <typename Stepper>
-void Output<Stepper>::save_dense(Stepper &s, const double xout, const double h) {
+void Output<Stepper>::save_dense(Stepper &s, const RR xout, const RR h) {
    if (count == kmax) resize();
    for (int i=0;i<nvar;i++) {
       ysave(i,count)=s.dense_out(i,xout,h);
@@ -98,7 +101,7 @@ void Output<Stepper>::save_dense(Stepper &s, const double xout, const double h) 
 }
 
 template <typename Stepper>
-void Output<Stepper>::save(const double x, Array<double,1> &y) {
+void Output<Stepper>::save(const RR x, Array<RR,1> &y) {
    if (kmax <=0) return;
    if (count == kmax) resize();
    for (int i=0;i<nvar;i++) {
@@ -108,8 +111,8 @@ void Output<Stepper>::save(const double x, Array<double,1> &y) {
 }
 
 template <typename Stepper>
-void Output<Stepper>::out(const int nstp, const double x, Array<double,1> &y, Stepper &s, 
-const double h) {
+void Output<Stepper>::out(const int nstp, const RR x, Array<RR,1> &y, Stepper &s, 
+const RR h) {
    if (!dense) {
       throw("dense output not set in output!");
    }

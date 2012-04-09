@@ -14,50 +14,51 @@
 
 #define SIGN(a,b) ((b) >= 0.0 ? fabs(a) : -fabs(a))
 
-#include <cmath>
 #include <blitz/array.h>
+#include <NTL/RR.h>
 #include "Output.h"
 
 using namespace blitz;
+using namespace NTL;
 
 template<typename Stepper>
 class Odeint {
    public:
    static const int MAXSTP=5000000;  // Maxsteps
-   double EPS;
+   RR EPS;
    int nok; // good steps
    int nbad; // bad steps (retried and fixed)
    int nvar;
-   double x1, x2, hmin;
+   RR x1, x2, hmin;
    bool dense;  // true if dense output is requested by out
-   Array<double,1> y;
-   Array<double,1> dydx;
-   Array<double,1> &ystart;
+   Array<RR,1> y;
+   Array<RR,1> dydx;
+   Array<RR,1> &ystart;
    Output<Stepper> &out;
    typename Stepper::Dtype &derivs;  // get the type of derivs from the stepper
    Stepper s;
    int nstp;
-   double x,h;
+   RR x,h;
    // The routines integrates starting values ystart[0..nvar-1] from xx1 to xx2 with 
    // absolute tolerance atol and relative tolerance rtol. The quantity h1 should be
    // set as guessed first stepsize, hmin as the minimum allowed stepsize 
    // (can be zero). An Output object should be input to control the saving of 
    // intermediate values. derivs is the supplied RHS. 
-   Odeint(Array<double,1> &ystartt, const double xx1, const double xx2,
-    const double atol, const double rtol, const double h1, const double hminn, 
+   Odeint(Array<RR,1> &ystartt, const RR xx1, const RR xx2,
+    const RR atol, const RR rtol, const RR h1, const RR hminn, 
     Output<Stepper> &outt, typename Stepper::Dtype &derivss);
    // Does actual integration
    void integrate();
 };
 
 template<typename Stepper>
-Odeint<Stepper>::Odeint(Array<double,1> &ystartt, const double xx1, const double xx2,
- const double atol, const double rtol, const double h1, const double hminn, 
+Odeint<Stepper>::Odeint(Array<RR,1> &ystartt, const RR xx1, const RR xx2,
+ const RR atol, const RR rtol, const RR h1, const RR hminn, 
  Output<Stepper> &outt, typename Stepper::Dtype &derivss) 
  : nvar(ystartt.size()), y(nvar), dydx(nvar), ystart(ystartt), x(xx1), nok(0), 
  nbad(0), x1(xx1), x2(xx2), hmin(hminn), dense(outt.dense), out(outt), 
  s(y, dydx, x, atol, rtol, dense), derivs(derivss) {
-   EPS=numeric_limits<double>::epsilon();
+   EPS=to_RR(2.4651903288156618919116517665087069677288E-32);
    h=SIGN(h1, x2-x1);
    for (int i=0;i<nvar;i++) y(i)=ystart(i);
    out.init(s.neqn,x1,x2);
