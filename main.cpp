@@ -6,18 +6,20 @@
 #include "Output.h"
 #include "RHS_gyro.h"
 #include "StepperDopr853m.h"
+#include "write_tec.h"
 
 using namespace blitz;
 using namespace NTL;
 
 int main(int argc, char* argv[]){
    int nvar=10;
-   RR atol=to_RR(1.0e-2);
+   string df("gyro_tec.dat");
+   RR atol=to_RR(1.0e-4);
    RR rtol=atol;
    RR h1=to_RR(1E-4);
    RR hmin=to_RR(1E-20);
    RR x1=to_RR(0.0);
-   RR x2=to_RR(100.0);
+   RR x2=to_RR(2.75);
 //    RR x2=0.23;
 
    // RHS parameter
@@ -33,8 +35,8 @@ int main(int argc, char* argv[]){
    Array<RR,2> tmp;
    ystart(0)=to_RR(0.0);
    ystart(1)=to_RR(0.0);
-//   ystart(2)=to_RR(250.0);
-   ystart(2)=to_RR(100.0);
+   ystart(2)=to_RR(250.0);
+//   ystart(2)=to_RR(100.0);
    ystart(3)=to_RR(0.0);
    ystart(4)=to_RR(0.0);
    ystart(5)=to_RR(0.1);
@@ -55,10 +57,13 @@ int main(int argc, char* argv[]){
 
    // Output
    cout << "Stepps "<<out.count << endl;
+   write_tec(out,df);
+
    //cout << out.xsave(Range(0,out.count-1)) << endl;
    //cout << out.ysave(Range(0,nvar-1),Range(0,out.count-1)) << endl;
 
    // Write file
+   /*
    cout << "Writing file" << endl;
    ofstream ofile;
    ofile.open("gyro.dat");
@@ -68,5 +73,6 @@ int main(int argc, char* argv[]){
    for (int hi=0;hi<out.count-1;hi++) ofile << out.ysave(2,hi) << " ";
    ofile << endl;
    ofile.close();
+   */
    return 0;
 }
