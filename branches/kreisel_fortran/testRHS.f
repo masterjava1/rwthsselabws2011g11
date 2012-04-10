@@ -1,17 +1,23 @@
       program test
       use RIGHTSIDE
       implicit none
-      integer :: j
-      real(kind=kind(1.0d0)), dimension(10) :: dx_dt
-      real(kind=kind(1.0d0)) :: t0
-      real(kind=kind(1.0d0)) :: h0
-      real(kind=kind(1.0d0)), dimension(10) :: x0
-      t0 = 0.3
+com   Precision
+      integer, parameter :: prec = selected_real_kind(8,248)
+com
+      integer :: i,j
+      real(kind=prec), dimension(10) :: dx_dt
+      real(kind=prec) :: t0
+      real(kind=prec), dimension(10) :: x0
+      t0 = 0.1
       x0 = (/ 0.1, 0.1, 250.0, 0.1, 0.1, 0.2, 0.1, 0.1, 0.1, 0.1 /)
-      call RHS(dx_dt, t0, x0)
-      do j=1,10
-         write(*,*) dx_dt(j)
+      open(unit=7, file='RHS_m.dat', status='unknown')
+      do i=1,1000
+         do j=1,10
+            x0(j) = x0(j)*1.01
+         end do
+         t0 = t0*1.01
+         call RHS(dx_dt, t0, x0)
+         write(unit=7,fmt="(11(E38.30))") t0, dx_dt(:)
       end do
-      h0=0.00003
-      write(*,*) sin(h0)
+      close(7)
       end program test

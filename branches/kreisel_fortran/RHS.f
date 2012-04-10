@@ -63,7 +63,6 @@ com   dmy_dt
      &(R-a*cos(theta))*my)))/(I+m*a**2*sin(theta)**2+k*m*a*
      &sin(theta)*(R-a*cos(theta))*(-xi*sin(phi)+omikron*cos(phi)+
      &(R-a*cos(theta))*my))
-      if (IsNaN(dx_dt(1))) write(*,*) x 
       if (IsNaN(dx_dt(1))) stop '"dx_dt(1)" is NaN'
 com
 com   dlambda_dt

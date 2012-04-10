@@ -1,14 +1,14 @@
-/*===========================================================================
+/**===========================================================================
   30.03.2012
   desc: structure for output from ODE solver such as odeint 
-  rev: 0.1
+  rev: 1.0
   author: Alexander Fischer
   ===========================================================================
   dependencies:
-    - Stepper.h  
     - blitz/array.h
-  included in:
-    - Odeint.h
+    - NTL/RR.h 
+  called in:
+    - main.cpp //NF
   ===========================================================================*/
 #ifndef _OUTPUT_INCLUDED__
 #define _OUTPUT_INCLUDED__
@@ -51,6 +51,9 @@ class Output {
    // x is greater than the desired output point xout. If so, it calls save_dense.
    void out(const int nstp, const RR x, Array<RR,1> &y, Stepper &s, 
     const RR h); 
+
+   void exportfile(const char* filename);
+   void importfile(const char* filename);
 };
    
 template <typename Stepper>
@@ -126,5 +129,30 @@ const RR h) {
       }
    }
 }
+
+template <typename Stepper>
+void Output<Stepper>::exportfile(const char* filename)
+  {
+	ofstream ofs(filename);
+    	if (ofs.bad())
+    	{
+       		return;
+    	}
+	
+	ofs << xsave << endl << ysave << endl; 
+	
+   }
+
+template <typename Stepper>
+void Output<Stepper>::importfile(const char* filename)
+  {
+        // validate file
+	ifstream ifs(filename);
+    	if (ifs.bad())
+    	{
+       		return;
+    	}
+	ifs >> xsave >> ysave; 
+   }
 
 #endif

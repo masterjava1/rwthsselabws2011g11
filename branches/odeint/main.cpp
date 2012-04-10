@@ -56,6 +56,8 @@ int main(int argc, char* argv[]){
    
 
    // Output
+   out.exportfile("tempfile.dat");
+   out.importfile("tempfile.dat");
    cout << "Stepps "<<out.count << endl;
    write_tec(out,df);
 

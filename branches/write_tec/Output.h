@@ -146,14 +146,13 @@ void Output<Stepper>::exportfile(const char* filename)
 template <typename Stepper>
 void Output<Stepper>::importfile(const char* filename)
   {
+        // validate file
 	ifstream ifs(filename);
     	if (ifs.bad())
     	{
        		return;
     	}
-	
 	ifs >> xsave >> ysave; 
-	
    }
 
 #endif
