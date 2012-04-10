@@ -1,16 +1,11 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "exportdialog.h"
-#include <qapplication.h>
-#include <qwt-qt4/qwt_plot.h>
-#include <qwt-qt4/qwt_data.h>
-
-#include <cmath>
 
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    parameterOptionsOpen(false),
+    parOpened(false)
 {
     ui->setupUi(this);
 }
@@ -46,6 +41,7 @@ void MainWindow::on_actionOpenParameterOptions_triggered()
         else
         {
           // set Text auf die Werte in Main  pointer??
+            mParameter->setPsid0(QString("99"));
         }
     }
 }

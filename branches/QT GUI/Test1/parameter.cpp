@@ -47,3 +47,6 @@ void Parameter::on_actionSetButtonClicked_triggered()
     emit(closeParWindow(PP));
 }
 
+void Parameter::setPsid0(QString s){
+    ui->psidot0->setText(s);
+}
