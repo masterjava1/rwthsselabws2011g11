@@ -9,13 +9,15 @@ SOURCES += main.cpp \
     parameter.cpp \
     warningdialog.cpp \
     errordialog.cpp \
-    parset.cpp
+    parset.cpp \
+    plot.cpp
 HEADERS += mainwindow.h \
     exportdialog.h \
     parameter.h \
     warningdialog.h \
     errordialog.h \
-    parset.h
+    parset.h \
+    plot.h
 FORMS += mainwindow.ui \
     exportdialog.ui \
     parameter.ui \
