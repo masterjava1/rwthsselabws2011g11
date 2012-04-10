@@ -32,6 +32,7 @@ void MainWindow::on_actionOpenParameterOptions_triggered()
     if(!parameterOptionsOpen){
         mParameter = new Parameter(this);
         connect(mParameter,SIGNAL(closeParWindow(ParSet)),this,SLOT(parWindowClosed(ParSet)));
+        connect(mParameter,SIGNAL(closeWindow()),this,SLOT(WindowClosed()));
         mParameter->show();
         parameterOptionsOpen = true;
         if (!parOpened)
@@ -40,8 +41,8 @@ void MainWindow::on_actionOpenParameterOptions_triggered()
         }
         else
         {
-          // set Text auf die Werte in Main  pointer??
-            mParameter->setPsid0(QString("99"));
+            mParameter->setPar(ui->psidot0->text(),ui->theta0->text(),ui->R->text(),ui->a->text(),ui->m->text(),
+                               ui->k->text(),ui->Tolerance->text());
         }
     }
 }
@@ -65,6 +66,17 @@ void MainWindow::parWindowClosed(ParSet P){
     ui->Tolerance->setText(P.rtol);
 }
 
+void MainWindow::WindowClosed()
+{
+    mParameter->close();
+    parameterOptionsOpen = false;
+}
 
 
 
+
+
+void MainWindow::on_actionSlideTime_triggered()
+{
+    ui->t->setText(QString("%1").arg(ui->t_slider->value()));
+}

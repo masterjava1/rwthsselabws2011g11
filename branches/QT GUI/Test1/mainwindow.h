@@ -24,6 +24,7 @@ public:
 public slots:
     void ExportbuttonClicked();
     void parWindowClosed(ParSet P);
+    void WindowClosed();
 
 protected:
     void changeEvent(QEvent *e);
@@ -36,6 +37,7 @@ private:
     ExportDialog *mExport;
 
 private slots:
+    void on_actionSlideTime_triggered();
     void on_actionOpenParameterOptions_triggered();
 };
 
