@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Apr 4 16:50:32 2012
+** Created: Tue Apr 10 08:39:42 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -28,6 +28,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionOpenParameterOptions;
     QWidget *centralWidget;
     QTabWidget *tabWidget;
     QWidget *Angles;
@@ -76,6 +77,8 @@ public:
         MainWindow->resize(540, 543);
         MainWindow->setMinimumSize(QSize(540, 543));
         MainWindow->setMaximumSize(QSize(540, 543));
+        actionOpenParameterOptions = new QAction(MainWindow);
+        actionOpenParameterOptions->setObjectName(QString::fromUtf8("actionOpenParameterOptions"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
@@ -200,7 +203,7 @@ public:
 
         retranslateUi(MainWindow);
         QObject::connect(Export_button, SIGNAL(clicked()), MainWindow, SLOT(ExportbuttonClicked()));
-        QObject::connect(changeparameter_button, SIGNAL(clicked()), MainWindow, SLOT(ParameterbuttonClicked()));
+        QObject::connect(changeparameter_button, SIGNAL(clicked()), actionOpenParameterOptions, SLOT(trigger()));
 
         tabWidget->setCurrentIndex(2);
 
@@ -211,6 +214,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        actionOpenParameterOptions->setText(QApplication::translate("MainWindow", "openParameterOptions", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Angles), QApplication::translate("MainWindow", "Angles", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Derivatives), QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Positions), QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));

@@ -8,12 +8,14 @@ SOURCES += main.cpp \
     exportdialog.cpp \
     parameter.cpp \
     warningdialog.cpp \
-    errordialog.cpp
+    errordialog.cpp \
+    parset.cpp
 HEADERS += mainwindow.h \
     exportdialog.h \
     parameter.h \
     warningdialog.h \
-    errordialog.h
+    errordialog.h \
+    parset.h
 FORMS += mainwindow.ui \
     exportdialog.ui \
     parameter.ui \

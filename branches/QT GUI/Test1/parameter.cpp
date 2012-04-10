@@ -8,13 +8,16 @@ Parameter::Parameter(QWidget *parent) :
     ui(new Ui::Parameter)
 {
     ui->setupUi(this);
-    ui->k->setEnabled(false);
 }
 
 Parameter::~Parameter()
 {
     delete ui;
 }
+
+Parameter::Parameter(QString ppsidot0, QString ttheta0, QString RR, QString aa, QString mm, QString kk, QString rtoll)
+    : psidot0(ppsidot0), theta0(ttheta0), R(RR), a(aa), m(mm), k(kk), rtol(rtoll){}
+
 
 void Parameter::changeEvent(QEvent *e)
 {
@@ -30,50 +33,17 @@ void Parameter::changeEvent(QEvent *e)
 
 void Parameter::FrictionCheck()
 {
-    if (ui->k->isEnabled())
-    ui->k->setEnabled(false);
+    if (ui->Friction->isChecked())
+    ui->k->setText("0.3");
     else
-    ui->k->setEnabled(true);
+    ui->k->setText("0");
 }
-double Parameter::Submit()
+
+
+void Parameter::on_actionSetButtonClicked_triggered()
 {
-    double psidot0 = (ui->psidot0->text()).toDouble();
-    if (psidot0 < 0)
-    {
-        psidot0 = -psidot0;
-    }
-    double theta0 =  (ui->theta0->text()).toDouble();
-    if (theta0 < 0)
-    {
-        theta0 = -theta0;
-    }
-    double R = (ui->R->text()).toDouble();
-    double a = (ui->a->text()).toDouble();
-    double m = (ui->m->text()).toDouble();
-    double k =(ui->k->text()).toDouble();
-    double TolConQual = (ui->TolConQual->text()).toDouble();
-    if (TolConQual < 0)
-    {
-        TolConQual = -TolConQual;
-    }
-    double vec[] = {psidot0, theta0, R, a, m, k, TolConQual};
-    if (psidot0 == 0 || theta0 == 0)
-    {
-        WarningDialog mWarning(this);
-        mWarning.setModal(true);
-        mWarning.exec();
-    }
-    if (R <= 0 || a <= 0 || m <= 0)
-    {
-        ErrorDialog mError(this);
-        mError.setModal(true);
-        mError.exec();
-        ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-    }
-    else{
-        ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
-    }
-
-
-    return *vec;
+    ParSet PP(ui->psidot0->text(),ui->theta0->text(),ui->R->text(),ui->a->text(),ui->m->text(),
+              ui->k->text(),ui->TolConQual->text());
+    emit(closeParWindow(PP));
 }
+

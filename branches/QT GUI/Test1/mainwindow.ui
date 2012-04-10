@@ -474,6 +474,11 @@
     </property>
    </widget>
   </widget>
+  <action name="actionOpenParameterOptions">
+   <property name="text">
+    <string>openParameterOptions</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
@@ -497,22 +502,21 @@
   <connection>
    <sender>changeparameter_button</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>ParameterbuttonClicked()</slot>
+   <receiver>actionOpenParameterOptions</receiver>
+   <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>494</x>
-     <y>60</y>
+     <x>445</x>
+     <y>59</y>
     </hint>
     <hint type="destinationlabel">
-     <x>579</x>
-     <y>39</y>
+     <x>599</x>
+     <y>62</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>ParameterbuttonClicked()</slot>
   <slot>ExportbuttonClicked()</slot>
  </slots>
 </ui>
