@@ -15,7 +15,7 @@ public:
     ~Parameter();
     Parameter(QString ppsidot0, QString ttheta0, QString RR, QString aa, QString mm, QString kk, QString rtoll);
     QString psidot0, theta0, R, a, m, k, rtol;
-    void setPsid0(QString s);
+    void setPar(QString psidot0, QString theta0, QString R, QString a, QString m, QString k, QString TolConQual);
 
 public slots:
     void FrictionCheck();
@@ -27,10 +27,12 @@ private:
     Ui::Parameter *ui;
 
 private slots:
+    void on_actionCancelButtonClicked_triggered();
     void on_actionSetButtonClicked_triggered();
 
 signals:
     void closeParWindow(ParSet P);
+    void closeWindow();
 
 };
 

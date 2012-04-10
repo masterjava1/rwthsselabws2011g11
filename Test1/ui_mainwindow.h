@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Apr 10 08:39:42 2012
+** Created: Tue Apr 10 21:32:00 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -29,6 +29,7 @@ class Ui_MainWindow
 {
 public:
     QAction *actionOpenParameterOptions;
+    QAction *actionSlideTime;
     QWidget *centralWidget;
     QTabWidget *tabWidget;
     QWidget *Angles;
@@ -79,6 +80,8 @@ public:
         MainWindow->setMaximumSize(QSize(540, 543));
         actionOpenParameterOptions = new QAction(MainWindow);
         actionOpenParameterOptions->setObjectName(QString::fromUtf8("actionOpenParameterOptions"));
+        actionSlideTime = new QAction(MainWindow);
+        actionSlideTime->setObjectName(QString::fromUtf8("actionSlideTime"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
@@ -132,6 +135,10 @@ public:
         t_slider = new QSlider(centralWidget);
         t_slider->setObjectName(QString::fromUtf8("t_slider"));
         t_slider->setGeometry(QRect(20, 470, 231, 19));
+        t_slider->setMinimum(0);
+        t_slider->setMaximum(2200);
+        t_slider->setSingleStep(100);
+        t_slider->setTracking(true);
         t_slider->setOrientation(Qt::Horizontal);
         changeparameter_button = new QPushButton(centralWidget);
         changeparameter_button->setObjectName(QString::fromUtf8("changeparameter_button"));
@@ -147,13 +154,13 @@ public:
         Export_button->setGeometry(QRect(420, 500, 92, 27));
         t_text = new QLabel(centralWidget);
         t_text->setObjectName(QString::fromUtf8("t_text"));
-        t_text->setGeometry(QRect(140, 500, 91, 16));
+        t_text->setGeometry(QRect(140, 500, 101, 16));
         G = new QLabel(centralWidget);
         G->setObjectName(QString::fromUtf8("G"));
         G->setGeometry(QRect(100, 500, 31, 16));
         t = new QLabel(centralWidget);
         t->setObjectName(QString::fromUtf8("t"));
-        t->setGeometry(QRect(240, 500, 46, 16));
+        t->setGeometry(QRect(250, 500, 46, 16));
         G_text = new QLabel(centralWidget);
         G_text->setObjectName(QString::fromUtf8("G_text"));
         G_text->setGeometry(QRect(20, 500, 81, 16));
@@ -204,6 +211,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(Export_button, SIGNAL(clicked()), MainWindow, SLOT(ExportbuttonClicked()));
         QObject::connect(changeparameter_button, SIGNAL(clicked()), actionOpenParameterOptions, SLOT(trigger()));
+        QObject::connect(t_slider, SIGNAL(sliderMoved(int)), actionSlideTime, SLOT(trigger()));
 
         tabWidget->setCurrentIndex(2);
 
@@ -215,6 +223,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         actionOpenParameterOptions->setText(QApplication::translate("MainWindow", "openParameterOptions", 0, QApplication::UnicodeUTF8));
+        actionSlideTime->setText(QApplication::translate("MainWindow", "SlideTime", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Angles), QApplication::translate("MainWindow", "Angles", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Derivatives), QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Positions), QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));
@@ -222,7 +231,7 @@ public:
         Simulate_button->setText(QApplication::translate("MainWindow", "Simulate", 0, QApplication::UnicodeUTF8));
         Import_button->setText(QApplication::translate("MainWindow", "Import Data", 0, QApplication::UnicodeUTF8));
         Export_button->setText(QApplication::translate("MainWindow", "Export Data", 0, QApplication::UnicodeUTF8));
-        t_text->setText(QApplication::translate("MainWindow", "Current t [s] = ", 0, QApplication::UnicodeUTF8));
+        t_text->setText(QApplication::translate("MainWindow", "Current t [ms] = ", 0, QApplication::UnicodeUTF8));
         G->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
         t->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
         G_text->setText(QApplication::translate("MainWindow", "Current G = ", 0, QApplication::UnicodeUTF8));

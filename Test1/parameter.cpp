@@ -47,6 +47,20 @@ void Parameter::on_actionSetButtonClicked_triggered()
     emit(closeParWindow(PP));
 }
 
-void Parameter::setPsid0(QString s){
-    ui->psidot0->setText(s);
+void Parameter::setPar(QString psidot0, QString theta0, QString R, QString a, QString m, QString k, QString TolConQual){
+    ui->psidot0->setText(psidot0);
+    ui->theta0->setText(theta0);
+    ui->R->setText(R);
+    ui->a->setText(a);
+    ui->m->setText(m);
+    ui->k->setText(k);
+    ui->TolConQual->setText(TolConQual);
+    if (k == "0.3"){
+        ui->Friction->setChecked(true);
+    }
+}
+
+void Parameter::on_actionCancelButtonClicked_triggered()
+{
+    emit(closeWindow());
 }

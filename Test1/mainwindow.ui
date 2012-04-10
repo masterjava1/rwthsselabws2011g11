@@ -183,6 +183,18 @@
       <height>19</height>
      </rect>
     </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>2200</number>
+    </property>
+    <property name="singleStep">
+     <number>10</number>
+    </property>
+    <property name="tracking">
+     <bool>true</bool>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
@@ -244,12 +256,12 @@
      <rect>
       <x>140</x>
       <y>500</y>
-      <width>91</width>
+      <width>101</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Current t [s] = </string>
+     <string>Current t [ms] = </string>
     </property>
    </widget>
    <widget class="QLabel" name="G">
@@ -268,7 +280,7 @@
    <widget class="QLabel" name="t">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>250</x>
       <y>500</y>
       <width>46</width>
       <height>16</height>
@@ -479,6 +491,11 @@
     <string>openParameterOptions</string>
    </property>
   </action>
+  <action name="actionSlideTime">
+   <property name="text">
+    <string>SlideTime</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
@@ -510,8 +527,24 @@
      <y>59</y>
     </hint>
     <hint type="destinationlabel">
-     <x>599</x>
-     <y>62</y>
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>t_slider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>actionSlideTime</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>479</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
