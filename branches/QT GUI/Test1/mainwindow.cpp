@@ -1,7 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "exportdialog.h"
-//#include "qwt_plot"
+#include <qapplication.h>
+#include <qwt-qt4/qwt_plot.h>
+#include <qwt-qt4/qwt_data.h>
+
+#include <cmath>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -64,5 +68,7 @@ void MainWindow::parWindowClosed(ParSet P){
     ui->k->setText(P.k);
     ui->Tolerance->setText(P.rtol);
 }
+
+
 
 
