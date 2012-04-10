@@ -3,9 +3,13 @@
 
 #include <QMainWindow>
 #include <QString>
+#include <QtGui/QApplication>
 #include "parameter.h"
 #include "exportdialog.h"
 #include "parset.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "exportdialog.h"
 
 namespace Ui {
     class MainWindow;

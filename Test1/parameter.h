@@ -15,6 +15,7 @@ public:
     ~Parameter();
     Parameter(QString ppsidot0, QString ttheta0, QString RR, QString aa, QString mm, QString kk, QString rtoll);
     QString psidot0, theta0, R, a, m, k, rtol;
+    void setPsid0(QString s);
 
 public slots:
     void FrictionCheck();
