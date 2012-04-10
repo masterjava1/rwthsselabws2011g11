@@ -11,11 +11,13 @@
 Die Simulation muss sowohl den reibungsbehafteten, als auch reibungsfreien Fall korrekt simulieren.
 
 Im Speziellen wird ein Runge-Kutta56-Verfahren mit adaptiver Schrittweitensteuerung unter Betrachtung einer Erhaltungsgr\"o\ss e (\textit{conserved quantity}) zur Simulation des Problems verwendet.\\ 
+
+% ??????????????????????????????
 \textit{Wahrscheinlich wird das Rkv56 Verfahren durch ein BDF-Verfahren oder eine C++ Implementierung eines speziellen Krylow-Verfahrens ersetzt.\\
 https://computation.llnl.gov/casc/software.html } \\ 
 Die Realisierung der Simulation findet in C++ statt. \\
 
-Die Bedienung sowie das ausgeben der Simulationsergebnisse muss durch eine grafische Benutzeroberfl\"ache (\textit{GUI}) m\"oglich sein.
+Die Bedienung sowie das Ausgeben der Simulationsergebnisse muss durch eine grafische Benutzeroberfl\"ache (\textit{GUI}) m\"oglich sein.
 
 Die Simulationsergebnisse k\"onnen in einer \textit{ASCII}-formatierten Datei zur weiteren Verarbeitung und Auswertung exportiert werden.
 
@@ -27,12 +29,12 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \begin{align*}
 	&
 	\ddot \theta (I+ma^2\sin^2\theta+kma\sin \theta(R-a\cos\theta)(-\dot x_c
-	\sin\phi+\dot y_c \cos \phi-(R-a\cos\theta)\dot \theta))
+	\sin\phi+\dot y_c \cos \phi+(R-a\cos\theta)\dot \theta))
 	\\&
 	=\underbrace{-(I_3-I)\dot \phi^2\sin\theta\cos\theta}_{=0}-I_3\dot \phi \sin \theta \dot \psi 
 	+ (g+a\dot \theta^2\cos \theta)(-ma\sin\theta - km(R-a\cos \theta)
 	\\&
-	(-\dot x_c \sin \phi +\dot y_c \cos \phi-(R-a\cos\theta)\dot \theta))
+	(-\dot x_c \sin \phi +\dot y_c \cos \phi+(R-a\cos\theta)\dot \theta))
 \end{align*}
 \begin{align*}
 	&
@@ -56,15 +58,16 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \end{align*}
 \begin{align*}
 	&m\ddot y_c=-km(g+a\cos \theta\dot \theta^2+a \sin \theta \ddot \theta)
-	(\dot y_c+(a\dot \phi + \dot \psi R)\sin \theta \cos \phi
+	(\dot y_c+(a\dot \phi + \dot \psi R)\sin \theta \sin \phi
 	+(R-a\cos \theta)\cos\phi \dot \theta)
-\end{align*} }
-
-\subsection{Systemanforderungen}
-%% \subsection{Anwendungsfallanalyse}
+\end{align*}
 
 
-\subsubsection{Funktionale Anforderungen}
+\subsection{Anwendungsfallanalyse}
+
+% Diagramme
+\subsubsection*{Systemanforderungen}
+\subsubsubsection*{Funktionale Anforderungen}
 
 {Dem Anwender ist es m\"oglich die Simulationsparameter k (Reibung) sowie 
 $ \dot \psi $ (rad/s) \"uber eine grafische Eingabemaske festzulegen. 
@@ -80,16 +83,18 @@ Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei exportiert we
 Kommt es w\"ahrend der Laufzeit zu einem kritischen Fehler (ein Fehler, der das korrekte Fortf\"uhren des Programmes unm\"oglich macht) wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das Programm beendet.
 \medskip
 
-\subsubsection{Nicht-Funktionale Anforderungen}
+\subsubsubsection*{Nicht-Funktionale Anforderungen}
 {
 Die Exportfunktion der Simulationssoftware schreibt Tecplot konforme ASCII-kodierte Ausgabedateien.
 Vormals exportierte Dateien k\"onnen wieder importiert und geplottet werden.
 Der Nutzer kann sich eine Statistik \"uber das Verhalten der Erhaltungsgr\"o\ss e und der Kontrollgr\"o\ss en zur Schrittweitensteuerung ausgeben lassen.  
 }
 
-%% \subsubsection{Benutzerdokumentation}
+\subsubsection*{Benutzerdokumentation}
 
-%% {\em - folgt -}
+
+
+%% {\em - folgt - nach Anwendungsfall}
 
 \section{Begriffsanalyse}
 \begin{itemize}
