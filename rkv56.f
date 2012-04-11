@@ -30,7 +30,7 @@ com   Dummy arguments
       real(kind=prec), dimension(:,:), pointer, intent(inout)
      & :: wi
 com   Parameter
-      real(kind=prec), parameter :: gtol = 1E-4
+      real(kind=prec), parameter :: gtol = 1E-6
       real(kind=prec), parameter :: R = 25E-3
       real(kind=prec), parameter :: m = 15E-3
       real(kind=prec), parameter :: I = 0.4*m*R**2

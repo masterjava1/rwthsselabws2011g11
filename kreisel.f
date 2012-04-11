@@ -21,14 +21,14 @@ com      tf = 0.23
       write(*,*) "Steps:"
       write(*,"(I9)") it
       it = it-1
-com      call kreiselplot(ti, wi, it)
+      call kreiselplot(ti, wi, it)
 com   DEBUG ->
 com   write matlab data file
-      open(unit=7, file='gyro_m.dat', status='unknown')
-      do i=1,(it/1000)
-         write(unit=7,fmt="(11(E28.20))") ti(i*1000), wi(3,i*1000)
-      end do
-      close(7)
+com      open(unit=7, file='gyro_m.dat', status='unknown')
+com      do i=1,(it/1000)
+com         write(unit=7,fmt="(11(E28.20))") ti(i*1000), wi(3,i*1000)
+com      end do
+com      close(7)
 com   <- DEBUG
       write(*,*) "Done" 
       end program
