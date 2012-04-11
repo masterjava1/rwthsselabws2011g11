@@ -215,8 +215,7 @@ void MainWindow::on_Export_button_clicked()
 
 
 void MainWindow::on_Simulate_button_clicked()
-{   simulateon = true;
-    int nvar=10;
+{   int nvar=10;
     RR atol=to_RR(1.0e-4);
     RR rtol=to_RR(params.rtol.toDouble());
     RR h1=to_RR(1E-4);
@@ -254,5 +253,7 @@ void MainWindow::on_Simulate_button_clicked()
     }
 
     out->~Output();
+    simulateon = true;
+    windswitch = 1;
 }
 
