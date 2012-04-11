@@ -23,7 +23,7 @@ HEADERS += errordialog.h \
            slider.h \
            StepperBase.h \
            StepperDopr853m.h \
-           warningdialog.h
+           warningdialog.h 
 FORMS += errordialog.ui \
          exportdialog.ui \
          mainwindow.ui \
@@ -41,4 +41,8 @@ SOURCES += errordialog.cpp \
            parameterdialog.cpp \
            parset.cpp \
            slider.cpp \
-           warningdialog.cpp
+           warningdialog.cpp \
+           RuntimeException.cpp \
+           StepperBase.cpp
+
+LIBS += -L/usr/local/lib -L/usr/lib -lntl -lblitz
