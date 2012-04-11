@@ -1,11 +1,15 @@
-/*===========================================================================
+/**===========================================================================
   02.04.2012
   desc: Dormant-Prince 853 method 
-  rev: 0.1
+  rev: 1.1
   author: Alexander Fischer
   ===========================================================================
   dependencies:
-    - blitz/array.h 
+    - blitz/array.h
+    - NTL/RR.h
+    - ntl_ext.h
+    - StepperBase.h
+    - RuntimeException.h
   ===========================================================================*/
 #ifndef _STEPPERDOPR853_INCLUDED__
 #define _STEPPERDOPR853_INCLUDED__
@@ -414,7 +418,8 @@ void StepperDopr853m<D>::step( RR htry, D &derivs) {
       RR err=error(h);
       if (con.success(err,h,derivs)) break;
       if (abs(h) <= abs(x)*EPS) {
-         throw("stepsize underflow in StepperDopr853m");
+         throw(RuntimeException("Stepsize underflow in StepperDopr853m! \n"
+         "abs(h) <= abs(x)*EPS",0));
       }      
    }
    derivs(x+h, yout, dydxnew);

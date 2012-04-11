@@ -6,7 +6,8 @@
   ===========================================================================
   dependencies:
     - blitz/array.h
-    - NTL/RR.h 
+    - NTL/RR.h
+    - RuntimeException.h 
   called in:
     - main.cpp //NF
   ===========================================================================*/
@@ -15,6 +16,7 @@
 
 #include <blitz/array.h> 
 #include <NTL/RR.h>
+#include "RuntimeException.h"
 
 using namespace blitz;
 using namespace NTL;
@@ -117,7 +119,8 @@ template <typename Stepper>
 void Output<Stepper>::out(const int nstp, const RR x, Array<RR,1> &y, Stepper &s, 
 const RR h) {
    if (!dense) {
-      throw("dense output not set in output!");
+      throw(RuntimeException("Dense output not set in output! \n"
+      "Please open a bugreport at https://code.google.com/p/rwthsselabws2011g11/",0));
    }
    if (nstp == -1) {
       save(x,y);
@@ -136,7 +139,7 @@ void Output<Stepper>::exportfile(const char* filename)
 	ofstream ofs(filename);
     	if (ofs.bad())
     	{
-       		return;
+       	   throw(RuntimeException("Could not write new parameterfile!",1));	
     	}
 	
 	ofs << xsave << endl << ysave << endl; 
@@ -150,7 +153,7 @@ void Output<Stepper>::importfile(const char* filename)
 	ifstream ifs(filename);
     	if (ifs.bad())
     	{
-       		return;
+       	   throw(RuntimeException("Could not open parameterfile!",1));	
     	}
 	ifs >> xsave >> ysave; 
    }

@@ -9,7 +9,7 @@
 CF = -O2 -lntl
 DCF = -lntl -Wall -g
 
-FILES = StepperBase.cpp main.cpp
+FILES = StepperBase.cpp RuntimeException.cpp main.cpp
 
 #==============================================================================
 

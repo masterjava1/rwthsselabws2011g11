@@ -1,13 +1,14 @@
-/*===========================================================================
+/**===========================================================================
   30.03.2012
   desc: high-level interface for ODE solvers with adaptive steppsize controll
-  rev: 0.1
+  rev: 1.0
   author: Alexander Fischer
   ===========================================================================
   dependencies:
     - blitz/array.h 
     - Stepper.h  
     - Output.h
+    - RuntimeException.h
   ===========================================================================*/
 #ifndef _ODEINT_INCLUDED__
 #define _ODEINT_INCLUDED__
@@ -91,10 +92,12 @@ void Odeint<Stepper>::integrate() {
          }
          return;  // Normal exit
       }
-      if (abs(s.hnext) <= hmin) throw("Step size too small in Odeint");
+      if (abs(s.hnext) <= hmin) throw(RuntimeException("Step size too small in Odeint!\n"
+      "hnext <= hmin",0));
       h=s.hnext;
    }
-   throw("Too many steps in routine Odeint");
+   throw(RuntimeException("Too many steps in routine Odeint\n"
+   "counter > maxsteps",0));
 }
 
 #endif

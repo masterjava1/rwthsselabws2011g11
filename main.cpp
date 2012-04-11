@@ -7,6 +7,7 @@
 #include "RHS_gyro.h"
 #include "StepperDopr853m.h"
 #include "write_tec.h"
+#include "RuntimeException.h"
 
 using namespace blitz;
 using namespace NTL;
@@ -49,8 +50,8 @@ int main(int argc, char* argv[]){
    Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,h1,hmin,out,d);
    try{
       ode.integrate();
-   }catch(char const* e){
-      cout << e << endl;
+   }catch(RuntimeException e){
+      cout << e.what() << endl;
       return 1;
    }
    
