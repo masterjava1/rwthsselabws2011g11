@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     parameterOptionsOpen(false),
-    params("250" ,"0.1" ,"2.5" ,"0.5" , "15", "0", "0.00001")
+    params("250" ,"0.1" ,"2.5" ,"0.5" , "15", "0", "0.00001", "2.75")
 {
     ui->setupUi(this);
     ui->Angles->setEnabled(false);
@@ -38,7 +38,7 @@ void MainWindow::on_actionOpenParameterOptions_triggered()
         connect(mParameter,SIGNAL(closeWindow()),this,SLOT(WindowClosed()));
         mParameter->show();
         parameterOptionsOpen = true;
-        mParameter->setPar(params.psid, params.theta, params.R, params.a, params.m, params.k, params.rtol);
+        mParameter->setPar(params.psid, params.theta, params.R, params.a, params.m, params.k, params.rtol, params.t_max);
     }
 }
 
@@ -53,7 +53,9 @@ void MainWindow::parWindowClosed(ParSet P){
     ui->m->setText(P.m);
     ui->k->setText(P.k);
     ui->Tolerance->setText(P.rtol);
+    ui->t_max->setText(P.t_max);
     params=P;
+    ui->t_slider->setMaximum((P.t_max).toDouble()*3000);
 }
 
 void MainWindow::WindowClosed()
@@ -67,71 +69,88 @@ void MainWindow::on_actionSlideTime_triggered()
     ui->t->setText(QString("%1").arg(ui->t_slider->value()));
 }
 
+RR max_RR(Array<RR,1> a, int numele) {
+   int i;
+   RR max=to_RR(-10E12);
+   for (i=0;i<numele;i++){
+      if(a(i)>max) max=a(i);
+   }
+   return max;
+}
+
+RR min_RR(Array<RR,1> a, int numele) {
+   int i;
+   RR min=to_RR(10E12);
+   for (i=0;i<numele;i++){
+      if(a(i)>min) min=a(i);
+   }
+   return min;
+}
+
+double to_double(const RR& a)
+{ double z; conv(z, a); return z; }
+
 void MainWindow::paintEvent(QPaintEvent *e)
 {
-    /*// Input "t" "my" "lambda"  "ny"  "xi"  "omikron"  "theta"  "phi"  "psi"  "xc"   "yc"
-    double m[11][2];
-    m[3][0] = 250;
-    m[6][0] =  0.1;
-    m[0][1] = 0.0001;
-    m[1][1] = -0.01864280005;
-    m[2][1] = 13.94658582 ;
-    m[3][1] = 235.9482257 ;
-    m[4][1] = -0.01751545076;
-    m[5][1] = -0.2890792344e-6;
-    m[6][1] = 0.09999933409 ;
-    m[7][1] = 0.0007080975705;
-    m[8][1] = 0.02428656225 ;
-    m[9][1] = -0.8892515745e-6;
-    m[10][1] = -0.2662271235e-11;
-    //Input end
-
-
-
+    // Input "t" "my" "lambda"  "ny"  "xi"  "omikron"  "theta"  "phi"  "psi"  "xc"   "yc"
     QPainter painter(this);
     painter.drawRect(10,100,250,150); //1
     painter.drawRect(10,260,250,150); //2
     painter.drawRect(270,100,250,150); //3
     painter.drawRect(270,260,250,150); //4
 
-//Angles ==================================================
-    //get min and max values -- val_min; val_max
-    double val1_min[] = {min(m[8][]),min(m[7][]),min(m[9][])};
-    double val1_max[] = {max(m[8][]),max(m[7][]),max(m[9][])};
-    double sum1[] = {0,0,0};
+    QPainter redpainter(this);
+    redpainter.setPen(Qt::red);
+    double t = ui->t_slider->value();
+    redpainter.drawLine(10+(ui->t_max->text()).toDouble()/250*t,100,10+(ui->t_max->text()).toDouble()/250*t,250);
 
-    for (int ii1= 0;ii1<3;ii1++){
-        if(val1_min[ii1]>0)
-            {sum1[ii1]=0;}
-        else{
-            if(val1_min[ii1]<0){
-            val1_min[ii1] = -val1_min[ii1];
-            }
-            if(val1_max[ii1]<0){
-            val1_max[ii1] = -val1_max[ii1];
-            }
-            sum1[ii1] = 150/(val1_min[ii1]+val1_max[ii1])*val1_max[ii1];
-        }
-        painter.drawLine(10,sum1[0]+100,260,sum1[0]+100); //1
-        painter.drawLine(270,sum1[1]+100,520,sum1[1]+100); //2
-        painter.drawLine(10,sum1[2]+260,260,sum1[2]+260); //3
-      //  painter.drawLine(270,sum1[0]+260,520,sum1[0]+260); //4
+    //Angles ================================================== ysave(var,n)
+   // if(ui->Angles->isEnabled(false)){
+        //get min and max values -- val_min; val_max
+        RR theta_min = min_RR(out->ysave(5,Range(0,out->count-1)), out->count);
+        RR phi_min = min_RR(out->ysave(6,Range(0,out->count-1)), out->count);
+        RR psi_min = min_RR(out->ysave(7,Range(0,out->count-1)), out->count);
+        RR theta_max = max_RR(out->ysave(5,Range(0,out->count-1)), out->count);
+        RR phi_max = max_RR(out->ysave(6,Range(0,out->count-1)), out->count);
+        RR psi_max = max_RR(out->ysave(7,Range(0,out->count-1)), out->count);
 
-        if (ii1 == 0){
-            path.moveTo(10,100+sum1[0]);
-        }
-        if (ii1 == 1){
-            path.moveTo(270,100+sum1[1]+m[6][0]);
-        }
-        if (ii1 == 2){
-            path.moveTo(10,260+sum1[2]);
-        }
-        for (int ii2 = 0; ii2<size(m,2);ii2++){
+        double min_angles[] = {to_double(theta_min),to_double(phi_min),to_double(psi_min)};
+        double max_angles[] = {to_double(theta_max),to_double(phi_max),to_double(psi_max)};
+        double sum1[] = {0,0,0};
+
+        for (int ii1= 0;ii1<3;ii1++){
+            if(min_angles[ii1]>0)
+                {sum1[ii1]=0;}
+            else{
+                if(min_angles[ii1]<0){
+                min_angles[ii1] = -min_angles[ii1];
+                }
+                if(max_angles[ii1]<0){
+                max_angles[ii1] = -max_angles[ii1];
+                }
+                sum1[ii1] = 150/(min_angles[ii1]+max_angles[ii1]+200)*max_angles[ii1];
+            }
+            painter.drawLine(10,sum1[0]+100,260,sum1[0]+100); //1
+            painter.drawLine(270,sum1[1]+100,520,sum1[1]+100); //2
+            painter.drawLine(10,sum1[2]+260,260,sum1[2]+260); //3
+          //  painter.drawLine(270,sum1[0]+260,520,sum1[0]+260); //4
             QPainterPath path;
-            path.lineTo(260-m[1][ii2],250-m[7][ii2]);
-            painter.drawPath(path);
-        }*/
-    }
+            if (ii1 == 0){
+                path.moveTo(10,100+sum1[0]+to_double(out->ysave(5,0)));
+            }
+            if (ii1 == 1){
+                path.moveTo(270,100+sum1[1]+to_double(out->ysave(6,0)));
+            }
+            if (ii1 == 2){
+                path.moveTo(10,260+sum1[2]+to_double(out->ysave(7,0)));
+            }
+            for (int ii2 = 0; ii2<out->count-1;ii2++){
+                path.lineTo(to_double(out->xsave(ii2)),to_double(out->ysave(ii1+5,ii2)));
+                painter.drawPath(path);
+            }
+        }
+   // }
+}
 
 
 

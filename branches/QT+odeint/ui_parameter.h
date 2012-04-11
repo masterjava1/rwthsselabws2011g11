@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'parameter.ui'
 **
-** Created: Wed Apr 11 20:57:56 2012
+** Created: Wed Apr 11 22:50:15 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -47,6 +47,8 @@ public:
     QLineEdit *m;
     QPushButton *Submit;
     QPushButton *Cancel;
+    QLabel *t_max_text;
+    QLineEdit *t_max;
 
     void setupUi(QDialog *Parameter)
     {
@@ -73,7 +75,7 @@ public:
         theta0->setGeometry(QRect(210, 60, 113, 27));
         export_button = new QPushButton(Parameter);
         export_button->setObjectName(QString::fromUtf8("export_button"));
-        export_button->setGeometry(QRect(75, 252, 71, 27));
+        export_button->setGeometry(QRect(75, 280, 71, 27));
         theta0_text = new QLabel(Parameter);
         theta0_text->setObjectName(QString::fromUtf8("theta0_text"));
         theta0_text->setGeometry(QRect(20, 70, 91, 17));
@@ -97,7 +99,7 @@ public:
         Friction->setGeometry(QRect(20, 10, 91, 22));
         import_button = new QPushButton(Parameter);
         import_button->setObjectName(QString::fromUtf8("import_button"));
-        import_button->setGeometry(QRect(0, 252, 71, 27));
+        import_button->setGeometry(QRect(0, 280, 71, 27));
         psidot_text = new QLabel(Parameter);
         psidot_text->setObjectName(QString::fromUtf8("psidot_text"));
         psidot_text->setGeometry(QRect(20, 40, 121, 17));
@@ -112,10 +114,16 @@ public:
         m->setGeometry(QRect(210, 150, 113, 27));
         Submit = new QPushButton(Parameter);
         Submit->setObjectName(QString::fromUtf8("Submit"));
-        Submit->setGeometry(QRect(150, 252, 121, 27));
+        Submit->setGeometry(QRect(150, 280, 121, 27));
         Cancel = new QPushButton(Parameter);
         Cancel->setObjectName(QString::fromUtf8("Cancel"));
-        Cancel->setGeometry(QRect(280, 252, 71, 27));
+        Cancel->setGeometry(QRect(280, 280, 71, 27));
+        t_max_text = new QLabel(Parameter);
+        t_max_text->setObjectName(QString::fromUtf8("t_max_text"));
+        t_max_text->setGeometry(QRect(20, 240, 81, 17));
+        t_max = new QLineEdit(Parameter);
+        t_max->setObjectName(QString::fromUtf8("t_max"));
+        t_max->setGeometry(QRect(210, 240, 113, 27));
 
         retranslateUi(Parameter);
         QObject::connect(Friction, SIGNAL(clicked()), Parameter, SLOT(FrictionCheck()));
@@ -149,6 +157,8 @@ public:
         m->setText(QApplication::translate("Parameter", "15", 0, QApplication::UnicodeUTF8));
         Submit->setText(QApplication::translate("Parameter", "Submit Changes", 0, QApplication::UnicodeUTF8));
         Cancel->setText(QApplication::translate("Parameter", "Cancel", 0, QApplication::UnicodeUTF8));
+        t_max_text->setText(QApplication::translate("Parameter", "t_max [s]", 0, QApplication::UnicodeUTF8));
+        t_max->setText(QApplication::translate("Parameter", "2.75", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

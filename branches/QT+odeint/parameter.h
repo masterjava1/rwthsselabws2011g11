@@ -13,9 +13,9 @@ class Parameter : public QDialog {
 public:
     Parameter(QWidget *parent = 0);
     ~Parameter();
-    Parameter(QString ppsidot0, QString ttheta0, QString RR, QString aa, QString mm, QString kk, QString rtoll);
-    QString psidot0, theta0, R, a, m, k, rtol;
-    void setPar(QString psidot0, QString theta0, QString R, QString a, QString m, QString k, QString TolConQual);
+    Parameter(QString ppsidot0, QString ttheta0, QString RR, QString aa, QString mm, QString kk, QString rtoll, QString tt_max);
+    QString psidot0, theta0, R, a, m, k, rtol, t_max;
+    void setPar(QString psidot0, QString theta0, QString R, QString a, QString m, QString k, QString TolConQual, QString t_max);
     void closeEvent(QCloseEvent* event);
 public slots:
     void FrictionCheck();

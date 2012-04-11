@@ -45,6 +45,9 @@ public slots:
 protected:
     void changeEvent(QEvent *e);
     void paintEvent(QPaintEvent *e);
+    RR max_RR(Array<RR,1> a, int numele);
+    RR min_RR(Array<RR,1> a, int numele);
+    double to_double(const RR& a);
 
 private:
     Ui::MainWindow *ui;

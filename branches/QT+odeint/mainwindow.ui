@@ -389,6 +389,32 @@
      <string>Tecplot</string>
     </property>
    </widget>
+   <widget class="QLabel" name="t_max_text">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>20</y>
+      <width>61</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>t_max = </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="t_max">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>20</y>
+      <width>59</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <action name="actionOpenParameterOptions">
    <property name="text">
