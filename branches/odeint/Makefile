@@ -16,10 +16,13 @@ SRC = src
 
 #==============================================================================
 
-default: $(FILES)
+default: 
 	g++ $(SRC)/* $(CF) -I $(INCLUDE) -L $(LIB) -o odeint.exe
 
-debug: $(FILES)
+local: 
+	g++ $(SRC)/* $(CF) -I $(INCLUDE) -o odeint.exe	
+
+debug: 
 	g++ $(SRC)/* $(DCF) -I $(INCLUDE) -L $(LIB) -o odeint_debug.exe
 
 #==============================================================================
