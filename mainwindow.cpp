@@ -55,7 +55,7 @@ void MainWindow::parWindowClosed(ParSet P){
     ui->Tolerance->setText(P.rtol);
     ui->t_max->setText(P.t_max);
     params=P;
-    ui->t_slider->setMaximum((P.t_max).toDouble()*3000);
+    ui->t_slider->setMaximum((P.t_max).toDouble()*1000);
 }
 
 void MainWindow::WindowClosed()
@@ -69,7 +69,7 @@ void MainWindow::on_actionSlideTime_triggered()
     ui->t->setText(QString("%1").arg(ui->t_slider->value()));
 }
 
-RR max_RR(Array<RR,1> a, int numele) {
+RR MainWindow::max_RR(Array<RR,1> a, int numele) {
    int i;
    RR max=to_RR(-10E12);
    for (i=0;i<numele;i++){
@@ -78,7 +78,7 @@ RR max_RR(Array<RR,1> a, int numele) {
    return max;
 }
 
-RR min_RR(Array<RR,1> a, int numele) {
+RR MainWindow::min_RR(Array<RR,1> a, int numele) {
    int i;
    RR min=to_RR(10E12);
    for (i=0;i<numele;i++){
@@ -87,7 +87,7 @@ RR min_RR(Array<RR,1> a, int numele) {
    return min;
 }
 
-double to_double(const RR& a)
+double MainWindow::to_double(const RR& a)
 { double z; conv(z, a); return z; }
 
 void MainWindow::paintEvent(QPaintEvent *e)
@@ -233,7 +233,7 @@ void MainWindow::on_Simulate_button_clicked()
     ystart(7)=to_RR(0.0);
     ystart(8)=to_RR(0.0);
     ystart(9)=to_RR(0.0);
-    out=new Output<StepperDopr853m<RHS_gyro > >(-1);
+    out=new Output<StepperDopr853m<RHS_gyro > >(100);
     RHS_gyro d(g,R,k,m,a);
     Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,h1,hmin,*out,d);
 
