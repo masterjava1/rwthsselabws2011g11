@@ -8,10 +8,11 @@
 #include <QPaintEvent>
 #include <QtGui>
 #include <QTabWidget>
+#include <fstream>
+#include <cstdlib>
 #include "parameter.h"
 #include "exportdialog.h"
 #include "parset.h"
-#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "exportdialog.h"
 
