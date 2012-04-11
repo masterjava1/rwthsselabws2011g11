@@ -12,9 +12,7 @@ Die Simulation muss sowohl den reibungsbehafteten, als auch reibungsfreien Fall 
 
 Im Speziellen wird ein Runge-Kutta56-Verfahren mit adaptiver Schrittweitensteuerung unter Betrachtung einer Erhaltungsgr\"o\ss e (\textit{conserved quantity}) zur Simulation des Problems verwendet.\\ 
 
-% ??????????????????????????????
-\textit{Wahrscheinlich wird das Rkv56 Verfahren durch ein BDF-Verfahren oder eine C++ Implementierung eines speziellen Krylow-Verfahrens ersetzt.\\
-https://computation.llnl.gov/casc/software.html } \\ 
+Das Rkv56 Verfahren wurde durch ein StepperDopr853-Verfahren ersetzt, um eine h\"ohere Genauigkeit zu erreichen.\\ 
 Die Realisierung der Simulation findet in C++ statt. \\
 
 Die Bedienung sowie das Ausgeben der Simulationsergebnisse muss durch eine grafische Benutzeroberfl\"ache (\textit{GUI}) m\"oglich sein.
@@ -69,8 +67,8 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \subsubsection*{Systemanforderungen}
 \subsubsubsection*{Funktionale Anforderungen}
 
-{Dem Anwender ist es m\"oglich die Simulationsparameter k (Reibung) sowie 
-$ \dot \psi $ (rad/s) \"uber eine grafische Eingabemaske festzulegen. 
+{Dem Anwender ist es m\"oglich die Simulationsparameter $k$ (Reibung) sowie 
+$ \dot \psi (rad/s), \theta (rad), R (cm), a (cm), m (g)$ und die Toleranz der Erhaltungsgr\"o\sse  \"uber eine grafische Eingabemaske festzulegen. 
 Wenn w\"ahrend der Simulation ein Fehler auftritt wird der Anwender 
 \"uber ein Popup-Fenster benachrichtigt. Nach Durchlauf der Simulation
 bekommt der Anwender die Simulationsergebnisse 
@@ -78,15 +76,16 @@ bekommt der Anwender die Simulationsergebnisse
 \phi$ -} in Form von \textit{LineCharts} in eine \textit{GUI} 
 eingebettet angezeigt.} 
 
-Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei exportiert werden. \medskip
+Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei oder im Tecplotformat exportiert werden. \medskip
 
-Kommt es w\"ahrend der Laufzeit zu einem kritischen Fehler (ein Fehler, der das korrekte Fortf\"uhren des Programmes unm\"oglich macht) wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das Programm beendet.
+Kommt es w\"ahrend der Laufzeit zu einem kritischen Fehler (ein Fehler, der das korrekte Fortf\"uhren des Programmes unm\"oglich macht) wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das an die Stelle zur\"uckgesetzt, an der der Fehler auftrat.
 \medskip
 
 \subsubsubsection*{Nicht-Funktionale Anforderungen}
 {
 Die Exportfunktion der Simulationssoftware schreibt Tecplot konforme ASCII-kodierte Ausgabedateien.
 Vormals exportierte Dateien k\"onnen wieder importiert und geplottet werden.
+Ebenso k\o"nnen \a"ltere Parameterkonfigurationen importiert werden.
 Der Nutzer kann sich eine Statistik \"uber das Verhalten der Erhaltungsgr\"o\ss e und der Kontrollgr\"o\ss en zur Schrittweitensteuerung ausgeben lassen.  
 }
 
@@ -101,8 +100,6 @@ Der Nutzer kann sich eine Statistik \"uber das Verhalten der Erhaltungsgr\"o\ss 
 \item LineChart - \textit{Zwei Achsen Diagramm mit Kartesischem Koordinatensystem. Die einzelnen Datenpunkte sind durch gerade Linien verbunden.} 
 \item GUI - \textit{Eine grafische Benutzeroberfl\"ache (GBO oder GUI) ist eine Software-Komponente, die dem Benutzer eines Computers die Interaktion mit der Maschine \"uber grafische Symbole erlaubt.} 
 \end{itemize}
-
-%% {\em -folgt -}
 
 
 
