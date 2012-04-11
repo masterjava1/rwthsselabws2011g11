@@ -19,8 +19,12 @@ SRC = src
 default: 
 	g++ $(SRC)/* $(CF) -I $(INCLUDE) -L $(LIB) -o odeint.exe
 
-local: 
+local:
+	mv include/NTL include/NTL_bu 
+	mv include/blitz include/blitz_bu 
 	g++ $(SRC)/* $(CF) -I $(INCLUDE) -o odeint.exe	
+	mv include/NTL_bu include/NTL
+	mv include/blitz_bu include/blitz 
 
 debug: 
 	g++ $(SRC)/* $(DCF) -I $(INCLUDE) -L $(LIB) -o odeint_debug.exe
