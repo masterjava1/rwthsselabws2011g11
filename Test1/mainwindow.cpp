@@ -80,6 +80,25 @@ void MainWindow::on_actionSlideTime_triggered()
 
 void MainWindow::paintEvent(QPaintEvent *e)
 {
+    // Input "t" "my" "lambda"  "ny"  "xi"  "omikron"  "theta"  "phi"  "psi"  "xc"   "yc"
+    double m[11][2];
+    m[3][0] = 250;
+    m[6][0] =  0.1;
+    m[0][1] = 0.0001;
+    m[1][1] = -0.01864280005;
+    m[2][1] = 13.94658582 ;
+    m[3][1] = 235.9482257 ;
+    m[4][1] = -0.01751545076;
+    m[5][1] = -0.2890792344e-6;
+    m[6][1] = 0.09999933409 ;
+    m[7][1] = 0.0007080975705;
+    m[8][1] = 0.02428656225 ;
+    m[9][1] = -0.8892515745e-6;
+    m[10][1] = -0.2662271235e-11;
+    //Input end
+
+
+
     QPainter painter(this);
     painter.drawRect(10,100,250,150); //1
     painter.drawRect(10,260,250,150); //2
@@ -88,9 +107,10 @@ void MainWindow::paintEvent(QPaintEvent *e)
 
 //Angles ==================================================
     //get min and max values -- val_min; val_max
-    double val1_min[] = {-500,100,-2000};
-    double val1_max[] = {1500,2000,1700};
+    double val1_min[] = {min(m[8][]),min(m[7][]),min(m[9][])};
+    double val1_max[] = {max(m[8][]),max(m[7][]),max(m[9][])};
     double sum1[] = {0,0,0};
+
     for (int ii1= 0;ii1<3;ii1++){
         if(val1_min[ii1]>0)
             {sum1[ii1]=0;}
@@ -107,26 +127,24 @@ void MainWindow::paintEvent(QPaintEvent *e)
         painter.drawLine(270,sum1[1]+100,520,sum1[1]+100); //2
         painter.drawLine(10,sum1[2]+260,260,sum1[2]+260); //3
       //  painter.drawLine(270,sum1[0]+260,520,sum1[0]+260); //4
-        QPainterPath path;
+
         if (ii1 == 0){
             path.moveTo(10,100+sum1[0]);
         }
         if (ii1 == 1){
-            path.moveTo(270,100+sum1[1]);
+            path.moveTo(270,100+sum1[1]+m[6][0]);
         }
         if (ii1 == 2){
             path.moveTo(10,260+sum1[2]);
         }
-/*
-        path.lineTo(70,100);
-        path.lineTo(80,200);
-        path.lineTo(100,100);
-        path.lineTo(120,300);
-        path.lineTo(75,105);
-        path.lineTo(110,20);*/
-        painter.drawPath(path);
+        for (int ii2 = 0; ii2<size(m,2);ii2++){
+            QPainterPath path;
+            path.lineTo(260-m[1][ii2],250-m[7][ii2]);
+            painter.drawPath(path);
+        }
     }
-}
+
+
 
 void MainWindow::on_actionAnglesClicked_triggered()
 {
