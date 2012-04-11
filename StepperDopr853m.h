@@ -14,6 +14,8 @@
 #ifndef _STEPPERDOPR853_INCLUDED__
 #define _STEPPERDOPR853_INCLUDED__
 
+#define SQR(x) ((x)*(x))
+
 // DEBUG
 #include <iostream>
 #include <blitz/array.h>

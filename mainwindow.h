@@ -22,6 +22,7 @@
 #include "Output.h"
 #include "StepperDopr853m.h"
 #include "RHS_gyro.h"
+#include "write_tec.h"
 
 
 namespace Ui {
@@ -35,9 +36,9 @@ public:
     ~MainWindow();
 
     ParSet params;
+    Output<StepperDopr853m<RHS_gyro> > *out;
 
 public slots:
-    void ExportbuttonClicked();
     void parWindowClosed(ParSet P);
     void WindowClosed();
 
@@ -60,6 +61,8 @@ private slots:
     void on_actionSlideTime_triggered();
     void on_actionOpenParameterOptions_triggered();
     void on_Simulate_button_clicked();
+    void on_Tecplot_button_clicked();
+    void on_Export_button_clicked();
 };
 
 #endif // MAINWINDOW_H

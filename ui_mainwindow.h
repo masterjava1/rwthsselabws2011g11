@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Apr 11 17:07:02 2012
+** Created: Wed Apr 11 20:14:52 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -58,6 +58,7 @@ public:
     QPushButton *Angles;
     QPushButton *Derivatives;
     QPushButton *Positions;
+    QPushButton *Tecplot_button;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -161,6 +162,9 @@ public:
         Positions = new QPushButton(centralWidget);
         Positions->setObjectName(QString::fromUtf8("Positions"));
         Positions->setGeometry(QRect(220, 60, 92, 27));
+        Tecplot_button = new QPushButton(centralWidget);
+        Tecplot_button->setObjectName(QString::fromUtf8("Tecplot_button"));
+        Tecplot_button->setGeometry(QRect(320, 470, 92, 27));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
@@ -207,6 +211,7 @@ public:
         Angles->setText(QApplication::translate("MainWindow", "Angles", 0, QApplication::UnicodeUTF8));
         Derivatives->setText(QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
         Positions->setText(QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));
+        Tecplot_button->setText(QApplication::translate("MainWindow", "Tecplot", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
