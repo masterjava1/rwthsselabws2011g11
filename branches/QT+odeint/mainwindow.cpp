@@ -7,7 +7,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     parameterOptionsOpen(false),
-    params("250" ,"0.1" ,"2.5" ,"0.5" , "15", "0", "0.00001", "2.75")
+    params("250" ,"0.1" ,"2.5" ,"0.5" , "15", "0", "0.00001", "2.75"),
+    windswitch(0),
+    simulateon(false)
 {
     ui->setupUi(this);
     ui->Angles->setEnabled(false);
@@ -103,9 +105,13 @@ void MainWindow::paintEvent(QPaintEvent *e)
     redpainter.setPen(Qt::red);
     double t = ui->t_slider->value();
     redpainter.drawLine(10+(ui->t_max->text()).toDouble()/250*t,100,10+(ui->t_max->text()).toDouble()/250*t,250);
-
+    update();
+    if(simulateon){
+    switch (windswitch){
+    case 0:
+        break;
+    case 1:
     //Angles ================================================== ysave(var,n)
-   // if(ui->Angles->isEnabled(false)){
         //get min and max values -- val_min; val_max
         RR theta_min = min_RR(out->ysave(5,Range(0,out->count-1)), out->count);
         RR phi_min = min_RR(out->ysave(6,Range(0,out->count-1)), out->count);
@@ -149,7 +155,9 @@ void MainWindow::paintEvent(QPaintEvent *e)
                 painter.drawPath(path);
             }
         }
-   // }
+        break;
+    }
+    }
 }
 
 
@@ -159,7 +167,7 @@ void MainWindow::on_actionAnglesClicked_triggered()
     ui->Angles->setEnabled(false);
     ui->Derivatives->setEnabled(true);
     ui->Positions->setEnabled(true);
-    whichplot = 1;
+    windswitch = 1;
 }
 
 void MainWindow::on_actionDerivativesClicked_triggered()
@@ -167,7 +175,7 @@ void MainWindow::on_actionDerivativesClicked_triggered()
     ui->Angles->setEnabled(true);
     ui->Derivatives->setEnabled(false);
     ui->Positions->setEnabled(true);
-    whichplot = 2;
+    windswitch = 2;
 }
 
 void MainWindow::on_actionPositionsClicked_triggered()
@@ -175,7 +183,7 @@ void MainWindow::on_actionPositionsClicked_triggered()
     ui->Angles->setEnabled(true);
     ui->Derivatives->setEnabled(true);
     ui->Positions->setEnabled(false);
-    whichplot = 3;
+    windswitch = 3;
 }
 
 
@@ -207,7 +215,7 @@ void MainWindow::on_Export_button_clicked()
 
 
 void MainWindow::on_Simulate_button_clicked()
-{
+{   simulateon = true;
     int nvar=10;
     RR atol=to_RR(1.0e-4);
     RR rtol=to_RR(params.rtol.toDouble());
@@ -247,3 +255,4 @@ void MainWindow::on_Simulate_button_clicked()
 
     out->~Output();
 }
+
