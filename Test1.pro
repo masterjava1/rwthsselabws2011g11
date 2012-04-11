@@ -37,4 +37,4 @@ FORMS += mainwindow.ui \
     errordialog.ui
 
 
-LIBS += -L/usr/local/lib -lntl -lblitz
+LIBS += -L/usr/local/lib -L/usr/lib -lntl -lblitz
