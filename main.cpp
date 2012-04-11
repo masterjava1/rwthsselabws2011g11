@@ -57,9 +57,10 @@ int main(int argc, char* argv[]){
    
 
    // Output
-   out.exportfile("tempfile.dat");
-   out.importfile("tempfile.dat");
+   //out.exportfile("tempfile.dat");
+   //out.importfile("tempfile.dat");
    cout << "Stepps "<<out.count << endl;
+   cout << "Writing file" << endl;
    write_tec(out,df);
 
    //cout << out.xsave(Range(0,out.count-1)) << endl;
@@ -67,7 +68,6 @@ int main(int argc, char* argv[]){
 
    // Write file
    /*
-   cout << "Writing file" << endl;
    ofstream ofile;
    ofile.open("gyro.dat");
    ofile << setprecision(16);
