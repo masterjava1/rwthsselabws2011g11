@@ -568,10 +568,6 @@ bool StepperDopr853m<D>::Controller::success( RR err, RR &h,
    RR Gc;
    // preserved quantity for next step
    Gc = derivs.presQ(youtc);
-//   cout << "next y" << endl;
-//   cout << youtc << endl << endl;
-//   cout << "dG/h " << abs(G-Gc)/h << endl;
-//   cout << " with stepsize " << h << endl;
    if (err <= 1.0 && abs(G-Gc)<1E-6) {
       if (err == 0.0)
          scale=maxscale;
