@@ -19,12 +19,12 @@ Der urspr\"ungliche Algorithmus nutzte eine Fehlersch\"atzung der Ordnung 6, was
 $err = err_5 \frac{err_5}{sqrt{(err_3)^2+0.01(err_5)^2}}$ \\
 abgesch\"atzt werden. 
 
-Die meiste Zeit über gilt $err_5 << err_3$ und damit $err=O(h^8)$. \medskiip
+Die meiste Zeit \"uber gilt $err_5 << err_3$ und damit $err=O(h^8)$. \medskip
 
-StepperDopr853 wurde als Mehrschrittverfahren mit fehlergesteuerter Schrittweitensteuerung implementiert, die neben dem gesch\"atzten Fehler auch noch die Erhaltungsgr\"o\sse \\
+StepperDopr853 wurde als Mehrschrittverfahren mit fehlergesteuerter Schrittweitensteuerung implementiert, die neben dem gesch\"atzten Fehler auch noch die Erhaltungsgr\"o\ss e \\
 $IR\dot\phi\sin^2\theta+I_3(R\cos\theta-a)(\dot\phi\cos\theta+\dot\psi) = const =: G$ \\
 ber\"ucksichtigt. ($\Delta G$ pro Schritt $< 1E-6$ ).
-Der L\"oser unterst\u"tzt sowohl eine dichte Ausgabe \textit{dense output}, als auch die Ausgabe von n \"aquidistant verteilten Werten. 
+Der L\"oser unterst\"utzt sowohl eine dichte Ausgabe \textit{dense output}, als auch die Ausgabe von n \"aquidistant verteilten Werten. 
 
 \textit{Frei nach NumericalRecipes3rdEdition ? Chapter 17.2.4 Dopr853 ? An Eight-Order Method
 
