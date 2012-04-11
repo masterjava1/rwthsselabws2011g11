@@ -6,6 +6,7 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+
 }
 
 Dialog::~Dialog()
@@ -27,15 +28,6 @@ void Dialog::changeEvent(QEvent *e)
 
 void Dialog::paintEvent(QPaintEvent *e)
 {
-    QPainterPath path;
-
-    path.moveTo(0, 0);
-    path.lineTo(70,100);
-    path.lineTo(80,200);
-
     QPainter painter(this);
-    painter.setPen(QPen(QColor(79, 106, 25), 1, Qt::SolidLine,
-                        Qt::FlatCap, Qt::MiterJoin));
-
-    painter.drawPath(path);
+    painter.drawLine(100,200,100,300);
 }

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Apr 10 21:32:00 2012
+** Created: Wed Apr 11 11:54:53 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,13 +14,11 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
-#include <QtGui/QGraphicsView>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QMainWindow>
 #include <QtGui/QPushButton>
 #include <QtGui/QSlider>
-#include <QtGui/QTabWidget>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,23 +28,10 @@ class Ui_MainWindow
 public:
     QAction *actionOpenParameterOptions;
     QAction *actionSlideTime;
+    QAction *actionAnglesClicked;
+    QAction *actionDerivativesClicked;
+    QAction *actionPositionsClicked;
     QWidget *centralWidget;
-    QTabWidget *tabWidget;
-    QWidget *Angles;
-    QGraphicsView *graphicsView_3;
-    QGraphicsView *graphicsView;
-    QGraphicsView *graphicsView_2;
-    QGraphicsView *graphicsView_4;
-    QWidget *Derivatives;
-    QGraphicsView *graphicsView_5;
-    QGraphicsView *graphicsView_6;
-    QGraphicsView *graphicsView_7;
-    QGraphicsView *graphicsView_8;
-    QWidget *Positions;
-    QGraphicsView *graphicsView_9;
-    QGraphicsView *graphicsView_10;
-    QGraphicsView *graphicsView_11;
-    QGraphicsView *graphicsView_12;
     QSlider *t_slider;
     QPushButton *changeparameter_button;
     QPushButton *Simulate_button;
@@ -70,6 +55,9 @@ public:
     QLabel *m;
     QLabel *k;
     QLabel *Tolerance;
+    QPushButton *Angles;
+    QPushButton *Derivatives;
+    QPushButton *Positions;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -82,62 +70,20 @@ public:
         actionOpenParameterOptions->setObjectName(QString::fromUtf8("actionOpenParameterOptions"));
         actionSlideTime = new QAction(MainWindow);
         actionSlideTime->setObjectName(QString::fromUtf8("actionSlideTime"));
+        actionAnglesClicked = new QAction(MainWindow);
+        actionAnglesClicked->setObjectName(QString::fromUtf8("actionAnglesClicked"));
+        actionDerivativesClicked = new QAction(MainWindow);
+        actionDerivativesClicked->setObjectName(QString::fromUtf8("actionDerivativesClicked"));
+        actionPositionsClicked = new QAction(MainWindow);
+        actionPositionsClicked->setObjectName(QString::fromUtf8("actionPositionsClicked"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        tabWidget = new QTabWidget(centralWidget);
-        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 50, 511, 411));
-        Angles = new QWidget();
-        Angles->setObjectName(QString::fromUtf8("Angles"));
-        graphicsView_3 = new QGraphicsView(Angles);
-        graphicsView_3->setObjectName(QString::fromUtf8("graphicsView_3"));
-        graphicsView_3->setGeometry(QRect(10, 190, 231, 171));
-        graphicsView = new QGraphicsView(Angles);
-        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(10, 10, 231, 171));
-        graphicsView_2 = new QGraphicsView(Angles);
-        graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(250, 10, 231, 171));
-        graphicsView_4 = new QGraphicsView(Angles);
-        graphicsView_4->setObjectName(QString::fromUtf8("graphicsView_4"));
-        graphicsView_4->setGeometry(QRect(250, 190, 231, 171));
-        tabWidget->addTab(Angles, QString());
-        Derivatives = new QWidget();
-        Derivatives->setObjectName(QString::fromUtf8("Derivatives"));
-        graphicsView_5 = new QGraphicsView(Derivatives);
-        graphicsView_5->setObjectName(QString::fromUtf8("graphicsView_5"));
-        graphicsView_5->setGeometry(QRect(10, 190, 231, 171));
-        graphicsView_6 = new QGraphicsView(Derivatives);
-        graphicsView_6->setObjectName(QString::fromUtf8("graphicsView_6"));
-        graphicsView_6->setGeometry(QRect(10, 10, 231, 171));
-        graphicsView_7 = new QGraphicsView(Derivatives);
-        graphicsView_7->setObjectName(QString::fromUtf8("graphicsView_7"));
-        graphicsView_7->setGeometry(QRect(250, 10, 231, 171));
-        graphicsView_8 = new QGraphicsView(Derivatives);
-        graphicsView_8->setObjectName(QString::fromUtf8("graphicsView_8"));
-        graphicsView_8->setGeometry(QRect(250, 190, 231, 171));
-        tabWidget->addTab(Derivatives, QString());
-        Positions = new QWidget();
-        Positions->setObjectName(QString::fromUtf8("Positions"));
-        graphicsView_9 = new QGraphicsView(Positions);
-        graphicsView_9->setObjectName(QString::fromUtf8("graphicsView_9"));
-        graphicsView_9->setGeometry(QRect(250, 10, 231, 171));
-        graphicsView_10 = new QGraphicsView(Positions);
-        graphicsView_10->setObjectName(QString::fromUtf8("graphicsView_10"));
-        graphicsView_10->setGeometry(QRect(10, 10, 231, 171));
-        graphicsView_11 = new QGraphicsView(Positions);
-        graphicsView_11->setObjectName(QString::fromUtf8("graphicsView_11"));
-        graphicsView_11->setGeometry(QRect(250, 190, 231, 171));
-        graphicsView_12 = new QGraphicsView(Positions);
-        graphicsView_12->setObjectName(QString::fromUtf8("graphicsView_12"));
-        graphicsView_12->setGeometry(QRect(10, 190, 231, 171));
-        tabWidget->addTab(Positions, QString());
         t_slider = new QSlider(centralWidget);
         t_slider->setObjectName(QString::fromUtf8("t_slider"));
         t_slider->setGeometry(QRect(20, 470, 231, 19));
         t_slider->setMinimum(0);
         t_slider->setMaximum(2200);
-        t_slider->setSingleStep(100);
+        t_slider->setSingleStep(10);
         t_slider->setTracking(true);
         t_slider->setOrientation(Qt::Horizontal);
         changeparameter_button = new QPushButton(centralWidget);
@@ -206,15 +152,24 @@ public:
         Tolerance = new QLabel(centralWidget);
         Tolerance->setObjectName(QString::fromUtf8("Tolerance"));
         Tolerance->setGeometry(QRect(480, 0, 59, 17));
+        Angles = new QPushButton(centralWidget);
+        Angles->setObjectName(QString::fromUtf8("Angles"));
+        Angles->setGeometry(QRect(20, 60, 92, 27));
+        Derivatives = new QPushButton(centralWidget);
+        Derivatives->setObjectName(QString::fromUtf8("Derivatives"));
+        Derivatives->setGeometry(QRect(120, 60, 92, 27));
+        Positions = new QPushButton(centralWidget);
+        Positions->setObjectName(QString::fromUtf8("Positions"));
+        Positions->setGeometry(QRect(220, 60, 92, 27));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
         QObject::connect(Export_button, SIGNAL(clicked()), MainWindow, SLOT(ExportbuttonClicked()));
         QObject::connect(changeparameter_button, SIGNAL(clicked()), actionOpenParameterOptions, SLOT(trigger()));
         QObject::connect(t_slider, SIGNAL(sliderMoved(int)), actionSlideTime, SLOT(trigger()));
-
-        tabWidget->setCurrentIndex(2);
-
+        QObject::connect(Angles, SIGNAL(clicked()), actionAnglesClicked, SLOT(trigger()));
+        QObject::connect(Derivatives, SIGNAL(clicked()), actionDerivativesClicked, SLOT(trigger()));
+        QObject::connect(Positions, SIGNAL(clicked()), actionPositionsClicked, SLOT(trigger()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -224,9 +179,9 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         actionOpenParameterOptions->setText(QApplication::translate("MainWindow", "openParameterOptions", 0, QApplication::UnicodeUTF8));
         actionSlideTime->setText(QApplication::translate("MainWindow", "SlideTime", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(Angles), QApplication::translate("MainWindow", "Angles", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(Derivatives), QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(Positions), QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));
+        actionAnglesClicked->setText(QApplication::translate("MainWindow", "AnglesClicked", 0, QApplication::UnicodeUTF8));
+        actionDerivativesClicked->setText(QApplication::translate("MainWindow", "DerivativesClicked", 0, QApplication::UnicodeUTF8));
+        actionPositionsClicked->setText(QApplication::translate("MainWindow", "PositionsClicked", 0, QApplication::UnicodeUTF8));
         changeparameter_button->setText(QApplication::translate("MainWindow", "Change Parameter", 0, QApplication::UnicodeUTF8));
         Simulate_button->setText(QApplication::translate("MainWindow", "Simulate", 0, QApplication::UnicodeUTF8));
         Import_button->setText(QApplication::translate("MainWindow", "Import Data", 0, QApplication::UnicodeUTF8));
@@ -249,6 +204,9 @@ public:
         m->setText(QString());
         k->setText(QString());
         Tolerance->setText(QString());
+        Angles->setText(QApplication::translate("MainWindow", "Angles", 0, QApplication::UnicodeUTF8));
+        Derivatives->setText(QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
+        Positions->setText(QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

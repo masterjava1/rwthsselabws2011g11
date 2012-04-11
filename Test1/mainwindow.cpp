@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     parOpened(false)
 {
     ui->setupUi(this);
+    ui->Angles->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -72,11 +73,81 @@ void MainWindow::WindowClosed()
     parameterOptionsOpen = false;
 }
 
-
-
-
-
 void MainWindow::on_actionSlideTime_triggered()
 {
     ui->t->setText(QString("%1").arg(ui->t_slider->value()));
+}
+
+void MainWindow::paintEvent(QPaintEvent *e)
+{
+    QPainter painter(this);
+    painter.drawRect(10,100,250,150); //1
+    painter.drawRect(10,260,250,150); //2
+    painter.drawRect(270,100,250,150); //3
+    painter.drawRect(270,260,250,150); //4
+
+//Angles ==================================================
+    //get min and max values -- val_min; val_max
+    double val1_min[] = {-500,100,-2000};
+    double val1_max[] = {1500,2000,1700};
+    double sum1[] = {0,0,0};
+    for (int ii1= 0;ii1<3;ii1++){
+        if(val1_min[ii1]>0)
+            {sum1[ii1]=0;}
+        else{
+            if(val1_min[ii1]<0){
+            val1_min[ii1] = -val1_min[ii1];
+            }
+            if(val1_max[ii1]<0){
+            val1_max[ii1] = -val1_max[ii1];
+            }
+            sum1[ii1] = 150/(val1_min[ii1]+val1_max[ii1])*val1_max[ii1];
+        }
+        painter.drawLine(10,sum1[0]+100,260,sum1[0]+100); //1
+        painter.drawLine(270,sum1[1]+100,520,sum1[1]+100); //2
+        painter.drawLine(10,sum1[2]+260,260,sum1[2]+260); //3
+      //  painter.drawLine(270,sum1[0]+260,520,sum1[0]+260); //4
+        QPainterPath path;
+        if (ii1 == 0){
+            path.moveTo(10,100+sum1[0]);
+        }
+        if (ii1 == 1){
+            path.moveTo(270,100+sum1[1]);
+        }
+        if (ii1 == 2){
+            path.moveTo(10,260+sum1[2]);
+        }
+/*
+        path.lineTo(70,100);
+        path.lineTo(80,200);
+        path.lineTo(100,100);
+        path.lineTo(120,300);
+        path.lineTo(75,105);
+        path.lineTo(110,20);*/
+        painter.drawPath(path);
+    }
+}
+
+void MainWindow::on_actionAnglesClicked_triggered()
+{
+    ui->Angles->setEnabled(false);
+    ui->Derivatives->setEnabled(true);
+    ui->Positions->setEnabled(true);
+    whichplot = 1;
+}
+
+void MainWindow::on_actionDerivativesClicked_triggered()
+{
+    ui->Angles->setEnabled(true);
+    ui->Derivatives->setEnabled(false);
+    ui->Positions->setEnabled(true);
+    whichplot = 2;
+}
+
+void MainWindow::on_actionPositionsClicked_triggered()
+{
+    ui->Angles->setEnabled(true);
+    ui->Derivatives->setEnabled(true);
+    ui->Positions->setEnabled(false);
+    whichplot = 3;
 }
