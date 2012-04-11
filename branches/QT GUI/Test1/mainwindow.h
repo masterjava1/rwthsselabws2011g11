@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include <QString>
 #include <QtGui/QApplication>
+#include <QtCore>
+#include <QPaintEvent>
+#include <QtGui>
+#include <QTabWidget>
 #include "parameter.h"
 #include "exportdialog.h"
 #include "parset.h"
@@ -28,6 +32,7 @@ public slots:
 
 protected:
     void changeEvent(QEvent *e);
+    void paintEvent(QPaintEvent *e);
 
 private:
     Ui::MainWindow *ui;
@@ -35,8 +40,12 @@ private:
     bool parameterOptionsOpen;
     bool parOpened;
     ExportDialog *mExport;
+    int whichplot;
 
 private slots:
+    void on_actionPositionsClicked_triggered();
+    void on_actionDerivativesClicked_triggered();
+    void on_actionAnglesClicked_triggered();
     void on_actionSlideTime_triggered();
     void on_actionOpenParameterOptions_triggered();
 };

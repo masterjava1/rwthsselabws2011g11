@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Tue Apr 10 21:32:02 2012
+** Created: Wed Apr 11 11:57:41 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,7 +35,10 @@ static const uint qt_meta_data_MainWindow[] = {
       36,   34,   11,   11, 0x0a,
       60,   11,   11,   11, 0x0a,
       75,   11,   11,   11, 0x08,
-     106,   11,   11,   11, 0x08,
+     113,   11,   11,   11, 0x08,
+     153,   11,   11,   11, 0x08,
+     188,   11,   11,   11, 0x08,
+     219,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -43,6 +46,9 @@ static const uint qt_meta_data_MainWindow[] = {
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0ExportbuttonClicked()\0P\0"
     "parWindowClosed(ParSet)\0WindowClosed()\0"
+    "on_actionPositionsClicked_triggered()\0"
+    "on_actionDerivativesClicked_triggered()\0"
+    "on_actionAnglesClicked_triggered()\0"
     "on_actionSlideTime_triggered()\0"
     "on_actionOpenParameterOptions_triggered()\0"
 };
@@ -79,11 +85,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: ExportbuttonClicked(); break;
         case 1: parWindowClosed((*reinterpret_cast< ParSet(*)>(_a[1]))); break;
         case 2: WindowClosed(); break;
-        case 3: on_actionSlideTime_triggered(); break;
-        case 4: on_actionOpenParameterOptions_triggered(); break;
+        case 3: on_actionPositionsClicked_triggered(); break;
+        case 4: on_actionDerivativesClicked_triggered(); break;
+        case 5: on_actionAnglesClicked_triggered(); break;
+        case 6: on_actionSlideTime_triggered(); break;
+        case 7: on_actionOpenParameterOptions_triggered(); break;
         default: ;
         }
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
 }
