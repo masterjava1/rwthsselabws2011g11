@@ -1,0 +1,5 @@
+To build odeint use the following commands:
+
+On cluster-linux use $make
+
+On your local computer use $make local

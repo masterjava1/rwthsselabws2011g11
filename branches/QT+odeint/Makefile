@@ -72,12 +72,9 @@ OBJECTS       = main.o \
 		moc_parameter.o \
 		moc_warningdialog.o \
 		moc_errordialog.o
-DIST          = /usr/share/qt4/mkspecs/common/unix.conf \
+DIST          = /usr/share/qt4/mkspecs/common/g++.conf \
+		/usr/share/qt4/mkspecs/common/unix.conf \
 		/usr/share/qt4/mkspecs/common/linux.conf \
-		/usr/share/qt4/mkspecs/common/gcc-base.conf \
-		/usr/share/qt4/mkspecs/common/gcc-base-unix.conf \
-		/usr/share/qt4/mkspecs/common/g++-base.conf \
-		/usr/share/qt4/mkspecs/common/g++-unix.conf \
 		/usr/share/qt4/mkspecs/qconfig.pri \
 		/usr/share/qt4/mkspecs/modules/qt_webkit_version.pri \
 		/usr/share/qt4/mkspecs/features/qt_functions.prf \
@@ -86,7 +83,6 @@ DIST          = /usr/share/qt4/mkspecs/common/unix.conf \
 		/usr/share/qt4/mkspecs/features/default_pre.prf \
 		/usr/share/qt4/mkspecs/features/debug.prf \
 		/usr/share/qt4/mkspecs/features/default_post.prf \
-		/usr/share/qt4/mkspecs/features/unix/gdb_dwarf_index.prf \
 		/usr/share/qt4/mkspecs/features/warn_on.prf \
 		/usr/share/qt4/mkspecs/features/qt.prf \
 		/usr/share/qt4/mkspecs/features/unix/thread.prf \
@@ -131,10 +127,6 @@ $(TARGET): ui_mainwindow.h ui_exportdialog.h ui_parameter.h ui_warningdialog.h u
 
 Makefile: Test1.pro  /usr/share/qt4/mkspecs/linux-g++/qmake.conf /usr/share/qt4/mkspecs/common/unix.conf \
 		/usr/share/qt4/mkspecs/common/linux.conf \
-		/usr/share/qt4/mkspecs/common/gcc-base.conf \
-		/usr/share/qt4/mkspecs/common/gcc-base-unix.conf \
-		/usr/share/qt4/mkspecs/common/g++-base.conf \
-		/usr/share/qt4/mkspecs/common/g++-unix.conf \
 		/usr/share/qt4/mkspecs/qconfig.pri \
 		/usr/share/qt4/mkspecs/modules/qt_webkit_version.pri \
 		/usr/share/qt4/mkspecs/features/qt_functions.prf \
@@ -143,7 +135,6 @@ Makefile: Test1.pro  /usr/share/qt4/mkspecs/linux-g++/qmake.conf /usr/share/qt4/
 		/usr/share/qt4/mkspecs/features/default_pre.prf \
 		/usr/share/qt4/mkspecs/features/debug.prf \
 		/usr/share/qt4/mkspecs/features/default_post.prf \
-		/usr/share/qt4/mkspecs/features/unix/gdb_dwarf_index.prf \
 		/usr/share/qt4/mkspecs/features/warn_on.prf \
 		/usr/share/qt4/mkspecs/features/qt.prf \
 		/usr/share/qt4/mkspecs/features/unix/thread.prf \
@@ -153,15 +144,12 @@ Makefile: Test1.pro  /usr/share/qt4/mkspecs/linux-g++/qmake.conf /usr/share/qt4/
 		/usr/share/qt4/mkspecs/features/yacc.prf \
 		/usr/share/qt4/mkspecs/features/lex.prf \
 		/usr/share/qt4/mkspecs/features/include_source_dir.prf \
-		/usr/lib/i386-linux-gnu/libQtGui.prl \
-		/usr/lib/i386-linux-gnu/libQtCore.prl
+		/usr/lib/libQtGui.prl \
+		/usr/lib/libQtCore.prl
 	$(QMAKE) -spec /usr/share/qt4/mkspecs/linux-g++ CONFIG+=debug -o Makefile Test1.pro
+/usr/share/qt4/mkspecs/common/g++.conf:
 /usr/share/qt4/mkspecs/common/unix.conf:
 /usr/share/qt4/mkspecs/common/linux.conf:
-/usr/share/qt4/mkspecs/common/gcc-base.conf:
-/usr/share/qt4/mkspecs/common/gcc-base-unix.conf:
-/usr/share/qt4/mkspecs/common/g++-base.conf:
-/usr/share/qt4/mkspecs/common/g++-unix.conf:
 /usr/share/qt4/mkspecs/qconfig.pri:
 /usr/share/qt4/mkspecs/modules/qt_webkit_version.pri:
 /usr/share/qt4/mkspecs/features/qt_functions.prf:
@@ -170,7 +158,6 @@ Makefile: Test1.pro  /usr/share/qt4/mkspecs/linux-g++/qmake.conf /usr/share/qt4/
 /usr/share/qt4/mkspecs/features/default_pre.prf:
 /usr/share/qt4/mkspecs/features/debug.prf:
 /usr/share/qt4/mkspecs/features/default_post.prf:
-/usr/share/qt4/mkspecs/features/unix/gdb_dwarf_index.prf:
 /usr/share/qt4/mkspecs/features/warn_on.prf:
 /usr/share/qt4/mkspecs/features/qt.prf:
 /usr/share/qt4/mkspecs/features/unix/thread.prf:
@@ -180,8 +167,8 @@ Makefile: Test1.pro  /usr/share/qt4/mkspecs/linux-g++/qmake.conf /usr/share/qt4/
 /usr/share/qt4/mkspecs/features/yacc.prf:
 /usr/share/qt4/mkspecs/features/lex.prf:
 /usr/share/qt4/mkspecs/features/include_source_dir.prf:
-/usr/lib/i386-linux-gnu/libQtGui.prl:
-/usr/lib/i386-linux-gnu/libQtCore.prl:
+/usr/lib/libQtGui.prl:
+/usr/lib/libQtCore.prl:
 qmake:  FORCE
 	@$(QMAKE) -spec /usr/share/qt4/mkspecs/linux-g++ CONFIG+=debug -o Makefile Test1.pro
 
