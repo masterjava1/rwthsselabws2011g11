@@ -420,22 +420,6 @@
  <resources/>
  <connections>
   <connection>
-   <sender>Export_button</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>ExportbuttonClicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>492</x>
-     <y>513</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>582</x>
-     <y>434</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>changeparameter_button</sender>
    <signal>clicked()</signal>
    <receiver>actionOpenParameterOptions</receiver>
