@@ -1,22 +1,25 @@
 #==============================================================================
 # 31.03.2012
+# author: Alexander Fischer
 # 
 # Makefile for odeint
-# blitz 0.9 required!
+# 
 #
 #==============================================================================
 
 CF = -O2 -lntl
 DCF = -lntl -Wall -g
 
-FILES = StepperBase.cpp RuntimeException.cpp main.cpp
+INCLUDE = include
+LIB = lib
+SRC = src
 
 #==============================================================================
 
 default: $(FILES)
-	g++ $(FILES) $(CF) -o odeint.exe
+	g++ $(SRC)/* $(CF) -I $(INCLUDE) -L $(LIB) -o odeint.exe
 
 debug: $(FILES)
-	g++ $(FILES) $(DCF) -o odeint_debug.exe
+	g++ $(SRC)/* $(DCF) -I $(INCLUDE) -L $(LIB) -o odeint_debug.exe
 
 #==============================================================================
