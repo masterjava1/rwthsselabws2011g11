@@ -81,24 +81,7 @@ void MainWindow::on_actionSlideTime_triggered()
 void MainWindow::paintEvent(QPaintEvent *e)
 {
     // Input "t" "my" "lambda"  "ny"  "xi"  "omikron"  "theta"  "phi"  "psi"  "xc"   "yc"
-    double m[11][2];
-    m[3][0] = 250;
-    m[6][0] =  0.1;
-    m[0][1] = 0.0001;
-    m[1][1] = -0.01864280005;
-    m[2][1] = 13.94658582 ;
-    m[3][1] = 235.9482257 ;
-    m[4][1] = -0.01751545076;
-    m[5][1] = -0.2890792344e-6;
-    m[6][1] = 0.09999933409 ;
-    m[7][1] = 0.0007080975705;
-    m[8][1] = 0.02428656225 ;
-    m[9][1] = -0.8892515745e-6;
-    m[10][1] = -0.2662271235e-11;
-    //Input end
-
-
-
+    /*
     QPainter painter(this);
     painter.drawRect(10,100,250,150); //1
     painter.drawRect(10,260,250,150); //2
@@ -142,6 +125,7 @@ void MainWindow::paintEvent(QPaintEvent *e)
             path.lineTo(260-m[1][ii2],250-m[7][ii2]);
             painter.drawPath(path);
         }
+    */
     }
 
 
