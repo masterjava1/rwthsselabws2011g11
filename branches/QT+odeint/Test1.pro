@@ -10,7 +10,9 @@ SOURCES += main.cpp \
     warningdialog.cpp \
     errordialog.cpp \
     parset.cpp \
-    ntl_ext.cpp
+    ntl_ext.cpp \
+    StepperBase.cpp \
+    RHS_van.cpp
 HEADERS += mainwindow.h \
     exportdialog.h \
     parameter.h \
@@ -24,7 +26,8 @@ HEADERS += mainwindow.h \
     ntl_ext.h \
     StepperBase.h \
     write_tec.h \
-    RuntimeException.h
+    RuntimeException.h \
+    RHS_van.h
 
 FORMS += mainwindow.ui \
     exportdialog.ui \
