@@ -54,7 +54,8 @@ private:
     Parameter *mParameter;
     bool parameterOptionsOpen;
     ExportDialog *mExport;
-    int whichplot;
+    int windswitch;
+    bool simulateon;
 
 
 private slots:
