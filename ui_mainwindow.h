@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Apr 11 20:57:55 2012
+** Created: Wed Apr 11 22:50:14 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -59,6 +59,8 @@ public:
     QPushButton *Derivatives;
     QPushButton *Positions;
     QPushButton *Tecplot_button;
+    QLabel *t_max_text;
+    QLabel *t_max;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -165,10 +167,15 @@ public:
         Tecplot_button = new QPushButton(centralWidget);
         Tecplot_button->setObjectName(QString::fromUtf8("Tecplot_button"));
         Tecplot_button->setGeometry(QRect(320, 470, 92, 27));
+        t_max_text = new QLabel(centralWidget);
+        t_max_text->setObjectName(QString::fromUtf8("t_max_text"));
+        t_max_text->setGeometry(QRect(400, 20, 61, 17));
+        t_max = new QLabel(centralWidget);
+        t_max->setObjectName(QString::fromUtf8("t_max"));
+        t_max->setGeometry(QRect(460, 20, 59, 17));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
-        QObject::connect(Export_button, SIGNAL(clicked()), MainWindow, SLOT(ExportbuttonClicked()));
         QObject::connect(changeparameter_button, SIGNAL(clicked()), actionOpenParameterOptions, SLOT(trigger()));
         QObject::connect(t_slider, SIGNAL(sliderMoved(int)), actionSlideTime, SLOT(trigger()));
         QObject::connect(Angles, SIGNAL(clicked()), actionAnglesClicked, SLOT(trigger()));
@@ -212,6 +219,8 @@ public:
         Derivatives->setText(QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
         Positions->setText(QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));
         Tecplot_button->setText(QApplication::translate("MainWindow", "Tecplot", 0, QApplication::UnicodeUTF8));
+        t_max_text->setText(QApplication::translate("MainWindow", "t_max = ", 0, QApplication::UnicodeUTF8));
+        t_max->setText(QString());
     } // retranslateUi
 
 };

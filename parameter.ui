@@ -81,7 +81,7 @@
    <property name="geometry">
     <rect>
      <x>75</x>
-     <y>252</y>
+     <y>280</y>
      <width>71</width>
      <height>27</height>
     </rect>
@@ -185,7 +185,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>252</y>
+     <y>280</y>
      <width>71</width>
      <height>27</height>
     </rect>
@@ -250,7 +250,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>252</y>
+     <y>280</y>
      <width>121</width>
      <height>27</height>
     </rect>
@@ -263,13 +263,39 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>252</y>
+     <y>280</y>
      <width>71</width>
      <height>27</height>
     </rect>
    </property>
    <property name="text">
     <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="t_max_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>81</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>t_max [s]</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="t_max">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>240</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2.75</string>
    </property>
   </widget>
   <action name="actionSetButtonClicked">
