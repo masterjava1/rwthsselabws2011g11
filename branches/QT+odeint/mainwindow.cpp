@@ -43,12 +43,6 @@ void MainWindow::on_actionOpenParameterOptions_triggered()
 }
 
 
-void MainWindow::ExportbuttonClicked()
-{
-    mExport = new ExportDialog;
-    mExport->show();
-}
-
 void MainWindow::parWindowClosed(ParSet P){
     mParameter->close();
     parameterOptionsOpen = false;
@@ -165,6 +159,34 @@ void MainWindow::on_actionPositionsClicked_triggered()
     whichplot = 3;
 }
 
+
+void MainWindow::on_Tecplot_button_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+           tr("Export Tecplot File"), "",
+           tr("Parameters (*.dat);;All Files (*)"));
+    write_tec(out,fileName.toStdString());
+}
+
+void MainWindow::on_Export_button_clicked()
+{
+    QFileDialog fdialog;
+    fdialog.setDefaultSuffix("gyr");
+    QString fileName = fdialog.getSaveFileName(this,
+           tr("Export Data"), "",
+           tr("Parameters (*.gyr);;All Files (*)"));
+
+    ofstream ofs(fileName.toLatin1()+ ".gyr");
+            if (ofs.bad())
+            {
+                return;
+            }
+
+        ofs << out->xsave << endl << out->ysave << endl;
+}
+
+
+
 void MainWindow::on_Simulate_button_clicked()
 {
     int nvar=10;
@@ -176,8 +198,8 @@ void MainWindow::on_Simulate_button_clicked()
     RR x2=to_RR(2.75);
     RR g=to_RR(9.81);
     RR R=to_RR(params.R.toDouble()/100);
-    RR k=to_RR(params.k.toDouble());
-    RR m=to_RR(params.m.toDouble());
+    RR k=to_RR(params.k.toDouble()*100);
+    RR m=to_RR(params.m.toDouble()/1000);
     RR a=to_RR(params.a.toDouble()/100);
 
     Array<RR,1> ystart(nvar);
@@ -192,7 +214,17 @@ void MainWindow::on_Simulate_button_clicked()
     ystart(7)=to_RR(0.0);
     ystart(8)=to_RR(0.0);
     ystart(9)=to_RR(0.0);
-    Output<StepperDopr853m<RHS_gyro> > out(-1);
+    out=new Output<StepperDopr853m<RHS_gyro > >(-1);
     RHS_gyro d(g,R,k,m,a);
-    Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,h1,hmin,out,d);
+    Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,h1,hmin,*out,d);
+
+    try{
+       ode.integrate();
+    }catch(RuntimeException rte){
+        QString what=rte.what();
+        QMessageBox::information(this, tr("Runtime Exception in ode.integrate()"),
+                                 what);
+    }
+
+    out->~Output();
 }

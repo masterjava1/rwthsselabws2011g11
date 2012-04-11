@@ -12,7 +12,8 @@ SOURCES += main.cpp \
     parset.cpp \
     ntl_ext.cpp \
     StepperBase.cpp \
-    RHS_van.cpp
+    RHS_van.cpp \
+    RuntimeException.cpp
 HEADERS += mainwindow.h \
     exportdialog.h \
     parameter.h \
