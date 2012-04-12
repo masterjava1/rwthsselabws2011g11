@@ -1,0 +1,242 @@
+\chapter{Analyse}
+\label{ch:2}
+
+\section{Anforderungsanalyse}
+\label{sec:2.1}
+
+\subsection{Benutzeranforderungen}
+
+{Das von Herrn Professor Gauger gestellte Simulationsproblem umfasst die Erstellung einer Software zur Simulation eines Stehaufkreisels.
+
+Die Simulation muss sowohl den reibungsbehafteten, als auch reibungsfreien Fall korrekt simulieren.
+
+Im Speziellen wird ein Runge-Kutta56-Verfahren mit adaptiver Schrittweitensteuerung unter Betrachtung einer Erhaltungsgr\"o\ss e (\textit{conserved quantity}) zur Simulation des Problems verwendet.\\ 
+
+Das Rkv56 Verfahren wurde durch ein StepperDopr853-Verfahren ersetzt, um eine h\"ohere Genauigkeit zu erreichen.\\ 
+Die Realisierung der Simulation findet in C++ statt. \\
+
+Die Bedienung sowie das Ausgeben der Simulationsergebnisse muss durch eine grafische Benutzeroberfl\"ache (\textit{GUI}) m\"oglich sein.
+
+Die Simulationsergebnisse k\"onnen in einer \textit{ASCII}-formatierten Datei zur weiteren Verarbeitung und Auswertung exportiert werden.
+
+Durch den modularen Aufbau ist die Wartbarkeit und einfache Erweiterbarkeit der Software durch Dritte gew\"ahrleistet.
+ 
+
+Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialgleichungssystems:
+
+\begin{align*}
+	&
+	\ddot \theta (I+ma^2\sin^2\theta+kma\sin \theta(R-a\cos\theta)(-\dot x_c
+	\sin\phi+\dot y_c \cos \phi+(R-a\cos\theta)\dot \theta))
+	\\&
+	=\underbrace{-(I_3-I)\dot \phi^2\sin\theta\cos\theta}_{=0}-I_3\dot \phi \sin \theta \dot \psi 
+	+ (g+a\dot \theta^2\cos \theta)(-ma\sin\theta - km(R-a\cos \theta)
+	\\&
+	(-\dot x_c \sin \phi +\dot y_c \cos \phi+(R-a\cos\theta)\dot \theta))
+\end{align*}
+\begin{align*}
+	&
+	\ddot \phi I \sin\theta= -\underbrace{(2I-I_3)}_{=I}
+	\dot \phi \dot \theta \cos \theta + I_3\dot \theta \dot \psi
+	\\&
+	-km(g+a\cos\theta\dot\theta^2+a\sin\theta\ddot\theta)
+	(a-R\cos\theta)(\dot x_c\cos \phi +\dot y_c \sin\phi+
+	(a\dot \phi+\dot \psi R)\sin \theta)
+\end{align*}
+\begin{align*}
+	&\ddot \psi I_3=-I_3(\ddot \phi \cos \theta - \dot \phi \dot \theta \sin \theta)
+	\\&
+	-km(g+a\cos\theta\dot\theta^2+a \sin\theta\ddot \theta)(R\sin\theta)
+	(\dot x_c\cos \phi +\dot y_c \sin \phi+(a\dot \phi +\dot \psi R)\sin\theta)
+\end{align*}
+\begin{align*}
+	&m\ddot x_c=-km(g+a\cos\theta\dot \theta^2+a\sin \theta\ddot\theta)
+	(\dot x_c+(a\dot \phi + \dot \psi R)\sin \theta\cos \phi+
+	(a\cos \theta -R)\sin \phi \dot \theta)
+\end{align*}
+\begin{align*}
+	&m\ddot y_c=-km(g+a\cos \theta\dot \theta^2+a \sin \theta \ddot \theta)
+	(\dot y_c+(a\dot \phi + \dot \psi R)\sin \theta \sin \phi
+	+(R-a\cos \theta)\cos\phi \dot \theta)
+\end{align*}
+
+
+\subsection{Anwendungsfallanalyse}
+\subsection*{Beschreibung der Anwendungsf\"alle}
+\begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
+\hline \\
+\textbf{Name} & \multicolumn{2}{p{5cm}|}{Export/Import as Tecplot file} \\
+\hline \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Enable storage of simulation data} \\
+\hline \\
+\textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{Simulation has been run/There are existing save files} \\
+\hline \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{A save file is created/Simulation data is loaded and graphed} \\
+\hline \\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Errormessage is shown}\\
+\hline \\
+\textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
+\hline \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Export Data} or \textit{Import data} button} \\
+\hline \\
+\textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
+\hline \\
+& 1 & User presses the \textit{Export Data} or \textit{Import data} button \\
+\hline \\
+& 2 & User selects a file to export/import \\
+\hline \\
+& 3 & Export file is created/Simulation data is loaded and graphed \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
+\hline \\
+\textbf{Name} & \multicolumn{2}{p{5cm}|}{Input Parameters} \\
+\hline \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{A set of parameters have been entered} \\
+\hline \\
+\textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{The user can start a simulation} \\
+\hline \\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Errormessage is shown}\\
+\hline \\
+\textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
+\hline \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Change Parameter} button in the GUI} \\
+\hline \\
+\textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
+\hline \\
+& 1 & User presses the \textit{Change Parameter} button in the GUI \\
+\hline \\
+& 2 & User enters parameters in a popupwindow \\
+\hline \\
+& 3 & User clicks \textit{Submit Changes}\\
+\hline \\
+\textbf{Nebenfluss} & \textbf{Schritt} & \textbf{Aktion} \\
+& 2a & User clicks on the Import/Export buttons\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
+\hline \\
+\textbf{Name} & \multicolumn{2}{p{5cm}|}{Save/Load Parameters from file} \\
+\hline \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Parameters are saved/loaded from file} \\
+\hline \\
+\textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{There are parameters to save/there is a file to load} \\
+\hline \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{A parameter file is created/parameters are loaded} \\
+\hline \\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Errormessage is shown}\\
+\hline \\
+\textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
+\hline \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Save} or \textit{Load} button in the GUI} \\
+\hline \\
+\textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
+\hline \\
+& 1 & User presses the \textit{Change Parameter} button\\
+\hline \\
+& 2 & User presses the \textit{Save} or \textit{Load} button in the GUI \\
+\hline \\
+& 3 & User clicks \textit{User chooses a file to save/load}\\
+\hline \\
+\textbf{Nebenfluss} & \textbf{Schritt} & \textbf{Aktion} \\
+& 1a & User enters parameters\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
+\hline \\
+\textbf{Name} & \multicolumn{2}{p{5cm}|}{Start Simulation} \\
+\hline \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Run the mathematical solver with the given parameters} \\
+\hline \\
+\textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{Parameters have been entered and checked for validity} \\
+\hline \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{Solver is finished, output is being created} \\
+\hline \\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Solver could not finish calculation}\\
+\hline \\
+\textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User, Solver} \\
+\hline \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Simulate} button in the GUI} \\
+\hline \\
+\textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
+\hline \\
+& 1 & User starts the simulation\\
+\hline \\
+& 2 & Check validity of parameters \\
+\hline \\
+& 3 & Run the solver\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
+\hline \\
+\textbf{Name} & \multicolumn{2}{p{5cm}|}{Toggle View} \\
+\hline \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Enable the user to view a different set of graphs} \\
+\hline \\
+\textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{There is simulation data to be graphed} \\
+\hline \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Errormessage is shown}\\
+\hline \\
+\textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
+\hline \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses one of the buttons \textit{Angles},\textit{Derivatives} or \textit{Positions} in the GUI} \\
+\hline \\
+\textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
+\hline \\
+& 1 & User presses one of the buttons \textit{Angles},\textit{Derivatives} or \textit{Positions} in the GUI\\
+\hline \\
+& 2 & A new set of data is graphed according to the button pressed \\
+\hline
+\end{tabular}
+
+\subsubsection*{Systemanforderungen}
+\subsection*{Funktionale Anforderungen}
+
+{Dem Anwender ist es m\"oglich die Simulationsparameter $k$ (Reibung) sowie 
+$ \dot \psi (rad/s), \theta (rad), R (cm), a (cm), m (g)$ und die Toleranz der Erhaltungsgr \"o\ss e  \"uber eine grafische Eingabemaske festzulegen. 
+Wenn w\"ahrend der Simulation ein Fehler auftritt wird der Anwender 
+\"uber ein Popup-Fenster benachrichtigt. Nach Durchlauf der Simulation
+bekommt der Anwender die Simulationsergebnisse 
+\textit{ - $\theta, \psi, \phi, x_c, y_c, \dot \theta, \dot \psi, 
+\phi$ -} in Form von \textit{LineCharts} in eine \textit{GUI} 
+eingebettet angezeigt.} 
+
+Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei oder im Tecplotformat exportiert werden. \medskip
+
+Kommt es w\"ahrend der Laufzeit zu einem kritischen Fehler (ein Fehler, der das korrekte Fortf\"uhren des Programmes unm\"oglich macht) wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das an die Stelle zur\"uckgesetzt, an der der Fehler auftrat.
+\medskip
+
+\subsection*{Nicht-Funktionale Anforderungen}
+{
+Die Exportfunktion der Simulationssoftware schreibt Tecplot konforme ASCII-kodierte Ausgabedateien.
+Vormals exportierte Dateien k\"onnen wieder importiert und geplottet werden.
+Ebenso k\o"nnen \a"ltere Parameterkonfigurationen importiert werden.
+Der Nutzer kann sich eine Statistik \"uber das Verhalten der Erhaltungsgr\"o\ss e und der Kontrollgr\"o\ss en zur Schrittweitensteuerung ausgeben lassen.  
+}
+
+\section{Begriffsanalyse}
+\begin{itemize}
+\item LineChart - \textit{Zwei Achsen Diagramm mit Kartesischem Koordinatensystem. Die einzelnen Datenpunkte sind durch gerade Linien verbunden.} 
+\item GUI - \textit{Eine grafische Benutzeroberfl\"ache (GBO oder GUI) ist eine Software-Komponente, die dem Benutzer eines Computers die Interaktion mit der Maschine \"uber grafische Symbole erlaubt.} 
+\end{itemize}
+
+
+

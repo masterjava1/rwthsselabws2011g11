@@ -1,0 +1,57 @@
+\documentclass{report}
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts} 
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{ulem}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{multirow}
+ 
+\title{\bf CES Softwareentwicklungspraktikum \\
+{\small Analyse- und Entwurfsdokument} \vspace{1cm}\\
+%\figure{figures/cces_logo.png,width=\textwidth}
+}
+
+
+\author{Lena Blum, Alexander Fischer und William Hulin}
+\date{Matr.-Nr. 302253, 303979 und 293858 \\
+email: {\tt [lena.blum|alexander.fischer|william.hulin]@rwth-aachen.de} 
+}
+
+\begin{document}
+\parindent 0pt
+\lstloadlanguages{[ISO]C++}
+\lstset{basicstyle=\small, numbers=left, numberstyle=\footnotesize,
+  stepnumber=1, numbersep=5pt, breaklines=true, escapeinside={/*@}{@*/}}
+
+
+\pagestyle{headings}
+
+\maketitle
+
+\tableofcontents
+
+
+\include{vorwort}
+\include{analyse}
+\include{entwurf}
+\include{nutzerdoc}
+\include{entwicklerdoc}
+
+\bibliographystyle{plain}
+\bibliography{analyse_entwurf}
+
+\appendix
+
+\include{quellcode}
+
+
+\end{document}
+
