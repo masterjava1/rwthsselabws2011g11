@@ -21,7 +21,7 @@ class StepperBase {
    RR &x;
    RR xold;  // used for dense output
    Array<RR,1> &y,&dydx;
-   RR atol, rtol;
+   RR atol, rtol,cqtol;
    bool dense;
    RR hdid;  // actual steppsize accomplished by the step routine
    RR hnext;  // steppsize predicted by the controller for the next step

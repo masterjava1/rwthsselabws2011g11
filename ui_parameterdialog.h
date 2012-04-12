@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'parameterdialog.ui'
 **
-** Created: Thu Apr 12 18:33:15 2012
+** Created: Thu Apr 12 23:35:03 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

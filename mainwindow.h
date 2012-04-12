@@ -64,7 +64,6 @@ private:
 
 private slots:
     void on_actionChangeVView_triggered();
-    void on_actionSlideTime_triggered();
     void on_actionOpenParameterOptions_triggered();
     void on_Simulate_button_clicked();
     void on_Tecplot_button_clicked();

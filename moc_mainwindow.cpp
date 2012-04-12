@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Thu Apr 12 19:18:37 2012
+** Created: Fri Apr 13 00:01:53 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,11 +35,10 @@ static const uint qt_meta_data_MainWindow[] = {
       38,   11,   11,   11, 0x0a,
       53,   11,   11,   11, 0x08,
       86,   11,   11,   11, 0x08,
-     117,   11,   11,   11, 0x08,
-     159,   11,   11,   11, 0x08,
-     188,   11,   11,   11, 0x08,
-     216,   11,   11,   11, 0x08,
-     243,   11,   11,   11, 0x08,
+     128,   11,   11,   11, 0x08,
+     157,   11,   11,   11, 0x08,
+     185,   11,   11,   11, 0x08,
+     212,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -47,7 +46,6 @@ static const uint qt_meta_data_MainWindow[] = {
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0P\0parWindowClosed(ParSet)\0"
     "WindowClosed()\0on_actionChangeVView_triggered()\0"
-    "on_actionSlideTime_triggered()\0"
     "on_actionOpenParameterOptions_triggered()\0"
     "on_Simulate_button_clicked()\0"
     "on_Tecplot_button_clicked()\0"
@@ -87,15 +85,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: parWindowClosed((*reinterpret_cast< ParSet(*)>(_a[1]))); break;
         case 1: WindowClosed(); break;
         case 2: on_actionChangeVView_triggered(); break;
-        case 3: on_actionSlideTime_triggered(); break;
-        case 4: on_actionOpenParameterOptions_triggered(); break;
-        case 5: on_Simulate_button_clicked(); break;
-        case 6: on_Tecplot_button_clicked(); break;
-        case 7: on_Export_button_clicked(); break;
-        case 8: on_Import_button_clicked(); break;
+        case 3: on_actionOpenParameterOptions_triggered(); break;
+        case 4: on_Simulate_button_clicked(); break;
+        case 5: on_Tecplot_button_clicked(); break;
+        case 6: on_Export_button_clicked(); break;
+        case 7: on_Import_button_clicked(); break;
         default: ;
         }
-        _id -= 9;
+        _id -= 8;
     }
     return _id;
 }
