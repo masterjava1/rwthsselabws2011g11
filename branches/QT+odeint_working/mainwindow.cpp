@@ -204,12 +204,23 @@ void MainWindow::redraw_plot(int variable)
    plot->graph(0)->setPen(QPen(Qt::blue));
    plot->graph(0)->setBrush(QBrush(QColor(0, 0, 255, 20)));
 
-   QVector<double> x(out->count);
-   QVector<double> y(out->count);
+   plot->addGraph();
+   plot->graph(1)->setPen(QPen(Qt::red));
+
+   QVector<double> ax(out->count);
+   QVector<double> ay(out->count);
    for (int i=0;i<out->count;i++){
-       conv(x[i],out->xsave(i));
-       conv(y[i],out->ysave(variable,i));
+       conv(ax[i],out->xsave(i));
+       conv(ay[i],out->ysave(variable,i));
    }
-   plot->graph(0)->setData(x,y);
+   plot->graph(0)->setData(ax,ay);
    plot->graph(0)->rescaleAxes();
+
+   QVector<double> bx(2);
+   QVector<double> by(2);
+
+   bx
+
+   plot->graph(1)->setData(bx,by);
+   plot->graph(1)->rescaleAxes();
 }
