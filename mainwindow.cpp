@@ -208,7 +208,7 @@ void MainWindow::redraw_plot(int variable)
    QVector<double> y(out->count);
    for (int i=0;i<out->count;i++){
        conv(x[i],out->xsave(i));
-       conv(y[i],out->ysave(i));
+       conv(y[i],out->ysave(variable,i));
    }
    plot->graph(0)->setData(x,y);
    plot->graph(0)->rescaleAxes();
