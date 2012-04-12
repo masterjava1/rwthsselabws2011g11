@@ -1,0 +1,644 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 11:10
+entering extended mode
+ %&-line parsing enabled.
+**test.tex
+(./test.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texmf-texlive/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/share/texmf-texlive/tex/generic/babel/ngermanb.ldf
+Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
+
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `ngerman'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@ngerman = a dialect from \language0
+\l@naustrian = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 92.
+)) (/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks26
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count101
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+(/usr/share/texmf-texlive/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen115
+\WF@size=\dimen116
+\c@WF@wrappedlines=\count102
+\WF@box=\box28
+\WF@everypar=\toks28
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/ulem.sty
+\UL@box=\box29
+\UL@hyphenbox=\box30
+\UL@skip=\skip49
+\UL@hook=\toks29
+\UL@pe=\count103
+\UL@pixel=\dimen117
+\ULC@box=\box31
+Package: ulem 2000/05/26
+\ULdepth=\dimen118
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/cancel.sty
+Package: cancel 2000/03/12 v2.1 Cancel math terms
+)
+(/usr/share/texmf-texlive/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count104
+\float@exts=\toks30
+\float@box=\box32
+\@float@everytoks=\toks31
+\@floatcapt=\box33
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
+\lst@mode=\count105
+\lst@gtempboxa=\box34
+\lst@token=\toks32
+\lst@length=\count106
+\lst@currlwidth=\dimen119
+\lst@column=\count107
+\lst@pos=\count108
+\lst@lostspace=\dimen120
+\lst@width=\dimen121
+\lst@newlines=\count109
+\lst@lineno=\count110
+\lst@maxwidth=\dimen122
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count111
+\lst@skipnumbers=\count112
+\lst@framebox=\box35
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen123
+) (./test.aux
+(./vorwort.aux) (./analyse.aux) (./entwurf.aux) (./nutzerdoc.aux)
+(./entwicklerdoc.aux) (./quellcode.aux))
+\openout1 = `test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count113
+\scratchdimen=\dimen124
+\scratchbox=\box36
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen125
+\MPnumerator=\count117
+\everyMPtoPDFconversion=\toks34
+)
+\c@lstlisting=\count118
+ (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 37.
+
+(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (13.06256pt too wide) in paragraph at lines 37--37
+ \T1/cmtt/m/n/12 [lena.blum|alexander.fischer|william.hulin]@rwth-aachen.de 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./test.toc)
+\tf@toc=\write3
+\openout3 = `test.toc'.
+
+ [1
+
+]
+\openout2 = `vorwort.aux'.
+
+
+(./vorwort.tex
+Kapitel 1.
+
+Overfull \hbox (12.6622pt too wide) in paragraph at lines 4--4
+[]\T1/cmr/bx/n/14.4 Aufgabenstellung und Struk-tur des Doku-ments 
+ []
+
+
+Overfull \hbox (74.73721pt too wide) in paragraph at lines 18--37
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--37
+
+ []
+
+) [2
+
+
+]
+\openout2 = `analyse.aux'.
+
+ (./analyse.tex
+Kapitel 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+ []
+
+
+Overfull \hbox (15.915pt too wide) in paragraph at lines 36--36
+[] 
+ []
+
+
+Overfull \hbox (2.4119pt too wide) in paragraph at lines 45--45
+[] 
+ []
+
+[3
+
+
+
+]
+Overfull \hbox (25.8656pt too wide) in paragraph at lines 56--56
+[] 
+ []
+
+
+Overfull \hbox (24.24069pt too wide) in paragraph at lines 61--61
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+[]\T1/cmr/m/n/10 User press-es the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+\T1/cmr/m/it/10 Ex-port Da-ta \T1/cmr/m/n/10 or
+ []
+
+
+Underfull \hbox (badness 5175) in paragraph at lines 90--91
+\T1/cmr/m/n/10 ed/Sim-u-la-tion da-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 90--91
+\T1/cmr/m/n/10 ta is load-ed and
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+[]\T1/cmr/m/n/10 User press-es the
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 114--115
+\T1/cmr/m/it/10 Change Pa-ram-e-ter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+\T1/cmr/m/n/10 Im-port/-Ex-port
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[]\T1/cmr/m/n/10 Parameters are saved/load-ed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+[]\T1/cmr/m/n/10 There are pa-ram-e-ters to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+[]\T1/cmr/m/n/10 User press-es the
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 145--146
+\T1/cmr/m/it/10 Change Pa-ram-e-ter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+[]\T1/cmr/m/n/10 User press-es the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+\T1/cmr/m/it/10 Save \T1/cmr/m/n/10 or \T1/cmr/m/it/10 Load
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+[]\T1/cmr/m/n/10 User clicks \T1/cmr/m/it/10 Us-er
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 149--150
+\T1/cmr/m/it/10 choos-es a file to
+ []
+
+[6]
+Underfull \hbox (badness 2922) in paragraph at lines 160--160
+[]\T1/cmr/m/n/10 Run the math-e-mat-i-cal solver
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 164--164
+[]\T1/cmr/m/n/10 Parameters have been en-tered
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 178--179
+[]\T1/cmr/m/n/10 Check va-lid-i-ty of
+ []
+
+[7]
+Underfull \hbox (badness 6944) in paragraph at lines 204--205
+[]\T1/cmr/m/n/10 User press-es one
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+\T1/cmr/m/n/10 of the but-tons
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+\T1/cmr/m/it/10 An-gles\T1/cmr/m/n/10 ,\T1/cmr/m/it/10 Derivatives
+ []
+
+[8] [9]
+Overfull \hbox (4.89342pt too wide) in paragraph at lines 229--234
+\T1/cmr/m/n/10 und geplot-tet wer-den. Eben-so kø"nnen []ltere Pa-ram-e-terkon-
+fig-u-ra-tio-nen im-portiert
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 237.
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 237.
+
+Overfull \hbox (3.57016pt too wide) in paragraph at lines 238--239
+[]\T1/cmr/m/n/10 GUI - \T1/cmr/m/it/10 Eine grafis-che Be-nutze-r-ober-fläche (
+GBO oder GUI) ist eine Software-
+ []
+
+) [10]
+\openout2 = `entwurf.aux'.
+
+ (./entwurf.tex
+Kapitel 3.
+<figures/StructureDiagGyroSim.png, id=54, 549.9747pt x 365.6862pt>
+File: figures/StructureDiagGyroSim.png Graphic file (type png)
+
+<use figures/StructureDiagGyroSim.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 6--7
+[] 
+ []
+
+<figures/RWTH_SSELAB_WS1112_CLASSES.png, id=55, 810.8694pt x 568.0422pt>
+File: figures/RWTH_SSELAB_WS1112_CLASSES.png Graphic file (type png)
+
+<use figures/RWTH_SSELAB_WS1112_CLASSES.png>
+<figures/Odeint.png, id=56, 797.8608pt x 759.5577pt>
+File: figures/Odeint.png Graphic file (type png)
+ <use figures/Odeint.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 10--12
+[]
+ []
+
+
+Overfull \hbox (88.62pt too wide) in paragraph at lines 10--12
+[] 
+ []
+
+[11
+
+
+
+ <./figures/StructureDiagGyroSim.png (PNG copy)>] [12 <./figures/RWTH_SSELAB_WS
+1112_CLASSES.png (PNG copy)>]
+Underfull \hbox (badness 6001) in paragraph at lines 19--19
+[][]$\OML/cmm/m/it/8 k \OT1/cmr/m/n/8 = 0\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3\OML/
+cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10[]\OML/cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10
+[]\OML/cmm/m/it/8 ; rtol \OT1/cmr/m/n/8 = \OML/cmm/m/it/8 atol \OT1/cmr/m/n/8 =
+ 10[]\OML/cmm/m/it/8 ; y\OT1/cmr/m/n/8 0 =
+ []
+
+[13 <./figures/Odeint.png (PNG copy)>]
+<figures/dopr0.png, id=67, 292.09125pt x 111.41624pt>
+File: figures/dopr0.png Graphic file (type png)
+ <use figures/dopr0.png>
+<figures/dopr1a.png, id=68, 785.93625pt x 705.63625pt>
+File: figures/dopr1a.png Graphic file (type png)
+
+<use figures/dopr1a.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 25--26
+[][] 
+ []
+
+[14 <./figures/dopr0.png (PNG copy)> <./figures/dopr1a.png (PNG copy)>]
+<figures/dopr1.png, id=80, 1083.04625pt x 610.28pt>
+File: figures/dopr1.png Graphic file (type png)
+ <use figures/dopr1.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 29--30
+[][] 
+ []
+
+<figures/dopr2.png, id=81, 785.93625pt x 705.63625pt>
+File: figures/dopr2.png Graphic file (type png)
+ <use figures/dopr2.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 37--38
+[][] 
+ []
+
+[15 <./figures/dopr1.png>] [16 <./figures/dopr2.png (PNG copy)>]
+<figures/GUIParameterInputForm.png, id=89, 376.5267pt x 362.0727pt>
+File: figures/GUIParameterInputForm.png Graphic file (type png)
+
+<use figures/GUIParameterInputForm.png>
+<figures/GUIDisplayForm.png, id=90, 562.2606pt x 403.2666pt>
+File: figures/GUIDisplayForm.png Graphic file (type png)
+
+<use figures/GUIDisplayForm.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 61--63
+[]
+ []
+
+
+Overfull \hbox (88.62pt too wide) in paragraph at lines 61--63
+[] 
+ []
+
+[17] [18 <./figures/GUIParameterInputForm.png (PNG copy)>]
+<figures/UseCaseTippeTop.png, id=98, 338.9463pt x 252.2223pt>
+File: figures/UseCaseTippeTop.png Graphic file (type png)
+
+<use figures/UseCaseTippeTop.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 65--66
+[] 
+ []
+
+) [19 <./figures/GUIDisplayForm.png (PNG copy)>] [20 <./figures/UseCaseTippeTop
+.png (PNG copy)>]
+\openout2 = `nutzerdoc.aux'.
+
+ (./nutzerdoc.tex
+Kapitel 4.
+) [21
+
+
+
+]
+\openout2 = `entwicklerdoc.aux'.
+
+ (./entwicklerdoc.tex
+Kapitel 5.
+) [22
+
+
+
+]
+No file test.bbl.
+\openout2 = `quellcode.aux'.
+
+(./quellcode.tex
+Anhang A.
+) [23
+
+
+
+] (./test.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux)
+(./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 9 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 4276 strings out of 495061
+ 54167 string characters out of 1182620
+ 142288 words of memory out of 3000000
+ 7322 multiletter control sequences out of 15000+50000
+ 25011 words of font info for 61 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 27i,16n,32p,519b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.60
+0pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/
+lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/lena/.texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/lena/.texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecti1000.600pk> </home/lena/.texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/ecbx1200.600pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
+1440.600pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> 
+</home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/lena/
+.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/lena/.texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/lena/.texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ectt1200.600pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecrm1200.600pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.
+600pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
+y6.pfb>
+Output written on test.pdf (24 pages, 842599 bytes).
+PDF statistics:
+ 666 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+
