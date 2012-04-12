@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'parameter.ui'
 **
-** Created: Thu Apr 12 23:57:42 2012
+** Created: Fri Apr 13 01:03:58 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -75,16 +75,16 @@ public:
         Friction = new QCheckBox(Parameter);
         Friction->setObjectName(QString::fromUtf8("Friction"));
         Friction->setGeometry(QRect(30, 0, 91, 22));
-        Friction->setChecked(true);
+        Friction->setChecked(false);
         import_button = new QPushButton(Parameter);
         import_button->setObjectName(QString::fromUtf8("import_button"));
         import_button->setGeometry(QRect(10, 370, 71, 27));
         Submit = new QPushButton(Parameter);
         Submit->setObjectName(QString::fromUtf8("Submit"));
-        Submit->setGeometry(QRect(160, 370, 121, 27));
+        Submit->setGeometry(QRect(240, 370, 121, 27));
         Cancel = new QPushButton(Parameter);
         Cancel->setObjectName(QString::fromUtf8("Cancel"));
-        Cancel->setGeometry(QRect(290, 370, 71, 27));
+        Cancel->setGeometry(QRect(160, 370, 71, 27));
         verticalLayoutWidget = new QWidget(Parameter);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(170, 30, 161, 331));

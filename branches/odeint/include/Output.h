@@ -40,7 +40,9 @@ class Output {
    // xlo (startingpoint of integration) and xhi (ending point)
    void init(const int neqn, const RR xlo, const RR xhi);
    // Resizes storage arrays by a factor of two, keeping data
-   void resize(); 
+   void resize();
+   // Clear xsave and ysave
+   void clear(); 
    // Invokes dense_out function of stepper routine to produce output at
    // xout. Normally called by out. Assumes that xout is between xold and
    // xold+h, where the stepper must keep track of xold, the location of
@@ -67,6 +69,14 @@ Output<Stepper>::Output(const int nsavee) : kmax(500), nsave(nsavee), count(0){
    dense = nsave > 0 ? true :false;
 }
 
+template <typename Stepper>
+void Output<Stepper>::clear(){
+   /*xsave.resize(shape(500));
+   ysave.resize(shape(nvar,500));*/
+   count = 0;
+   kmax=500;
+   dense = nsave > 0 ? true :false;
+}
 
 template <typename Stepper>
 void Output<Stepper>::init(const int neqn, const RR xlo, const RR xhi) {

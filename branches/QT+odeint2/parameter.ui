@@ -51,7 +51,7 @@
     <string>Friction</string>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="import_button">
@@ -70,7 +70,7 @@
   <widget class="QPushButton" name="Submit">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>240</x>
      <y>370</y>
      <width>121</width>
      <height>27</height>
@@ -83,7 +83,7 @@
   <widget class="QPushButton" name="Cancel">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>160</x>
      <y>370</y>
      <width>71</width>
      <height>27</height>
@@ -249,6 +249,13 @@
     <string>CancelButtonClicked</string>
    </property>
   </action>
+  <zorder>export_button</zorder>
+  <zorder>import_button</zorder>
+  <zorder>Cancel</zorder>
+  <zorder>verticalLayoutWidget</zorder>
+  <zorder>verticalLayoutWidget_2</zorder>
+  <zorder>Submit</zorder>
+  <zorder>Friction</zorder>
  </widget>
  <resources/>
  <connections>
