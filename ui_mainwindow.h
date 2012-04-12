@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Fri Apr 13 01:14:23 2012
+** Created: Fri Apr 13 01:27:16 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -33,6 +33,7 @@ public:
     QAction *actionOpenParameterOptions;
     QAction *actionSlideTime;
     QAction *actionChangeVView;
+    QAction *actionFitall;
     QWidget *centralWidget;
     QPushButton *changeparameter_button;
     QPushButton *Simulate_button;
@@ -97,6 +98,7 @@ public:
     QVBoxLayout *verticalLayout_12;
     QLabel *display_cqtol;
     QSpacerItem *verticalSpacer_2;
+    QPushButton *pushButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -114,6 +116,8 @@ public:
         actionSlideTime->setObjectName(QString::fromUtf8("actionSlideTime"));
         actionChangeVView = new QAction(MainWindow);
         actionChangeVView->setObjectName(QString::fromUtf8("actionChangeVView"));
+        actionFitall = new QAction(MainWindow);
+        actionFitall->setObjectName(QString::fromUtf8("actionFitall"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         changeparameter_button = new QPushButton(centralWidget);
@@ -423,11 +427,15 @@ public:
 
         horizontalLayout->addLayout(verticalLayout_12);
 
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(530, 490, 95, 31));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
         QObject::connect(changeparameter_button, SIGNAL(clicked()), actionOpenParameterOptions, SLOT(trigger()));
         QObject::connect(spinBox, SIGNAL(valueChanged(int)), actionChangeVView, SLOT(trigger()));
+        QObject::connect(pushButton, SIGNAL(clicked()), actionFitall, SLOT(trigger()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -438,6 +446,7 @@ public:
         actionOpenParameterOptions->setText(QApplication::translate("MainWindow", "openParameterOptions", 0, QApplication::UnicodeUTF8));
         actionSlideTime->setText(QApplication::translate("MainWindow", "SlideTime", 0, QApplication::UnicodeUTF8));
         actionChangeVView->setText(QApplication::translate("MainWindow", "changeVView", 0, QApplication::UnicodeUTF8));
+        actionFitall->setText(QApplication::translate("MainWindow", "fitall", 0, QApplication::UnicodeUTF8));
         changeparameter_button->setText(QApplication::translate("MainWindow", "Change Parameter", 0, QApplication::UnicodeUTF8));
         Simulate_button->setText(QApplication::translate("MainWindow", "Simulate", 0, QApplication::UnicodeUTF8));
         Import_button->setText(QApplication::translate("MainWindow", "Import Data", 0, QApplication::UnicodeUTF8));
@@ -481,6 +490,7 @@ public:
         t_max->setText(QString());
         label_cqtol->setText(QApplication::translate("MainWindow", "cq tol =", 0, QApplication::UnicodeUTF8));
         display_cqtol->setText(QString());
+        pushButton->setText(QApplication::translate("MainWindow", "Fit all", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

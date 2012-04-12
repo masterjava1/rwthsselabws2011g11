@@ -247,3 +247,9 @@ void MainWindow::on_actionChangeVView_triggered()
     cvar = ui->spinBox->value();
     redraw_plot(cvar);
 }
+
+void MainWindow::on_actionFitall_triggered()
+{
+    cvar = ui->spinBox->value();
+    redraw_plot(cvar);
+}

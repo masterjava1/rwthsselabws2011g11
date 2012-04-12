@@ -63,6 +63,7 @@ private:
 
 
 private slots:
+    void on_actionFitall_triggered();
     void on_actionChangeVView_triggered();
     void on_actionOpenParameterOptions_triggered();
     void on_Simulate_button_clicked();
