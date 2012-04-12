@@ -258,7 +258,7 @@ void MainWindow::on_Simulate_button_clicked()
                                  what);
     }
     x=1.3;
-    redraw_plot(2);
+    redraw_plot(5);
 }
 
 void MainWindow::on_Export_button_clicked()
@@ -325,7 +325,9 @@ void MainWindow::redraw_plot(int variable)
      bx[0]=x;
      bx[1]=x;
      by[0]=plot->yAxis->range().maxRange;
-     by[1]=0;
+     by[1]=plot->yAxis->range().minRange;
 
      plot->graph(1)->setData(bx,by);
+
+     plot->replot();
 }

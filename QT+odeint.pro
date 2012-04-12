@@ -23,7 +23,8 @@ HEADERS += errordialog.h \
            slider.h \
            StepperBase.h \
            StepperDopr853m.h \
-           warningdialog.h 
+           warningdialog.h \
+           qcustomplot.h
 FORMS += errordialog.ui \
          exportdialog.ui \
          mainwindow.ui \
@@ -43,6 +44,9 @@ SOURCES += errordialog.cpp \
            slider.cpp \
            warningdialog.cpp \
            RuntimeException.cpp \
-           StepperBase.cpp
+           StepperBase.cpp \
+           qcustomplot.cpp
 
 LIBS += -L/usr/local/lib -L/usr/lib -lntl -lblitz
+
+QMAKE_CXXFLAGS=-fpermissive
