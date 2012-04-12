@@ -180,6 +180,9 @@
    <property name="text">
     <string>Friction</string>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="import_button">
    <property name="geometry">

@@ -116,7 +116,8 @@ void MainWindow::on_Tecplot_button_clicked()
 
 void MainWindow::on_Simulate_button_clicked()
 {
-    QProgressDialog progress("Simulating...please wait..","Cancel",0,100);
+    QProgressDialog progress("Simulating...please wait..","",0,100);
+        progress.setCancelButton(0);
         progress.show();
         int nvar=10;
         RR atol=to_RR(1.0e-4);
@@ -149,7 +150,6 @@ void MainWindow::on_Simulate_button_clicked()
         out.clear();
         RHS_gyro d(g,R,k,m,a);
         Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,h1,hmin,out,d);
-        if (progress.wasCanceled()) return;
         try{
            ode.integrate();
         }catch(RuntimeException rte){
