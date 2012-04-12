@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Thu Apr 12 06:43:56 2012
+** Created: Thu Apr 12 18:39:34 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,23 +34,19 @@ static const uint qt_meta_data_MainWindow[] = {
       14,   12,   11,   11, 0x0a,
       38,   11,   11,   11, 0x0a,
       53,   11,   11,   11, 0x08,
-      91,   11,   11,   11, 0x08,
-     131,   11,   11,   11, 0x08,
-     166,   11,   11,   11, 0x08,
-     197,   11,   11,   11, 0x08,
-     239,   11,   11,   11, 0x08,
-     268,   11,   11,   11, 0x08,
-     296,   11,   11,   11, 0x08,
-     323,   11,   11,   11, 0x08,
+      86,   11,   11,   11, 0x08,
+     117,   11,   11,   11, 0x08,
+     159,   11,   11,   11, 0x08,
+     188,   11,   11,   11, 0x08,
+     216,   11,   11,   11, 0x08,
+     243,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0P\0parWindowClosed(ParSet)\0"
-    "WindowClosed()\0on_actionPositionsClicked_triggered()\0"
-    "on_actionDerivativesClicked_triggered()\0"
-    "on_actionAnglesClicked_triggered()\0"
+    "WindowClosed()\0on_actionChangeVView_triggered()\0"
     "on_actionSlideTime_triggered()\0"
     "on_actionOpenParameterOptions_triggered()\0"
     "on_Simulate_button_clicked()\0"
@@ -90,18 +86,16 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: parWindowClosed((*reinterpret_cast< ParSet(*)>(_a[1]))); break;
         case 1: WindowClosed(); break;
-        case 2: on_actionPositionsClicked_triggered(); break;
-        case 3: on_actionDerivativesClicked_triggered(); break;
-        case 4: on_actionAnglesClicked_triggered(); break;
-        case 5: on_actionSlideTime_triggered(); break;
-        case 6: on_actionOpenParameterOptions_triggered(); break;
-        case 7: on_Simulate_button_clicked(); break;
-        case 8: on_Tecplot_button_clicked(); break;
-        case 9: on_Export_button_clicked(); break;
-        case 10: on_Import_button_clicked(); break;
+        case 2: on_actionChangeVView_triggered(); break;
+        case 3: on_actionSlideTime_triggered(); break;
+        case 4: on_actionOpenParameterOptions_triggered(); break;
+        case 5: on_Simulate_button_clicked(); break;
+        case 6: on_Tecplot_button_clicked(); break;
+        case 7: on_Export_button_clicked(); break;
+        case 8: on_Import_button_clicked(); break;
         default: ;
         }
-        _id -= 11;
+        _id -= 9;
     }
     return _id;
 }

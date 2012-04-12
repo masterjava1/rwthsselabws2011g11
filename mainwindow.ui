@@ -337,45 +337,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="Angles">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>92</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Angles</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Derivatives">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>60</y>
-      <width>92</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Derivatives</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Positions">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>60</y>
-      <width>92</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Positions</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Tecplot_button">
     <property name="geometry">
      <rect>
@@ -431,6 +392,22 @@
      <enum>QFrame::Raised</enum>
     </property>
    </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>59</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>9</number>
+    </property>
+   </widget>
   </widget>
   <action name="actionOpenParameterOptions">
    <property name="text">
@@ -442,19 +419,9 @@
     <string>SlideTime</string>
    </property>
   </action>
-  <action name="actionAnglesClicked">
+  <action name="actionChangeVView">
    <property name="text">
-    <string>AnglesClicked</string>
-   </property>
-  </action>
-  <action name="actionDerivativesClicked">
-   <property name="text">
-    <string>DerivativesClicked</string>
-   </property>
-  </action>
-  <action name="actionPositionsClicked">
-   <property name="text">
-    <string>PositionsClicked</string>
+    <string>changeVView</string>
    </property>
   </action>
  </widget>
@@ -494,46 +461,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>Angles</sender>
-   <signal>clicked()</signal>
-   <receiver>actionAnglesClicked</receiver>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>actionChangeVView</receiver>
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>65</x>
-     <y>73</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Derivatives</sender>
-   <signal>clicked()</signal>
-   <receiver>actionDerivativesClicked</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>165</x>
-     <y>73</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Positions</sender>
-   <signal>clicked()</signal>
-   <receiver>actionPositionsClicked</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>265</x>
-     <y>73</y>
+     <x>49</x>
+     <y>65</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>

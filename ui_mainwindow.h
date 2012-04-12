@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu Apr 12 06:14:09 2012
+** Created: Thu Apr 12 18:36:33 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -20,6 +20,7 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QPushButton>
 #include <QtGui/QSlider>
+#include <QtGui/QSpinBox>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,9 +30,7 @@ class Ui_MainWindow
 public:
     QAction *actionOpenParameterOptions;
     QAction *actionSlideTime;
-    QAction *actionAnglesClicked;
-    QAction *actionDerivativesClicked;
-    QAction *actionPositionsClicked;
+    QAction *actionChangeVView;
     QWidget *centralWidget;
     QSlider *t_slider;
     QPushButton *changeparameter_button;
@@ -56,13 +55,11 @@ public:
     QLabel *m;
     QLabel *k;
     QLabel *Tolerance;
-    QPushButton *Angles;
-    QPushButton *Derivatives;
-    QPushButton *Positions;
     QPushButton *Tecplot_button;
     QLabel *t_max_text;
     QLabel *t_max;
     QFrame *plottingframe;
+    QSpinBox *spinBox;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -75,12 +72,8 @@ public:
         actionOpenParameterOptions->setObjectName(QString::fromUtf8("actionOpenParameterOptions"));
         actionSlideTime = new QAction(MainWindow);
         actionSlideTime->setObjectName(QString::fromUtf8("actionSlideTime"));
-        actionAnglesClicked = new QAction(MainWindow);
-        actionAnglesClicked->setObjectName(QString::fromUtf8("actionAnglesClicked"));
-        actionDerivativesClicked = new QAction(MainWindow);
-        actionDerivativesClicked->setObjectName(QString::fromUtf8("actionDerivativesClicked"));
-        actionPositionsClicked = new QAction(MainWindow);
-        actionPositionsClicked->setObjectName(QString::fromUtf8("actionPositionsClicked"));
+        actionChangeVView = new QAction(MainWindow);
+        actionChangeVView->setObjectName(QString::fromUtf8("actionChangeVView"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         t_slider = new QSlider(centralWidget);
@@ -157,15 +150,6 @@ public:
         Tolerance = new QLabel(centralWidget);
         Tolerance->setObjectName(QString::fromUtf8("Tolerance"));
         Tolerance->setGeometry(QRect(480, 0, 59, 17));
-        Angles = new QPushButton(centralWidget);
-        Angles->setObjectName(QString::fromUtf8("Angles"));
-        Angles->setGeometry(QRect(20, 60, 92, 27));
-        Derivatives = new QPushButton(centralWidget);
-        Derivatives->setObjectName(QString::fromUtf8("Derivatives"));
-        Derivatives->setGeometry(QRect(120, 60, 92, 27));
-        Positions = new QPushButton(centralWidget);
-        Positions->setObjectName(QString::fromUtf8("Positions"));
-        Positions->setGeometry(QRect(220, 60, 92, 27));
         Tecplot_button = new QPushButton(centralWidget);
         Tecplot_button->setObjectName(QString::fromUtf8("Tecplot_button"));
         Tecplot_button->setGeometry(QRect(320, 470, 92, 27));
@@ -180,14 +164,17 @@ public:
         plottingframe->setGeometry(QRect(20, 100, 501, 351));
         plottingframe->setFrameShape(QFrame::StyledPanel);
         plottingframe->setFrameShadow(QFrame::Raised);
+        spinBox = new QSpinBox(centralWidget);
+        spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        spinBox->setGeometry(QRect(20, 50, 59, 31));
+        spinBox->setMinimum(1);
+        spinBox->setMaximum(9);
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
         QObject::connect(changeparameter_button, SIGNAL(clicked()), actionOpenParameterOptions, SLOT(trigger()));
         QObject::connect(t_slider, SIGNAL(sliderMoved(int)), actionSlideTime, SLOT(trigger()));
-        QObject::connect(Angles, SIGNAL(clicked()), actionAnglesClicked, SLOT(trigger()));
-        QObject::connect(Derivatives, SIGNAL(clicked()), actionDerivativesClicked, SLOT(trigger()));
-        QObject::connect(Positions, SIGNAL(clicked()), actionPositionsClicked, SLOT(trigger()));
+        QObject::connect(spinBox, SIGNAL(valueChanged(int)), actionChangeVView, SLOT(trigger()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -197,9 +184,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         actionOpenParameterOptions->setText(QApplication::translate("MainWindow", "openParameterOptions", 0, QApplication::UnicodeUTF8));
         actionSlideTime->setText(QApplication::translate("MainWindow", "SlideTime", 0, QApplication::UnicodeUTF8));
-        actionAnglesClicked->setText(QApplication::translate("MainWindow", "AnglesClicked", 0, QApplication::UnicodeUTF8));
-        actionDerivativesClicked->setText(QApplication::translate("MainWindow", "DerivativesClicked", 0, QApplication::UnicodeUTF8));
-        actionPositionsClicked->setText(QApplication::translate("MainWindow", "PositionsClicked", 0, QApplication::UnicodeUTF8));
+        actionChangeVView->setText(QApplication::translate("MainWindow", "changeVView", 0, QApplication::UnicodeUTF8));
         changeparameter_button->setText(QApplication::translate("MainWindow", "Change Parameter", 0, QApplication::UnicodeUTF8));
         Simulate_button->setText(QApplication::translate("MainWindow", "Simulate", 0, QApplication::UnicodeUTF8));
         Import_button->setText(QApplication::translate("MainWindow", "Import Data", 0, QApplication::UnicodeUTF8));
@@ -222,9 +207,6 @@ public:
         m->setText(QString());
         k->setText(QString());
         Tolerance->setText(QString());
-        Angles->setText(QApplication::translate("MainWindow", "Angles", 0, QApplication::UnicodeUTF8));
-        Derivatives->setText(QApplication::translate("MainWindow", "Derivatives", 0, QApplication::UnicodeUTF8));
-        Positions->setText(QApplication::translate("MainWindow", "Positions", 0, QApplication::UnicodeUTF8));
         Tecplot_button->setText(QApplication::translate("MainWindow", "Tecplot", 0, QApplication::UnicodeUTF8));
         t_max_text->setText(QApplication::translate("MainWindow", "t_max = ", 0, QApplication::UnicodeUTF8));
         t_max->setText(QString());
