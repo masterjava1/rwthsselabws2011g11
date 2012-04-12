@@ -7,8 +7,9 @@
 
 \section{Detailentwurf: Klassen}
 \label{sec:3.2}
-\includegraphics[width=4in,keepaspectratio=true]{figures/klassenidagramm.png}
 \includegraphics[width=4in,keepaspectratio=true]{figures/Odeint.png}
+
+\includegraphics[width=4in,keepaspectratio=true]{figures/klassenidagramm.png}
 
 \subsection*{StepperDopr853 - Dormand-Prince 853 method}
 Entwicklungsschritte vom Prototypen zum fertigen L\"oser
@@ -30,14 +31,16 @@ Auf Grund der Erfahrung mit dem Prototypen entschieden wir uns für die Verwendun
 
 Die korrekte L\"osung der rkf56 Fortran95 Implementierung ist rot dargestellt, die falsche L\"osung des Dopr853$\_$double Algorithmus in blau. Es lag nahe das diese Unterschiede in der L\"osung auf Ungenauigkeiten in der Auswertung der steifen rechten Seite und den Berechnungen des Dopr853 Algorithmus zur\"uckzuf\"uhren waren. Wir entschieden uns also für die Verwendung eines genaueren Datentyps, und zwar NTL::RR aus der NTL library\footnote[2]{http://www.shoup.net/ntl/}
 
-Unter verwendung des NTL::RR Datentyps kann der fertige L\"oser (Dopr853 in \textit{C++}) die L\"osung des Problems$^1$ in 852 Schritten berechnen.
+Unter verwendung des NTL::RR Datentyps kann der fertige L\"oser (Dopr853 in \textit{C++}) die L\"osung des Problems$^1$ in 852 Schritten berechnen. \medskip
 
 L\"osung für $\dot\psi$(Drehgeschwindigkeit) mit Dopr853: \medskip
 
 \includegraphics[width=4in,keepaspectratio=true]{figures/dopr2.png}
 
 Der Dopr853 Algorithmus ist ein Algorithmus aus der Familie der Runge-Kutta Algorithmen der Ordnung 8.  Für jeden Schritt werden 12 Auswertungen der rechten Seite des DGL ben\"otigt.
-Der urspr\"ungliche Algorithmus nutzte eine Fehlersch\"atzung der Ordnung 6, was sich allerdings in einigen F\"allen als unzureichend herausstellte, da dieser Fehlersch\"atzer jeweils die letzte Auswertung nicht ber\"ucksichtigte. Hairer, N\"orsett und Wanner1 konstruierten Absch\"atzungen der f\"unften und dritten Ordnung, die auch den letzen Punkt ber\"ucksichtigen. Der Fehler kann also \"uber \\
+Der urspr\"ungliche Algorithmus nutzte eine Fehlersch\"atzung der Ordnung 6, was sich allerdings in einigen F\"allen als unzureichend herausstellte, da dieser Fehlersch\"atzer jeweils die letzte Auswertung nicht ber\"ucksichtigte. Hairer, N\"orsett und Wanner\footnote[3]{Hairer, E., Nørsett, S.P., and Wanner, G. 1993, Solving Ordinary Differential Equations I. Nonstiff 
+Problems, 2nd ed. (New York: Springer). Fortran codes at 
+http://www.unige.ch/~hairer/software.html } konstruierten Absch\"atzungen der f\"unften und dritten Ordnung, die auch den letzen Punkt ber\"ucksichtigen. Der Fehler kann also \"uber \\
 $err = err_5 \frac{err_5}{\sqrt{(err_3)^2+0.01(err_5)^2}}$ \\
 abgesch\"atzt werden. 
 
@@ -46,22 +49,16 @@ Die meiste Zeit \"uber gilt $err_5 << err_3$ und damit $err=O(h^8)$. \medskip
 StepperDopr853 wurde als Mehrschrittverfahren mit fehlergesteuerter Schrittweitensteuerung implementiert, die neben dem gesch\"atzten Fehler auch noch die Erhaltungsgr\"o\ss e \\
 $IR\dot\phi\sin^2\theta+I_3(R\cos\theta-a)(\dot\phi\cos\theta+\dot\psi) = const =: G$ \\
 ber\"ucksichtigt. ($\Delta G$ pro Schritt $< 1E-6$ ).
-Der L\"oser unterst\"utzt sowohl eine dichte Ausgabe \textit{dense output}, als auch die Ausgabe von n \"aquidistant verteilten Werten. 
-
-\textit{Frei nach NumericalRecipes3rdEdition - Chapter 17.2.4 Dopr853 - An Eight-Order Method} \medskip
-
-\textit{Implementierung nach Numerical Recipes Software 2007, "Routine Implementing an Eighth-order Runge-Kutta Method,"
+Der L\"oser unterst\"utzt sowohl eine dichte Ausgabe \textit{dense output}, als auch die Ausgabe von n \"aquidistant verteilten Werten.\footnote[4]{Frei nach NumericalRecipes3rdEdition - Chapter 17.2.4 Dopr853 - An Eight-Order Method
+Implementierung nach Numerical Recipes Software 2007, "Routine Implementing an Eighth-order Runge-Kutta Method,"
 Numerical Recipes Webnote No. 20, at http://www.nr.com/webnotes?20}
-\footnote[3]{Hairer, E., Nørsett, S.P., and Wanner, G. 1993, Solving Ordinary Differential Equations I. Nonstiff 
-Problems, 2nd ed. (New York: Springer). Fortran codes at 
-http://www.unige.ch/~hairer/software.html }
 
 \section{Graphical User Interface}
 \label{sec:3.3}
-\includegraphics[width=4in,keepaspectratio=true]{figures/GUIParameterInputForm.png}
+\includegraphics[width=4in,keepaspectratio=true]{figures/GUIParameterInputForm.png} %ersetzen
 
-\includegraphics[width=4in,keepaspectratio=true]{figures/GUIDisplayForm.png}
+\includegraphics[width=4in,keepaspectratio=true]{figures/GUIDisplayForm.png} %ersetzen
 \section{Use-Case-Diagramm}
 \label{sec:3.4}
-\includegraphics[width=4in,keepaspectratio=true]{figures/UseCaseTippeTop.png}
+\includegraphics[width=4in,keepaspectratio=true]{figures/UseCaseTippeTop.png} %ersetzen
 

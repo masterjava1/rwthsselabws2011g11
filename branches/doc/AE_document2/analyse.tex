@@ -207,16 +207,16 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \hline
 \end{tabular}
 
-\subsubsection*{Systemanforderungen}
-\subsection*{Funktionale Anforderungen}
+\subsection*{Systemanforderungen}
+\subsubsection*{Funktionale Anforderungen}
 
 {Dem Anwender ist es m\"oglich die Simulationsparameter $k$ (Reibung) sowie 
-$ \dot \psi (rad/s), \theta (rad), R (cm), a (cm), m (g)$ und die Toleranz der Erhaltungsgr \"o\ss e  \"uber eine grafische Eingabemaske festzulegen. 
+$ \dot \psi (rad/s), \theta (rad), R (cm), a (cm), m (g)$ und die Toleranz der Erhaltungsgr\"o\ss e  \"uber eine grafische Eingabemaske festzulegen. %%% HIER!!!
 Wenn w\"ahrend der Simulation ein Fehler auftritt wird der Anwender 
 \"uber ein Popup-Fenster benachrichtigt. Nach Durchlauf der Simulation
 bekommt der Anwender die Simulationsergebnisse 
 \textit{ - $\theta, \psi, \phi, x_c, y_c, \dot \theta, \dot \psi, 
-\phi$ -} in Form von \textit{LineCharts} in eine \textit{GUI} 
+\dot \phi,v_x,v_y$ -} in Form von \textit{LineCharts} in eine \textit{GUI} 
 eingebettet angezeigt.} 
 
 Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei oder im Tecplotformat exportiert werden. \medskip
@@ -224,18 +224,19 @@ Die auf der \textit{GUI} ausgegebenen Plots k\"onnen als Bilddatei oder im Tecpl
 Kommt es w\"ahrend der Laufzeit zu einem kritischen Fehler (ein Fehler, der das korrekte Fortf\"uhren des Programmes unm\"oglich macht) wird der Anwender \"uber ein Popup-Fenster benachrichtigt und das an die Stelle zur\"uckgesetzt, an der der Fehler auftrat.
 \medskip
 
-\subsection*{Nicht-Funktionale Anforderungen}
+\subsubsection*{Nicht-Funktionale Anforderungen}
 {
 Die Exportfunktion der Simulationssoftware schreibt Tecplot konforme ASCII-kodierte Ausgabedateien.
 Vormals exportierte Dateien k\"onnen wieder importiert und geplottet werden.
-Ebenso k\o"nnen \a"ltere Parameterkonfigurationen importiert werden.
-Der Nutzer kann sich eine Statistik \"uber das Verhalten der Erhaltungsgr\"o\ss e und der Kontrollgr\"o\ss en zur Schrittweitensteuerung ausgeben lassen.  
+Ebenso k\"onnen \"altere Parameterkonfigurationen importiert werden.
 }
 
 \section{Begriffsanalyse}
 \begin{itemize}
 \item LineChart - \textit{Zwei Achsen Diagramm mit Kartesischem Koordinatensystem. Die einzelnen Datenpunkte sind durch gerade Linien verbunden.} 
 \item GUI - \textit{Eine grafische Benutzeroberfl\"ache (GBO oder GUI) ist eine Software-Komponente, die dem Benutzer eines Computers die Interaktion mit der Maschine \"uber grafische Symbole erlaubt.} 
+\item m
+\item theta, %phi, psi, x_, y_c, thetadot, psidot, phidot, v_x,v_y,R,k,a,G,absolute und relative Toleranz des RKV atol = Gtol
 \end{itemize}
 
 

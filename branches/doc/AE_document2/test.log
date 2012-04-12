@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 19:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 21:07
 entering extended mode
  %&-line parsing enabled.
 **test.tex
@@ -450,21 +450,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 \T1/cmr/m/it/10 An-gles\T1/cmr/m/n/10 ,\T1/cmr/m/it/10 Derivatives
  []
 
-[8] [9]
-Overfull \hbox (4.89342pt too wide) in paragraph at lines 229--234
-\T1/cmr/m/n/10 und geplot-tet wer-den. Eben-so kø"nnen []ltere Pa-ram-e-terkon-
+[8]
+Overfull \hbox (2.12746pt too wide) in paragraph at lines 213--221
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 rad=s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; ^^
+R\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 rad\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; R\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 cm\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; a\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 cm\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; m\OT1/cmr/m/n/10 
+(\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 )$ \T1/cmr/m/n/10 und die Tol-er-anz der Er-
+hal-tungs-gröÿe über
+ []
+
+[9]
+Overfull \hbox (4.89342pt too wide) in paragraph at lines 229--233
+\T1/cmr/m/n/10 und geplot-tet wer-den. Eben-so kön-nen äl-tere Pa-ram-e-terkon-
 fig-u-ra-tio-nen im-portiert
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 237.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 236.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 237.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 236.
 
-Overfull \hbox (3.57016pt too wide) in paragraph at lines 238--239
+Overfull \hbox (3.57016pt too wide) in paragraph at lines 237--238
 []\T1/cmr/m/n/10 GUI - \T1/cmr/m/it/10 Eine grafis-che Be-nutze-r-ober-fläche (
 GBO oder GUI) ist eine Software-
  []
@@ -478,63 +488,62 @@ Kapitel 3.
 File: figures/StructureDiagGyroSim.png Graphic file (type png)
 
 <use figures/StructureDiagGyroSim.png>
-<figures/klassenidagramm.png, id=55, 798.5835pt x 760.2804pt>
-File: figures/klassenidagramm.png Graphic file (type png)
-
-<use figures/klassenidagramm.png>
-<figures/Odeint.png, id=56, 797.8608pt x 759.5577pt>
+<figures/Odeint.png, id=55, 797.8608pt x 759.5577pt>
 File: figures/Odeint.png Graphic file (type png)
  <use figures/Odeint.png>
-Overfull \hbox (235.38165pt too wide) in paragraph at lines 10--12
-[] [] 
- []
-
-[11
+<figures/klassenidagramm.png, id=56, 798.5835pt x 760.2804pt> [11
 
 
 
  <./figures/StructureDiagGyroSim.png (PNG copy)>]
-Underfull \hbox (badness 6001) in paragraph at lines 19--19
+File: figures/klassenidagramm.png Graphic file (type png)
+ <use figures/klassenidagramm.png> [12 <./figures/Odeint.png (PNG copy)>]
+Underfull \hbox (badness 6001) in paragraph at lines 20--20
 [][]$\OML/cmm/m/it/8 k \OT1/cmr/m/n/8 = 0\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3\OML/
 cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10[]\OML/cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10
 []\OML/cmm/m/it/8 ; rtol \OT1/cmr/m/n/8 = \OML/cmm/m/it/8 atol \OT1/cmr/m/n/8 =
  10[]\OML/cmm/m/it/8 ; y\OT1/cmr/m/n/8 0 =
  []
 
-<figures/dopr0.png, id=60, 292.09125pt x 111.41624pt>
+<figures/dopr0.png, id=64, 292.09125pt x 111.41624pt>
 File: figures/dopr0.png Graphic file (type png)
  <use figures/dopr0.png>
-<figures/dopr1a.png, id=61, 785.93625pt x 705.63625pt>
+<figures/dopr1a.png, id=65, 785.93625pt x 705.63625pt>
 File: figures/dopr1a.png Graphic file (type png)
 
-<use figures/dopr1a.png> [12 <./figures/klassenidagramm.png (PNG copy)> <./figu
-res/Odeint.png (PNG copy)> <./figures/dopr0.png (PNG copy)>]
-<figures/dopr1.png, id=74, 1083.04625pt x 610.28pt>
+<use figures/dopr1a.png> [13 <./figures/klassenidagramm.png (PNG copy)> <./figu
+res/dopr0.png (PNG copy)>] <figures/dopr1.png, id=77, 1083.04625pt x 610.28pt>
 File: figures/dopr1.png Graphic file (type png)
- <use figures/dopr1.png>
-[13 <./figures/dopr1a.png (PNG copy)> <./figures/dopr1.png>]
-<figures/dopr2.png, id=78, 785.93625pt x 705.63625pt>
+
+<use figures/dopr1.png> [14 <./figures/dopr1a.png (PNG copy)> <./figures/dopr1.
+png>] <figures/dopr2.png, id=81, 785.93625pt x 705.63625pt>
 File: figures/dopr2.png Graphic file (type png)
- <use figures/dopr2.png>
-[14 <./figures/dopr2.png (PNG copy)>]
-<figures/GUIParameterInputForm.png, id=83, 376.5267pt x 362.0727pt>
+
+<use figures/dopr2.png>
+Underfull \hbox (badness 2591) in paragraph at lines 54--54
+\T1/cmr/m/n/8 ing an Eighth-order Runge-Kutta Method,"Numerical Recipes Web-not
+e No. 20, at
+ []
+
+[15 <./figures/dopr2.png (PNG copy)>]
+<figures/GUIParameterInputForm.png, id=86, 376.5267pt x 362.0727pt>
 File: figures/GUIParameterInputForm.png Graphic file (type png)
 
 <use figures/GUIParameterInputForm.png>
-<figures/GUIDisplayForm.png, id=84, 562.2606pt x 403.2666pt>
+<figures/GUIDisplayForm.png, id=87, 562.2606pt x 403.2666pt>
 File: figures/GUIDisplayForm.png Graphic file (type png)
 
-<use figures/GUIDisplayForm.png> [15 <./figures/GUIParameterInputForm.png (PNG 
-copy)>] <figures/UseCaseTippeTop.png, id=88, 338.9463pt x 252.2223pt>
+<use figures/GUIDisplayForm.png> [16 <./figures/GUIParameterInputForm.png (PNG 
+copy)>] <figures/UseCaseTippeTop.png, id=91, 338.9463pt x 252.2223pt>
 File: figures/UseCaseTippeTop.png Graphic file (type png)
 
-<use figures/UseCaseTippeTop.png>) [16 <./figures/GUIDisplayForm.png (PNG copy)
+<use figures/UseCaseTippeTop.png>) [17 <./figures/GUIDisplayForm.png (PNG copy)
 > <./figures/UseCaseTippeTop.png (PNG copy)>]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
 Kapitel 4.
-) [17
+) [18
 
 
 
@@ -543,16 +552,6 @@ Kapitel 4.
 
  (./entwicklerdoc.tex
 Kapitel 5.
-) [18
-
-
-
-]
-No file test.bbl.
-\openout2 = `quellcode.aux'.
-
-(./quellcode.tex
-Anhang A.
 <figures/_odeint_8h__dep__incl.png, id=99, 168.3891pt x 160.4394pt>
 File: figures/_odeint_8h__dep__incl.png Graphic file (type png)
 
@@ -719,17 +718,19 @@ ic file (type png)
 <use figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd7cc_icgraph.png>)
 [29 <./figures/write__tec_8h__dep__incl.png (PNG copy)> <./figures/write__tec_8
 h__incl.png (PNG copy)> <./figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd
-7cc_icgraph.png (PNG copy)>] (./test.aux (./vorwort.aux) (./analyse.aux)
-(./entwurf.aux) (./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux)) )
+7cc_icgraph.png (PNG copy)>]
+No file test.bbl.
+(./test.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux) (./nutzerdoc.aux)
+(./entwicklerdoc.aux)) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 9 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4426 strings out of 495061
- 61377 string characters out of 1182620
+ 4420 strings out of 495061
+ 61299 string characters out of 1182620
  142288 words of memory out of 3000000
- 7442 multiletter control sequences out of 15000+50000
+ 7440 multiletter control sequences out of 15000+50000
  25011 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,16n,32p,519b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -757,9 +758,9 @@ ve/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y6.pfb>
-Output written on test.pdf (30 pages, 1479756 bytes).
+Output written on test.pdf (30 pages, 1473860 bytes).
 PDF statistics:
- 728 PDF objects out of 1000 (max. 8388607)
+ 713 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
