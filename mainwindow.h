@@ -58,7 +58,7 @@ private:
     bool simulateon;
     QCustomPlot *plot;
     void redraw_plot(int variable);
-    double x,y;
+    double x;
 
 
 private slots:

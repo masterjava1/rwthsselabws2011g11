@@ -49,4 +49,4 @@ SOURCES += errordialog.cpp \
 
 LIBS += -L/usr/local/lib -L/usr/lib -lntl -lblitz
 
-QMAKE_CXXFLAGS=-fpermissive
+QMAKE_CXXFLAGS = -fpermissive
