@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Fri Apr 13 00:41:47 2012
+** Created: Fri Apr 13 01:14:23 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -105,6 +105,9 @@ public:
         MainWindow->resize(630, 535);
         MainWindow->setMinimumSize(QSize(630, 535));
         MainWindow->setMaximumSize(QSize(630, 535));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../../../../tippetop_icon.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         actionOpenParameterOptions = new QAction(MainWindow);
         actionOpenParameterOptions->setObjectName(QString::fromUtf8("actionOpenParameterOptions"));
         actionSlideTime = new QAction(MainWindow);
@@ -431,7 +434,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "GyroSim", 0, QApplication::UnicodeUTF8));
         actionOpenParameterOptions->setText(QApplication::translate("MainWindow", "openParameterOptions", 0, QApplication::UnicodeUTF8));
         actionSlideTime->setText(QApplication::translate("MainWindow", "SlideTime", 0, QApplication::UnicodeUTF8));
         actionChangeVView->setText(QApplication::translate("MainWindow", "changeVView", 0, QApplication::UnicodeUTF8));

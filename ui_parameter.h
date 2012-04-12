@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'parameter.ui'
 **
-** Created: Fri Apr 13 01:03:58 2012
+** Created: Fri Apr 13 01:07:11 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -187,6 +187,13 @@ public:
 
         verticalLayout_2->addWidget(t_max_text);
 
+        export_button->raise();
+        import_button->raise();
+        Cancel->raise();
+        verticalLayoutWidget->raise();
+        verticalLayoutWidget_2->raise();
+        Submit->raise();
+        Friction->raise();
 
         retranslateUi(Parameter);
         QObject::connect(Friction, SIGNAL(clicked()), Parameter, SLOT(FrictionCheck()));
