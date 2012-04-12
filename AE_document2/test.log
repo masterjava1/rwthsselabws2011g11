@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 17:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 19:36
 entering extended mode
  %&-line parsing enabled.
 **test.tex
@@ -524,17 +524,12 @@ File: figures/GUIParameterInputForm.png Graphic file (type png)
 <figures/GUIDisplayForm.png, id=84, 562.2606pt x 403.2666pt>
 File: figures/GUIDisplayForm.png Graphic file (type png)
 
-<use figures/GUIDisplayForm.png>
-Overfull \hbox (235.38165pt too wide) in paragraph at lines 61--63
-[] [] 
- []
-
-<figures/UseCaseTippeTop.png, id=85, 338.9463pt x 252.2223pt>
+<use figures/GUIDisplayForm.png> [15 <./figures/GUIParameterInputForm.png (PNG 
+copy)>] <figures/UseCaseTippeTop.png, id=88, 338.9463pt x 252.2223pt>
 File: figures/UseCaseTippeTop.png Graphic file (type png)
 
-<use figures/UseCaseTippeTop.png>) [15 <./figures/GUIParameterInputForm.png (PN
-G copy)> <./figures/GUIDisplayForm.png (PNG copy)>] [16 <./figures/UseCaseTippe
-Top.png (PNG copy)>]
+<use figures/UseCaseTippeTop.png>) [16 <./figures/GUIDisplayForm.png (PNG copy)
+> <./figures/UseCaseTippeTop.png (PNG copy)>]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
@@ -558,239 +553,186 @@ No file test.bbl.
 
 (./quellcode.tex
 Anhang A.
-
-! LaTeX Error: Environment DoxyCompactList undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 ...ief descriptions\-:\begin{DoxyCompactList}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \item\contentsline
-                       {section}{{\bf mainwindow.\-cpp} }{\pageref{mainwindo...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `mainwindow_8cpp' on page 19 undefined on input line 1
-4.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \item\contentsline
-                       {section}{{\bf ntl\-\_\-ext.\-h} }{\pageref{ntl__ext_...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `ntl__ext_8h' on page 19 undefined on input line 15.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \item\contentsline
-                       {section}{{\bf \-Odeint.\-h} }{\pageref{_odeint_8h}}{}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_odeint_8h' on page 19 undefined on input line 16.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \item\contentsline
-                       {section}{{\bf \-Output.\-h} }{\pageref{_output_8h}}{}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_output_8h' on page 19 undefined on input line 17.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 \item\contentsline
-                       {section}{{\bf \-R\-H\-S\-\_\-gyro.\-h} }{\pageref{_r...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_r_h_s__gyro_8h' on page 19 undefined on input line 1
-8.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \item\contentsline
-                       {section}{{\bf \-Runtime\-Exception.\-cpp} }{\pageref...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_runtime_exception_8cpp' on page 19 undefined on inpu
-t line 19.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \item\contentsline
-                       {section}{{\bf \-Runtime\-Exception.\-h} }{\pageref{_...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_runtime_exception_8h' on page 19 undefined on input 
-line 20.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \item\contentsline
-                       {section}{{\bf \-Stepper\-Base.\-cpp} }{\pageref{_ste...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_stepper_base_8cpp' on page 19 undefined on input lin
-e 21.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 \item\contentsline
-                       {section}{{\bf \-Stepper\-Base.\-h} }{\pageref{_stepp...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_stepper_base_8h' on page 19 undefined on input line 
-22.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \item\contentsline
-                       {section}{{\bf \-Stepper\-Dopr853m.\-h} }{\pageref{_s...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `_stepper_dopr853m_8h' on page 19 undefined on input l
-ine 23.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \item\contentsline
-                       {section}{{\bf write\-\_\-tec.\-h} }{\pageref{write__...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `write__tec_8h' on page 19 undefined on input line 24.
-
-
-
-! LaTeX Error: \begin{document} ended by \end{DoxyCompactList}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 \end{DoxyCompactList}
-                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-) [19
-
-
-
-] (./test.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux)
-(./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+<figures/_odeint_8h__dep__incl.png, id=99, 168.3891pt x 160.4394pt>
+File: figures/_odeint_8h__dep__incl.png Graphic file (type png)
+
+<use figures/_odeint_8h__dep__incl.png>
+<figures/_odeint_8h__incl.png, id=100, 351.2322pt x 276.7941pt>
+File: figures/_odeint_8h__incl.png Graphic file (type png)
+
+<use figures/_odeint_8h__incl.png>
+<figures/_output_8h__dep__incl.png, id=101, 252.2223pt x 218.2554pt> [19
+
+
+
+ <./figures/_odeint_8h__dep__incl.png (PNG copy)>]
+File: figures/_output_8h__dep__incl.png Graphic file (type png)
+
+<use figures/_output_8h__dep__incl.png>
+<figures/_output_8h__incl.png, id=105, 351.2322pt x 218.2554pt>
+File: figures/_output_8h__incl.png Graphic file (type png)
+
+<use figures/_output_8h__incl.png>
+<figures/_r_h_s__gyro_8h__dep__incl.png, id=106, 168.3891pt x 160.4394pt>
+File: figures/_r_h_s__gyro_8h__dep__incl.png Graphic file (type png)
+
+<use figures/_r_h_s__gyro_8h__dep__incl.png>
+<figures/_r_h_s__gyro_8h__incl.png, id=107, 228.3732pt x 160.4394pt> [20 <./fig
+ures/_odeint_8h__incl.png (PNG copy)> <./figures/_output_8h__dep__incl.png (PNG
+ copy)> <./figures/_output_8h__incl.png (PNG copy)>]
+File: figures/_r_h_s__gyro_8h__incl.png Graphic file (type png)
+
+<use figures/_r_h_s__gyro_8h__incl.png>
+<figures/_runtime_exception_8cpp__incl.png, id=111, 196.5744pt x 218.2554pt>
+File: figures/_runtime_exception_8cpp__incl.png Graphic file (type png)
+
+<use figures/_runtime_exception_8cpp__incl.png>
+<figures/_runtime_exception_8h__dep__incl.png, id=112, 463.2507pt x 276.7941pt>
+[21 <./figures/_r_h_s__gyro_8h__dep__incl.png (PNG copy)> <./figures/_r_h_s__gy
+ro_8h__incl.png (PNG copy)>]
+File: figures/_runtime_exception_8h__dep__incl.png Graphic file (type png)
+
+<use figures/_runtime_exception_8h__dep__incl.png>
+<figures/_runtime_exception_8h__incl.png, id=116, 184.2885pt x 160.4394pt>
+File: figures/_runtime_exception_8h__incl.png Graphic file (type png)
+
+<use figures/_runtime_exception_8h__incl.png>
+<figures/_stepper_base_8cpp__incl.png, id=117, 228.3732pt x 218.2554pt>
+[22 <./figures/_runtime_exception_8cpp__incl.png (PNG copy)> <./figures/_runtim
+e_exception_8h__dep__incl.png (PNG copy)>]
+File: figures/_stepper_base_8cpp__incl.png Graphic file (type png)
+
+<use figures/_stepper_base_8cpp__incl.png>
+<figures/_stepper_base_8h__dep__incl.png, id=121, 294.8616pt x 218.2554pt>
+File: figures/_stepper_base_8h__dep__incl.png Graphic file (type png)
+
+<use figures/_stepper_base_8h__dep__incl.png>
+<figures/_stepper_base_8h__incl.png, id=122, 228.3732pt x 160.4394pt> [23 <./fi
+gures/_runtime_exception_8h__incl.png (PNG copy)> <./figures/_stepper_base_8cpp
+__incl.png (PNG copy)>]
+File: figures/_stepper_base_8h__incl.png Graphic file (type png)
+ <use figures/_stepper_base_8h__incl.png>
+<figures/_stepper_dopr853m_8h__dep__incl.png, id=126, 184.2885pt x 160.4394pt>
+File: figures/_stepper_dopr853m_8h__dep__incl.png Graphic file (type png)
+
+<use figures/_stepper_dopr853m_8h__dep__incl.png>
+<figures/_stepper_dopr853m_8h__incl.png, id=127, 429.2838pt x 218.2554pt>
+File: figures/_stepper_dopr853m_8h__incl.png Graphic file (type png)
+
+<use figures/_stepper_dopr853m_8h__incl.png>
+<figures/class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png, id=128, 24
+4.2726pt x 101.9007pt> [24 <./figures/_stepper_base_8h__dep__incl.png (PNG copy
+)> <./figures/_stepper_base_8h__incl.png (PNG copy)> <./figures/_stepper_dopr85
+3m_8h__dep__incl.png (PNG copy)>]
+File: figures/class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png Graphi
+c file (type png)
+
+<use figures/class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png>
+<figures/class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph.png,
+ id=133, 278.9622pt x 101.9007pt>
+File: figures/class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph
+.png Graphic file (type png)
+
+<use figures/class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph.
+png>
+<figures/class_stepper_base__inherit__graph.png, id=134, 200.1879pt x 160.4394p
+t>
+File: figures/class_stepper_base__inherit__graph.png Graphic file (type png)
+ <use figures/class_stepper_base__inherit__graph.png>
+<figures/class_stepper_dopr853m__coll__graph.png, id=135, 338.9463pt x 174.1707
+pt>
+File: figures/class_stepper_dopr853m__coll__graph.png Graphic file (type png)
+ <use figures/class_stepper_dopr853m__coll__graph.png>
+<figures/class_stepper_dopr853m__inherit__graph.png, id=136, 200.1879pt x 160.4
+394pt> [25 <./figures/_stepper_dopr853m_8h__incl.png (PNG copy)> <./figures/cla
+ss_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png (PNG copy)> <./figures/
+class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph.png (PNG copy
+)> <./figures/class_stepper_base__inherit__graph.png (PNG copy)>]
+File: figures/class_stepper_dopr853m__inherit__graph.png Graphic file (type png
+)
+
+<use figures/class_stepper_dopr853m__inherit__graph.png>
+<figures/class_stepper_dopr853m_a05acb9133063a88b1d70681194723766_cgraph.png, i
+d=140, 274.626pt x 101.9007pt>
+File: figures/class_stepper_dopr853m_a05acb9133063a88b1d70681194723766_cgraph.p
+ng Graphic file (type png)
+
+<use figures/class_stepper_dopr853m_a05acb9133063a88b1d70681194723766_cgraph.pn
+g> <figures/mainwindow_8cpp__incl.png, id=141, 977.0904pt x 334.6101pt>
+File: figures/mainwindow_8cpp__incl.png Graphic file (type png)
+
+<use figures/mainwindow_8cpp__incl.png>
+<figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png, id=142, 
+278.9622pt x 182.1204pt>
+File: figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png Grap
+hic file (type png)
+
+<use figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png>
+<figures/ntl__ext_8h__dep__incl.png, id=143, 184.2885pt x 218.2554pt> [26 <./fi
+gures/class_stepper_dopr853m__coll__graph.png (PNG copy)> <./figures/class_step
+per_dopr853m__inherit__graph.png (PNG copy)> <./figures/class_stepper_dopr853m_
+a05acb9133063a88b1d70681194723766_cgraph.png (PNG copy)> <./figures/mainwindow_
+8cpp__incl.png (PNG copy)>]
+File: figures/ntl__ext_8h__dep__incl.png Graphic file (type png)
+ <use figures/ntl__ext_8h__dep__incl.png>
+<figures/ntl__ext_8h__incl.png, id=147, 142.3719pt x 160.4394pt>
+File: figures/ntl__ext_8h__incl.png Graphic file (type png)
+
+<use figures/ntl__ext_8h__incl.png>
+<figures/ntl__ext_8h_a8e2d6730b8d184fccdf23ef92b230729_icgraph.png, id=148, 338
+.9463pt x 142.3719pt> [27 <./figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f
+499fa97_cgraph.png (PNG copy)> <./figures/ntl__ext_8h__dep__incl.png (PNG copy)
+>]
+File: figures/ntl__ext_8h_a8e2d6730b8d184fccdf23ef92b230729_icgraph.png Graphic
+ file (type png)
+ <use figures/ntl__ext_8h_a8e2d6730b8d184fccdf23ef92b230729_icgraph.png>
+<figures/ntl__ext_8h_aebfb5c962cc9f3c91b927a50eb365ad3_icgraph.png, id=152, 334
+.6101pt x 101.9007pt>
+File: figures/ntl__ext_8h_aebfb5c962cc9f3c91b927a50eb365ad3_icgraph.png Graphic
+ file (type png)
+
+<use figures/ntl__ext_8h_aebfb5c962cc9f3c91b927a50eb365ad3_icgraph.png>
+<figures/struct_stepper_dopr853m_1_1_controller_a03aa3bc288f933a6ea83c911e68601
+1f_cgraph.png, id=153, 338.9463pt x 142.3719pt>
+File: figures/struct_stepper_dopr853m_1_1_controller_a03aa3bc288f933a6ea83c911e
+686011f_cgraph.png Graphic file (type png)
+
+<use figures/struct_stepper_dopr853m_1_1_controller_a03aa3bc288f933a6ea83c911e6
+86011f_cgraph.png>
+<figures/write__tec_8h__dep__incl.png, id=154, 168.3891pt x 160.4394pt>
+File: figures/write__tec_8h__dep__incl.png Graphic file (type png)
+
+<use figures/write__tec_8h__dep__incl.png>
+<figures/write__tec_8h__incl.png, id=155, 403.9893pt x 276.7941pt> [28 <./figur
+es/ntl__ext_8h__incl.png (PNG copy)> <./figures/ntl__ext_8h_a8e2d6730b8d184fccd
+f23ef92b230729_icgraph.png (PNG copy)> <./figures/ntl__ext_8h_aebfb5c962cc9f3c9
+1b927a50eb365ad3_icgraph.png (PNG copy)> <./figures/struct_stepper_dopr853m_1_1
+_controller_a03aa3bc288f933a6ea83c911e686011f_cgraph.png (PNG copy)>]
+File: figures/write__tec_8h__incl.png Graphic file (type png)
+
+<use figures/write__tec_8h__incl.png>
+<figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd7cc_icgraph.png, id=159, 2
+10.3057pt x 101.9007pt>
+File: figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd7cc_icgraph.png Graph
+ic file (type png)
+
+<use figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd7cc_icgraph.png>)
+[29 <./figures/write__tec_8h__dep__incl.png (PNG copy)> <./figures/write__tec_8
+h__incl.png (PNG copy)> <./figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd
+7cc_icgraph.png (PNG copy)>] (./test.aux (./vorwort.aux) (./analyse.aux)
+(./entwurf.aux) (./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux)) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 9 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4289 strings out of 495061
- 54339 string characters out of 1182620
+ 4426 strings out of 495061
+ 61377 string characters out of 1182620
  142288 words of memory out of 3000000
- 7335 multiletter control sequences out of 15000+50000
+ 7442 multiletter control sequences out of 15000+50000
  25011 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,16n,32p,519b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,16n,32p,519b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.60
 0pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/
 lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/lena/.texmf-
@@ -815,9 +757,9 @@ ve/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y6.pfb>
-Output written on test.pdf (20 pages, 1219719 bytes).
+Output written on test.pdf (30 pages, 1479756 bytes).
 PDF statistics:
- 668 PDF objects out of 1000 (max. 8388607)
+ 728 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
