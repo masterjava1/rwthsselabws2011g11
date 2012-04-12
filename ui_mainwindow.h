@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Fri Apr 13 00:01:42 2012
+** Created: Fri Apr 13 00:41:47 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -135,7 +135,7 @@ public:
         plottingframe->setFrameShadow(QFrame::Raised);
         spinBox = new QSpinBox(centralWidget);
         spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setGeometry(QRect(470, 450, 51, 31));
+        spinBox->setGeometry(QRect(530, 450, 91, 31));
         spinBox->setMinimum(1);
         spinBox->setMaximum(9);
         verticalLayoutWidget = new QWidget(centralWidget);
@@ -440,16 +440,16 @@ public:
         Import_button->setText(QApplication::translate("MainWindow", "Import Data", 0, QApplication::UnicodeUTF8));
         Export_button->setText(QApplication::translate("MainWindow", "Export Data", 0, QApplication::UnicodeUTF8));
         Tecplot_button->setText(QApplication::translate("MainWindow", "Tecplot", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("MainWindow", "1", 0, QApplication::UnicodeUTF8));
-        label_7->setText(QApplication::translate("MainWindow", "2", 0, QApplication::UnicodeUTF8));
-        label_10->setText(QApplication::translate("MainWindow", "3", 0, QApplication::UnicodeUTF8));
-        label_9->setText(QApplication::translate("MainWindow", "4", 0, QApplication::UnicodeUTF8));
-        label_11->setText(QApplication::translate("MainWindow", "5", 0, QApplication::UnicodeUTF8));
-        label_8->setText(QApplication::translate("MainWindow", "6", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("MainWindow", "7", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("MainWindow", "8", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("MainWindow", "9", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("MainWindow", "10", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("MainWindow", "1", 0, QApplication::UnicodeUTF8));
+        label_10->setText(QApplication::translate("MainWindow", "2", 0, QApplication::UnicodeUTF8));
+        label_9->setText(QApplication::translate("MainWindow", "3", 0, QApplication::UnicodeUTF8));
+        label_11->setText(QApplication::translate("MainWindow", "4", 0, QApplication::UnicodeUTF8));
+        label_8->setText(QApplication::translate("MainWindow", "5", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("MainWindow", "6", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("MainWindow", "7", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("MainWindow", "8", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("MainWindow", "9", 0, QApplication::UnicodeUTF8));
         label_13->setText(QApplication::translate("MainWindow", "theta dot", 0, QApplication::UnicodeUTF8));
         label_19->setText(QApplication::translate("MainWindow", "phi dot", 0, QApplication::UnicodeUTF8));
         label_18->setText(QApplication::translate("MainWindow", "psi dot", 0, QApplication::UnicodeUTF8));
