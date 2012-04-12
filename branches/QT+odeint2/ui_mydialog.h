@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mydialog.ui'
 **
-** Created: Thu Apr 12 01:17:56 2012
+** Created: Thu Apr 12 06:14:09 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

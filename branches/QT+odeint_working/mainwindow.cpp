@@ -191,7 +191,8 @@ void MainWindow::on_Simulate_button_clicked()
         QMessageBox::information(this, tr("Runtime Exception in ode.integrate()"),
                                  what);
     }
-    redraw_plot(3);
+    x = 1.2;
+    redraw_plot(4);
     out->~Output();
     simulateon = true;
     windswitch = 1;
@@ -219,8 +220,12 @@ void MainWindow::redraw_plot(int variable)
    QVector<double> bx(2);
    QVector<double> by(2);
 
-   bx
+   bx[0]=x;
+   bx[1]=x;
+   by[0]=plot->yAxis->range().maxRange;
+   by[1]=plot->yAxis->range().minRange;
 
    plot->graph(1)->setData(bx,by);
-   plot->graph(1)->rescaleAxes();
+
+   plot->replot();
 }
