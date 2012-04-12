@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     parameterOptionsOpen(false),
     //set default starting parameters
     params("250" ,"0.1" ,"2.5" ,"0.5" , "15", "0", "0.00001", "2.75"),
-    out(-1)
+    out(10000)
 {
     ui->setupUi(this);
     ui->Angles->setEnabled(false);
@@ -19,8 +19,6 @@ MainWindow::MainWindow(QWidget *parent) :
     plot->setParent(ui->plottingframe);
     plot->setRangeDrag(Qt::Horizontal | Qt::Vertical);
     plot->setRangeZoom(Qt::Horizontal | Qt::Vertical);
-    plot->setInteraction(QCustomPlot::iSelectPlottables);
-
 }
 
 MainWindow::~MainWindow()
@@ -99,88 +97,6 @@ RR MainWindow::min_RR(Array<RR,1> a, int numele) {
 
 double MainWindow::to_double(const RR& a)
 { double z; conv(z, a); return z; }
-
-/*void MainWindow::paintEvent(QPaintEvent *e)
-{
-    // Input "t" "my" "lambda"  "ny"  "xi"  "omikron"  "theta"  "phi"  "psi"  "xc"   "yc"
-    QPainter painter(this);
-    painter.drawRect(10,100,250,150); //1
-    painter.drawRect(10,260,250,150); //2
-    painter.drawRect(270,100,250,150); //3
-    painter.drawRect(270,260,250,150); //4
-
-    QPainter redpainter(this);
-    redpainter.setPen(Qt::red);
-    double t =(ui->t_slider->value());
-    c<<t<< " ";
-    redpainter.drawLine(10+(t*250/params.t_max.toDouble()/1000),100,10+(t*250/params.t_max.toDouble()/1000),250);
-    update();
-    if(simulateon){
-    switch (windswitch){
-    case 0:
-        break;
-    case 1:
-    //Angles ================================================== ysave(var,n)
-        //get min and max values -- val_min; val_max
-<<<<<<< .
-        RR theta_min = min_RR(out.ysave(5,Range(0,out.count-1)), out.count);
-        RR phi_min = min_RR(out.ysave(6,Range(0,out.count-1)), out.count);
-        RR psi_min = min_RR(out.ysave(7,Range(0,out.count-1)), out.count);
-        RR theta_max = max_RR(out.ysave(5,Range(0,out.count-1)), out.count);
-        RR phi_max = max_RR(out.ysave(6,Range(0,out.count-1)), out.count);
-        RR psi_max = max_RR(out.ysave(7,Range(0,out.count-1)), out.count);
-=======
-        RR theta_min = to_RR(0);
-        theta_min = min_RR(out.ysave(5,Range(0,out.count-1)), out.count);
-        RR phi_min = min_RR(out.ysave(6,Range(0,
-
-
-count-1)), out.count);
-        RR psi_min = min_RR(out.ysave(7,Range(0,out.count-1)), out.count);
-        RR theta_max = max_RR(out.ysave(5,Range(0,out.count-1)), out.count);
-        RR phi_max = max_RR(out.ysave(6,Range(0,out.count-1)), out.count);
-        RR psi_max = max_RR(out.ysave(7,Range(0,out.count-1)), out.count);
->>>>>>> .r142
-
-        double min_angles[] = {to_double(theta_min),to_double(phi_min),to_double(psi_min)};
-        double max_angles[] = {to_double(theta_max),to_double(phi_max),to_double(psi_max)};
-        double sum1[] = {0,0,0};
-
-        for (int ii1= 0;ii1<3;ii1++){
-            if(min_angles[ii1]>0)
-                {sum1[ii1]=0;}
-            else{
-                if(min_angles[ii1]<0){
-                min_angles[ii1] = -min_angles[ii1];
-                }
-                if(max_angles[ii1]<0){
-                max_angles[ii1] = -max_angles[ii1];
-                }
-                sum1[ii1] = 150/(min_angles[ii1]+max_angles[ii1]+200)*max_angles[ii1];
-            }
-            painter.drawLine(10,sum1[0]+100,260,sum1[0]+100); //1
-            painter.drawLine(270,sum1[1]+100,520,sum1[1]+100); //2
-            painter.drawLine(10,sum1[2]+260,260,sum1[2]+260); //3
-          //  painter.drawLine(270,sum1[0]+260,520,sum1[0]+260); //4
-            QPainterPath path;
-            if (ii1 == 0){
-                path.moveTo(10,100+sum1[0]+to_double(out.ysave(5,0)));
-            }
-            if (ii1 == 1){
-                path.moveTo(270,100+sum1[1]+to_double(out.ysave(6,0)));
-            }
-            if (ii1 == 2){
-                path.moveTo(10,260+sum1[2]+to_double(out.ysave(7,0)));
-            }
-            for (int ii2 = 0; ii2<out.count-1;ii2++){
-                path.lineTo(to_double(out.xsave(ii2)),to_double(out.ysave(ii1+5,ii2)));
-                painter.drawPath(path);
-            }
-        }
-        break;
-    }
-    }
-}*/
 
 
 
@@ -304,11 +220,10 @@ void MainWindow::on_Import_button_clicked()
 void MainWindow::redraw_plot(int variable)
 {
      plot->addGraph();
-     plot->graph(0)->setPen(QPen(Qt::blue));
-     plot->graph(0)->setBrush(QBrush(QColor(0, 0, 255, 20)));
-
      plot->addGraph();
-     plot->graph(1)->setPen(QPen(Qt::red));
+     plot->graph(0)->setPen(QPen(Qt::red));
+     plot->graph(1)->setPen(QPen(Qt::blue));
+     plot->graph(1)->setBrush(QBrush(QColor(0, 0, 255, 20)));
 
      QVector<double> ax(out.count);
      QVector<double> ay(out.count);
@@ -316,18 +231,23 @@ void MainWindow::redraw_plot(int variable)
          conv(ax[i],out.xsave(i));
          conv(ay[i],out.ysave(variable,i));
      }
-     plot->graph(0)->setData(ax,ay);
-     plot->graph(0)->rescaleAxes();
 
      QVector<double> bx(2);
      QVector<double> by(2);
-
+     /*
      bx[0]=x;
      bx[1]=x;
      by[0]=plot->yAxis->range().maxRange;
      by[1]=plot->yAxis->range().minRange;
+     */
 
-     plot->graph(1)->setData(bx,by);
+     bx[0]=x;
+     bx[1]=x;
+     by[0]=1E50;
+     by[1]=-1E50;
 
+     plot->graph(1)->setData(ax,ay);
+     plot->graph(0)->setData(bx,by);
+     plot->graph(1)->rescaleAxes();
      plot->replot();
 }
