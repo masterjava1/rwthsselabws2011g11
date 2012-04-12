@@ -170,7 +170,7 @@ void MainWindow::on_Simulate_button_clicked()
         progress.close();
 }
 
-void MainWindow::on_Export_button_clicked()
+void  MainWindow::on_Export_button_clicked()
 {
 
     QString fileName = QFileDialog::getSaveFileName(this,
@@ -185,21 +185,21 @@ void MainWindow::on_Export_button_clicked()
                 return;
             }
 
-        ofs << out.xsave << endl << out.ysave << endl;
+        ofs << out.xsave << endl << out.ysave << endl << out.count << endl;
 }
+
+
 
 
 void MainWindow::on_Import_button_clicked()
 {
-    out.clear();
+        out.clear();
 
     QString fileName = QFileDialog::getOpenFileName(this,
           tr("Import Data"), "",
           tr("Gyro Export (*.gyr);;All Files (*)"));
 
-    if (fileName.isEmpty())
-          return;
-      else {
+
 
         ifstream ifs(fileName.toLatin1());
         if(ifs.bad())
@@ -207,9 +207,17 @@ void MainWindow::on_Import_button_clicked()
             return;
         }
 
-        ifs >> out.xsave >> out.ysave;
+        Array<RR,1> xtemp;
+        Array<RR,2> ytemp;
+        ifs >> xtemp;
+        ifs >>ytemp;
+        ifs >> out.count;
+        out.xsave.resize(xtemp.shape());
+        out.ysave.resize(ytemp.shape());
+        out.xsave=xtemp;
+        out.ysave=ytemp;
         redraw_plot(cvar);
-    }
+
 }
 
 
