@@ -1,0 +1,191 @@
+\section{\-Odeint$<$ \-Stepper $>$ \-Class \-Template \-Reference}
+\label{class_odeint}\index{\-Odeint$<$ Stepper $>$@{\-Odeint$<$ Stepper $>$}}
+
+
+high-\/level interface for \-O\-D\-E solvers with adaptive steppsize controll  
+
+
+
+
+{\ttfamily \#include $<$\-Odeint.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Odeint} (\-Array$<$ \-R\-R, 1 $>$ \&ystartt, const \-R\-R xx1, const \-R\-R xx2, const \-R\-R atol, const \-R\-R rtol, const \-R\-R h1, const \-R\-R hminn, {\bf \-Output}$<$ \-Stepper $>$ \&outt, typename \-Stepper\-::\-Dtype \&derivss)
+\item 
+void {\bf integrate} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-R\-R {\bf \-E\-P\-S}
+\item 
+int {\bf nok}
+\item 
+int {\bf nbad}
+\item 
+int {\bf nvar}
+\item 
+\-R\-R {\bf x1}
+\item 
+\-R\-R {\bf x2}
+\item 
+\-R\-R {\bf hmin}
+\item 
+bool {\bf dense}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf y}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf dydx}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ \& {\bf ystart}
+\item 
+{\bf \-Output}$<$ \-Stepper $>$ \& {\bf out}
+\item 
+\-Stepper\-::\-Dtype \& {\bf derivs}
+\item 
+\-Stepper {\bf s}
+\item 
+int {\bf nstp}
+\item 
+\-R\-R {\bf x}
+\item 
+\-R\-R {\bf h}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bf \-M\-A\-X\-S\-T\-P} = 5000000
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename \-Stepper$>$class Odeint$<$ Stepper $>$}
+
+high-\/level interface for \-O\-D\-E solvers with adaptive steppsize controll 
+
+\begin{DoxyDate}{\-Date}
+30.\-03.\-2012 
+\end{DoxyDate}
+\begin{DoxyVersion}{\-Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{\-Author}
+\-Alexander \-Fischer
+\end{DoxyAuthor}
+high-\/level interface for \-O\-D\-E solvers with adaptive steppsize controll
+
+dependencies\-:
+\begin{DoxyItemize}
+\item blitz/array.\-h
+\item \-N\-T\-L/\-R\-R.\-h
+\item \doxyref{\-Output.\-h}{p.}{_output_8h}
+\item \doxyref{\-Runtime\-Exception.\-h}{p.}{_runtime_exception_8h}
+\end{DoxyItemize}
+
+called in\-:
+\begin{DoxyItemize}
+\item \doxyref{mainwindow.\-cpp}{p.}{mainwindow_8cpp} 
+\end{DoxyItemize}
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Odeint@{\-Odeint}!\-Odeint@{\-Odeint}}
+\index{\-Odeint@{\-Odeint}!Odeint@{\-Odeint}}
+\subsubsection[{\-Odeint}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf \-Odeint} (
+\begin{DoxyParamCaption}
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{ystartt, }
+\item[{const \-R\-R}]{xx1, }
+\item[{const \-R\-R}]{xx2, }
+\item[{const \-R\-R}]{atol, }
+\item[{const \-R\-R}]{rtol, }
+\item[{const \-R\-R}]{h1, }
+\item[{const \-R\-R}]{hminn, }
+\item[{{\bf \-Output}$<$ \-Stepper $>$ \&}]{outt, }
+\item[{typename \-Stepper\-::\-Dtype \&}]{derivss}
+\end{DoxyParamCaption}
+)}\label{class_odeint_a7beba4948cc41896bb53bf32397da346}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Odeint@{\-Odeint}!integrate@{integrate}}
+\index{integrate@{integrate}!Odeint@{\-Odeint}}
+\subsubsection[{integrate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf integrate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0}
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Odeint@{\-Odeint}!dense@{dense}}
+\index{dense@{dense}!Odeint@{\-Odeint}}
+\subsubsection[{dense}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ bool {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf dense}}\label{class_odeint_af201992452293fa974f34e57c63d5b16}
+\index{\-Odeint@{\-Odeint}!derivs@{derivs}}
+\index{derivs@{derivs}!Odeint@{\-Odeint}}
+\subsubsection[{derivs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-Stepper\-::\-Dtype\& {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf derivs}}\label{class_odeint_aa6dbbbcd2b973aca19e8f4f14ba49894}
+\index{\-Odeint@{\-Odeint}!dydx@{dydx}}
+\index{dydx@{dydx}!Odeint@{\-Odeint}}
+\subsubsection[{dydx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-Array$<$\-R\-R,1$>$ {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf dydx}}\label{class_odeint_ada60d5233e41dc7412082e8914c694b3}
+\index{\-Odeint@{\-Odeint}!\-E\-P\-S@{\-E\-P\-S}}
+\index{\-E\-P\-S@{\-E\-P\-S}!Odeint@{\-Odeint}}
+\subsubsection[{\-E\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf \-E\-P\-S}}\label{class_odeint_a22958a5c7e2543e7704eb980518975a2}
+\index{\-Odeint@{\-Odeint}!h@{h}}
+\index{h@{h}!Odeint@{\-Odeint}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf h}}\label{class_odeint_ac95d532494f8101072597d379f8eee60}
+\index{\-Odeint@{\-Odeint}!hmin@{hmin}}
+\index{hmin@{hmin}!Odeint@{\-Odeint}}
+\subsubsection[{hmin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf hmin}}\label{class_odeint_a36e12471be64c382a32a5631169afa83}
+\index{\-Odeint@{\-Odeint}!\-M\-A\-X\-S\-T\-P@{\-M\-A\-X\-S\-T\-P}}
+\index{\-M\-A\-X\-S\-T\-P@{\-M\-A\-X\-S\-T\-P}!Odeint@{\-Odeint}}
+\subsubsection[{\-M\-A\-X\-S\-T\-P}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ const int {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf \-M\-A\-X\-S\-T\-P} = 5000000\hspace{0.3cm}{\ttfamily  [static]}}\label{class_odeint_a3211a7c8113b20175baa56c87a49c37a}
+\index{\-Odeint@{\-Odeint}!nbad@{nbad}}
+\index{nbad@{nbad}!Odeint@{\-Odeint}}
+\subsubsection[{nbad}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf nbad}}\label{class_odeint_aa8584b567b3eb31887d46d306a46389d}
+\index{\-Odeint@{\-Odeint}!nok@{nok}}
+\index{nok@{nok}!Odeint@{\-Odeint}}
+\subsubsection[{nok}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf nok}}\label{class_odeint_ae8d37e6197126266dbeff26f6cb61085}
+\index{\-Odeint@{\-Odeint}!nstp@{nstp}}
+\index{nstp@{nstp}!Odeint@{\-Odeint}}
+\subsubsection[{nstp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf nstp}}\label{class_odeint_ab14c7698c9e19035c6cf56e013469a88}
+\index{\-Odeint@{\-Odeint}!nvar@{nvar}}
+\index{nvar@{nvar}!Odeint@{\-Odeint}}
+\subsubsection[{nvar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf nvar}}\label{class_odeint_a53a819f87823379003ed61c471519d2b}
+\index{\-Odeint@{\-Odeint}!out@{out}}
+\index{out@{out}!Odeint@{\-Odeint}}
+\subsubsection[{out}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ {\bf \-Output}$<$\-Stepper$>$\& {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf out}}\label{class_odeint_a67e729855849613d5b764d8efaa21b1d}
+\index{\-Odeint@{\-Odeint}!s@{s}}
+\index{s@{s}!Odeint@{\-Odeint}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-Stepper {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf s}}\label{class_odeint_a2d89719de8c96f75b3e0dc6912a49d09}
+\index{\-Odeint@{\-Odeint}!x@{x}}
+\index{x@{x}!Odeint@{\-Odeint}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf x}}\label{class_odeint_ab371f03224559ac34af4a5e66fabf22a}
+\index{\-Odeint@{\-Odeint}!x1@{x1}}
+\index{x1@{x1}!Odeint@{\-Odeint}}
+\subsubsection[{x1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf x1}}\label{class_odeint_aab0aeb2b71c071e51d0a76409f7438d9}
+\index{\-Odeint@{\-Odeint}!x2@{x2}}
+\index{x2@{x2}!Odeint@{\-Odeint}}
+\subsubsection[{x2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf x2}}\label{class_odeint_a2395b4ee2faf735219638f7385927097}
+\index{\-Odeint@{\-Odeint}!y@{y}}
+\index{y@{y}!Odeint@{\-Odeint}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-Array$<$\-R\-R,1$>$ {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf y}}\label{class_odeint_a1bfc74e3d8760b9d6e7c7ba26bc33f4a}
+\index{\-Odeint@{\-Odeint}!ystart@{ystart}}
+\index{ystart@{ystart}!Odeint@{\-Odeint}}
+\subsubsection[{ystart}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-Array$<$\-R\-R,1$>$\& {\bf \-Odeint}$<$ \-Stepper $>$\-::{\bf ystart}}\label{class_odeint_a9f2cdfed6f39651e11f2f81a79459926}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Odeint.\-h}\end{DoxyCompactItemize}

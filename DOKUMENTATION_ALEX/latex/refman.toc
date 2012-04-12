@@ -1,0 +1,333 @@
+\contentsline {chapter}{\numberline {1}\discretionary {-}{}{}Namespace \discretionary {-}{}{}Index}{1}
+\contentsline {section}{\numberline {1.1}\discretionary {-}{}{}Namespace \discretionary {-}{}{}List}{1}
+\contentsline {chapter}{\numberline {2}\discretionary {-}{}{}Class \discretionary {-}{}{}Index}{3}
+\contentsline {section}{\numberline {2.1}\discretionary {-}{}{}Class \discretionary {-}{}{}Hierarchy}{3}
+\contentsline {chapter}{\numberline {3}\discretionary {-}{}{}Class \discretionary {-}{}{}Index}{5}
+\contentsline {section}{\numberline {3.1}\discretionary {-}{}{}Class \discretionary {-}{}{}List}{5}
+\contentsline {chapter}{\numberline {4}\discretionary {-}{}{}File \discretionary {-}{}{}Index}{7}
+\contentsline {section}{\numberline {4.1}\discretionary {-}{}{}File \discretionary {-}{}{}List}{7}
+\contentsline {chapter}{\numberline {5}\discretionary {-}{}{}Namespace \discretionary {-}{}{}Documentation}{9}
+\contentsline {section}{\numberline {5.1}blitz \discretionary {-}{}{}Namespace \discretionary {-}{}{}Reference}{9}
+\contentsline {subsection}{\numberline {5.1.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{9}
+\contentsline {section}{\numberline {5.2}\discretionary {-}{}{}N\discretionary {-}{}{}T\discretionary {-}{}{}L \discretionary {-}{}{}Namespace \discretionary {-}{}{}Reference}{9}
+\contentsline {subsection}{\numberline {5.2.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{9}
+\contentsline {chapter}{\numberline {6}\discretionary {-}{}{}Class \discretionary {-}{}{}Documentation}{11}
+\contentsline {section}{\numberline {6.1}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Dopr853m$<$ \discretionary {-}{}{}D $>$\discretionary {-}{}{}:\discretionary {-}{}{}:\discretionary {-}{}{}Controller \discretionary {-}{}{}Struct \discretionary {-}{}{}Reference}{11}
+\contentsline {subsection}{\numberline {6.1.1}\discretionary {-}{}{}Constructor \& \discretionary {-}{}{}Destructor \discretionary {-}{}{}Documentation}{11}
+\contentsline {subsubsection}{\numberline {6.1.1.1}\discretionary {-}{}{}Controller}{11}
+\contentsline {subsection}{\numberline {6.1.2}\discretionary {-}{}{}Member \discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{11}
+\contentsline {subsubsection}{\numberline {6.1.2.1}success}{12}
+\contentsline {subsection}{\numberline {6.1.3}\discretionary {-}{}{}Member \discretionary {-}{}{}Data \discretionary {-}{}{}Documentation}{12}
+\contentsline {subsubsection}{\numberline {6.1.3.1}errold}{12}
+\contentsline {subsubsection}{\numberline {6.1.3.2}\discretionary {-}{}{}G}{12}
+\contentsline {subsubsection}{\numberline {6.1.3.3}hnext}{12}
+\contentsline {subsubsection}{\numberline {6.1.3.4}reject}{12}
+\contentsline {subsubsection}{\numberline {6.1.3.5}youtc}{12}
+\contentsline {section}{\numberline {6.2}\discretionary {-}{}{}Odeint$<$ \discretionary {-}{}{}Stepper $>$ \discretionary {-}{}{}Class \discretionary {-}{}{}Template \discretionary {-}{}{}Reference}{12}
+\contentsline {subsection}{\numberline {6.2.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{13}
+\contentsline {subsection}{\numberline {6.2.2}\discretionary {-}{}{}Constructor \& \discretionary {-}{}{}Destructor \discretionary {-}{}{}Documentation}{14}
+\contentsline {subsubsection}{\numberline {6.2.2.1}\discretionary {-}{}{}Odeint}{14}
+\contentsline {subsection}{\numberline {6.2.3}\discretionary {-}{}{}Member \discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{14}
+\contentsline {subsubsection}{\numberline {6.2.3.1}integrate}{14}
+\contentsline {subsection}{\numberline {6.2.4}\discretionary {-}{}{}Member \discretionary {-}{}{}Data \discretionary {-}{}{}Documentation}{14}
+\contentsline {subsubsection}{\numberline {6.2.4.1}dense}{14}
+\contentsline {subsubsection}{\numberline {6.2.4.2}derivs}{14}
+\contentsline {subsubsection}{\numberline {6.2.4.3}dydx}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.4}\discretionary {-}{}{}E\discretionary {-}{}{}P\discretionary {-}{}{}S}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.5}h}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.6}hmin}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.7}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}S\discretionary {-}{}{}T\discretionary {-}{}{}P}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.8}nbad}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.9}nok}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.10}nstp}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.11}nvar}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.12}out}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.13}s}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.14}x}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.15}x1}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.16}x2}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.17}y}{15}
+\contentsline {subsubsection}{\numberline {6.2.4.18}ystart}{15}
+\contentsline {section}{\numberline {6.3}\discretionary {-}{}{}Output$<$ \discretionary {-}{}{}Stepper $>$ \discretionary {-}{}{}Class \discretionary {-}{}{}Template \discretionary {-}{}{}Reference}{15}
+\contentsline {subsection}{\numberline {6.3.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{16}
+\contentsline {subsection}{\numberline {6.3.2}\discretionary {-}{}{}Constructor \& \discretionary {-}{}{}Destructor \discretionary {-}{}{}Documentation}{17}
+\contentsline {subsubsection}{\numberline {6.3.2.1}\discretionary {-}{}{}Output}{17}
+\contentsline {subsubsection}{\numberline {6.3.2.2}\discretionary {-}{}{}Output}{17}
+\contentsline {subsection}{\numberline {6.3.3}\discretionary {-}{}{}Member \discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.1}clear}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.2}exportfile}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.3}importfile}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.4}init}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.5}out}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.6}resize}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.7}save}{17}
+\contentsline {subsubsection}{\numberline {6.3.3.8}save\discretionary {-}{}{}\_\discretionary {-}{}{}dense}{17}
+\contentsline {subsection}{\numberline {6.3.4}\discretionary {-}{}{}Member \discretionary {-}{}{}Data \discretionary {-}{}{}Documentation}{17}
+\contentsline {subsubsection}{\numberline {6.3.4.1}count}{17}
+\contentsline {subsubsection}{\numberline {6.3.4.2}dense}{17}
+\contentsline {subsubsection}{\numberline {6.3.4.3}dxout}{17}
+\contentsline {subsubsection}{\numberline {6.3.4.4}kmax}{18}
+\contentsline {subsubsection}{\numberline {6.3.4.5}nsave}{18}
+\contentsline {subsubsection}{\numberline {6.3.4.6}nvar}{18}
+\contentsline {subsubsection}{\numberline {6.3.4.7}x1}{18}
+\contentsline {subsubsection}{\numberline {6.3.4.8}x2}{18}
+\contentsline {subsubsection}{\numberline {6.3.4.9}xout}{18}
+\contentsline {subsubsection}{\numberline {6.3.4.10}xsave}{18}
+\contentsline {subsubsection}{\numberline {6.3.4.11}ysave}{18}
+\contentsline {section}{\numberline {6.4}\discretionary {-}{}{}R\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}gyro \discretionary {-}{}{}Class \discretionary {-}{}{}Reference}{18}
+\contentsline {subsection}{\numberline {6.4.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{19}
+\contentsline {subsection}{\numberline {6.4.2}\discretionary {-}{}{}Constructor \& \discretionary {-}{}{}Destructor \discretionary {-}{}{}Documentation}{19}
+\contentsline {subsubsection}{\numberline {6.4.2.1}\discretionary {-}{}{}R\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}gyro}{19}
+\contentsline {subsection}{\numberline {6.4.3}\discretionary {-}{}{}Member \discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{19}
+\contentsline {subsubsection}{\numberline {6.4.3.1}operator()}{19}
+\contentsline {subsubsection}{\numberline {6.4.3.2}pres\discretionary {-}{}{}Q}{19}
+\contentsline {subsection}{\numberline {6.4.4}\discretionary {-}{}{}Member \discretionary {-}{}{}Data \discretionary {-}{}{}Documentation}{19}
+\contentsline {subsubsection}{\numberline {6.4.4.1}a}{19}
+\contentsline {subsubsection}{\numberline {6.4.4.2}g}{19}
+\contentsline {subsubsection}{\numberline {6.4.4.3}\discretionary {-}{}{}I}{19}
+\contentsline {subsubsection}{\numberline {6.4.4.4}\discretionary {-}{}{}I3}{19}
+\contentsline {subsubsection}{\numberline {6.4.4.5}k}{20}
+\contentsline {subsubsection}{\numberline {6.4.4.6}m}{20}
+\contentsline {subsubsection}{\numberline {6.4.4.7}\discretionary {-}{}{}R}{20}
+\contentsline {section}{\numberline {6.5}\discretionary {-}{}{}Runtime\discretionary {-}{}{}Exception \discretionary {-}{}{}Class \discretionary {-}{}{}Reference}{20}
+\contentsline {subsection}{\numberline {6.5.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{20}
+\contentsline {subsection}{\numberline {6.5.2}\discretionary {-}{}{}Constructor \& \discretionary {-}{}{}Destructor \discretionary {-}{}{}Documentation}{21}
+\contentsline {subsubsection}{\numberline {6.5.2.1}\discretionary {-}{}{}Runtime\discretionary {-}{}{}Exception}{21}
+\contentsline {subsection}{\numberline {6.5.3}\discretionary {-}{}{}Member \discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{21}
+\contentsline {subsubsection}{\numberline {6.5.3.1}get\discretionary {-}{}{}Window\discretionary {-}{}{}Id}{21}
+\contentsline {subsubsection}{\numberline {6.5.3.2}what}{21}
+\contentsline {section}{\numberline {6.6}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Base \discretionary {-}{}{}Class \discretionary {-}{}{}Reference}{21}
+\contentsline {subsection}{\numberline {6.6.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{22}
+\contentsline {subsection}{\numberline {6.6.2}\discretionary {-}{}{}Constructor \& \discretionary {-}{}{}Destructor \discretionary {-}{}{}Documentation}{23}
+\contentsline {subsubsection}{\numberline {6.6.2.1}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Base}{23}
+\contentsline {subsection}{\numberline {6.6.3}\discretionary {-}{}{}Member \discretionary {-}{}{}Data \discretionary {-}{}{}Documentation}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.1}atol}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.2}dense}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.3}dydx}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.4}\discretionary {-}{}{}E\discretionary {-}{}{}P\discretionary {-}{}{}S}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.5}hdid}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.6}hnext}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.7}n}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.8}neqn}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.9}rtol}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.10}x}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.11}xold}{23}
+\contentsline {subsubsection}{\numberline {6.6.3.12}y}{24}
+\contentsline {subsubsection}{\numberline {6.6.3.13}yerr}{24}
+\contentsline {subsubsection}{\numberline {6.6.3.14}yout}{24}
+\contentsline {section}{\numberline {6.7}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Dopr853m$<$ \discretionary {-}{}{}D $>$ \discretionary {-}{}{}Class \discretionary {-}{}{}Template \discretionary {-}{}{}Reference}{24}
+\contentsline {subsection}{\numberline {6.7.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{29}
+\contentsline {subsection}{\numberline {6.7.2}\discretionary {-}{}{}Member \discretionary {-}{}{}Typedef \discretionary {-}{}{}Documentation}{30}
+\contentsline {subsubsection}{\numberline {6.7.2.1}\discretionary {-}{}{}Dtype}{30}
+\contentsline {subsection}{\numberline {6.7.3}\discretionary {-}{}{}Constructor \& \discretionary {-}{}{}Destructor \discretionary {-}{}{}Documentation}{30}
+\contentsline {subsubsection}{\numberline {6.7.3.1}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Dopr853m}{30}
+\contentsline {subsection}{\numberline {6.7.4}\discretionary {-}{}{}Member \discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{30}
+\contentsline {subsubsection}{\numberline {6.7.4.1}dense\discretionary {-}{}{}\_\discretionary {-}{}{}out}{30}
+\contentsline {subsubsection}{\numberline {6.7.4.2}dy}{30}
+\contentsline {subsubsection}{\numberline {6.7.4.3}error}{30}
+\contentsline {subsubsection}{\numberline {6.7.4.4}prepare\discretionary {-}{}{}\_\discretionary {-}{}{}dense}{31}
+\contentsline {subsubsection}{\numberline {6.7.4.5}step}{31}
+\contentsline {subsection}{\numberline {6.7.5}\discretionary {-}{}{}Member \discretionary {-}{}{}Data \discretionary {-}{}{}Documentation}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.1}a101}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.2}a104}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.3}a105}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.4}a106}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.5}a107}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.6}a108}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.7}a109}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.8}a111}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.9}a1110}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.10}a114}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.11}a115}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.12}a116}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.13}a117}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.14}a118}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.15}a119}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.16}a121}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.17}a1210}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.18}a1211}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.19}a124}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.20}a125}{31}
+\contentsline {subsubsection}{\numberline {6.7.5.21}a126}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.22}a127}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.23}a128}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.24}a129}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.25}a141}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.26}a1410}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.27}a1411}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.28}a1412}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.29}a1413}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.30}a147}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.31}a148}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.32}a149}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.33}a151}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.34}a1511}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.35}a1512}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.36}a1513}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.37}a1514}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.38}a156}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.39}a157}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.40}a158}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.41}a161}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.42}a1613}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.43}a1614}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.44}a1615}{32}
+\contentsline {subsubsection}{\numberline {6.7.5.45}a166}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.46}a167}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.47}a168}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.48}a169}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.49}a21}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.50}a31}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.51}a32}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.52}a41}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.53}a43}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.54}a51}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.55}a53}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.56}a54}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.57}a61}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.58}a64}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.59}a65}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.60}a71}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.61}a74}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.62}a75}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.63}a76}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.64}a81}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.65}a84}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.66}a85}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.67}a86}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.68}a87}{33}
+\contentsline {subsubsection}{\numberline {6.7.5.69}a91}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.70}a94}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.71}a95}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.72}a96}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.73}a97}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.74}a98}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.75}b1}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.76}b10}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.77}b11}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.78}b12}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.79}b6}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.80}b7}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.81}b8}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.82}b9}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.83}bhh1}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.84}bhh2}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.85}bhh3}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.86}c10}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.87}c11}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.88}c14}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.89}c15}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.90}c16}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.91}c2}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.92}c3}{34}
+\contentsline {subsubsection}{\numberline {6.7.5.93}c4}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.94}c5}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.95}c6}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.96}c7}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.97}c8}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.98}c9}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.99}con}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.100}d41}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.101}d410}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.102}d411}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.103}d412}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.104}d413}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.105}d414}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.106}d415}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.107}d416}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.108}d46}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.109}d47}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.110}d48}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.111}d49}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.112}d51}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.113}d510}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.114}d511}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.115}d512}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.116}d513}{35}
+\contentsline {subsubsection}{\numberline {6.7.5.117}d514}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.118}d515}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.119}d516}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.120}d56}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.121}d57}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.122}d58}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.123}d59}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.124}d61}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.125}d610}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.126}d611}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.127}d612}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.128}d613}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.129}d614}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.130}d615}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.131}d616}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.132}d66}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.133}d67}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.134}d68}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.135}d69}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.136}d71}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.137}d710}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.138}d711}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.139}d712}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.140}d713}{36}
+\contentsline {subsubsection}{\numberline {6.7.5.141}d714}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.142}d715}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.143}d716}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.144}d76}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.145}d77}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.146}d78}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.147}d79}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.148}er1}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.149}er10}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.150}er11}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.151}er12}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.152}er6}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.153}er7}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.154}er8}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.155}er9}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.156}k10}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.157}k2}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.158}k3}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.159}k4}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.160}k5}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.161}k6}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.162}k7}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.163}k8}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.164}k9}{37}
+\contentsline {subsubsection}{\numberline {6.7.5.165}rcont1}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.166}rcont2}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.167}rcont3}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.168}rcont4}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.169}rcont5}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.170}rcont6}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.171}rcont7}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.172}rcont8}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.173}yerr2}{38}
+\contentsline {subsubsection}{\numberline {6.7.5.174}ytemp}{38}
+\contentsline {chapter}{\numberline {7}\discretionary {-}{}{}File \discretionary {-}{}{}Documentation}{39}
+\contentsline {section}{\numberline {7.1}mainwindow.\discretionary {-}{}{}cpp \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{39}
+\contentsline {subsection}{\numberline {7.1.1}\discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{40}
+\contentsline {subsubsection}{\numberline {7.1.1.1}main}{40}
+\contentsline {section}{\numberline {7.2}ntl\discretionary {-}{}{}\_\discretionary {-}{}{}ext.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{40}
+\contentsline {subsection}{\numberline {7.2.1}\discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{41}
+\contentsline {subsubsection}{\numberline {7.2.1.1}max}{42}
+\contentsline {subsubsection}{\numberline {7.2.1.2}max}{42}
+\contentsline {subsubsection}{\numberline {7.2.1.3}max}{42}
+\contentsline {subsubsection}{\numberline {7.2.1.4}max}{42}
+\contentsline {subsubsection}{\numberline {7.2.1.5}min}{42}
+\contentsline {subsubsection}{\numberline {7.2.1.6}min}{42}
+\contentsline {subsubsection}{\numberline {7.2.1.7}min}{42}
+\contentsline {subsubsection}{\numberline {7.2.1.8}min}{42}
+\contentsline {section}{\numberline {7.3}\discretionary {-}{}{}Odeint.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{43}
+\contentsline {subsection}{\numberline {7.3.1}\discretionary {-}{}{}Define \discretionary {-}{}{}Documentation}{44}
+\contentsline {subsubsection}{\numberline {7.3.1.1}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}G\discretionary {-}{}{}N}{44}
+\contentsline {section}{\numberline {7.4}\discretionary {-}{}{}Output.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{44}
+\contentsline {section}{\numberline {7.5}\discretionary {-}{}{}R\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}gyro.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{45}
+\contentsline {subsection}{\numberline {7.5.1}\discretionary {-}{}{}Define \discretionary {-}{}{}Documentation}{46}
+\contentsline {subsubsection}{\numberline {7.5.1.1}\discretionary {-}{}{}S\discretionary {-}{}{}Q\discretionary {-}{}{}R}{46}
+\contentsline {section}{\numberline {7.6}\discretionary {-}{}{}Runtime\discretionary {-}{}{}Exception.\discretionary {-}{}{}cpp \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{46}
+\contentsline {section}{\numberline {7.7}\discretionary {-}{}{}Runtime\discretionary {-}{}{}Exception.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{47}
+\contentsline {section}{\numberline {7.8}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Base.\discretionary {-}{}{}cpp \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{49}
+\contentsline {section}{\numberline {7.9}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Base.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{49}
+\contentsline {section}{\numberline {7.10}\discretionary {-}{}{}Stepper\discretionary {-}{}{}Dopr853m.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{50}
+\contentsline {section}{\numberline {7.11}write\discretionary {-}{}{}\_\discretionary {-}{}{}tec.\discretionary {-}{}{}h \discretionary {-}{}{}File \discretionary {-}{}{}Reference}{51}
+\contentsline {subsection}{\numberline {7.11.1}\discretionary {-}{}{}Function \discretionary {-}{}{}Documentation}{53}
+\contentsline {subsubsection}{\numberline {7.11.1.1}write\discretionary {-}{}{}\_\discretionary {-}{}{}tec}{53}
