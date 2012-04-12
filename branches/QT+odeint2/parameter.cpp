@@ -17,8 +17,8 @@ Parameter::~Parameter()
     delete ui;
 }
 
-Parameter::Parameter(QString ppsidot0, QString ttheta0, QString RR, QString aa, QString mm, QString kk, QString rtoll, QString tt_max)
-    : psidot0(ppsidot0), theta0(ttheta0), R(RR), a(aa), m(mm), k(kk), rtol(rtoll), t_max(tt_max){}
+Parameter::Parameter(QString ppsidot0, QString ttheta0, QString RR, QString aa, QString mm, QString kk, QString rtoll,QString cqtoll, QString tt_max)
+    : psidot0(ppsidot0), theta0(ttheta0), R(RR), a(aa), m(mm), k(kk), rtol(rtoll), cqtol(cqtoll), t_max(tt_max){}
 
 
 void Parameter::changeEvent(QEvent *e)
@@ -45,11 +45,11 @@ void Parameter::FrictionCheck()
 void Parameter::on_actionSetButtonClicked_triggered()
 {
     ParSet PP(ui->psidot0->text(),ui->theta0->text(),ui->R->text(),ui->a->text(),ui->m->text(),
-              ui->k->text(),ui->TolConQual->text(),ui->t_max->text());
+              ui->k->text(),ui->TolConQual->text(),ui->cqtol->text(), ui->t_max->text());
     emit(closeParWindow(PP));
 }
 
-void Parameter::setPar(QString psidot0, QString theta0, QString R, QString a, QString m, QString k, QString TolConQual, QString t_max){
+void Parameter::setPar(QString psidot0, QString theta0, QString R, QString a, QString m, QString k, QString TolConQual, QString ConsTol, QString t_max){
     ui->psidot0->setText(psidot0);
     ui->theta0->setText(theta0);
     ui->R->setText(R);
@@ -58,6 +58,7 @@ void Parameter::setPar(QString psidot0, QString theta0, QString R, QString a, QS
     ui->k->setText(k);
     ui->TolConQual->setText(TolConQual);
     ui->t_max->setText(t_max);
+    ui->cqtol->setText(ConsTol);
     if (k == "0.3"){
         ui->Friction->setChecked(true);
     }
@@ -86,7 +87,7 @@ void Parameter::on_export_button_clicked()
             }
             QDataStream out(&file);
             out<<ui->psidot0->text() << ui->theta0->text() << ui->R->text() << ui->a->text() << ui->m->text() <<
-                    ui->k->text() << ui->TolConQual->text() << ui->t_max->text();
+                    ui->k->text() << ui->TolConQual->text() << ui->cqtol->text()<< ui->t_max->text();
         }
 }
 
@@ -108,11 +109,11 @@ void Parameter::on_import_button_clicked()
                 return;
             }
 
-            QString psidot0, theta0, R, a, m, k, TolConQual, t_max;
+            QString psidot0, theta0, R, a, m, k, TolConQual,consqtol, t_max;
 
             QDataStream in(&file);
             in >> psidot0 >> theta0 >> R >> a >> m >> k >> TolConQual >> t_max;
-            setPar(psidot0,theta0,R,a,m,k,TolConQual,t_max);
+            setPar(psidot0,theta0,R,a,m,k,TolConQual,consqtol,t_max);
       }
 }
 

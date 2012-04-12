@@ -8,17 +8,26 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow),
     parameterOptionsOpen(false),
     //set default starting parameters
-    params("250" ,"0.1" ,"2.5" ,"0.5" , "15", "0", "0.00001", "2.75"),
+    params("250" ,"0.1" ,"2.5" ,"0.5" , "15", "0.3", "1E-4","1E-4", "2.75"),
     out(5000)
 {
     ui->setupUi(this);
     plot = new QCustomPlot(this);
-    plot->setFixedHeight(351);
+    plot->setFixedHeight(371);
     plot->setFixedWidth(501);
     plot->setParent(ui->plottingframe);
     plot->setRangeDrag(Qt::Horizontal | Qt::Vertical);
     plot->setRangeZoom(Qt::Horizontal | Qt::Vertical);
     cvar = 1;
+    ui->psidot0->setText(params.psid);
+    ui->theta0->setText(params.theta);
+    ui->R->setText(params.R);
+    ui->a->setText(params.a);
+    ui->m->setText(params.m);
+    ui->k->setText(params.k);
+    ui->display_cqtol->setText(params.cqtol);
+    ui->Tolerance->setText(params.rtol);
+    ui->t_max->setText(params.t_max);
 }
 
 MainWindow::~MainWindow()
@@ -46,7 +55,7 @@ void MainWindow::on_actionOpenParameterOptions_triggered()
         connect(mParameter,SIGNAL(closeWindow()),this,SLOT(WindowClosed()));
         mParameter->show();
         parameterOptionsOpen = true;
-        mParameter->setPar(params.psid, params.theta, params.R, params.a, params.m, params.k, params.rtol, params.t_max);
+        mParameter->setPar(params.psid, params.theta, params.R, params.a, params.m, params.k, params.rtol,params.cqtol, params.t_max);
     }
 }
 
@@ -60,10 +69,10 @@ void MainWindow::parWindowClosed(ParSet P){
     ui->a->setText(P.a);
     ui->m->setText(P.m);
     ui->k->setText(P.k);
+    ui->display_cqtol->setText(P.cqtol);
     ui->Tolerance->setText(P.rtol);
     ui->t_max->setText(P.t_max);
     params=P;
-    ui->t_slider->setMaximum((P.t_max).toDouble()*1000);
 }
 
 void MainWindow::WindowClosed()
@@ -72,10 +81,6 @@ void MainWindow::WindowClosed()
     parameterOptionsOpen = false;
 }
 
-void MainWindow::on_actionSlideTime_triggered()
-{
-    ui->t->setText(QString("%1").arg(ui->t_slider->value()));
-}
 
 RR MainWindow::max_RR(Array<RR,1> a, int numele) {
    int i;
@@ -131,9 +136,9 @@ void MainWindow::on_Simulate_button_clicked()
         RR k=to_RR(params.k.toDouble()*100);
         RR m=to_RR(params.m.toDouble()/1000);
         RR a=to_RR(params.a.toDouble()/100);
+        RR cqtol=to_RR(params.cqtol.toDouble());
         progress.setValue(10);
         Array<RR,1> ystart(nvar);
-        Array<RR,2> tmp;
         progress.setValue(20);
         ystart(0)=to_RR(0.0);
         ystart(1)=to_RR(0.0);
@@ -149,7 +154,7 @@ void MainWindow::on_Simulate_button_clicked()
         progress.setValue(30);
         out.clear();
         RHS_gyro d(g,R,k,m,a);
-        Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,h1,hmin,out,d);
+        Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,cqtol,h1,hmin,out,d);
         try{
            ode.integrate();
         }catch(RuntimeException rte){
@@ -212,9 +217,8 @@ void MainWindow::redraw_plot(int variable)
 {
      plot->addGraph();
      plot->addGraph();
-     plot->graph(0)->setPen(QPen(Qt::red));
-     plot->graph(1)->setPen(QPen(Qt::blue));
-     plot->graph(1)->setBrush(QBrush(QColor(0, 0, 255, 20)));
+     plot->graph(0)->setPen(QPen(Qt::blue));
+     plot->graph(0)->setBrush(QBrush(QColor(0, 0, 255, 20)));
 
      QVector<double> ax(out.count);
      QVector<double> ay(out.count);
@@ -224,22 +228,9 @@ void MainWindow::redraw_plot(int variable)
      }
 
      QVector<double> bx(2);
-     QVector<double> by(2);
-     /*
-     bx[0]=x;
-     bx[1]=x;
-     by[0]=plot->yAxis->range().maxRange;
-     by[1]=plot->yAxis->range().minRange;
-     */
 
-     bx[0]=x;
-     bx[1]=x;
-     by[0]=1E50;
-     by[1]=-1E50;
-
-     plot->graph(1)->setData(ax,ay);
-     plot->graph(0)->setData(bx,by);
-     plot->graph(1)->rescaleAxes();
+     plot->graph(0)->setData(ax,ay);
+     plot->graph(0)->rescaleAxes();
      plot->replot();
 }
 

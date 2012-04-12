@@ -31,6 +31,7 @@ class Odeint {
    int nbad; // bad steps (retried and fixed)
    int nvar;
    RR x1, x2, hmin;
+   RR cqtol;
    bool dense;  // true if dense output is requested by out
    Array<RR,1> y;
    Array<RR,1> dydx;
@@ -48,6 +49,10 @@ class Odeint {
    Odeint(Array<RR,1> &ystartt, const RR xx1, const RR xx2,
     const RR atol, const RR rtol, const RR h1, const RR hminn, 
     Output<Stepper> &outt, typename Stepper::Dtype &derivss);
+   // possible to give cqtol
+   Odeint(Array<RR,1> &ystartt, const RR xx1, const RR xx2,
+    const RR atol, const RR rtol, const RR cqtol, const RR h1, const RR hminn, 
+    Output<Stepper> &outt, typename Stepper::Dtype &derivss);
    // Does actual integration
    void integrate();
 };
@@ -59,6 +64,19 @@ Odeint<Stepper>::Odeint(Array<RR,1> &ystartt, const RR xx1, const RR xx2,
  : nvar(ystartt.size()), y(nvar), dydx(nvar), ystart(ystartt), x(xx1), nok(0), 
  nbad(0), x1(xx1), x2(xx2), hmin(hminn), dense(outt.dense), out(outt), 
  s(y, dydx, x, atol, rtol, dense), derivs(derivss) {
+   EPS=to_RR(2.4651903288156618919116517665087069677288E-32);
+   h=SIGN(h1, x2-x1);
+   for (int i=0;i<nvar;i++) y(i)=ystart(i);
+   out.init(s.neqn,x1,x2);
+}
+
+template<typename Stepper>
+Odeint<Stepper>::Odeint(Array<RR,1> &ystartt, const RR xx1, const RR xx2,
+ const RR atol, const RR rtol, const RR cqtol, const RR h1, const RR hminn, 
+ Output<Stepper> &outt, typename Stepper::Dtype &derivss) 
+ : nvar(ystartt.size()), y(nvar), dydx(nvar), ystart(ystartt), x(xx1), nok(0), 
+ nbad(0), x1(xx1), x2(xx2), hmin(hminn), dense(outt.dense), out(outt), 
+ s(y, dydx, x, atol, rtol, cqtol, dense), derivs(derivss) {
    EPS=to_RR(2.4651903288156618919116517665087069677288E-32);
    h=SIGN(h1, x2-x1);
    for (int i=0;i<nvar;i++) y(i)=ystart(i);
