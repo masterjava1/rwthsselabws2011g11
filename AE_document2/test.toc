@@ -7,10 +7,10 @@
 \contentsline {subsection}{\numberline {2.1.1}Benutzeranforderungen}{3}
 \contentsline {subsection}{\numberline {2.1.2}Anwendungsfallanalyse}{5}
 \contentsline {section}{\numberline {2.2}Begriffsanalyse}{10}
-\contentsline {chapter}{\numberline {3}Entwurf}{11}
-\contentsline {section}{\numberline {3.1}Grobentwurf: Subsysteme}{11}
-\contentsline {section}{\numberline {3.2}Detailentwurf: Klassen}{12}
-\contentsline {section}{\numberline {3.3}Graphical User Interface}{16}
-\contentsline {section}{\numberline {3.4}Use-Case-Diagramm}{17}
-\contentsline {chapter}{\numberline {4}Benutzerdokumentation}{18}
-\contentsline {chapter}{\numberline {5}Entwicklerdokumentation}{19}
+\contentsline {chapter}{\numberline {3}Entwurf}{12}
+\contentsline {section}{\numberline {3.1}Grobentwurf: Subsysteme}{12}
+\contentsline {section}{\numberline {3.2}Detailentwurf: Klassen}{13}
+\contentsline {section}{\numberline {3.3}Graphical User Interface}{17}
+\contentsline {section}{\numberline {3.4}Use-Case-Diagramm}{18}
+\contentsline {chapter}{\numberline {4}Benutzerdokumentation}{19}
+\contentsline {chapter}{\numberline {5}Entwicklerdokumentation}{20}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 21:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 21:59
 entering extended mode
  %&-line parsing enabled.
 **test.tex
@@ -222,7 +222,7 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 \bigstrutjot=\dimen123
 ) (./test.aux
 (./vorwort.aux) (./analyse.aux) (./entwurf.aux) (./nutzerdoc.aux)
-(./entwicklerdoc.aux) (./quellcode.aux))
+(./entwicklerdoc.aux))
 \openout1 = `test.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -237,8 +237,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen124
@@ -479,25 +478,25 @@ Overfull \hbox (3.57016pt too wide) in paragraph at lines 237--238
 GBO oder GUI) ist eine Software-
  []
 
-) [10]
+[10]) [11]
 \openout2 = `entwurf.aux'.
 
  (./entwurf.tex
 Kapitel 3.
-<figures/StructureDiagGyroSim.png, id=54, 549.9747pt x 365.6862pt>
+<figures/StructureDiagGyroSim.png, id=57, 549.9747pt x 365.6862pt>
 File: figures/StructureDiagGyroSim.png Graphic file (type png)
 
 <use figures/StructureDiagGyroSim.png>
-<figures/Odeint.png, id=55, 797.8608pt x 759.5577pt>
+<figures/Odeint.png, id=58, 797.8608pt x 759.5577pt>
 File: figures/Odeint.png Graphic file (type png)
  <use figures/Odeint.png>
-<figures/klassenidagramm.png, id=56, 798.5835pt x 760.2804pt> [11
+<figures/klassenidagramm.png, id=59, 798.5835pt x 760.2804pt> [12
 
 
 
  <./figures/StructureDiagGyroSim.png (PNG copy)>]
 File: figures/klassenidagramm.png Graphic file (type png)
- <use figures/klassenidagramm.png> [12 <./figures/Odeint.png (PNG copy)>]
+ <use figures/klassenidagramm.png> [13 <./figures/Odeint.png (PNG copy)>]
 Underfull \hbox (badness 6001) in paragraph at lines 20--20
 [][]$\OML/cmm/m/it/8 k \OT1/cmr/m/n/8 = 0\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3\OML/
 cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10[]\OML/cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10
@@ -505,18 +504,18 @@ cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10[]\OML/cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10
  10[]\OML/cmm/m/it/8 ; y\OT1/cmr/m/n/8 0 =
  []
 
-<figures/dopr0.png, id=64, 292.09125pt x 111.41624pt>
+<figures/dopr0.png, id=67, 292.09125pt x 111.41624pt>
 File: figures/dopr0.png Graphic file (type png)
  <use figures/dopr0.png>
-<figures/dopr1a.png, id=65, 785.93625pt x 705.63625pt>
+<figures/dopr1a.png, id=68, 785.93625pt x 705.63625pt>
 File: figures/dopr1a.png Graphic file (type png)
 
-<use figures/dopr1a.png> [13 <./figures/klassenidagramm.png (PNG copy)> <./figu
-res/dopr0.png (PNG copy)>] <figures/dopr1.png, id=77, 1083.04625pt x 610.28pt>
+<use figures/dopr1a.png> [14 <./figures/klassenidagramm.png (PNG copy)> <./figu
+res/dopr0.png (PNG copy)>] <figures/dopr1.png, id=80, 1083.04625pt x 610.28pt>
 File: figures/dopr1.png Graphic file (type png)
 
-<use figures/dopr1.png> [14 <./figures/dopr1a.png (PNG copy)> <./figures/dopr1.
-png>] <figures/dopr2.png, id=81, 785.93625pt x 705.63625pt>
+<use figures/dopr1.png> [15 <./figures/dopr1a.png (PNG copy)> <./figures/dopr1.
+png>] <figures/dopr2.png, id=84, 785.93625pt x 705.63625pt>
 File: figures/dopr2.png Graphic file (type png)
 
 <use figures/dopr2.png>
@@ -525,25 +524,25 @@ Underfull \hbox (badness 2591) in paragraph at lines 54--54
 e No. 20, at
  []
 
-[15 <./figures/dopr2.png (PNG copy)>]
-<figures/GUIParameterInputForm.png, id=86, 376.5267pt x 362.0727pt>
+[16 <./figures/dopr2.png (PNG copy)>]
+<figures/GUIParameterInputForm.png, id=89, 376.5267pt x 362.0727pt>
 File: figures/GUIParameterInputForm.png Graphic file (type png)
 
 <use figures/GUIParameterInputForm.png>
-<figures/GUIDisplayForm.png, id=87, 562.2606pt x 403.2666pt>
+<figures/GUIDisplayForm.png, id=90, 562.2606pt x 403.2666pt>
 File: figures/GUIDisplayForm.png Graphic file (type png)
 
-<use figures/GUIDisplayForm.png> [16 <./figures/GUIParameterInputForm.png (PNG 
-copy)>] <figures/UseCaseTippeTop.png, id=91, 338.9463pt x 252.2223pt>
+<use figures/GUIDisplayForm.png> [17 <./figures/GUIParameterInputForm.png (PNG 
+copy)>] <figures/UseCaseTippeTop.png, id=94, 338.9463pt x 252.2223pt>
 File: figures/UseCaseTippeTop.png Graphic file (type png)
 
-<use figures/UseCaseTippeTop.png>) [17 <./figures/GUIDisplayForm.png (PNG copy)
+<use figures/UseCaseTippeTop.png>) [18 <./figures/GUIDisplayForm.png (PNG copy)
 > <./figures/UseCaseTippeTop.png (PNG copy)>]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
 Kapitel 4.
-) [18
+) [19
 
 
 
@@ -552,173 +551,11 @@ Kapitel 4.
 
  (./entwicklerdoc.tex
 Kapitel 5.
-<figures/_odeint_8h__dep__incl.png, id=99, 168.3891pt x 160.4394pt>
-File: figures/_odeint_8h__dep__incl.png Graphic file (type png)
-
-<use figures/_odeint_8h__dep__incl.png>
-<figures/_odeint_8h__incl.png, id=100, 351.2322pt x 276.7941pt>
-File: figures/_odeint_8h__incl.png Graphic file (type png)
-
-<use figures/_odeint_8h__incl.png>
-<figures/_output_8h__dep__incl.png, id=101, 252.2223pt x 218.2554pt> [19
+) [20
 
 
 
- <./figures/_odeint_8h__dep__incl.png (PNG copy)>]
-File: figures/_output_8h__dep__incl.png Graphic file (type png)
-
-<use figures/_output_8h__dep__incl.png>
-<figures/_output_8h__incl.png, id=105, 351.2322pt x 218.2554pt>
-File: figures/_output_8h__incl.png Graphic file (type png)
-
-<use figures/_output_8h__incl.png>
-<figures/_r_h_s__gyro_8h__dep__incl.png, id=106, 168.3891pt x 160.4394pt>
-File: figures/_r_h_s__gyro_8h__dep__incl.png Graphic file (type png)
-
-<use figures/_r_h_s__gyro_8h__dep__incl.png>
-<figures/_r_h_s__gyro_8h__incl.png, id=107, 228.3732pt x 160.4394pt> [20 <./fig
-ures/_odeint_8h__incl.png (PNG copy)> <./figures/_output_8h__dep__incl.png (PNG
- copy)> <./figures/_output_8h__incl.png (PNG copy)>]
-File: figures/_r_h_s__gyro_8h__incl.png Graphic file (type png)
-
-<use figures/_r_h_s__gyro_8h__incl.png>
-<figures/_runtime_exception_8cpp__incl.png, id=111, 196.5744pt x 218.2554pt>
-File: figures/_runtime_exception_8cpp__incl.png Graphic file (type png)
-
-<use figures/_runtime_exception_8cpp__incl.png>
-<figures/_runtime_exception_8h__dep__incl.png, id=112, 463.2507pt x 276.7941pt>
-[21 <./figures/_r_h_s__gyro_8h__dep__incl.png (PNG copy)> <./figures/_r_h_s__gy
-ro_8h__incl.png (PNG copy)>]
-File: figures/_runtime_exception_8h__dep__incl.png Graphic file (type png)
-
-<use figures/_runtime_exception_8h__dep__incl.png>
-<figures/_runtime_exception_8h__incl.png, id=116, 184.2885pt x 160.4394pt>
-File: figures/_runtime_exception_8h__incl.png Graphic file (type png)
-
-<use figures/_runtime_exception_8h__incl.png>
-<figures/_stepper_base_8cpp__incl.png, id=117, 228.3732pt x 218.2554pt>
-[22 <./figures/_runtime_exception_8cpp__incl.png (PNG copy)> <./figures/_runtim
-e_exception_8h__dep__incl.png (PNG copy)>]
-File: figures/_stepper_base_8cpp__incl.png Graphic file (type png)
-
-<use figures/_stepper_base_8cpp__incl.png>
-<figures/_stepper_base_8h__dep__incl.png, id=121, 294.8616pt x 218.2554pt>
-File: figures/_stepper_base_8h__dep__incl.png Graphic file (type png)
-
-<use figures/_stepper_base_8h__dep__incl.png>
-<figures/_stepper_base_8h__incl.png, id=122, 228.3732pt x 160.4394pt> [23 <./fi
-gures/_runtime_exception_8h__incl.png (PNG copy)> <./figures/_stepper_base_8cpp
-__incl.png (PNG copy)>]
-File: figures/_stepper_base_8h__incl.png Graphic file (type png)
- <use figures/_stepper_base_8h__incl.png>
-<figures/_stepper_dopr853m_8h__dep__incl.png, id=126, 184.2885pt x 160.4394pt>
-File: figures/_stepper_dopr853m_8h__dep__incl.png Graphic file (type png)
-
-<use figures/_stepper_dopr853m_8h__dep__incl.png>
-<figures/_stepper_dopr853m_8h__incl.png, id=127, 429.2838pt x 218.2554pt>
-File: figures/_stepper_dopr853m_8h__incl.png Graphic file (type png)
-
-<use figures/_stepper_dopr853m_8h__incl.png>
-<figures/class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png, id=128, 24
-4.2726pt x 101.9007pt> [24 <./figures/_stepper_base_8h__dep__incl.png (PNG copy
-)> <./figures/_stepper_base_8h__incl.png (PNG copy)> <./figures/_stepper_dopr85
-3m_8h__dep__incl.png (PNG copy)>]
-File: figures/class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png Graphi
-c file (type png)
-
-<use figures/class_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png>
-<figures/class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph.png,
- id=133, 278.9622pt x 101.9007pt>
-File: figures/class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph
-.png Graphic file (type png)
-
-<use figures/class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph.
-png>
-<figures/class_stepper_base__inherit__graph.png, id=134, 200.1879pt x 160.4394p
-t>
-File: figures/class_stepper_base__inherit__graph.png Graphic file (type png)
- <use figures/class_stepper_base__inherit__graph.png>
-<figures/class_stepper_dopr853m__coll__graph.png, id=135, 338.9463pt x 174.1707
-pt>
-File: figures/class_stepper_dopr853m__coll__graph.png Graphic file (type png)
- <use figures/class_stepper_dopr853m__coll__graph.png>
-<figures/class_stepper_dopr853m__inherit__graph.png, id=136, 200.1879pt x 160.4
-394pt> [25 <./figures/_stepper_dopr853m_8h__incl.png (PNG copy)> <./figures/cla
-ss_odeint_a998c158bc0c3e531cd5b1960cddfa3d0_icgraph.png (PNG copy)> <./figures/
-class_runtime_exception_a99f49b8c4fcb10963596bc0e8507e47e_icgraph.png (PNG copy
-)> <./figures/class_stepper_base__inherit__graph.png (PNG copy)>]
-File: figures/class_stepper_dopr853m__inherit__graph.png Graphic file (type png
-)
-
-<use figures/class_stepper_dopr853m__inherit__graph.png>
-<figures/class_stepper_dopr853m_a05acb9133063a88b1d70681194723766_cgraph.png, i
-d=140, 274.626pt x 101.9007pt>
-File: figures/class_stepper_dopr853m_a05acb9133063a88b1d70681194723766_cgraph.p
-ng Graphic file (type png)
-
-<use figures/class_stepper_dopr853m_a05acb9133063a88b1d70681194723766_cgraph.pn
-g> <figures/mainwindow_8cpp__incl.png, id=141, 977.0904pt x 334.6101pt>
-File: figures/mainwindow_8cpp__incl.png Graphic file (type png)
-
-<use figures/mainwindow_8cpp__incl.png>
-<figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png, id=142, 
-278.9622pt x 182.1204pt>
-File: figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png Grap
-hic file (type png)
-
-<use figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png>
-<figures/ntl__ext_8h__dep__incl.png, id=143, 184.2885pt x 218.2554pt> [26 <./fi
-gures/class_stepper_dopr853m__coll__graph.png (PNG copy)> <./figures/class_step
-per_dopr853m__inherit__graph.png (PNG copy)> <./figures/class_stepper_dopr853m_
-a05acb9133063a88b1d70681194723766_cgraph.png (PNG copy)> <./figures/mainwindow_
-8cpp__incl.png (PNG copy)>]
-File: figures/ntl__ext_8h__dep__incl.png Graphic file (type png)
- <use figures/ntl__ext_8h__dep__incl.png>
-<figures/ntl__ext_8h__incl.png, id=147, 142.3719pt x 160.4394pt>
-File: figures/ntl__ext_8h__incl.png Graphic file (type png)
-
-<use figures/ntl__ext_8h__incl.png>
-<figures/ntl__ext_8h_a8e2d6730b8d184fccdf23ef92b230729_icgraph.png, id=148, 338
-.9463pt x 142.3719pt> [27 <./figures/mainwindow_8cpp_a0ddf1224851353fc92bfbff6f
-499fa97_cgraph.png (PNG copy)> <./figures/ntl__ext_8h__dep__incl.png (PNG copy)
->]
-File: figures/ntl__ext_8h_a8e2d6730b8d184fccdf23ef92b230729_icgraph.png Graphic
- file (type png)
- <use figures/ntl__ext_8h_a8e2d6730b8d184fccdf23ef92b230729_icgraph.png>
-<figures/ntl__ext_8h_aebfb5c962cc9f3c91b927a50eb365ad3_icgraph.png, id=152, 334
-.6101pt x 101.9007pt>
-File: figures/ntl__ext_8h_aebfb5c962cc9f3c91b927a50eb365ad3_icgraph.png Graphic
- file (type png)
-
-<use figures/ntl__ext_8h_aebfb5c962cc9f3c91b927a50eb365ad3_icgraph.png>
-<figures/struct_stepper_dopr853m_1_1_controller_a03aa3bc288f933a6ea83c911e68601
-1f_cgraph.png, id=153, 338.9463pt x 142.3719pt>
-File: figures/struct_stepper_dopr853m_1_1_controller_a03aa3bc288f933a6ea83c911e
-686011f_cgraph.png Graphic file (type png)
-
-<use figures/struct_stepper_dopr853m_1_1_controller_a03aa3bc288f933a6ea83c911e6
-86011f_cgraph.png>
-<figures/write__tec_8h__dep__incl.png, id=154, 168.3891pt x 160.4394pt>
-File: figures/write__tec_8h__dep__incl.png Graphic file (type png)
-
-<use figures/write__tec_8h__dep__incl.png>
-<figures/write__tec_8h__incl.png, id=155, 403.9893pt x 276.7941pt> [28 <./figur
-es/ntl__ext_8h__incl.png (PNG copy)> <./figures/ntl__ext_8h_a8e2d6730b8d184fccd
-f23ef92b230729_icgraph.png (PNG copy)> <./figures/ntl__ext_8h_aebfb5c962cc9f3c9
-1b927a50eb365ad3_icgraph.png (PNG copy)> <./figures/struct_stepper_dopr853m_1_1
-_controller_a03aa3bc288f933a6ea83c911e686011f_cgraph.png (PNG copy)>]
-File: figures/write__tec_8h__incl.png Graphic file (type png)
-
-<use figures/write__tec_8h__incl.png>
-<figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd7cc_icgraph.png, id=159, 2
-10.3057pt x 101.9007pt>
-File: figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd7cc_icgraph.png Graph
-ic file (type png)
-
-<use figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd7cc_icgraph.png>)
-[29 <./figures/write__tec_8h__dep__incl.png (PNG copy)> <./figures/write__tec_8
-h__incl.png (PNG copy)> <./figures/write__tec_8h_a68e135aa96fa65bac5a869be50bcd
-7cc_icgraph.png (PNG copy)>]
+]
 No file test.bbl.
 (./test.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux) (./nutzerdoc.aux)
 (./entwicklerdoc.aux)) )
@@ -727,13 +564,13 @@ No file test.bbl.
 ### simple group (level 1) entered at line 9 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4420 strings out of 495061
- 61299 string characters out of 1182620
- 142288 words of memory out of 3000000
- 7440 multiletter control sequences out of 15000+50000
+ 4265 strings out of 495061
+ 53979 string characters out of 1182620
+ 141958 words of memory out of 3000000
+ 7318 multiletter control sequences out of 15000+50000
  25011 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,16n,32p,519b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,16n,32p,519b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.60
 0pk> </home/lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/
 lena/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/lena/.texmf-
@@ -758,9 +595,9 @@ ve/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y6.pfb>
-Output written on test.pdf (30 pages, 1473860 bytes).
+Output written on test.pdf (21 pages, 1214729 bytes).
 PDF statistics:
- 713 PDF objects out of 1000 (max. 8388607)
+ 655 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
