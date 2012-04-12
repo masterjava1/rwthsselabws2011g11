@@ -1,0 +1,213 @@
+\section{\-Output$<$ \-Stepper $>$ \-Class \-Template \-Reference}
+\label{class_output}\index{\-Output$<$ Stepper $>$@{\-Output$<$ Stepper $>$}}
+
+
+structure for output from \-O\-D\-E solver such as odeint  
+
+
+
+
+{\ttfamily \#include $<$\-Output.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Output} ()
+\item 
+{\bf \-Output} (const int nsavee)
+\item 
+void {\bf init} (const int neqn, const \-R\-R xlo, const \-R\-R xhi)
+\item 
+void {\bf resize} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf save\-\_\-dense} (\-Stepper \&s, const \-R\-R {\bf xout}, const \-R\-R h)
+\item 
+void {\bf save} (const \-R\-R x, \-Array$<$ \-R\-R, 1 $>$ \&y)
+\item 
+void {\bf out} (const int nstp, const \-R\-R x, \-Array$<$ \-R\-R, 1 $>$ \&y, \-Stepper \&s, const \-R\-R h)
+\item 
+void {\bf exportfile} (const char $\ast$filename)
+\item 
+void {\bf importfile} (const char $\ast$filename)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf kmax}
+\item 
+int {\bf nvar}
+\item 
+int {\bf nsave}
+\item 
+bool {\bf dense}
+\item 
+int {\bf count}
+\item 
+\-R\-R {\bf x1}
+\item 
+\-R\-R {\bf x2}
+\item 
+\-R\-R {\bf xout}
+\item 
+\-R\-R {\bf dxout}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf xsave}
+\item 
+\-Array$<$ \-R\-R, 2 $>$ {\bf ysave}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename \-Stepper$>$class Output$<$ Stepper $>$}
+
+structure for output from \-O\-D\-E solver such as odeint 
+
+\begin{DoxyDate}{\-Date}
+30.\-03.\-2012 
+\end{DoxyDate}
+\begin{DoxyAuthor}{\-Author}
+\-Alexander \-Fischer 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{\-Version}
+1.\-0
+\end{DoxyVersion}
+structure for output from \-O\-D\-E solver such as odeint
+
+dependencies\-:
+\begin{DoxyItemize}
+\item blitz/array.\-h
+\item \-N\-T\-L/\-R\-R.\-h
+\item \doxyref{\-Runtime\-Exception.\-h}{p.}{_runtime_exception_8h}
+\end{DoxyItemize}
+
+called in\-:
+\begin{DoxyItemize}
+\item \doxyref{mainwindow.\-cpp}{p.}{mainwindow_8cpp} 
+\end{DoxyItemize}
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Output@{\-Output}!\-Output@{\-Output}}
+\index{\-Output@{\-Output}!Output@{\-Output}}
+\subsubsection[{\-Output}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ {\bf \-Output}$<$ \-Stepper $>$\-::{\bf \-Output} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_a943f1b21e41f42393ce5798ffff319c4}
+\index{\-Output@{\-Output}!\-Output@{\-Output}}
+\index{\-Output@{\-Output}!Output@{\-Output}}
+\subsubsection[{\-Output}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ {\bf \-Output}$<$ \-Stepper $>$\-::{\bf \-Output} (
+\begin{DoxyParamCaption}
+\item[{const int}]{nsavee}
+\end{DoxyParamCaption}
+)}\label{class_output_a642bd3467422e0ebc4c846c876ea1379}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Output@{\-Output}!clear@{clear}}
+\index{clear@{clear}!Output@{\-Output}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_a68e713b8e38e10554e417647d62378c0}
+\index{\-Output@{\-Output}!exportfile@{exportfile}}
+\index{exportfile@{exportfile}!Output@{\-Output}}
+\subsubsection[{exportfile}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf exportfile} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_output_a51e746607fae2e85b53edda013a8c87a}
+\index{\-Output@{\-Output}!importfile@{importfile}}
+\index{importfile@{importfile}!Output@{\-Output}}
+\subsubsection[{importfile}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf importfile} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_output_a12da293f8d11293cbdb999c59aa0381f}
+\index{\-Output@{\-Output}!init@{init}}
+\index{init@{init}!Output@{\-Output}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf init} (
+\begin{DoxyParamCaption}
+\item[{const int}]{neqn, }
+\item[{const \-R\-R}]{xlo, }
+\item[{const \-R\-R}]{xhi}
+\end{DoxyParamCaption}
+)}\label{class_output_a0e71deb5aa7bcd4a94e7e1ac0f485e86}
+\index{\-Output@{\-Output}!out@{out}}
+\index{out@{out}!Output@{\-Output}}
+\subsubsection[{out}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf out} (
+\begin{DoxyParamCaption}
+\item[{const int}]{nstp, }
+\item[{const \-R\-R}]{x, }
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{y, }
+\item[{\-Stepper \&}]{s, }
+\item[{const \-R\-R}]{h}
+\end{DoxyParamCaption}
+)}\label{class_output_a8b4fa335fed0a7698fd2ac9fe450a94d}
+\index{\-Output@{\-Output}!resize@{resize}}
+\index{resize@{resize}!Output@{\-Output}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf resize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_a6e047fff76bac1db55534d629f64ae98}
+\index{\-Output@{\-Output}!save@{save}}
+\index{save@{save}!Output@{\-Output}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf save} (
+\begin{DoxyParamCaption}
+\item[{const \-R\-R}]{x, }
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{y}
+\end{DoxyParamCaption}
+)}\label{class_output_a817cdd554102d1dd39366ab16645212b}
+\index{\-Output@{\-Output}!save\-\_\-dense@{save\-\_\-dense}}
+\index{save\-\_\-dense@{save\-\_\-dense}!Output@{\-Output}}
+\subsubsection[{save\-\_\-dense}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Stepper $>$ void {\bf \-Output}$<$ \-Stepper $>$\-::{\bf save\-\_\-dense} (
+\begin{DoxyParamCaption}
+\item[{\-Stepper \&}]{s, }
+\item[{const \-R\-R}]{xout, }
+\item[{const \-R\-R}]{h}
+\end{DoxyParamCaption}
+)}\label{class_output_ab07e1e79f74cc1139253dfdae98deb21}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Output@{\-Output}!count@{count}}
+\index{count@{count}!Output@{\-Output}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Output}$<$ \-Stepper $>$\-::{\bf count}}\label{class_output_ab0e2892e85d6bf3b8549448969939847}
+\index{\-Output@{\-Output}!dense@{dense}}
+\index{dense@{dense}!Output@{\-Output}}
+\subsubsection[{dense}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ bool {\bf \-Output}$<$ \-Stepper $>$\-::{\bf dense}}\label{class_output_a9d41e516ad60fbbdb555d02a518f827b}
+\index{\-Output@{\-Output}!dxout@{dxout}}
+\index{dxout@{dxout}!Output@{\-Output}}
+\subsubsection[{dxout}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Output}$<$ \-Stepper $>$\-::{\bf dxout}}\label{class_output_ae09872e88e791dd0a22a523ca52ffc53}
+\index{\-Output@{\-Output}!kmax@{kmax}}
+\index{kmax@{kmax}!Output@{\-Output}}
+\subsubsection[{kmax}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Output}$<$ \-Stepper $>$\-::{\bf kmax}}\label{class_output_a34894d005e82367710706962f1fc4b3c}
+\index{\-Output@{\-Output}!nsave@{nsave}}
+\index{nsave@{nsave}!Output@{\-Output}}
+\subsubsection[{nsave}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Output}$<$ \-Stepper $>$\-::{\bf nsave}}\label{class_output_a1a72fab28170363fe7a0908d7432aede}
+\index{\-Output@{\-Output}!nvar@{nvar}}
+\index{nvar@{nvar}!Output@{\-Output}}
+\subsubsection[{nvar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ int {\bf \-Output}$<$ \-Stepper $>$\-::{\bf nvar}}\label{class_output_aabd59495af1bd767884119b85d9def6f}
+\index{\-Output@{\-Output}!x1@{x1}}
+\index{x1@{x1}!Output@{\-Output}}
+\subsubsection[{x1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Output}$<$ \-Stepper $>$\-::{\bf x1}}\label{class_output_a34e2db3ce55ddc6f1b2b365a2b918367}
+\index{\-Output@{\-Output}!x2@{x2}}
+\index{x2@{x2}!Output@{\-Output}}
+\subsubsection[{x2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Output}$<$ \-Stepper $>$\-::{\bf x2}}\label{class_output_a0a4907734c123cabd35087ef7a8ae329}
+\index{\-Output@{\-Output}!xout@{xout}}
+\index{xout@{xout}!Output@{\-Output}}
+\subsubsection[{xout}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-R\-R {\bf \-Output}$<$ \-Stepper $>$\-::{\bf xout}}\label{class_output_ae42bbbbdb75c4eeb82a16c67701294f2}
+\index{\-Output@{\-Output}!xsave@{xsave}}
+\index{xsave@{xsave}!Output@{\-Output}}
+\subsubsection[{xsave}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-Array$<$\-R\-R,1$>$ {\bf \-Output}$<$ \-Stepper $>$\-::{\bf xsave}}\label{class_output_a0fed965a390f959ed88c0f7c3ee778ad}
+\index{\-Output@{\-Output}!ysave@{ysave}}
+\index{ysave@{ysave}!Output@{\-Output}}
+\subsubsection[{ysave}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename \-Stepper$>$ \-Array$<$\-R\-R,2$>$ {\bf \-Output}$<$ \-Stepper $>$\-::{\bf ysave}}\label{class_output_ac982c2cee43ddb484715f0a682b1a603}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Output.\-h}\end{DoxyCompactItemize}

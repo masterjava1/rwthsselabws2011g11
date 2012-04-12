@@ -1,0 +1,148 @@
+\section{\-Stepper\-Base \-Class \-Reference}
+\label{class_stepper_base}\index{\-Stepper\-Base@{\-Stepper\-Base}}
+
+
+base class for all \-O\-D\-E algorithms  
+
+
+
+
+{\ttfamily \#include $<$\-Stepper\-Base.\-h$>$}
+
+
+
+\-Inheritance diagram for \-Stepper\-Base\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_stepper_base__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Stepper\-Base} (\-Array$<$ \-R\-R, 1 $>$ \&yy, \-Array$<$ \-R\-R, 1 $>$ \&dydxx, \-R\-R \&xx, const \-R\-R atoll, const \-R\-R rtoll, bool dens)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-R\-R \& {\bf x}
+\item 
+\-R\-R {\bf xold}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ \& {\bf y}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ \& {\bf dydx}
+\item 
+\-R\-R {\bf atol}
+\item 
+\-R\-R {\bf rtol}
+\item 
+bool {\bf dense}
+\item 
+\-R\-R {\bf hdid}
+\item 
+\-R\-R {\bf hnext}
+\item 
+\-R\-R {\bf \-E\-P\-S}
+\item 
+int {\bf n}
+\item 
+int {\bf neqn}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf yout}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf yerr}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+base class for all \-O\-D\-E algorithms 
+
+\begin{DoxyDate}{\-Date}
+30.\-03.\-2012 
+\end{DoxyDate}
+\begin{DoxyVersion}{\-Version}
+0.\-1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{\-Author}
+\-Alexander \-Fischer
+\end{DoxyAuthor}
+base class for all \-O\-D\-E algorithms
+
+dependencies\-:
+\begin{DoxyItemize}
+\item blitz/array.\-h
+\item \-N\-T\-L/\-R\-R.\-h
+\end{DoxyItemize}
+
+called in\-:
+\begin{DoxyItemize}
+\item \doxyref{\-Stepper\-Dopr853m.\-h}{p.}{_stepper_dopr853m_8h} 
+\end{DoxyItemize}
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!\-Stepper\-Base@{\-Stepper\-Base}}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{\-Stepper\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stepper\-Base\-::\-Stepper\-Base} (
+\begin{DoxyParamCaption}
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{yy, }
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{dydxx, }
+\item[{\-R\-R \&}]{xx, }
+\item[{const \-R\-R}]{atoll, }
+\item[{const \-R\-R}]{rtoll, }
+\item[{bool}]{dens}
+\end{DoxyParamCaption}
+)}\label{class_stepper_base_a327d9d329f036944286e2f014d6c7414}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!atol@{atol}}
+\index{atol@{atol}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{atol}]{\setlength{\rightskip}{0pt plus 5cm}\-R\-R {\bf \-Stepper\-Base\-::atol}}\label{class_stepper_base_af061285297b1a6b139d2dc5d34441d5a}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!dense@{dense}}
+\index{dense@{dense}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{dense}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stepper\-Base\-::dense}}\label{class_stepper_base_a43a2f403d369231ca5e54ae33f3557a9}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!dydx@{dydx}}
+\index{dydx@{dydx}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{dydx}]{\setlength{\rightskip}{0pt plus 5cm}\-Array$<$\-R\-R,1$>$ \& {\bf \-Stepper\-Base\-::dydx}}\label{class_stepper_base_aaea1e32b97889dfb6cf8595df3f940e6}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!\-E\-P\-S@{\-E\-P\-S}}
+\index{\-E\-P\-S@{\-E\-P\-S}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{\-E\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}\-R\-R {\bf \-Stepper\-Base\-::\-E\-P\-S}}\label{class_stepper_base_a4a1200c2d2ef7e118d03c498693386ae}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!hdid@{hdid}}
+\index{hdid@{hdid}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{hdid}]{\setlength{\rightskip}{0pt plus 5cm}\-R\-R {\bf \-Stepper\-Base\-::hdid}}\label{class_stepper_base_a72703306a00833fbc071654d93e89fe6}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!hnext@{hnext}}
+\index{hnext@{hnext}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{hnext}]{\setlength{\rightskip}{0pt plus 5cm}\-R\-R {\bf \-Stepper\-Base\-::hnext}}\label{class_stepper_base_ab5745d35d62d22c5044dce1520951995}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!n@{n}}
+\index{n@{n}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stepper\-Base\-::n}}\label{class_stepper_base_aaf0eef45a989a76ad7d1b791d4fc153a}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!neqn@{neqn}}
+\index{neqn@{neqn}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{neqn}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stepper\-Base\-::neqn}}\label{class_stepper_base_afcc8a4efaddfad5a758c5c6174142400}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!rtol@{rtol}}
+\index{rtol@{rtol}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{rtol}]{\setlength{\rightskip}{0pt plus 5cm}\-R\-R {\bf \-Stepper\-Base\-::rtol}}\label{class_stepper_base_a6d8add3bf0c0a78a8fd3a2c35b9e93fa}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!x@{x}}
+\index{x@{x}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}\-R\-R\& {\bf \-Stepper\-Base\-::x}}\label{class_stepper_base_abdb71a2e353db50bb12d46b1bd300261}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!xold@{xold}}
+\index{xold@{xold}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{xold}]{\setlength{\rightskip}{0pt plus 5cm}\-R\-R {\bf \-Stepper\-Base\-::xold}}\label{class_stepper_base_aacc0f7dadbd09b8edae03862e70134d0}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!y@{y}}
+\index{y@{y}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}\-Array$<$\-R\-R,1$>$\& {\bf \-Stepper\-Base\-::y}}\label{class_stepper_base_ac8ea0aca68eef800d7f594a07cbd80da}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!yerr@{yerr}}
+\index{yerr@{yerr}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{yerr}]{\setlength{\rightskip}{0pt plus 5cm}\-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Base\-::yerr}}\label{class_stepper_base_a3d6811da5277c476eecd397471710d7e}
+\index{\-Stepper\-Base@{\-Stepper\-Base}!yout@{yout}}
+\index{yout@{yout}!StepperBase@{\-Stepper\-Base}}
+\subsubsection[{yout}]{\setlength{\rightskip}{0pt plus 5cm}\-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Base\-::yout}}\label{class_stepper_base_a591835d3446fe83639acc1f5f25fcace}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Stepper\-Base.\-h}\item 
+{\bf \-Stepper\-Base.\-cpp}\end{DoxyCompactItemize}

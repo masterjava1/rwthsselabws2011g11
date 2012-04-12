@@ -1,0 +1,1044 @@
+\section{\-Stepper\-Dopr853m$<$ \-D $>$ \-Class \-Template \-Reference}
+\label{class_stepper_dopr853m}\index{\-Stepper\-Dopr853m$<$ D $>$@{\-Stepper\-Dopr853m$<$ D $>$}}
+
+
+\-Dormant-\/\-Prince 853 method, modified to check preserved quantity.  
+
+
+
+
+{\ttfamily \#include $<$\-Stepper\-Dopr853m.\-h$>$}
+
+
+
+\-Inheritance diagram for \-Stepper\-Dopr853m$<$ \-D $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_stepper_dopr853m__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for \-Stepper\-Dopr853m$<$ \-D $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_stepper_dopr853m__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \-Controller}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \-D {\bf \-Dtype}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Stepper\-Dopr853m} (\-Array$<$ \-R\-R, 1 $>$ \&yy, \-Array$<$ \-R\-R, 1 $>$ \&dydxx, \-R\-R \&xx, \-R\-R atoll, \-R\-R rtoll, bool dens)
+\item 
+void {\bf step} (\-R\-R htry, \-D \&derivs)
+\item 
+void {\bf dy} (\-R\-R h, \-D \&derivs)
+\item 
+void {\bf prepare\-\_\-dense} (\-R\-R h, \-Array$<$ \-R\-R, 1 $>$ \&dydxnew, \-D \&derivs)
+\item 
+\-R\-R {\bf dense\-\_\-out} (int i, \-R\-R {\bf x}, \-R\-R h)
+\item 
+\-R\-R {\bf error} (\-R\-R h)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf yerr2}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf ytemp}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k2}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k3}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k4}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k5}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k6}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k7}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k8}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k9}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf k10}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont1}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont2}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont3}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont4}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont5}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont6}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont7}
+\item 
+\-Array$<$ \-R\-R, 1 $>$ {\bf rcont8}
+\item 
+\-R\-R {\bf c2}
+\item 
+\-R\-R {\bf c3}
+\item 
+\-R\-R {\bf c4}
+\item 
+\-R\-R {\bf c5}
+\item 
+\-R\-R {\bf c6}
+\item 
+\-R\-R {\bf c7}
+\item 
+\-R\-R {\bf c8}
+\item 
+\-R\-R {\bf c9}
+\item 
+\-R\-R {\bf c10}
+\item 
+\-R\-R {\bf c11}
+\item 
+\-R\-R {\bf c14}
+\item 
+\-R\-R {\bf c15}
+\item 
+\-R\-R {\bf c16}
+\item 
+\-R\-R {\bf b1}
+\item 
+\-R\-R {\bf b6}
+\item 
+\-R\-R {\bf b7}
+\item 
+\-R\-R {\bf b8}
+\item 
+\-R\-R {\bf b9}
+\item 
+\-R\-R {\bf b10}
+\item 
+\-R\-R {\bf b11}
+\item 
+\-R\-R {\bf b12}
+\item 
+\-R\-R {\bf bhh1}
+\item 
+\-R\-R {\bf bhh2}
+\item 
+\-R\-R {\bf bhh3}
+\item 
+\-R\-R {\bf er1}
+\item 
+\-R\-R {\bf er6}
+\item 
+\-R\-R {\bf er7}
+\item 
+\-R\-R {\bf er8}
+\item 
+\-R\-R {\bf er9}
+\item 
+\-R\-R {\bf er10}
+\item 
+\-R\-R {\bf er11}
+\item 
+\-R\-R {\bf er12}
+\item 
+\-R\-R {\bf a21}
+\item 
+\-R\-R {\bf a31}
+\item 
+\-R\-R {\bf a32}
+\item 
+\-R\-R {\bf a41}
+\item 
+\-R\-R {\bf a43}
+\item 
+\-R\-R {\bf a51}
+\item 
+\-R\-R {\bf a53}
+\item 
+\-R\-R {\bf a54}
+\item 
+\-R\-R {\bf a61}
+\item 
+\-R\-R {\bf a64}
+\item 
+\-R\-R {\bf a65}
+\item 
+\-R\-R {\bf a71}
+\item 
+\-R\-R {\bf a74}
+\item 
+\-R\-R {\bf a75}
+\item 
+\-R\-R {\bf a76}
+\item 
+\-R\-R {\bf a81}
+\item 
+\-R\-R {\bf a84}
+\item 
+\-R\-R {\bf a85}
+\item 
+\-R\-R {\bf a86}
+\item 
+\-R\-R {\bf a87}
+\item 
+\-R\-R {\bf a91}
+\item 
+\-R\-R {\bf a94}
+\item 
+\-R\-R {\bf a95}
+\item 
+\-R\-R {\bf a96}
+\item 
+\-R\-R {\bf a97}
+\item 
+\-R\-R {\bf a98}
+\item 
+\-R\-R {\bf a101}
+\item 
+\-R\-R {\bf a104}
+\item 
+\-R\-R {\bf a105}
+\item 
+\-R\-R {\bf a106}
+\item 
+\-R\-R {\bf a107}
+\item 
+\-R\-R {\bf a108}
+\item 
+\-R\-R {\bf a109}
+\item 
+\-R\-R {\bf a111}
+\item 
+\-R\-R {\bf a114}
+\item 
+\-R\-R {\bf a115}
+\item 
+\-R\-R {\bf a116}
+\item 
+\-R\-R {\bf a117}
+\item 
+\-R\-R {\bf a118}
+\item 
+\-R\-R {\bf a119}
+\item 
+\-R\-R {\bf a1110}
+\item 
+\-R\-R {\bf a121}
+\item 
+\-R\-R {\bf a124}
+\item 
+\-R\-R {\bf a125}
+\item 
+\-R\-R {\bf a126}
+\item 
+\-R\-R {\bf a127}
+\item 
+\-R\-R {\bf a128}
+\item 
+\-R\-R {\bf a129}
+\item 
+\-R\-R {\bf a1210}
+\item 
+\-R\-R {\bf a1211}
+\item 
+\-R\-R {\bf a141}
+\item 
+\-R\-R {\bf a147}
+\item 
+\-R\-R {\bf a148}
+\item 
+\-R\-R {\bf a149}
+\item 
+\-R\-R {\bf a1410}
+\item 
+\-R\-R {\bf a1411}
+\item 
+\-R\-R {\bf a1412}
+\item 
+\-R\-R {\bf a1413}
+\item 
+\-R\-R {\bf a151}
+\item 
+\-R\-R {\bf a156}
+\item 
+\-R\-R {\bf a157}
+\item 
+\-R\-R {\bf a158}
+\item 
+\-R\-R {\bf a1511}
+\item 
+\-R\-R {\bf a1512}
+\item 
+\-R\-R {\bf a1513}
+\item 
+\-R\-R {\bf a1514}
+\item 
+\-R\-R {\bf a161}
+\item 
+\-R\-R {\bf a166}
+\item 
+\-R\-R {\bf a167}
+\item 
+\-R\-R {\bf a168}
+\item 
+\-R\-R {\bf a169}
+\item 
+\-R\-R {\bf a1613}
+\item 
+\-R\-R {\bf a1614}
+\item 
+\-R\-R {\bf a1615}
+\item 
+\-R\-R {\bf d41}
+\item 
+\-R\-R {\bf d46}
+\item 
+\-R\-R {\bf d47}
+\item 
+\-R\-R {\bf d48}
+\item 
+\-R\-R {\bf d49}
+\item 
+\-R\-R {\bf d410}
+\item 
+\-R\-R {\bf d411}
+\item 
+\-R\-R {\bf d412}
+\item 
+\-R\-R {\bf d413}
+\item 
+\-R\-R {\bf d414}
+\item 
+\-R\-R {\bf d415}
+\item 
+\-R\-R {\bf d416}
+\item 
+\-R\-R {\bf d51}
+\item 
+\-R\-R {\bf d56}
+\item 
+\-R\-R {\bf d57}
+\item 
+\-R\-R {\bf d58}
+\item 
+\-R\-R {\bf d59}
+\item 
+\-R\-R {\bf d510}
+\item 
+\-R\-R {\bf d511}
+\item 
+\-R\-R {\bf d512}
+\item 
+\-R\-R {\bf d513}
+\item 
+\-R\-R {\bf d514}
+\item 
+\-R\-R {\bf d515}
+\item 
+\-R\-R {\bf d516}
+\item 
+\-R\-R {\bf d61}
+\item 
+\-R\-R {\bf d66}
+\item 
+\-R\-R {\bf d67}
+\item 
+\-R\-R {\bf d68}
+\item 
+\-R\-R {\bf d69}
+\item 
+\-R\-R {\bf d610}
+\item 
+\-R\-R {\bf d611}
+\item 
+\-R\-R {\bf d612}
+\item 
+\-R\-R {\bf d613}
+\item 
+\-R\-R {\bf d614}
+\item 
+\-R\-R {\bf d615}
+\item 
+\-R\-R {\bf d616}
+\item 
+\-R\-R {\bf d71}
+\item 
+\-R\-R {\bf d76}
+\item 
+\-R\-R {\bf d77}
+\item 
+\-R\-R {\bf d78}
+\item 
+\-R\-R {\bf d79}
+\item 
+\-R\-R {\bf d710}
+\item 
+\-R\-R {\bf d711}
+\item 
+\-R\-R {\bf d712}
+\item 
+\-R\-R {\bf d713}
+\item 
+\-R\-R {\bf d714}
+\item 
+\-R\-R {\bf d715}
+\item 
+\-R\-R {\bf d716}
+\item 
+{\bf \-Controller} {\bf con}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$typename D$>$class Stepper\-Dopr853m$<$ D $>$}
+
+\-Dormant-\/\-Prince 853 method, modified to check preserved quantity. 
+
+\begin{DoxyDate}{\-Date}
+02.\-04.\-2012 
+\end{DoxyDate}
+\begin{DoxyVersion}{\-Version}
+1.\-1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{\-Author}
+\-Alexander \-Fischer
+\end{DoxyAuthor}
+\-Dormant-\/\-Prince 853 method, modified to check preserved quantity
+
+dependencies\-:
+\begin{DoxyItemize}
+\item blitz/array.\-h
+\item \-N\-T\-L/\-R\-R.\-h
+\item \doxyref{ntl\-\_\-ext.\-h}{p.}{ntl__ext_8h}
+\item \doxyref{\-Stepper\-Base.\-h}{p.}{_stepper_base_8h}
+\item \doxyref{\-Runtime\-Exception.\-h}{p.}{_runtime_exception_8h}
+\end{DoxyItemize}
+
+called in\-:
+\begin{DoxyItemize}
+\item \doxyref{\-Odeint.\-h}{p.}{class_odeint_ac95d532494f8101072597d379f8eee60} 
+\end{DoxyItemize}
+
+\subsection{\-Member \-Typedef \-Documentation}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!\-Dtype@{\-Dtype}}
+\index{\-Dtype@{\-Dtype}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{\-Dtype}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ typedef \-D {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf \-Dtype}}\label{class_stepper_dopr853m_ae5cb64c787f3f8fbff2f465d62214f11}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{\-Stepper\-Dopr853m}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf \-Stepper\-Dopr853m} (
+\begin{DoxyParamCaption}
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{yy, }
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{dydxx, }
+\item[{\-R\-R \&}]{xx, }
+\item[{\-R\-R}]{atoll, }
+\item[{\-R\-R}]{rtoll, }
+\item[{bool}]{dens}
+\end{DoxyParamCaption}
+)}\label{class_stepper_dopr853m_a0c86a20ca4b031f8f4129cc2aa95bdc8}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!dense\-\_\-out@{dense\-\_\-out}}
+\index{dense\-\_\-out@{dense\-\_\-out}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{dense\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf dense\-\_\-out} (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{\-R\-R}]{x, }
+\item[{\-R\-R}]{h}
+\end{DoxyParamCaption}
+)}\label{class_stepper_dopr853m_a265d772ea7d48bf8c9c9f6697ceb6fe5}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!dy@{dy}}
+\index{dy@{dy}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{dy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf dy} (
+\begin{DoxyParamCaption}
+\item[{\-R\-R}]{h, }
+\item[{\-D \&}]{derivs}
+\end{DoxyParamCaption}
+)}\label{class_stepper_dopr853m_a7b7cdd27e02ea96efc8304e674b051d5}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!error@{error}}
+\index{error@{error}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf error} (
+\begin{DoxyParamCaption}
+\item[{\-R\-R}]{h}
+\end{DoxyParamCaption}
+)}\label{class_stepper_dopr853m_a05acb9133063a88b1d70681194723766}
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_stepper_dopr853m_a05acb9133063a88b1d70681194723766_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!prepare\-\_\-dense@{prepare\-\_\-dense}}
+\index{prepare\-\_\-dense@{prepare\-\_\-dense}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{prepare\-\_\-dense}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf prepare\-\_\-dense} (
+\begin{DoxyParamCaption}
+\item[{\-R\-R}]{h, }
+\item[{\-Array$<$ \-R\-R, 1 $>$ \&}]{dydxnew, }
+\item[{\-D \&}]{derivs}
+\end{DoxyParamCaption}
+)}\label{class_stepper_dopr853m_acaaad311d7647b8ae628d84c9f99a106}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!step@{step}}
+\index{step@{step}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf step} (
+\begin{DoxyParamCaption}
+\item[{\-R\-R}]{htry, }
+\item[{\-D \&}]{derivs}
+\end{DoxyParamCaption}
+)}\label{class_stepper_dopr853m_a5f29d7c2b10fa0ead68cc38ec379e76f}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a101@{a101}}
+\index{a101@{a101}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a101}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a101}}\label{class_stepper_dopr853m_a4a2db42a8eb5de4dd9b6b260e158e713}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a104@{a104}}
+\index{a104@{a104}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a104}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a104}}\label{class_stepper_dopr853m_a2834084028b7ce7b030b02ac2be108e3}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a105@{a105}}
+\index{a105@{a105}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a105}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a105}}\label{class_stepper_dopr853m_ab4aab23d6165f7ce92c074bd905de4a3}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a106@{a106}}
+\index{a106@{a106}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a106}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a106}}\label{class_stepper_dopr853m_ae354d720045a041478dd3db07e9a3bc9}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a107@{a107}}
+\index{a107@{a107}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a107}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a107}}\label{class_stepper_dopr853m_a8d984cd9c83293da1a20436643c7cf43}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a108@{a108}}
+\index{a108@{a108}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a108}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a108}}\label{class_stepper_dopr853m_ae385ec609ceb9bf898d234a49195b604}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a109@{a109}}
+\index{a109@{a109}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a109}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a109}}\label{class_stepper_dopr853m_a78363d439a932f6e12e48cd445eed78a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a111@{a111}}
+\index{a111@{a111}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a111}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a111}}\label{class_stepper_dopr853m_a8514e6626a60431d38a4b49a78eb4eb5}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1110@{a1110}}
+\index{a1110@{a1110}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1110}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1110}}\label{class_stepper_dopr853m_a68e25e48bde8a3b0a8d0015a27f3dde0}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a114@{a114}}
+\index{a114@{a114}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a114}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a114}}\label{class_stepper_dopr853m_a75d66505cc88c468f8a1fd8dcfc82f37}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a115@{a115}}
+\index{a115@{a115}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a115}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a115}}\label{class_stepper_dopr853m_a9e5ff832686fb1e9974907eef71e7bc8}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a116@{a116}}
+\index{a116@{a116}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a116}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a116}}\label{class_stepper_dopr853m_a093a908bbc890217d69b0e81e5fdc036}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a117@{a117}}
+\index{a117@{a117}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a117}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a117}}\label{class_stepper_dopr853m_ab9418f0a817b86e24c91a7b83372d650}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a118@{a118}}
+\index{a118@{a118}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a118}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a118}}\label{class_stepper_dopr853m_ad0c3f68b2c083e304a256774b57c745a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a119@{a119}}
+\index{a119@{a119}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a119}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a119}}\label{class_stepper_dopr853m_a06e38f75ffbf938676768b25ad00a4cd}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a121@{a121}}
+\index{a121@{a121}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a121}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a121}}\label{class_stepper_dopr853m_afa4b2e2111322268cad91b05f9f10dc8}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1210@{a1210}}
+\index{a1210@{a1210}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1210}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1210}}\label{class_stepper_dopr853m_aae0c1d248924ef4012c9cdca8cce2c56}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1211@{a1211}}
+\index{a1211@{a1211}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1211}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1211}}\label{class_stepper_dopr853m_a295e84d6143f8376f2286f4a67c669f7}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a124@{a124}}
+\index{a124@{a124}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a124}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a124}}\label{class_stepper_dopr853m_acaecd5a485347a4a91b99f6a6225fbae}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a125@{a125}}
+\index{a125@{a125}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a125}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a125}}\label{class_stepper_dopr853m_ae6868e73d0c6230e31767b1a25013618}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a126@{a126}}
+\index{a126@{a126}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a126}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a126}}\label{class_stepper_dopr853m_afb46ef643452099c44d8900ff3140826}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a127@{a127}}
+\index{a127@{a127}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a127}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a127}}\label{class_stepper_dopr853m_abc5305a5878311073e91e78c5e8078c4}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a128@{a128}}
+\index{a128@{a128}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a128}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a128}}\label{class_stepper_dopr853m_a9988717d56f4b5653c7f43b583e339b5}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a129@{a129}}
+\index{a129@{a129}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a129}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a129}}\label{class_stepper_dopr853m_a55e7777f90714b573c83f819a0ff34ee}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a141@{a141}}
+\index{a141@{a141}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a141}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a141}}\label{class_stepper_dopr853m_ae280c4804742a72175bb8037a2a2fa9e}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1410@{a1410}}
+\index{a1410@{a1410}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1410}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1410}}\label{class_stepper_dopr853m_addb821b2a0be155e28b374c1820efac2}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1411@{a1411}}
+\index{a1411@{a1411}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1411}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1411}}\label{class_stepper_dopr853m_a0d8c1cc6d56d0e58273ffb0fde40f128}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1412@{a1412}}
+\index{a1412@{a1412}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1412}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1412}}\label{class_stepper_dopr853m_a5c99eef77782852c419623c7eda93514}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1413@{a1413}}
+\index{a1413@{a1413}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1413}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1413}}\label{class_stepper_dopr853m_a183a488db9c7a427cfe712e6abe56504}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a147@{a147}}
+\index{a147@{a147}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a147}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a147}}\label{class_stepper_dopr853m_ad562001d9ce48fc728a33c69acad7087}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a148@{a148}}
+\index{a148@{a148}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a148}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a148}}\label{class_stepper_dopr853m_ad4167aa7712188af4abfa2e74ae8e377}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a149@{a149}}
+\index{a149@{a149}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a149}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a149}}\label{class_stepper_dopr853m_a6521dafaceee56613ec1b00ae2a77536}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a151@{a151}}
+\index{a151@{a151}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a151}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a151}}\label{class_stepper_dopr853m_aa0ffeb5202c02818f5e18fe0e41de4c1}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1511@{a1511}}
+\index{a1511@{a1511}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1511}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1511}}\label{class_stepper_dopr853m_a24acd7b416693317d36fe48a7f437b5c}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1512@{a1512}}
+\index{a1512@{a1512}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1512}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1512}}\label{class_stepper_dopr853m_a92d06f6c69b8da3fdc79de9e6a6c5d4d}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1513@{a1513}}
+\index{a1513@{a1513}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1513}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1513}}\label{class_stepper_dopr853m_a2127c9a0df313a46cdde94c54cde5d87}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1514@{a1514}}
+\index{a1514@{a1514}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1514}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1514}}\label{class_stepper_dopr853m_a86c26facecde9700673ad352ba6a30f7}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a156@{a156}}
+\index{a156@{a156}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a156}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a156}}\label{class_stepper_dopr853m_a311eb35d0ee3921a5fe29c890ef14a9a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a157@{a157}}
+\index{a157@{a157}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a157}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a157}}\label{class_stepper_dopr853m_a49ea20bf68e22115e8a1156a7d0712a4}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a158@{a158}}
+\index{a158@{a158}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a158}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a158}}\label{class_stepper_dopr853m_a3084e3151cda390bcc0be2705108c8f4}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a161@{a161}}
+\index{a161@{a161}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a161}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a161}}\label{class_stepper_dopr853m_aa1b352287ea77f680165c9c39757fa01}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1613@{a1613}}
+\index{a1613@{a1613}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1613}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1613}}\label{class_stepper_dopr853m_af877051062379231c0b834ae6058138f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1614@{a1614}}
+\index{a1614@{a1614}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1614}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1614}}\label{class_stepper_dopr853m_a54497a1e01c8594e0fef132ff02c2122}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a1615@{a1615}}
+\index{a1615@{a1615}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a1615}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a1615}}\label{class_stepper_dopr853m_ac8aec9fa8dbbfec59fec8578ff188671}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a166@{a166}}
+\index{a166@{a166}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a166}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a166}}\label{class_stepper_dopr853m_a2e9bf0c8e2a8ed92d451538de3b8e6ef}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a167@{a167}}
+\index{a167@{a167}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a167}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a167}}\label{class_stepper_dopr853m_ab5f2980f2c8381f94ccda3aa5b25c123}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a168@{a168}}
+\index{a168@{a168}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a168}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a168}}\label{class_stepper_dopr853m_a046088cac5f2c8b5020e3b80a358dfc6}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a169@{a169}}
+\index{a169@{a169}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a169}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a169}}\label{class_stepper_dopr853m_a7721095e0cd85b832a7c6e80bbe2c316}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a21@{a21}}
+\index{a21@{a21}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a21}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a21}}\label{class_stepper_dopr853m_a87724f7274df94f25d06f5558a3b8e1a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a31@{a31}}
+\index{a31@{a31}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a31}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a31}}\label{class_stepper_dopr853m_aa6104e80e5a500685a15c50bca327175}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a32@{a32}}
+\index{a32@{a32}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a32}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a32}}\label{class_stepper_dopr853m_a6652da1e1ac2fd570d544ec90089a6a4}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a41@{a41}}
+\index{a41@{a41}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a41}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a41}}\label{class_stepper_dopr853m_adfbc43b3b05fbc59a88dfbd8dc694764}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a43@{a43}}
+\index{a43@{a43}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a43}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a43}}\label{class_stepper_dopr853m_a74d282dfb9cafc4c339855bd921d8a5c}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a51@{a51}}
+\index{a51@{a51}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a51}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a51}}\label{class_stepper_dopr853m_af714e5916bad565f680762f771e8b900}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a53@{a53}}
+\index{a53@{a53}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a53}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a53}}\label{class_stepper_dopr853m_a22c2380f3fad22df38b21f960747cc70}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a54@{a54}}
+\index{a54@{a54}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a54}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a54}}\label{class_stepper_dopr853m_a317096e030cce8844b841e80f9924fbf}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a61@{a61}}
+\index{a61@{a61}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a61}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a61}}\label{class_stepper_dopr853m_aa5b0788b7a1612819c44bf1716e47a43}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a64@{a64}}
+\index{a64@{a64}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a64}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a64}}\label{class_stepper_dopr853m_ae485489bbeb68222a7eba37496ce24c8}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a65@{a65}}
+\index{a65@{a65}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a65}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a65}}\label{class_stepper_dopr853m_a626ab2eeb9d6b899e5e65f225944082b}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a71@{a71}}
+\index{a71@{a71}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a71}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a71}}\label{class_stepper_dopr853m_a809bfdfe65bd3d28a185ab7fedd3cc4f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a74@{a74}}
+\index{a74@{a74}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a74}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a74}}\label{class_stepper_dopr853m_a6e34df83ced6bfb167e534a1a9693694}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a75@{a75}}
+\index{a75@{a75}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a75}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a75}}\label{class_stepper_dopr853m_a0b0e89e9e3e42d636eca0f996b895337}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a76@{a76}}
+\index{a76@{a76}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a76}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a76}}\label{class_stepper_dopr853m_a59b0427a6c306d1a574d906a7dc61e27}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a81@{a81}}
+\index{a81@{a81}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a81}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a81}}\label{class_stepper_dopr853m_ab79cc4b2ee9946ad54bb64e791930f4d}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a84@{a84}}
+\index{a84@{a84}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a84}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a84}}\label{class_stepper_dopr853m_aca2783249aecb932b4e6791e7da49b55}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a85@{a85}}
+\index{a85@{a85}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a85}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a85}}\label{class_stepper_dopr853m_aae955987df39cb4522613d5023348119}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a86@{a86}}
+\index{a86@{a86}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a86}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a86}}\label{class_stepper_dopr853m_a71a43e56d2b5b7933c91c74c71db42ea}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a87@{a87}}
+\index{a87@{a87}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a87}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a87}}\label{class_stepper_dopr853m_a2d1ec765a26c9914d5ac13161da7bafc}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a91@{a91}}
+\index{a91@{a91}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a91}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a91}}\label{class_stepper_dopr853m_a82d3e8e89e164748201a32911cafff1f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a94@{a94}}
+\index{a94@{a94}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a94}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a94}}\label{class_stepper_dopr853m_ac38ccded11a778c412704957fedd27bb}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a95@{a95}}
+\index{a95@{a95}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a95}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a95}}\label{class_stepper_dopr853m_a0197e2b6f81fb5d2527031ddac1894f6}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a96@{a96}}
+\index{a96@{a96}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a96}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a96}}\label{class_stepper_dopr853m_a0a3383da267dab0ecfaf0915aae91120}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a97@{a97}}
+\index{a97@{a97}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a97}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a97}}\label{class_stepper_dopr853m_a0ee7946b920fb248862a8c85ee80751d}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!a98@{a98}}
+\index{a98@{a98}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{a98}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf a98}}\label{class_stepper_dopr853m_a2ae24d88f4ecdcdeb79ab5f244f4d43b}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b1@{b1}}
+\index{b1@{b1}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b1}}\label{class_stepper_dopr853m_a94d8c85f0c8013b644bc2f08a1357624}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b10@{b10}}
+\index{b10@{b10}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b10}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b10}}\label{class_stepper_dopr853m_a62f840679c52cedb64e47a0af6ff90b8}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b11@{b11}}
+\index{b11@{b11}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b11}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b11}}\label{class_stepper_dopr853m_aa1cb008be2c476b0c98f958f22856418}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b12@{b12}}
+\index{b12@{b12}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b12}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b12}}\label{class_stepper_dopr853m_aef517978db5f27b3161dc06fd1a17a15}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b6@{b6}}
+\index{b6@{b6}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b6}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b6}}\label{class_stepper_dopr853m_a4f3df5fcfb3e8856b1cfa88483101524}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b7@{b7}}
+\index{b7@{b7}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b7}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b7}}\label{class_stepper_dopr853m_a36f3443d655772c1c80c3ad9b1665c37}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b8@{b8}}
+\index{b8@{b8}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b8}}\label{class_stepper_dopr853m_ae59afe85897ad352de4fdfd5799e2ade}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!b9@{b9}}
+\index{b9@{b9}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{b9}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf b9}}\label{class_stepper_dopr853m_a8398785c3a5fa0d99aff85e1d18c8806}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!bhh1@{bhh1}}
+\index{bhh1@{bhh1}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{bhh1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf bhh1}}\label{class_stepper_dopr853m_a1920bad00212c8d6d27f756a1c094c25}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!bhh2@{bhh2}}
+\index{bhh2@{bhh2}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{bhh2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf bhh2}}\label{class_stepper_dopr853m_a27dc136691cc0caee14c725505e6a504}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!bhh3@{bhh3}}
+\index{bhh3@{bhh3}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{bhh3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf bhh3}}\label{class_stepper_dopr853m_aebc47a07bf16792d8a6f08f9fb5e12e6}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c10@{c10}}
+\index{c10@{c10}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c10}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c10}}\label{class_stepper_dopr853m_ad34701c7792bbbb50ea256778f10bb02}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c11@{c11}}
+\index{c11@{c11}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c11}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c11}}\label{class_stepper_dopr853m_ac1469b1ab13a5b65bae56cd72650a56c}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c14@{c14}}
+\index{c14@{c14}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c14}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c14}}\label{class_stepper_dopr853m_ae97d71fd915303862a4ce3214e573e7a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c15@{c15}}
+\index{c15@{c15}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c15}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c15}}\label{class_stepper_dopr853m_a86f80a31486c5d3d8c4a3ca74b9dc6bd}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c16@{c16}}
+\index{c16@{c16}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c16}}\label{class_stepper_dopr853m_af7088c9d34c8fb5bff6063775ced7df4}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c2@{c2}}
+\index{c2@{c2}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c2}}\label{class_stepper_dopr853m_aebbd03ebe62b30158fa9f70e21731c5a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c3@{c3}}
+\index{c3@{c3}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c3}}\label{class_stepper_dopr853m_ab5f1a3b1c00da52ed5b2bba631a5edfe}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c4@{c4}}
+\index{c4@{c4}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c4}}\label{class_stepper_dopr853m_ac64df406fa23d3fa27d7df6c913cb12d}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c5@{c5}}
+\index{c5@{c5}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c5}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c5}}\label{class_stepper_dopr853m_abe315993227d1f21158734afcdc0d13a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c6@{c6}}
+\index{c6@{c6}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c6}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c6}}\label{class_stepper_dopr853m_a93e2e854370d66afe7c530f9a2e1f7de}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c7@{c7}}
+\index{c7@{c7}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c7}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c7}}\label{class_stepper_dopr853m_afe405b81923e2f6e19e8952a443df181}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c8@{c8}}
+\index{c8@{c8}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c8}}\label{class_stepper_dopr853m_ac4632851717e09305028a0f923a30341}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!c9@{c9}}
+\index{c9@{c9}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{c9}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf c9}}\label{class_stepper_dopr853m_a04892aeee3b034067800a014f34aa2e7}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!con@{con}}
+\index{con@{con}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{con}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf \-Controller} {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf con}}\label{class_stepper_dopr853m_a37eac8073e52f186eac6e238a7109390}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d41@{d41}}
+\index{d41@{d41}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d41}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d41}}\label{class_stepper_dopr853m_a5b9db32de3f9c9621a646fede925b084}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d410@{d410}}
+\index{d410@{d410}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d410}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d410}}\label{class_stepper_dopr853m_a1eba4a36fd61949e3a5978278825a4fb}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d411@{d411}}
+\index{d411@{d411}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d411}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d411}}\label{class_stepper_dopr853m_a7cf7c377ecca88de37b671aba89297df}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d412@{d412}}
+\index{d412@{d412}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d412}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d412}}\label{class_stepper_dopr853m_ac9c20e1dd0849dff552384544d393af9}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d413@{d413}}
+\index{d413@{d413}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d413}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d413}}\label{class_stepper_dopr853m_af9bd93f8a7cbc53e93d45e356660745a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d414@{d414}}
+\index{d414@{d414}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d414}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d414}}\label{class_stepper_dopr853m_a39c846eaa920cbc39e94b2fc18aa58e4}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d415@{d415}}
+\index{d415@{d415}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d415}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d415}}\label{class_stepper_dopr853m_a3026560ecba6db21fc447a5483fe7d03}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d416@{d416}}
+\index{d416@{d416}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d416}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d416}}\label{class_stepper_dopr853m_ac0c88a71605932a62285736755af104c}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d46@{d46}}
+\index{d46@{d46}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d46}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d46}}\label{class_stepper_dopr853m_ad81e2380e1dadbdfb7ce73a90a989e5e}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d47@{d47}}
+\index{d47@{d47}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d47}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d47}}\label{class_stepper_dopr853m_abc0ec9b9ca0b4a6e21f0388f62ddd6c7}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d48@{d48}}
+\index{d48@{d48}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d48}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d48}}\label{class_stepper_dopr853m_a088ea0fdc49241fe12ffc52cef54755c}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d49@{d49}}
+\index{d49@{d49}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d49}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d49}}\label{class_stepper_dopr853m_a5e5061bdc7a273e6915c88269d569008}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d51@{d51}}
+\index{d51@{d51}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d51}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d51}}\label{class_stepper_dopr853m_af4f20d65677191c782cc21507bb35833}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d510@{d510}}
+\index{d510@{d510}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d510}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d510}}\label{class_stepper_dopr853m_aa36c2b5c6d5a62199fa955887642b2f4}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d511@{d511}}
+\index{d511@{d511}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d511}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d511}}\label{class_stepper_dopr853m_ae8ba3304a6199bfb442156524869bc84}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d512@{d512}}
+\index{d512@{d512}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d512}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d512}}\label{class_stepper_dopr853m_a3895170dcbbba5df3247e7240c7c5133}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d513@{d513}}
+\index{d513@{d513}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d513}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d513}}\label{class_stepper_dopr853m_a258a477bb9015cd4d87fe3bf6320bd88}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d514@{d514}}
+\index{d514@{d514}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d514}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d514}}\label{class_stepper_dopr853m_ac1386846a644599e932fcf4d37a021db}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d515@{d515}}
+\index{d515@{d515}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d515}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d515}}\label{class_stepper_dopr853m_aef4ee12f375a660c1fb58527fac751ea}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d516@{d516}}
+\index{d516@{d516}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d516}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d516}}\label{class_stepper_dopr853m_a26fe1e4b5db159cb53ad2149d445374e}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d56@{d56}}
+\index{d56@{d56}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d56}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d56}}\label{class_stepper_dopr853m_a2a445084eb3a627148cb6df37c0466f0}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d57@{d57}}
+\index{d57@{d57}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d57}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d57}}\label{class_stepper_dopr853m_a4bc890665f4fb0425a2e1313ee39c627}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d58@{d58}}
+\index{d58@{d58}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d58}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d58}}\label{class_stepper_dopr853m_a550b5c43e45093deecc3a4bb9d16e1d2}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d59@{d59}}
+\index{d59@{d59}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d59}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d59}}\label{class_stepper_dopr853m_a8809e8c097fbb2a1497d5502068181f2}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d61@{d61}}
+\index{d61@{d61}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d61}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d61}}\label{class_stepper_dopr853m_ae7ca05a5a34bb42b3924f352db3f26a1}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d610@{d610}}
+\index{d610@{d610}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d610}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d610}}\label{class_stepper_dopr853m_a38b2bffe2ec388376b49167d51250aeb}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d611@{d611}}
+\index{d611@{d611}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d611}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d611}}\label{class_stepper_dopr853m_a2c8bf9b91525a7e2e2048ba9259ee0fe}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d612@{d612}}
+\index{d612@{d612}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d612}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d612}}\label{class_stepper_dopr853m_a15023faa584f00ea67db8b9ee4e4ab32}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d613@{d613}}
+\index{d613@{d613}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d613}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d613}}\label{class_stepper_dopr853m_aa6a5737d1c4612681a248574512290ae}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d614@{d614}}
+\index{d614@{d614}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d614}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d614}}\label{class_stepper_dopr853m_a5d8623fc2d89cf27effa94080e2a27f1}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d615@{d615}}
+\index{d615@{d615}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d615}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d615}}\label{class_stepper_dopr853m_abc87729af64c0bc07a5b376b02bb4121}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d616@{d616}}
+\index{d616@{d616}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d616}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d616}}\label{class_stepper_dopr853m_a3d84af934614a89be26c1a01c8c577f2}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d66@{d66}}
+\index{d66@{d66}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d66}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d66}}\label{class_stepper_dopr853m_a8e009f563e30ca5b3f0b4db1e0b7f9e3}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d67@{d67}}
+\index{d67@{d67}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d67}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d67}}\label{class_stepper_dopr853m_ac2f1c459ab817ebb4f67fa26ae27ed17}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d68@{d68}}
+\index{d68@{d68}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d68}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d68}}\label{class_stepper_dopr853m_ae0acec9ccf6d9e82dc67909041d7cd43}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d69@{d69}}
+\index{d69@{d69}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d69}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d69}}\label{class_stepper_dopr853m_a6782c65ae3803bbafedf6c1ce1e3764c}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d71@{d71}}
+\index{d71@{d71}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d71}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d71}}\label{class_stepper_dopr853m_af6df0c19c716722e5cec1e168a0337e1}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d710@{d710}}
+\index{d710@{d710}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d710}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d710}}\label{class_stepper_dopr853m_ac5e643b97164874286dffbc59d2def83}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d711@{d711}}
+\index{d711@{d711}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d711}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d711}}\label{class_stepper_dopr853m_a73aaa40377a5b8c564b35f4907500000}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d712@{d712}}
+\index{d712@{d712}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d712}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d712}}\label{class_stepper_dopr853m_aeb8c579313bd20b3b9ef3598de1ce50f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d713@{d713}}
+\index{d713@{d713}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d713}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d713}}\label{class_stepper_dopr853m_a3fca4cc531ccaa221a236b359d46c5af}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d714@{d714}}
+\index{d714@{d714}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d714}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d714}}\label{class_stepper_dopr853m_ab6d8a01a91eb96d0c9bf52a4e914e5d0}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d715@{d715}}
+\index{d715@{d715}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d715}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d715}}\label{class_stepper_dopr853m_a75b50455ddefc01e9fefa5ea9221a737}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d716@{d716}}
+\index{d716@{d716}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d716}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d716}}\label{class_stepper_dopr853m_a0c5f41a74168f0ee5e9355d08352032a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d76@{d76}}
+\index{d76@{d76}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d76}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d76}}\label{class_stepper_dopr853m_acf85bffe9c71147f3f06bbe5c478eb7f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d77@{d77}}
+\index{d77@{d77}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d77}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d77}}\label{class_stepper_dopr853m_a897d227d5372ebba8c4ad530a2fb6f2f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d78@{d78}}
+\index{d78@{d78}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d78}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d78}}\label{class_stepper_dopr853m_a4b47cf8cb2fc35f1162bc9df4cde6f69}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!d79@{d79}}
+\index{d79@{d79}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{d79}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf d79}}\label{class_stepper_dopr853m_a18ed563b0ab3412227f837a5e5bbe610}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er1@{er1}}
+\index{er1@{er1}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er1}}\label{class_stepper_dopr853m_ab65d144c3edb8f9f2e160b3f6c9c2d54}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er10@{er10}}
+\index{er10@{er10}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er10}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er10}}\label{class_stepper_dopr853m_a0e4e24951f6b78e49aca3f1572092d2a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er11@{er11}}
+\index{er11@{er11}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er11}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er11}}\label{class_stepper_dopr853m_abe7001a2c5f57d8fb6303c9a609972bd}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er12@{er12}}
+\index{er12@{er12}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er12}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er12}}\label{class_stepper_dopr853m_aa998ab78d9c3c9d31e60a0525f0a1aa5}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er6@{er6}}
+\index{er6@{er6}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er6}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er6}}\label{class_stepper_dopr853m_af60811e6ab16604d4002d9b43c580335}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er7@{er7}}
+\index{er7@{er7}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er7}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er7}}\label{class_stepper_dopr853m_a2186fd50f3f7d4c3e3cff348887627c2}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er8@{er8}}
+\index{er8@{er8}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er8}}\label{class_stepper_dopr853m_a9adbf950cf587e0c3d5039dfaa199187}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!er9@{er9}}
+\index{er9@{er9}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{er9}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-R\-R {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf er9}}\label{class_stepper_dopr853m_a3037075c3cd6945b7aa6247f4b497122}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k10@{k10}}
+\index{k10@{k10}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k10}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k10}}\label{class_stepper_dopr853m_a90ebc6b7a1285bebeafc74c155969a38}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k2@{k2}}
+\index{k2@{k2}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k2}}\label{class_stepper_dopr853m_a8c0bb04c13b5c3d92b99a92249742e2f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k3@{k3}}
+\index{k3@{k3}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k3}}\label{class_stepper_dopr853m_aed479488ec9f4eb1241502ad0e7ce68a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k4@{k4}}
+\index{k4@{k4}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k4}}\label{class_stepper_dopr853m_acdd0b1d864bfec0feb6ba5e14cea19b8}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k5@{k5}}
+\index{k5@{k5}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k5}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k5}}\label{class_stepper_dopr853m_a3f39ecbc2a7a59bd4fef7527e60e16af}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k6@{k6}}
+\index{k6@{k6}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k6}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k6}}\label{class_stepper_dopr853m_a160caaf6db28d01d7dd8acbd41b56b7e}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k7@{k7}}
+\index{k7@{k7}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k7}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k7}}\label{class_stepper_dopr853m_a91642444a5fa84f4f6cceb7bdea152ed}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k8@{k8}}
+\index{k8@{k8}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k8}}\label{class_stepper_dopr853m_a1f6fb5f0f50e238a6993c40787da52d9}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!k9@{k9}}
+\index{k9@{k9}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{k9}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf k9}}\label{class_stepper_dopr853m_a5f26b659430cff586d8e5b111ccf0a48}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont1@{rcont1}}
+\index{rcont1@{rcont1}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont1}}\label{class_stepper_dopr853m_a8b8c6b290fc5c2cec6bdac89fe8ba212}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont2@{rcont2}}
+\index{rcont2@{rcont2}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont2}}\label{class_stepper_dopr853m_a5468248ed7ae4d26f486c3e1a02dfe8e}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont3@{rcont3}}
+\index{rcont3@{rcont3}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont3}}\label{class_stepper_dopr853m_a19131ec8703166cfe515b95844e3e0de}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont4@{rcont4}}
+\index{rcont4@{rcont4}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont4}}\label{class_stepper_dopr853m_a34499aa14179a43ea6cb26f4a39fc8d9}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont5@{rcont5}}
+\index{rcont5@{rcont5}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont5}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont5}}\label{class_stepper_dopr853m_aa95931469aff9f745793621054c2fb0a}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont6@{rcont6}}
+\index{rcont6@{rcont6}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont6}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont6}}\label{class_stepper_dopr853m_ac686e244e7327fc29a0dca5104bc2ff7}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont7@{rcont7}}
+\index{rcont7@{rcont7}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont7}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont7}}\label{class_stepper_dopr853m_a6ac2f2a980405a2e759dcab98350520f}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!rcont8@{rcont8}}
+\index{rcont8@{rcont8}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{rcont8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf rcont8}}\label{class_stepper_dopr853m_a9b49cc0f326e849f73813199434d96ec}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!yerr2@{yerr2}}
+\index{yerr2@{yerr2}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{yerr2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf yerr2}}\label{class_stepper_dopr853m_a6bab725b78bcaca6a72a3023e9664692}
+\index{\-Stepper\-Dopr853m@{\-Stepper\-Dopr853m}!ytemp@{ytemp}}
+\index{ytemp@{ytemp}!StepperDopr853m@{\-Stepper\-Dopr853m}}
+\subsubsection[{ytemp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ \-Array$<$\-R\-R,1$>$ {\bf \-Stepper\-Dopr853m}$<$ \-D $>$\-::{\bf ytemp}}\label{class_stepper_dopr853m_ab943c800cabc2160a1b8615c911e8e1e}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Stepper\-Dopr853m.\-h}\end{DoxyCompactItemize}
