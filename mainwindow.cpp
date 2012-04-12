@@ -84,7 +84,7 @@ RR MainWindow::min_RR(Array<RR,1> a, int numele) {
    int i;
    RR min=to_RR(10E12);
    for (i=0;i<numele;i++){
-      if(a(i)>min) min=a(i);
+      if(a(i)<min) min=a(i);
    }
    return min;
 }
@@ -113,7 +113,8 @@ void MainWindow::paintEvent(QPaintEvent *e)
     case 1:
     //Angles ================================================== ysave(var,n)
         //get min and max values -- val_min; val_max
-        RR theta_min = min_RR(out->ysave(5,Range(0,out->count-1)), out->count);
+        RR theta_min = to_RR(0);
+        theta_min = min_RR(out->ysave(5,Range(0,out->count-1)), out->count);
         RR phi_min = min_RR(out->ysave(6,Range(0,out->count-1)), out->count);
         RR psi_min = min_RR(out->ysave(7,Range(0,out->count-1)), out->count);
         RR theta_max = max_RR(out->ysave(5,Range(0,out->count-1)), out->count);
@@ -240,7 +241,7 @@ void MainWindow::on_Simulate_button_clicked()
     ystart(7)=to_RR(0.0);
     ystart(8)=to_RR(0.0);
     ystart(9)=to_RR(0.0);
-    out=new Output<StepperDopr853m<RHS_gyro > >(100);
+    out=new Output<StepperDopr853m<RHS_gyro > >(-1);
     RHS_gyro d(g,R,k,m,a);
     Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,h1,hmin,*out,d);
 

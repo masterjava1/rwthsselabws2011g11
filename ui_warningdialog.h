@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'warningdialog.ui'
 **
-** Created: Thu Apr 12 00:49:48 2012
-**      by: Qt User Interface Compiler version 4.6.3
+** Created: Thu Apr 12 01:17:56 2012
+**      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
