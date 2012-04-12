@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 11:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 17:48
 entering extended mode
  %&-line parsing enabled.
 **test.tex
@@ -478,32 +478,22 @@ Kapitel 3.
 File: figures/StructureDiagGyroSim.png Graphic file (type png)
 
 <use figures/StructureDiagGyroSim.png>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 6--7
-[] 
- []
+<figures/klassenidagramm.png, id=55, 798.5835pt x 760.2804pt>
+File: figures/klassenidagramm.png Graphic file (type png)
 
-<figures/RWTH_SSELAB_WS1112_CLASSES.png, id=55, 810.8694pt x 568.0422pt>
-File: figures/RWTH_SSELAB_WS1112_CLASSES.png Graphic file (type png)
-
-<use figures/RWTH_SSELAB_WS1112_CLASSES.png>
+<use figures/klassenidagramm.png>
 <figures/Odeint.png, id=56, 797.8608pt x 759.5577pt>
 File: figures/Odeint.png Graphic file (type png)
  <use figures/Odeint.png>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 10--12
-[]
- []
-
-
-Overfull \hbox (88.62pt too wide) in paragraph at lines 10--12
-[] 
+Overfull \hbox (235.38165pt too wide) in paragraph at lines 10--12
+[] [] 
  []
 
 [11
 
 
 
- <./figures/StructureDiagGyroSim.png (PNG copy)>] [12 <./figures/RWTH_SSELAB_WS
-1112_CLASSES.png (PNG copy)>]
+ <./figures/StructureDiagGyroSim.png (PNG copy)>]
 Underfull \hbox (badness 6001) in paragraph at lines 19--19
 [][]$\OML/cmm/m/it/8 k \OT1/cmr/m/n/8 = 0\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3\OML/
 cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10[]\OML/cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10
@@ -511,67 +501,45 @@ cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10[]\OML/cmm/m/it/8 ; h[] \OT1/cmr/m/n/8 = 10
  10[]\OML/cmm/m/it/8 ; y\OT1/cmr/m/n/8 0 =
  []
 
-[13 <./figures/Odeint.png (PNG copy)>]
-<figures/dopr0.png, id=67, 292.09125pt x 111.41624pt>
+<figures/dopr0.png, id=60, 292.09125pt x 111.41624pt>
 File: figures/dopr0.png Graphic file (type png)
  <use figures/dopr0.png>
-<figures/dopr1a.png, id=68, 785.93625pt x 705.63625pt>
+<figures/dopr1a.png, id=61, 785.93625pt x 705.63625pt>
 File: figures/dopr1a.png Graphic file (type png)
 
-<use figures/dopr1a.png>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 25--26
-[][] 
- []
-
-[14 <./figures/dopr0.png (PNG copy)> <./figures/dopr1a.png (PNG copy)>]
-<figures/dopr1.png, id=80, 1083.04625pt x 610.28pt>
+<use figures/dopr1a.png> [12 <./figures/klassenidagramm.png (PNG copy)> <./figu
+res/Odeint.png (PNG copy)> <./figures/dopr0.png (PNG copy)>]
+<figures/dopr1.png, id=74, 1083.04625pt x 610.28pt>
 File: figures/dopr1.png Graphic file (type png)
  <use figures/dopr1.png>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 29--30
-[][] 
- []
-
-<figures/dopr2.png, id=81, 785.93625pt x 705.63625pt>
+[13 <./figures/dopr1a.png (PNG copy)> <./figures/dopr1.png>]
+<figures/dopr2.png, id=78, 785.93625pt x 705.63625pt>
 File: figures/dopr2.png Graphic file (type png)
  <use figures/dopr2.png>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 37--38
-[][] 
- []
-
-[15 <./figures/dopr1.png>] [16 <./figures/dopr2.png (PNG copy)>]
-<figures/GUIParameterInputForm.png, id=89, 376.5267pt x 362.0727pt>
+[14 <./figures/dopr2.png (PNG copy)>]
+<figures/GUIParameterInputForm.png, id=83, 376.5267pt x 362.0727pt>
 File: figures/GUIParameterInputForm.png Graphic file (type png)
 
 <use figures/GUIParameterInputForm.png>
-<figures/GUIDisplayForm.png, id=90, 562.2606pt x 403.2666pt>
+<figures/GUIDisplayForm.png, id=84, 562.2606pt x 403.2666pt>
 File: figures/GUIDisplayForm.png Graphic file (type png)
 
 <use figures/GUIDisplayForm.png>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 61--63
-[]
+Overfull \hbox (235.38165pt too wide) in paragraph at lines 61--63
+[] [] 
  []
 
-
-Overfull \hbox (88.62pt too wide) in paragraph at lines 61--63
-[] 
- []
-
-[17] [18 <./figures/GUIParameterInputForm.png (PNG copy)>]
-<figures/UseCaseTippeTop.png, id=98, 338.9463pt x 252.2223pt>
+<figures/UseCaseTippeTop.png, id=85, 338.9463pt x 252.2223pt>
 File: figures/UseCaseTippeTop.png Graphic file (type png)
 
-<use figures/UseCaseTippeTop.png>
-Overfull \hbox (88.62pt too wide) in paragraph at lines 65--66
-[] 
- []
-
-) [19 <./figures/GUIDisplayForm.png (PNG copy)>] [20 <./figures/UseCaseTippeTop
-.png (PNG copy)>]
+<use figures/UseCaseTippeTop.png>) [15 <./figures/GUIParameterInputForm.png (PN
+G copy)> <./figures/GUIDisplayForm.png (PNG copy)>] [16 <./figures/UseCaseTippe
+Top.png (PNG copy)>]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
 Kapitel 4.
-) [21
+) [17
 
 
 
@@ -580,7 +548,7 @@ Kapitel 4.
 
  (./entwicklerdoc.tex
 Kapitel 5.
-) [22
+) [18
 
 
 
@@ -590,12 +558,223 @@ No file test.bbl.
 
 (./quellcode.tex
 Anhang A.
-) [23
+
+! LaTeX Error: Environment DoxyCompactList undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...ief descriptions\-:\begin{DoxyCompactList}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \item\contentsline
+                       {section}{{\bf mainwindow.\-cpp} }{\pageref{mainwindo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `mainwindow_8cpp' on page 19 undefined on input line 1
+4.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \item\contentsline
+                       {section}{{\bf ntl\-\_\-ext.\-h} }{\pageref{ntl__ext_...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `ntl__ext_8h' on page 19 undefined on input line 15.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \item\contentsline
+                       {section}{{\bf \-Odeint.\-h} }{\pageref{_odeint_8h}}{}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_odeint_8h' on page 19 undefined on input line 16.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \item\contentsline
+                       {section}{{\bf \-Output.\-h} }{\pageref{_output_8h}}{}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_output_8h' on page 19 undefined on input line 17.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \item\contentsline
+                       {section}{{\bf \-R\-H\-S\-\_\-gyro.\-h} }{\pageref{_r...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_r_h_s__gyro_8h' on page 19 undefined on input line 1
+8.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \item\contentsline
+                       {section}{{\bf \-Runtime\-Exception.\-cpp} }{\pageref...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_runtime_exception_8cpp' on page 19 undefined on inpu
+t line 19.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \item\contentsline
+                       {section}{{\bf \-Runtime\-Exception.\-h} }{\pageref{_...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_runtime_exception_8h' on page 19 undefined on input 
+line 20.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \item\contentsline
+                       {section}{{\bf \-Stepper\-Base.\-cpp} }{\pageref{_ste...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_stepper_base_8cpp' on page 19 undefined on input lin
+e 21.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \item\contentsline
+                       {section}{{\bf \-Stepper\-Base.\-h} }{\pageref{_stepp...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_stepper_base_8h' on page 19 undefined on input line 
+22.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \item\contentsline
+                       {section}{{\bf \-Stepper\-Dopr853m.\-h} }{\pageref{_s...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `_stepper_dopr853m_8h' on page 19 undefined on input l
+ine 23.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \item\contentsline
+                       {section}{{\bf write\-\_\-tec.\-h} }{\pageref{write__...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `write__tec_8h' on page 19 undefined on input line 24.
+
+
+
+! LaTeX Error: \begin{document} ended by \end{DoxyCompactList}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \end{DoxyCompactList}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [19
 
 
 
 ] (./test.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux)
 (./nutzerdoc.aux) (./entwicklerdoc.aux) (./quellcode.aux))
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -605,10 +784,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 9 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4276 strings out of 495061
- 54167 string characters out of 1182620
+ 4289 strings out of 495061
+ 54339 string characters out of 1182620
  142288 words of memory out of 3000000
- 7322 multiletter control sequences out of 15000+50000
+ 7335 multiletter control sequences out of 15000+50000
  25011 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,16n,32p,519b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -636,9 +815,9 @@ ve/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y6.pfb>
-Output written on test.pdf (24 pages, 842599 bytes).
+Output written on test.pdf (20 pages, 1219719 bytes).
 PDF statistics:
- 666 PDF objects out of 1000 (max. 8388607)
+ 668 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
