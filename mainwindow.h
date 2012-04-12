@@ -45,7 +45,6 @@ public slots:
 
 protected:
     void changeEvent(QEvent *e);
-    void paintEvent(QPaintEvent *e);
     RR max_RR(Array<RR,1> a, int numele);
     RR min_RR(Array<RR,1> a, int numele);
     double to_double(const RR& a);
@@ -58,6 +57,7 @@ private:
     int windswitch;
     bool simulateon;
     QCustomPlot *plot;
+    void redraw_plot(int variable);
 
 
 private slots:

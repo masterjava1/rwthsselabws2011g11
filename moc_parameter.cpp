@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'parameter.h'
 **
-** Created: Thu Apr 12 04:13:51 2012
+** Created: Thu Apr 12 04:45:21 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
