@@ -58,13 +58,12 @@ private:
     QCustomPlot *plot;
     void redraw_plot(int variable);
     double x;
+    int cvar;
 
 
 
 private slots:
-    void on_actionPositionsClicked_triggered();
-    void on_actionDerivativesClicked_triggered();
-    void on_actionAnglesClicked_triggered();
+    void on_actionChangeVView_triggered();
     void on_actionSlideTime_triggered();
     void on_actionOpenParameterOptions_triggered();
     void on_Simulate_button_clicked();
