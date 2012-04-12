@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'errordialog.ui'
 **
-** Created: Thu Apr 12 04:13:30 2012
+** Created: Thu Apr 12 04:44:58 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

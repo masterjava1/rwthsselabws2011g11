@@ -17,6 +17,9 @@ MainWindow::MainWindow(QWidget *parent) :
     plot->setFixedHeight(351);
     plot->setFixedWidth(501);
     plot->setParent(ui->plottingframe);
+    plot->setRangeDrag(Qt::Horizontal | Qt::Vertical);
+    plot->setRangeZoom(Qt::Horizontal | Qt::Vertical);
+    plot->setInteraction(QCustomPlot::iSelectPlottables);
 }
 
 MainWindow::~MainWindow()
@@ -96,10 +99,6 @@ RR MainWindow::min_RR(Array<RR,1> a, int numele) {
 double MainWindow::to_double(const RR& a)
 { double z; conv(z, a); return z; }
 
-void MainWindow::paintEvent(QPaintEvent *e)
-{
-
-}
 
 
 
@@ -192,9 +191,25 @@ void MainWindow::on_Simulate_button_clicked()
         QMessageBox::information(this, tr("Runtime Exception in ode.integrate()"),
                                  what);
     }
-
+    redraw_plot(3);
     out->~Output();
     simulateon = true;
     windswitch = 1;
 }
 
+
+void MainWindow::redraw_plot(int variable)
+{
+   plot->addGraph();
+   plot->graph(0)->setPen(QPen(Qt::blue));
+   plot->graph(0)->setBrush(QBrush(QColor(0, 0, 255, 20)));
+
+   QVector<double> x(out->count);
+   QVector<double> y(out->count);
+   for (int i=0;i<out->count;i++){
+       conv(x[i],out->xsave(i));
+       conv(y[i],out->ysave(i));
+   }
+   plot->graph(0)->setData(x,y);
+   plot->graph(0)->rescaleAxes();
+}
