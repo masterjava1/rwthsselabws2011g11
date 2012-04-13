@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  13 APR 2012 06:40
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  13 APR 2012 07:45
 entering extended mode
  %&-line parsing enabled.
 **test.tex
@@ -525,15 +525,14 @@ e No. 20, at
  []
 
 [16 <./figures/dopr2.png (PNG copy)>]
-<figures/GUIParameterInputForm.png, id=89, 376.5267pt x 362.0727pt>
-File: figures/GUIParameterInputForm.png Graphic file (type png)
+<figures/main2.png, id=89, 634.37pt x 571.13374pt>
+File: figures/main2.png Graphic file (type png)
+ <use figures/main2.png>
+<figures/parameter.png, id=91, 373.395pt x 445.665pt>
+File: figures/parameter.png Graphic file (type png)
 
-<use figures/GUIParameterInputForm.png>
-<figures/GUIDisplayForm.png, id=90, 562.2606pt x 403.2666pt>
-File: figures/GUIDisplayForm.png Graphic file (type png)
-
-<use figures/GUIDisplayForm.png> [17 <./figures/GUIParameterInputForm.png (PNG 
-copy)>] <figures/UseCaseTippeTop.png, id=94, 469.0323pt x 455.301pt>
+<use figures/parameter.png> [17 <./figures/main2.png>]
+<figures/UseCaseTippeTop.png, id=96, 469.0323pt x 455.301pt>
 File: figures/UseCaseTippeTop.png Graphic file (type png)
 
 <use figures/UseCaseTippeTop.png>
@@ -541,8 +540,8 @@ Overfull \hbox (88.62pt too wide) in paragraph at lines 63--64
 [] 
  []
 
-) [18 <./figures/GUIDisplayForm.png (PNG copy)>] [19 <./figures/UseCaseTippeTop
-.png (PNG copy)>]
+) [18 <./figures/parameter.png>] [19 <./figures/UseCaseTippeTop.png (PNG copy)>
+]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
@@ -563,18 +562,14 @@ Kapitel 5.
 ]
 No file test.bbl.
 (./test.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux) (./nutzerdoc.aux)
-(./entwicklerdoc.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+(./entwicklerdoc.aux)) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 9 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  4265 strings out of 495061
- 53979 string characters out of 1182620
+ 53874 string characters out of 1182620
  141958 words of memory out of 3000000
  7318 multiletter control sequences out of 15000+50000
  25011 words of font info for 61 fonts, out of 3000000 for 9000
@@ -604,9 +599,9 @@ ve/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y6.pfb>
-Output written on test.pdf (22 pages, 1241118 bytes).
+Output written on test.pdf (22 pages, 1277479 bytes).
 PDF statistics:
- 658 PDF objects out of 1000 (max. 8388607)
+ 660 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
