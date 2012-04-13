@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  12 APR 2012 21:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.29)  13 APR 2012 06:40
 entering extended mode
  %&-line parsing enabled.
 **test.tex
@@ -533,16 +533,21 @@ File: figures/GUIParameterInputForm.png Graphic file (type png)
 File: figures/GUIDisplayForm.png Graphic file (type png)
 
 <use figures/GUIDisplayForm.png> [17 <./figures/GUIParameterInputForm.png (PNG 
-copy)>] <figures/UseCaseTippeTop.png, id=94, 338.9463pt x 252.2223pt>
+copy)>] <figures/UseCaseTippeTop.png, id=94, 469.0323pt x 455.301pt>
 File: figures/UseCaseTippeTop.png Graphic file (type png)
 
-<use figures/UseCaseTippeTop.png>) [18 <./figures/GUIDisplayForm.png (PNG copy)
-> <./figures/UseCaseTippeTop.png (PNG copy)>]
+<use figures/UseCaseTippeTop.png>
+Overfull \hbox (88.62pt too wide) in paragraph at lines 63--64
+[] 
+ []
+
+) [18 <./figures/GUIDisplayForm.png (PNG copy)>] [19 <./figures/UseCaseTippeTop
+.png (PNG copy)>]
 \openout2 = `nutzerdoc.aux'.
 
  (./nutzerdoc.tex
 Kapitel 4.
-) [19
+) [20
 
 
 
@@ -551,14 +556,18 @@ Kapitel 4.
 
  (./entwicklerdoc.tex
 Kapitel 5.
-) [20
+) [21
 
 
 
 ]
 No file test.bbl.
 (./test.aux (./vorwort.aux) (./analyse.aux) (./entwurf.aux) (./nutzerdoc.aux)
-(./entwicklerdoc.aux)) )
+(./entwicklerdoc.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 9 ({)
@@ -595,9 +604,9 @@ ve/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y6.pfb>
-Output written on test.pdf (21 pages, 1214729 bytes).
+Output written on test.pdf (22 pages, 1241118 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
+ 658 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
