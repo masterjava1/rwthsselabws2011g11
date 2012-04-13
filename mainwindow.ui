@@ -124,7 +124,7 @@
      <number>1</number>
     </property>
     <property name="maximum">
-     <number>9</number>
+     <number>10</number>
     </property>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
@@ -214,7 +214,7 @@
      <rect>
       <x>558</x>
       <y>90</y>
-      <width>63</width>
+      <width>69</width>
       <height>351</height>
      </rect>
     </property>
@@ -222,21 +222,21 @@
      <item>
       <widget class="QLabel" name="label_13">
        <property name="text">
-        <string>theta dot</string>
+        <string>d(θ)/dt</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_19">
        <property name="text">
-        <string>phi dot</string>
+        <string>d(Φ)/dt</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_18">
        <property name="text">
-        <string>psi dot</string>
+        <string>d(ψ)/dt</string>
        </property>
       </widget>
      </item>
@@ -257,21 +257,21 @@
      <item>
       <widget class="QLabel" name="label_16">
        <property name="text">
-        <string>theta</string>
+        <string>θ</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_15">
        <property name="text">
-        <string>phi</string>
+        <string>Φ</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_14">
        <property name="text">
-        <string>psi</string>
+        <string>ψ</string>
        </property>
       </widget>
      </item>

@@ -28,6 +28,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->display_cqtol->setText(params.cqtol);
     ui->Tolerance->setText(params.rtol);
     ui->t_max->setText(params.t_max);
+
+    ui->Tecplot_button->setEnabled(false);
+    ui->Export_button->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -111,19 +114,32 @@ void MainWindow::on_Tecplot_button_clicked()
     QString fileName = QFileDialog::getSaveFileName(this,
            tr("Export Tecplot File"), "",
            tr("Simulation Data (*.dat);;All Files (*)"));
+    if (fileName.isEmpty())
+            return;
     QFileInfo file(fileName);
     if(file.suffix().isEmpty()) fileName += ".dat";
     write_tec(out,fileName.toStdString());
 }
 
+void MainWindow::disableUI(){
+    ui->spinBox->setEnabled(false);
+    ui->pushButton->setEnabled(false);
+    ui->Simulate_button->setEnabled(false);
+    ui->Import_button->setEnabled(false);
+    ui->Tecplot_button->setEnabled(false);
+    ui->Export_button->setEnabled(false);
+    this->update();
+    this->repaint();
+    sleep(1);
+}
 
 
 
 void MainWindow::on_Simulate_button_clicked()
 {
-    QProgressDialog progress("Simulating...please wait..","",0,100);
-        progress.setCancelButton(0);
-        progress.show();
+
+    disableUI();
+
         int nvar=10;
         RR atol=to_RR(1.0e-4);
         RR rtol=to_RR(params.rtol.toDouble());
@@ -137,9 +153,7 @@ void MainWindow::on_Simulate_button_clicked()
         RR m=to_RR(params.m.toDouble()/1000);
         RR a=to_RR(params.a.toDouble()/100);
         RR cqtol=to_RR(params.cqtol.toDouble());
-        progress.setValue(10);
         Array<RR,1> ystart(nvar);
-        progress.setValue(20);
         ystart(0)=to_RR(0.0);
         ystart(1)=to_RR(0.0);
         ystart(2)=to_RR(params.psid.toDouble());
@@ -150,8 +164,6 @@ void MainWindow::on_Simulate_button_clicked()
         ystart(7)=to_RR(0.0);
         ystart(8)=to_RR(0.0);
         ystart(9)=to_RR(0.0);
-
-        progress.setValue(30);
         out.clear();
         RHS_gyro d(g,R,k,m,a);
         Odeint<StepperDopr853m<RHS_gyro> > ode(ystart,x1,x2,atol,rtol,cqtol,h1,hmin,out,d);
@@ -162,12 +174,13 @@ void MainWindow::on_Simulate_button_clicked()
             QMessageBox::information(this, tr("Runtime Exception in ode.integrate()"),
                                      what);
         }
-
-        progress.setValue(90);
-        x=1.3;
-        progress.setValue(100);
         redraw_plot(cvar);
-        progress.close();
+        ui->spinBox->setEnabled(true);
+        ui->pushButton->setEnabled(true);
+        ui->Simulate_button->setEnabled(true);
+        ui->Import_button->setEnabled(true);
+        ui->Tecplot_button->setEnabled(true);
+        ui->Export_button->setEnabled(true);
 }
 
 void  MainWindow::on_Export_button_clicked()
@@ -176,6 +189,8 @@ void  MainWindow::on_Export_button_clicked()
     QString fileName = QFileDialog::getSaveFileName(this,
            tr("Export Data"), "",
            tr("Gyro Export (*.gyr);;All Files (*)"));
+    if (fileName.isEmpty())
+            return;
     QFileInfo file(fileName);
     if(file.suffix().isEmpty()) fileName += ".gyr";
 
@@ -194,11 +209,11 @@ void  MainWindow::on_Export_button_clicked()
 void MainWindow::on_Import_button_clicked()
 {
         out.clear();
-
     QString fileName = QFileDialog::getOpenFileName(this,
           tr("Import Data"), "",
           tr("Gyro Export (*.gyr);;All Files (*)"));
-
+    if (fileName.isEmpty())
+            return;
 
 
         ifstream ifs(fileName.toLatin1());
@@ -217,6 +232,9 @@ void MainWindow::on_Import_button_clicked()
         out.xsave=xtemp;
         out.ysave=ytemp;
         redraw_plot(cvar);
+
+        ui->Tecplot_button->setEnabled(true);
+        ui->Export_button->setEnabled(true);
 
 }
 
@@ -244,12 +262,12 @@ void MainWindow::redraw_plot(int variable)
 
 void MainWindow::on_actionChangeVView_triggered()
 {
-    cvar = ui->spinBox->value();
+    cvar = ui->spinBox->value()-1;
     redraw_plot(cvar);
 }
 
 void MainWindow::on_actionFitall_triggered()
 {
-    cvar = ui->spinBox->value();
+    cvar = ui->spinBox->value()-1;
     redraw_plot(cvar);
 }
