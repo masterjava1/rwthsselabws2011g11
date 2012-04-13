@@ -48,6 +48,7 @@ protected:
     RR max_RR(Array<RR,1> a, int numele);
     RR min_RR(Array<RR,1> a, int numele);
     double to_double(const RR& a);
+    void disableUI();
 
 private:
     Ui::MainWindow *ui;

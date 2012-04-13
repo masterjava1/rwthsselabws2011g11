@@ -74,10 +74,11 @@ void Parameter::on_export_button_clicked()
     QString fileName = QFileDialog::getSaveFileName(this,
            tr("Export Parameters"), "",
            tr("Parameters (*.par);;All Files (*)"));
-    QFileInfo file(fileName);
-    if(file.suffix().isEmpty()) fileName += ".par";
     if (fileName.isEmpty())
             return;
+    QFileInfo file(fileName);
+    if(file.suffix().isEmpty()) fileName += ".par";
+
         else {
         QFile file(fileName);
             if (!file.open(QIODevice::WriteOnly)) {
