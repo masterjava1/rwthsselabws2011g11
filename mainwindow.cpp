@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     plot->setParent(ui->plottingframe);
     plot->setRangeDrag(Qt::Horizontal | Qt::Vertical);
     plot->setRangeZoom(Qt::Horizontal | Qt::Vertical);
-    cvar = 1;
+    cvar = 0;
     ui->psidot0->setText(params.psid);
     ui->theta0->setText(params.theta);
     ui->R->setText(params.R);
@@ -137,9 +137,7 @@ void MainWindow::disableUI(){
 
 void MainWindow::on_Simulate_button_clicked()
 {
-
     disableUI();
-
         int nvar=10;
         RR atol=to_RR(1.0e-4);
         RR rtol=to_RR(params.rtol.toDouble());
