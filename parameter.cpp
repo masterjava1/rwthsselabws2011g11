@@ -57,7 +57,7 @@ void Parameter::on_actionSetButtonClicked_triggered()
         if(errorflag) throw RuntimeException("Invalid value! \n Value<0 or equal to 0.",1);
     }catch(RuntimeException rte){
         QString what=rte.what();
-        QMessageBox::information(this, tr("Runtime Exception in ode.integrate()"),
+        QMessageBox::information(this, tr("Exception in paremeterwindow"),
                              what);
     }
 }
