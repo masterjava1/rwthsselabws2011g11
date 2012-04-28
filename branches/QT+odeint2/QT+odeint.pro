@@ -15,7 +15,6 @@ HEADERS += errordialog.h \
     Odeint.h \
     Output.h \
     parameter.h \
-    parameterdialog.h \
     parset.h \
     RHS_gyro.h \
     RuntimeException.h \
@@ -37,7 +36,6 @@ SOURCES += errordialog.cpp \
     mydialog.cpp \
     ntl_ext.cpp \
     parameter.cpp \
-    parameterdialog.cpp \
     parset.cpp \
     slider.cpp \
     warningdialog.cpp \
