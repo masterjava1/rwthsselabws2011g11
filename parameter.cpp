@@ -4,6 +4,7 @@
 #include "ui_parameter.h"
 #include "warningdialog.h"
 #include "errordialog.h"
+#include "RuntimeException.h"
 
 Parameter::Parameter(QWidget *parent) :
     QDialog(parent),
@@ -44,9 +45,21 @@ void Parameter::FrictionCheck()
 
 void Parameter::on_actionSetButtonClicked_triggered()
 {
-    ParSet PP(ui->psidot0->text(),ui->theta0->text(),ui->R->text(),ui->a->text(),ui->m->text(),
-              ui->k->text(),ui->TolConQual->text(),ui->cqtol->text(), ui->t_max->text());
-    emit(closeParWindow(PP));
+    try{
+        bool errorflag=false;
+        ParSet PP(ui->psidot0->text(),ui->theta0->text(),ui->R->text(),ui->a->text(),ui->m->text(),
+                  ui->k->text(),ui->TolConQual->text(),ui->cqtol->text(), ui->t_max->text());
+        if((ui->R->text().toDouble()<0)||(ui->R->text().toDouble()!=0)) errorflag=true;
+        if((ui->a->text().toDouble()<0)||(ui->a->text().toDouble()!=0)) errorflag=true;
+        if((ui->cqtol->text().toDouble()<0)||(ui->cqtol->text().toDouble()!=0)) errorflag=true;
+        if((ui->t_max->text().toDouble()<0)||(ui->t_max->text().toDouble()!=0)) errorflag=true;
+        if(!errorflag) emit(closeParWindow(PP));
+        if(errorflag) throw RuntimeException("Invalid value! \n Value<0 or equal to 0.",1);
+    }catch(RuntimeException rte){
+        QString what=rte.what();
+        QMessageBox::information(this, tr("Runtime Exception in ode.integrate()"),
+                             what);
+    }
 }
 
 void Parameter::setPar(QString psidot0, QString theta0, QString R, QString a, QString m, QString k, QString TolConQual, QString ConsTol, QString t_max){
