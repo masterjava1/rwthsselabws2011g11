@@ -65,29 +65,57 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \subsection*{Beschreibung der Anwendungsf\"alle}
 \begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
 \hline \\
-\textbf{Name} & \multicolumn{2}{p{5cm}|}{Export/Import as Tecplot file} \\
+\textbf{Name} & \multicolumn{2}{p{5cm}|}{Export as Tecplot file} \\
 \hline \\
-\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Enable storage of simulation data} \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Enable storage of simulation data in a common file format} \\
 \hline \\
 \textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
 \hline \\
-\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{Simulation has been run/There are existing save files} \\
+\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{Simulation has been run or imported} \\
 \hline \\
-\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{A save file is created/Simulation data is loaded and graphed} \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{A tecplot file has been created} \\
 \hline \\
-\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Errormessage is shown}\\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{}\\
 \hline \\
 \textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
 \hline \\
-\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Export Data} or \textit{Import data} button} \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Export Data} button} \\
 \hline \\
 \textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
 \hline \\
-& 1 & User presses the \textit{Export Data} or \textit{Import data} button \\
+& 1 & User presses the \textit{Export Data} button \\
 \hline \\
-& 2 & User selects a file to export/import \\
+& 2 & User choses a file name and directory in a new dialog \\
 \hline \\
-& 3 & Export file is created/Simulation data is loaded and graphed \\
+& 3 & Export file is created and the main window resumed \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
+\hline \\
+\textbf{Name} & \multicolumn{2}{p{5cm}|}{Import from Tecplot file} \\
+\hline \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Enable recovery of previously stored data} \\
+\hline \\
+\textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
+\hline \\
+\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{Simulation data has been exported as a tecplot file} \\
+\hline \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{Simulation data is loaded and graphed} \\
+\hline \\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{}\\
+\hline \\
+\textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
+\hline \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Import Data} button} \\
+\hline \\
+\textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
+\hline \\
+& 1 & User presses the \textit{Import Data} button \\
+\hline \\
+& 2 & User selects a file to import from a new dialog \\
+\hline \\
+& 3 & Simulation data is loaded and graphed in the main window \\
 \hline
 \end{tabular}
 
@@ -95,7 +123,7 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \hline \\
 \textbf{Name} & \multicolumn{2}{p{5cm}|}{Input Parameters} \\
 \hline \\
-\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{A set of parameters have been entered} \\
+\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{A set of valid parameters has been loaded into memory} \\
 \hline \\
 \textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
 \hline \\
@@ -113,45 +141,18 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \hline \\
 & 1 & User presses the \textit{Change Parameter} button in the GUI \\
 \hline \\
-& 2 & User enters parameters in a popupwindow \\
+& 2 & User enters parameters in a popupwindow or clicks on the \textit{Import Parameters} button and selects a file in the new dialog \\
 \hline \\
-& 3 & User clicks \textit{Submit Changes}\\
+& 3 & User clicks \textit{Submit Changes} to close the parameters dialog\\
 \hline \\
 \textbf{Nebenfluss} & \textbf{Schritt} & \textbf{Aktion} \\
-& 2a & User clicks on the Import/Export buttons\\
+& 2a & User can export the current parameters to a file using the \textit{Export Parameters} button\\
 \hline
 \end{tabular}
+\medskip
 
-\begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
-\hline \\
-\textbf{Name} & \multicolumn{2}{p{5cm}|}{Save/Load Parameters from file} \\
-\hline \\
-\textbf{Ziel} & \multicolumn{2}{p{5cm}|}{Parameters are saved/loaded from file} \\
-\hline \\
-\textbf{Einordnung} & \multicolumn{2}{p{5cm}|}{} \\
-\hline \\
-\textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{There are parameters to save/there is a file to load} \\
-\hline \\
-\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{A parameter file is created/parameters are loaded} \\
-\hline \\
-\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Errormessage is shown}\\
-\hline \\
-\textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
-\hline \\
-\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses the \textit{Save} or \textit{Load} button in the GUI} \\
-\hline \\
-\textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
-\hline \\
-& 1 & User presses the \textit{Change Parameter} button\\
-\hline \\
-& 2 & User presses the \textit{Save} or \textit{Load} button in the GUI \\
-\hline \\
-& 3 & User clicks \textit{User chooses a file to save/load}\\
-\hline \\
-\textbf{Nebenfluss} & \textbf{Schritt} & \textbf{Aktion} \\
-& 1a & User enters parameters\\
-\hline
-\end{tabular}
+Save/Load parameters from file: See \textit{Input Parameters}.
+\medskip
 
 \begin{tabular}{|p{5cm}|p{2cm}|p{3cm}|}
 \hline \\
@@ -165,7 +166,7 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \hline \\
 \textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{Solver is finished, output is being created} \\
 \hline \\
-\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Solver could not finish calculation}\\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Solver could not finish calculation, exception dialog is displayed}\\
 \hline \\
 \textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User, Solver} \\
 \hline \\
@@ -175,9 +176,13 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \hline \\
 & 1 & User starts the simulation\\
 \hline \\
-& 2 & Check validity of parameters \\
+& 2 & GUI is disabled \\
 \hline \\
 & 3 & Run the solver\\
+\hline
+& 4 & Draw output Graphs\\
+\hline
+& 5 & Enable GUI\\
 \hline
 \end{tabular}
 
@@ -191,19 +196,19 @@ Das Kernproblem besteht im L\"osen der Rechten Seite des folgenden Differentialg
 \hline \\
 \textbf{Vorbedingung} & \multicolumn{2}{p{5cm}|}{There is simulation data to be graphed} \\
 \hline \\
-\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{} \\
+\textbf{Nachbedingung} & \multicolumn{2}{p{5cm}|}{A different graph is displayed} \\
 \hline \\
-\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{Errormessage is shown}\\
+\textbf{Nachbedingung im Fehlerfall} & \multicolumn{2}{p{5cm}|}{}\\
 \hline \\
 \textbf{Haupt-Neben-akteure} & \multicolumn{2}{p{5cm}|}{User} \\
 \hline \\
-\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User presses one of the buttons \textit{Angles},\textit{Derivatives} or \textit{Positions} in the GUI} \\
+\textbf{Ausl\"oser} & \multicolumn{2}{p{5cm}|}{User toggles the spinbox} \\
 \hline \\
 \textbf{Standardfluss} & \textbf{Schritt}& \textbf{Aktion} \\
 \hline \\
-& 1 & User presses one of the buttons \textit{Angles},\textit{Derivatives} or \textit{Positions} in the GUI\\
+& 1 & User selects a different graph from the spinbox\\
 \hline \\
-& 2 & A new set of data is graphed according to the button pressed \\
+& 2 & A new set of data is graphed according to the number selected \\
 \hline
 \end{tabular}
 
