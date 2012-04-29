@@ -29,8 +29,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Tolerance->setText(params.rtol);
     ui->t_max->setText(params.t_max);
 
+    //disable buttons that should not be used yet
     ui->Tecplot_button->setEnabled(false);
     ui->Export_button->setEnabled(false);
+    ui->pushButton->setEnabled(false);
+    ui->spinBox->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -64,6 +67,7 @@ void MainWindow::on_actionOpenParameterOptions_triggered()
 
 
 void MainWindow::parWindowClosed(ParSet P){
+    //update main window after parameter window is closed
     mParameter->close();
     parameterOptionsOpen = false;
     ui->psidot0->setText(P.psid);
@@ -137,7 +141,7 @@ void MainWindow::disableUI(){
 
 void MainWindow::on_Simulate_button_clicked()
 {
-    disableUI();
+        disableUI(); //disable buttons while simulating
         int nvar=10;
         RR atol=to_RR(1.0e-4);
         RR rtol=to_RR(params.rtol.toDouble());
@@ -173,12 +177,16 @@ void MainWindow::on_Simulate_button_clicked()
                                      what);
         }
         redraw_plot(cvar);
+
+        //reactivate buttons
         ui->spinBox->setEnabled(true);
         ui->pushButton->setEnabled(true);
         ui->Simulate_button->setEnabled(true);
         ui->Import_button->setEnabled(true);
         ui->Tecplot_button->setEnabled(true);
         ui->Export_button->setEnabled(true);
+        ui->pushButton->setEnabled(true);
+        ui->spinBox->setEnabled(true);
 }
 
 void  MainWindow::on_Export_button_clicked()
@@ -230,9 +238,11 @@ void MainWindow::on_Import_button_clicked()
         out.xsave=xtemp;
         out.ysave=ytemp;
         redraw_plot(cvar);
-
+        //enable buttons
         ui->Tecplot_button->setEnabled(true);
         ui->Export_button->setEnabled(true);
+        ui->pushButton->setEnabled(true);
+        ui->spinBox->setEnabled(true);
 
 }
 
