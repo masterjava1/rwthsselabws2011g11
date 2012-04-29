@@ -90,10 +90,9 @@ void Parameter::on_export_button_clicked()
            tr("Parameters (*.par);;All Files (*)"));
     if (fileName.isEmpty())
             return;
-    QFileInfo file(fileName);
-    if(file.suffix().isEmpty()) fileName += ".par";
+    QFileInfo fileinfo(fileName);
+    if(fileinfo.suffix().isEmpty()) fileName += ".par";
 
-        else {
         QFile file(fileName);
             if (!file.open(QIODevice::WriteOnly)) {
                 QMessageBox::information(this, tr("Unable to open file"),
@@ -103,7 +102,6 @@ void Parameter::on_export_button_clicked()
             QDataStream out(&file);
             out<<ui->psidot0->text() << ui->theta0->text() << ui->R->text() << ui->a->text() << ui->m->text() <<
                     ui->k->text() << ui->TolConQual->text() << ui->cqtol->text()<< ui->t_max->text();
-        }
 }
 
 void Parameter::on_import_button_clicked()
