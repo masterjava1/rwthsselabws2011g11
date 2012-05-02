@@ -1,0 +1,26 @@
+# =================================================================================
+# Tippe Top Simulation G11
+#
+# Date: May 2012
+# 
+# Author:
+# Lena Blum            lena.blum@rwth-aachen.de
+# William Hulin        william.hulin@rwth-aachen.de
+# Alexander Fischer    alexander.fischer@rwth-aachen.de
+#
+# License: GNU General Public License v2 (or later) 
+# =================================================================================
+
+To compile TippeTopSim use
+   $make
+
+To clean up use
+   $make clean
+
+
+NOTE:
+   This makefile uses prebuilt libraries (NTL, blitz and qt)
+   if you want to build TippeTopSim on different architectures
+   than the RWTH Linux Cluster environment you have to recompile them
+
+# =================================================================================
