@@ -11,10 +11,12 @@
 # $make
 # $make clean
 # ==================================================================
-CXX = g++
+# CXX = g++
 UIC = tools/uic
 MOC = tools/moc
-CF = -O2 -fpermissive -lQtGui -lQtCore -lntl 
+CF = -lQtGui -lQtCore -lntl 
+CF += $(FLAGS_FAST) 
+CF += $(FLAGS_AUTOPAR) 
 DEFINES = -DQT_WEBKIT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB \
    -DQT_SHARED
 APP = TippeTopSim.exe
